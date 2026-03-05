@@ -2,8 +2,8 @@ name: Auto-Post to Social Media
 
 on:
   schedule:
-    # Run every 6 hours
     - cron: '0 */6 * * *'
+  workflow_dispatch:
   repository_dispatch:
     types: [update-social]
 
@@ -16,40 +16,32 @@ jobs:
       
       - name: Post to Telegram
         run: |
-          # Article to post
-          ARTICLE_TITLE="سوق البرمجيات السحابية في المملكة — وين وصل وإلى وين رايح؟"
+          ARTICLE_TITLE="سوق البرمجيات السحابية في المملكة"
           ARTICLE_SLUG="saas-market-saudi-arabia-2026"
-          ARTICLE_EXCERPT="يُتوقع أن يصل حجم سوق SaaS في المملكة إلى 6.49 مليار دولار بحلول عام 2030."
+          ARTICLE_EXCERPT="يُتوقع أن يصل حجم سوق SaaS في المملكة إلى 6.49 مليار دولار."
           SITE_URL="https://saudisaashub.pages.dev"
           
-          # Telegram Bot Token
           BOT_TOKEN="${{ secrets.TELEGRAM_BOT_TOKEN }}"
-          
-          # Your chat ID
           CHAT_ID="7293624236"
           
-          # Hooks
-          HOOKS=("وش رايك؟ 🤔" "هل سمعت عن هذا؟ 🤨" "والله تستاهل تعرف! 🙌" "اقرى وأخبرني! 😱" "وش المثير في هذا؟ 🔥")
-          HOOK=${HOOKS[$((RANDOM % 5))]}
+          HOOKS=("وش رايك؟ 🤔" "هل سمعت عن هذا؟ 🤨" "والله تستاهل! 🙌")
+          HOOK=${HOOKS[$((RANDOM % 3))]}
           
-          # Build message
           MESSAGE="${HOOK}
 
 ${ARTICLE_TITLE}
 
 📝 ${ARTICLE_EXCERPT}
 
-👇 اقرأ المزيد:
-${SITE_URL}/articles/${ARTICLE_SLUG}
+👇 ${SITE_URL}/articles/${ARTICLE_SLUG}
 
-#SaudiSaaS #السعودية #التقنية #SaaS #Startups"
+#SaudiSaaS #السعودية #التقنية"
           
-          # Send to Telegram
           curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
             -d "chat_id=${CHAT_ID}" \
             -d "text=${MESSAGE}" \
             -d "parse_mode=Markdown"
           
-          echo "✅ Posted to Telegram!"
+          echo "✅ Done!"
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
