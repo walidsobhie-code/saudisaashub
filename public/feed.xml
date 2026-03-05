@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SaudiSaaSHub - المصدرك الأول لـ SaaS في المملكة العربية السعودية</title>
+    <link>https://saudisaashub.com</link>
+    <description>أحدث أخبار وتقارير البرمجيات كخدمة (SaaS) في المملكة العربية السعودية</description>
+    <language>ar</language>
+    <lastBuildDate>Wed, 04 Mar 2026 19:00:00 +0000</lastBuildDate>
+    <atom:link href="https://saudisaashub.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://saudisaashub.com/logo.png</url>
+      <title>SaudiSaaSHub</title>
+      <link>https://saudisaashub.com</link>
+    </image>
+    
+    <!-- Article 1 -->
+    <item>
+      <title>سوق البرمجيات السحابية في المملكة — وين وصل وإلى وين رايح؟</title>
+      <link>https://saudisaashub.com/saas-market-saudi-arabia-2026</link>
+      <description>يتجاوز حجم سوق البرمجيات كخدمة في المملكة العربية السعودية حاجز المليارات، ويُتوقع أن يصل إلى 6.49 مليار دولار بحلول عام 2030.</description>
+      <pubDate>Wed, 04 Mar 2026 10:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>تقارير السوق</category>
+      <guid>https://saudisaashub.com/saas-market-saudi-arabia-2026</guid>
+    </item>
+    
+    <!-- Article 2 -->
+    <item>
+      <title>لماذا تتسابق عمالقة التقنية للدخول إلى السوق السعودي؟</title>
+      <link>https://saudisaashub.com/tech-giants-saudi-market-2026</link>
+      <description>AWS تستثمر 5.3 مليار دولار، ماياكروسوفت تبني 3 مراكز بيانات — لماذا تتسابق عمالقة التقنية للسوق السعودي؟</description>
+      <pubDate>Wed, 04 Mar 2026 11:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>أخبار السوق</category>
+      <guid>https://saudisaashub.com/tech-giants-saudi-market-2026</guid>
+    </item>
+    
+    <!-- Article 3 -->
+    <item>
+      <title>المنشآت الصغيرة والمتوسطة والكلاود — علاقة في بدايتها وفرصة لا تُعوَّض</title>
+      <link>https://saudisaashub.com/sme-cloud-adoption-saudi-2026</link>
+      <description>تُمثّل المنشآت الصغيرة والمتوسطة العمود الفقري للاقتصاد السعودي. فرصتها في تبنّي SaaS تنمو 10% سنوياً.</description>
+      <pubDate>Wed, 04 Mar 2026 12:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>دليل عملي</category>
+      <guid>https://saudisaashub.com/sme-cloud-adoption-saudi-2026</guid>
+    </item>
+    
+    <!-- Article 4 -->
+    <item>
+      <title>أبرز شركات SaaS الناشئة في المملكة العربية السعودية لعام 2026</title>
+      <link>https://saudisaashub.com/top-saas-startups-saudi-2026</link>
+      <description>شهدت المملكة خلال 2025 طفرة غير مسبوقة في تمويل الشركات الناشئة — 1.34 مليار دولار في نصف عام.</description>
+      <pubDate>Wed, 04 Mar 2026 13:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>تقارير الشركات</category>
+      <guid>https://saudisaashub.com/top-saas-startups-saudi-2026</guid>
+    </item>
+    
+    <!-- Article 5 -->
+    <item>
+      <title>كيف تطلق شركة SaaS ناجحة في السعودية؟ — دليل المؤسسين 2026</title>
+      <link>https://saudisaashub.com/launch-saas-company-saudi-2026</link>
+      <description>السوق السعودي من أكثر البيئات تهيّؤاً في العالم لإطلاق شركة SaaS. دليل شامل للمؤسسين.</description>
+      <pubDate>Wed, 04 Mar 2026 14:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>دليل عملي</category>
+      <guid>https://saudisaashub.com/launch-saas-company-saudi-2026</guid>
+    </item>
+    
+    <!-- Article 6 -->
+    <item>
+      <title>نظام حماية البيانات الشخصية (PDPL) — ما يجب أن يعرفه كل مزوّد SaaS</title>
+      <link>https://saudisaashub.com/pdpl-guide-saudi-2026</link>
+      <description>صدر نظام حماية البيانات الشخصية في المملكة ودخل حيّز التنفيذ. ما الذي يجب أن يفعله مزودو SaaS؟</description>
+      <pubDate>Wed, 04 Mar 2026 15:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>قانوني وتنظيمي</category>
+      <guid>https://saudisaashub.com/pdpl-guide-saudi-2026</guid>
+    </item>
+    
+    <!-- Article 7 -->
+    <item>
+      <title>الفرق بين شركة SaaS تحترم PDPL وشركة تُخاطر بغرامات مليونية</title>
+      <link>https://saudisaashub.com/pdpl-compliance-vs-fines-2026</link>
+      <description>الشركات غير الممتثلة لـ PDPL تواجه غرامات مليونية. كيف تحمي شركتك؟</description>
+      <pubDate>Wed, 04 Mar 2026 16:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>قانوني وتنظيمي</category>
+      <guid>https://saudisaashub.com/pdpl-compliance-vs-fines-2026</guid>
+    </item>
+    
+    <!-- Article 8 -->
+    <item>
+      <title>فاتورة إلكترونية ٢٠٢٦ — كل ما تحتاج معرفته قبل ما يغرّمونك</title>
+      <link>https://saudisaashub.com/zatca-e-invoice-2026</link>
+      <description>موجات الإلزام مستمرة من زاتكا. الموجة 24 تستهدف المنشآت بـ 375 ألف ريال — امتثل قبل 30 يونيو 2026.</description>
+      <pubDate>Wed, 04 Mar 2026 17:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>امتثال ضريبي</category>
+      <guid>https://saudisaashub.com/zatca-e-invoice-2026</guid>
+    </item>
+    
+    <!-- Article 9 -->
+    <item>
+      <title>أفضل برامج SaaS للفاتورة الإلكترونية المتوافقة مع زاتكا 2026</title>
+      <link>https://saudisaashub.com/zatca-software-reviews-2026</link>
+      <description>معايير الاختيار الصحيح لحلول الفوترة الإلكترونية المعتمدة من زاتكا.</description>
+      <pubDate>Wed, 04 Mar 2026 18:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>مراجعات المنتجات</category>
+      <guid>https://saudisaashub.com/zatca-software-reviews-2026</guid>
+    </item>
+    
+    <!-- Article 10 -->
+    <item>
+      <title>الدليل الشامل للتكامل مع منصة فاتورة — من الصفر للامتثال الكامل</title>
+      <link>https://saudisaashub.com/zatca-integration-guide-2026</link>
+      <description>التكامل مع منصة زاتكا خطوة بخطوة — من التسجيل للاختبار للإطلاق.</description>
+      <pubDate>Wed, 04 Mar 2026 19:00:00 +0000</pubDate>
+      <author>Saudi SaaS Hub Team</author>
+      <category>دليل تقني</category>
+      <guid>https://saudisaashub.com/zatca-integration-guide-2026</guid>
+    </item>
+    
+  </channel>
+</rss>

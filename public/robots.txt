@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://saudisaashub.com/sitemap.xml
+Sitemap: https://saudisaashub.com/sitemap-articles.xml
+
+# Feed
+Allow: /feed.xml
+
+# Crawl-delay
+Crawl-delay: 1
