@@ -5,7 +5,6 @@ on:
     # Run every 6 hours
     - cron: '0 */6 * * *'
   workflow_dispatch:
-  workflow_dispatch:
 
 jobs:
   post-to-telegram:
@@ -22,7 +21,7 @@ jobs:
           ARTICLE_EXCERPT="يُتوقع أن يصل حجم سوق SaaS في المملكة إلى 6.49 مليار دولار بحلول عام 2030."
           SITE_URL="https://saudisaashub.pages.dev"
           
-          # Telegram Bot Token (hardcoded for now - add as secret later)
+          # Telegram Bot Token
           BOT_TOKEN="${{ secrets.TELEGRAM_BOT_TOKEN }}"
           
           # Your chat ID
