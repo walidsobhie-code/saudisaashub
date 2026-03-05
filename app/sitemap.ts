@@ -2,7 +2,7 @@ import { getArticles } from '@/lib/articles';
 
 export default async function sitemap() {
   const articles = await getArticles();
-  const baseUrl = 'https://saudisaashub.com';
+  const baseUrl = 'https://f35cdfe3.f249971c.saudisaashub.pages.dev';
 
   const staticPages = [
     { url: baseUrl, lastModified: new Date() },

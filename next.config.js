@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Dynamic for searchParams routes - works on Vercel/Netlify/Cloudflare
-  dynamicParams: true,
+  output: 'export',
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

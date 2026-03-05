@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     default: 'SaudiSaaSHub - المصدرك الأول لـ SaaS في المملكة العربية السعودية',
     template: '%s | SaudiSaaSHub',
   },
-  description: 'المصدرك الأول لأحدث أخبار وتقارير SaaS والشركات الناشئة في المملكة العربية السعودية. نقدم تحليلات السوق، مراجعات الشركات، وأدلة عملية لنمو عملك.',
+  description: 'المصدرك الأول لأحدث أخبار وتقارير SaaS والشركات الناشئة في المملكة العربية السعودية. نقدم تحليلات السوق الشاملة، مراجعات الشركات التقنية، وأدلة عملية لنمو الأعمال والوصول للتحول الرقمي.',
   keywords: ['SaaS', 'startup', 'السعودية', 'التقنية', 'الأعمال', 'الفوترة الإلكترونية', 'ZATCA', 'PDPL', 'التحول الرقمي', 'رؤية 2030', 'SaaS السعودية', 'شركات ناشئة'],
-  authors: [{ name: 'SaudiSaaSHub' }],
+  authors: [{ name: 'SaudiSaaSHub Team' }],
   creator: 'SaudiSaaSHub',
   publisher: 'SaudiSaaSHub',
   formatDetection: {
@@ -21,37 +21,37 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://saudisaashub.pages.dev'),
+  metadataBase: new URL('https://f35cdfe3.f249971c.saudisaashub.pages.dev'),
   alternates: {
-    canonical: 'https://saudisaashub.pages.dev',
+    canonical: 'https://f35cdfe3.f249971c.saudisaashub.pages.dev',
     languages: {
-      'ar': 'https://saudisaashub.pages.dev',
-      'en': 'https://saudisaashub.pages.dev/en',
+      'ar': 'https://f35cdfe3.f249971c.saudisaashub.pages.dev',
+      'en': 'https://f35cdfe3.f249971c.saudisaashub.pages.dev/en',
     },
   },
   openGraph: {
     title: 'SaudiSaaSHub - المصدرك الأول لـ SaaS في المملكة العربية السعودية',
-    description: 'المصدرك الأول لأحدث أخبار وتقارير SaaS والشركات الناشئة في المملكة العربية السعودية. تحليلات السوق، مراجعات الشركات، وأدلة عملية.',
-    url: 'https://saudisaashub.pages.dev',
+    description: 'المصدرك الأول لأحدث أخبار وتقارير SaaS والشركات الناشئة في المملكة العربية السعودية. تحليلات السوق الشاملة، مراجعات الشركات التقنية، وأدلة عملية لنمو الأعمال.',
+    url: 'https://f35cdfe3.f249971c.saudisaashub.pages.dev',
     siteName: 'SaudiSaaSHub',
     locale: 'ar_SA',
     alternateLocale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/logo.png',
-        width: 800,
-        height: 800,
+        url: 'https://f35cdfe3.f249971c.saudisaashub.pages.dev/logo.png',
+        width: 1200,
+        height: 630,
         alt: 'SaudiSaaSHub - المصدرك الأول لـ SaaS في المملكة',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SaudiSaaSHub',
-    description: 'المصدرك الأول لـ SaaS في المملكة العربية السعودية',
+    title: 'SaudiSaaSHub - المصدرك الأول لـ SaaS في المملكة',
+    description: 'المصدرك الأول لأحدث أخبار وتقارير SaaS والشركات الناشئة في المملكة العربية السعودية.',
     creator: '@SaudiSaaSHub',
-    images: ['/logo.png'],
+    images: ['https://f35cdfe3.f249971c.saudisaashub.pages.dev/logo.png'],
   },
   robots: {
     index: true,
@@ -82,6 +82,13 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="SaudiSaaS" />
+        
+        {/* Explicit meta tags for LinkedIn */}
+        <meta name="author" content="SaudiSaaSHub Team" />
+        <meta name="image" content="https://f35cdfe3.f249971c.saudisaashub.pages.dev/logo.png" />
+        <meta property="og:image" content="https://f35cdfe3.f249971c.saudisaashub.pages.dev/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </head>
       <body className="min-h-screen flex flex-col">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent-green focus:text-background">

@@ -3,6 +3,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://saudisaashub-website.vercel.app/sitemap.xml
+Sitemap: https://f35cdfe3.f249971c.saudisaashub.pages.dev/sitemap.xml
 
 # Crawl-delay: 1

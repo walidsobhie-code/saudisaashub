@@ -1,0 +1,79 @@
+name: Social Media Auto-Post
+
+on:
+  workflow_dispatch:
+    inputs:
+      article_slug:
+        description: 'Article slug to post (leave empty for latest)'
+        required: false
+        type: string
+  schedule:
+    # Run daily at 9 AM Saudi time (UTC 6)
+    - cron: '0 6 * * *'
+
+jobs:
+  generate-posts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests python-dotenv
+      
+      - name: Generate social media posts
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scripts/social_post.py >> $GITHUB_STEP_SUMMARY 2>&1
+      
+      - name: Create issue for manual posting
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const slug = '${{ github.event.inputs.article_slug }}';
+            const body = `🤖 New article ready for social media posting!
+            
+            Article: ${slug || 'Latest'}
+            
+            Run the workflow to generate posts or use the Telegram bot to auto-post.`;
+            
+            github.rest.createIssue({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📱 Social Media Post - ${new Date().toLocaleDateString('ar-SA')}`,
+              body: body
+            })
+
+  notify-telegram:
+    needs: generate-posts
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Send completion notification
+        if: env.TELEGRAM_BOT_TOKEN != ''
+        uses: appleboy/telegram-action@v1
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            ✅ *SaudiSaaSHub Update Complete!*
+            
+            New social media posts generated.
+            Check GitHub Actions for details.
+            
+            🔗 ${{ github.server_url }}/${{ github.repository }}/actions

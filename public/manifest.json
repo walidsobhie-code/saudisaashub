@@ -1,43 +1,13 @@
 {
-  "name": "SaudiSaaSHub",
+  "name": "SaudiSaaSHub - مصدرك الأول لـ SaaS",
   "short_name": "SaudiSaaS",
   "description": "المصدرك الأول لـ SaaS في المملكة العربية السعودية",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0A0A14",
   "theme_color": "#00D9A5",
-  "orientation": "portrait-primary",
-  "icons": [
-    {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
   "categories": ["news", "technology", "business"],
   "lang": "ar",
   "dir": "rtl",
-  "scope": "/",
-  "prefer_related_applications": false,
-  "shortcuts": [
-    {
-      "name": "المقالات",
-      "short_name": "المقالات",
-      "url": "/articles",
-      "description": "تصفح جميع المقالات"
-    },
-    {
-      "name": "عن المنصة",
-      "short_name": "عن المنصة",
-      "url": "/about",
-      "description": "معلومات عن SaudiSaaSHub"
-    }
-  ]
+  "scope": "/"
 }

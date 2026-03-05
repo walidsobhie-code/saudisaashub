@@ -1,7 +1,7 @@
 # SEO Audit Report - SaudiSaaSHub
 
 ## Domain
-**URL:** https://saudisaashub-website.vercel.app
+**URL:** https://saudisaashub.pages.dev
 
 ---
 
