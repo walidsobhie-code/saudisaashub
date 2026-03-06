@@ -1,4 +1,14 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '404 - الصفحة غير موجودة | SaudiSaaSHub',
+  description: 'عذراً، الصفحة التي تبحث عنها غير موجودة',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (
