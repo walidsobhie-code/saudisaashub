@@ -122,18 +122,22 @@ export function Hero() {
           </Link>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-accent-green">17+</div>
-            <div className="text-white/40 text-sm">مقال</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-purple-400">8+</div>
-            <div className="text-white/40 text-sm">قطاع</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-pink-500">2026</div>
-            <div className="text-white/40 text-sm">أحدث</div>
+        {/* Latest Articles Preview */}
+        <div className="mb-8">
+          <p className="text-white/40 text-sm mb-4">أحدث المقالات</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/articles/how-to-launch-saas-company-saudi-arabia-2026" className="group px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-accent-green/50 transition-all text-sm">
+              <span className="text-white/60 group-hover:text-white transition-colors">كيف تطلق SaaS في السعودية</span>
+              <span className="text-accent-green mr-2">→</span>
+            </Link>
+            <Link href="/articles/zatca-e-invoice-2026" className="group px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-purple-400/50 transition-all text-sm">
+              <span className="text-white/60 group-hover:text-white transition-colors">الفوترة الإلكترونية</span>
+              <span className="text-purple-400 mr-2">→</span>
+            </Link>
+            <Link href="/articles/pdpl-guide-saudi-2026" className="group px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-pink-500/50 transition-all text-sm">
+              <span className="text-white/60 group-hover:text-white transition-colors">دليل PDPL</span>
+              <span className="text-pink-500 mr-2">→</span>
+            </Link>
           </div>
         </div>
       </div>

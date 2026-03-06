@@ -191,37 +191,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.01] to-transparent" />
-        
+      {/* Latest Articles - Unique Showcase */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-green/5 via-purple-500/5 to-pink-500/5" />
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-green/10 border border-accent-green/20 text-accent-green text-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
+              جديد على المنصة
+            </div>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              استكشف حسب <span className="bg-gradient-to-r from-emerald-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">القطاع</span>
+              أحدث <span className="bg-gradient-to-r from-emerald-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">المقالات</span>
             </h2>
-            <p className="text-white/40 text-lg max-w-xl mx-auto">اختر القطاع لعرض المقالات المتخصصة</p>
+            <p className="text-white/40 text-lg max-w-xl mx-auto">ابقَ على اطلاع بأحدث التحليلات والتقارير</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {categories.map((cat) => (
+          {/* Article Cards with Glow Effect */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: 'كيف تطلق شركة SaaS في السعودية 2026', category: 'دليل عملي', color: 'from-emerald-400 to-green-600', slug: 'how-to-launch-saas-company-saudi-arabia-2026' },
+              { title: 'الأمن السيبراني للشركات السعودية', category: 'أمن سيبراني', color: 'from-red-500 to-orange-500', slug: 'cybersecurity-saudi-arabia-2026' },
+              { title: 'الصحة الرقمية في المملكة 2026', category: 'رعاية صحية', color: 'from-pink-500 to-rose-500', slug: 'digital-health-saudi-2026' },
+              { title: 'الفوترة الإلكترونية زاتكا', category: 'امتثال ضريبي', color: 'from-purple-500 to-violet-600', slug: 'zatca-e-invoice-2026' },
+              { title: 'منصات التعليم الإلكتروني', category: 'تعليم تقني', color: 'from-yellow-500 to-amber-600', slug: 'edtech-lms-saudi-2026' },
+              { title: 'تجارة الإلكترونية السعودية', category: 'تجارة إلكترونية', color: 'from-blue-500 to-cyan-600', slug: 'ecommerce-saudi-2026' },
+            ].map((article, i) => (
               <Link
-                key={cat.name}
-                href={`/articles?category=${encodeURIComponent(cat.name)}`}
-                className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/8 backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-white/15"
+                key={i}
+                href={`/articles/${article.slug}`}
+                className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/8 backdrop-blur-sm transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(0,217,165,0.1)]"
               >
-                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${cat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-4xl">{cat.icon}</span>
-                    <span className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/60">{cat.count}+</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">{cat.name}</h3>
-                  <p className="text-white/40 text-sm">مقال</p>
+                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${article.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-gradient-to-br ${article.color} flex items-center justify-center text-white font-bold text-sm opacity-80">
+                  {i + 1}
                 </div>
-                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${cat.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`} />
+                <div className="relative z-10 mt-8">
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs bg-gradient-to-r ${article.color} text-white/90 mb-3`}>
+                    {article.category}
+                  </span>
+                  <h3 className="text-lg font-bold text-white group-hover:text-accent-green transition-colors duration-300 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <div className="flex items-center gap-2 mt-4 text-white/40 text-sm group-hover:text-accent-green transition-colors">
+                    <span>اقرأ المزيد</span>
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </div>
+                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${article.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`} />
               </Link>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/articles" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-accent-green to-emerald-400 text-background font-bold hover:shadow-[0_0_30px_rgba(0,217,165,0.3)] transition-all">
+              عرض جميع المقالات
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
