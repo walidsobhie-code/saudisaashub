@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: PageProps) {
       tags: article.categories,
       images: [
         {
-          url: `https://saudisaashub.pages.dev/og-image.png`,
+          url: `https://saudisaashub.pages.dev/logo.png`,
           width: 1200,
           height: 630,
           alt: article.title,
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: PageProps) {
       card: 'summary_large_image',
       title: article.title,
       description: article.excerpt,
-      images: [`https://saudisaashub.pages.dev/og-image.png`],
+      images: [`https://saudisaashub.pages.dev/logo.png`],
     },
     alternates: {
       canonical: articleUrl,

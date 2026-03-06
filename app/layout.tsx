@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://saudisaashub.pages.dev/og-image.png',
+        url: 'https://saudisaashub.pages.dev/logo.png',
         width: 1200,
         height: 630,
         alt: 'SaudiSaaSHub - مصدرك الأول لـ SaaS في المملكة',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'SaudiSaaSHub - مصدرك الأول لـ SaaS في المملكة',
     description: 'مصدرك الأول لأحدث أخبار وتقارير SaaS والشركات الناشئة في المملكة العربية السعودية.',
     creator: '@SaudiSaaSHub',
-    images: ['https://saudisaashub.pages.dev/og-image.png'],
+    images: ['https://saudisaashub.pages.dev/logo.png'],
   },
   robots: {
     index: true,
@@ -118,8 +118,8 @@ export default function RootLayout({
 
         {/* Explicit meta tags for LinkedIn */}
         <meta name="author" content="SaudiSaaSHub Team" />
-        <meta name="image" content="https://saudisaashub.pages.dev/og-image.png" />
-        <meta property="og:image" content="https://saudisaashub.pages.dev/og-image.png" />
+        <meta name="image" content="https://saudisaashub.pages.dev/logo.png" />
+        <meta property="og:image" content="https://saudisaashub.pages.dev/logo.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
       </head>
