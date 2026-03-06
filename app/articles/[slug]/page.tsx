@@ -87,8 +87,63 @@ export default async function ArticlePage({ params }: PageProps) {
   // Generate FAQs based on article
   const faqs = generateSampleFAQs(article.title, article.content);
 
+  // JSON-LD structured data
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.excerpt,
+    image: 'https://saudisaashub.pages.dev/logo.png',
+    datePublished: article.date,
+    dateModified: article.date,
+    author: {
+      '@type': 'Organization',
+      name: 'SaudiSaaSHub',
+      url: 'https://saudisaashub.pages.dev',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'SaudiSaaSHub',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://saudisaashub.pages.dev/logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://saudisaashub.pages.dev/articles/${article.slug}`,
+    },
+    articleSection: article.categories[0],
+    keywords: article.categories.join(', '),
+    wordCount: article.content.split(/\s+/).length,
+  };
+
+  // FAQ Schema
+  const faqSchema = faqs.slice(0, 5).map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  }));
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqSchema,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Article Header - Professional Style */}
       <section className="py-10 md:py-14 border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
