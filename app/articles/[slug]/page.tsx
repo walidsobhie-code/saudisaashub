@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: PageProps) {
       tags: article.categories,
       images: [
         {
-          url: `https://saudisaashub.pages.dev/logo.png`,
+          url: `https://saudisaashub.pages.dev/og-image.png`,
           width: 1200,
           height: 630,
           alt: article.title,
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: PageProps) {
       card: 'summary_large_image',
       title: article.title,
       description: article.excerpt,
-      images: [`https://saudisaashub.pages.dev/logo.png`],
+      images: [`https://saudisaashub.pages.dev/og-image.png`],
     },
     alternates: {
       canonical: articleUrl,
@@ -93,7 +93,7 @@ export default async function ArticlePage({ params }: PageProps) {
     '@type': 'Article',
     headline: article.title,
     description: article.excerpt,
-    image: 'https://saudisaashub.pages.dev/logo.png',
+    image: 'https://saudisaashub.pages.dev/og-image.png',
     datePublished: article.date,
     dateModified: article.date,
     author: {
@@ -106,7 +106,7 @@ export default async function ArticlePage({ params }: PageProps) {
       name: 'SaudiSaaSHub',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://saudisaashub.pages.dev/logo.png',
+        url: 'https://saudisaashub.pages.dev/og-image.png',
       },
     },
     mainEntityOfPage: {
