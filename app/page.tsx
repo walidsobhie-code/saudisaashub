@@ -215,7 +215,7 @@ export default function Home() {
               { title: 'الصحة الرقمية في المملكة 2026', category: 'رعاية صحية', color: 'from-pink-500 to-rose-500', slug: 'digital-health-saudi-2026' },
               { title: 'الفوترة الإلكترونية زاتكا', category: 'امتثال ضريبي', color: 'from-purple-500 to-violet-600', slug: 'zatca-e-invoice-2026' },
               { title: 'منصات التعليم الإلكتروني', category: 'تعليم تقني', color: 'from-yellow-500 to-amber-600', slug: 'edtech-lms-saudi-2026' },
-              { title: 'تجارة الإلكترونية السعودية', category: 'تجارة إلكترونية', color: 'from-blue-500 to-cyan-600', slug: 'ecommerce-saudi-2026' },
+              { title: 'تجارة الإلكترونية السعودية', category: 'تجارة إلكترونية', color: 'from-blue-500 to-cyan-600', slug: 'ecommerce-platforms-saudi-2026' },
             ].map((article, i) => (
               <Link
                 key={i}
