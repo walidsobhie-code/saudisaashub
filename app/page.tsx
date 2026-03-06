@@ -210,7 +210,7 @@ export default function Home() {
           {/* Article Cards with Glow Effect */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'كيف تطلق شركة SaaS في السعودية 2026', category: 'دليل عملي', color: 'from-emerald-400 to-green-600', slug: 'how-to-launch-saas-company-saudi-arabia-2026' },
+              { title: 'كيف تطلق شركة SaaS في السعودية 2026', category: 'دليل عملي', color: 'from-emerald-400 to-green-600', slug: 'launch-saas-company-saudi-2026' },
               { title: 'الأمن السيبراني للشركات السعودية', category: 'أمن سيبراني', color: 'from-red-500 to-orange-500', slug: 'cybersecurity-saudi-arabia-2026' },
               { title: 'الصحة الرقمية في المملكة 2026', category: 'رعاية صحية', color: 'from-pink-500 to-rose-500', slug: 'digital-health-saudi-2026' },
               { title: 'الفوترة الإلكترونية زاتكا', category: 'امتثال ضريبي', color: 'from-purple-500 to-violet-600', slug: 'zatca-e-invoice-2026' },
