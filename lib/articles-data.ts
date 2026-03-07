@@ -1,4 +1,5 @@
 import { additionalArticles } from './new-articles';
+import { detailedArticles } from './detailed-articles';
 
 export const articles = [
   {
@@ -409,5 +410,12 @@ export const articles = [
     author: "Saudi SaaS Hub Team",
     readingTime: 5
   },
-  ...additionalArticles
+  ...additionalArticles,
+  ...detailedArticles,
+]
+
+  ...detailedArticles,
+]
+
+  ...detailedArticles,
 ]
