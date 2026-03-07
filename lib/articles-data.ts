@@ -1,3 +1,5 @@
+import { additionalArticles } from './new-articles';
+
 export const articles = [
   {
     title: "سوق البرمجيات السحابية في المملكة — وين وصل وإلى وين رايح؟",
@@ -406,5 +408,6 @@ export const articles = [
     categories: ["مقارنة", "FinTech"],
     author: "Saudi SaaS Hub Team",
     readingTime: 5
-  }
+  },
+  ...additionalArticles
 ]
