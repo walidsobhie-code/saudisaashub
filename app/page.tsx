@@ -191,32 +191,43 @@ export default function Home() {
       <Hero />
 
       {/* Latest Headlines Ticker */}
-      <section className="py-4 bg-gradient-to-r from-emerald-500/5 via-purple-500/5 to-pink-500/5 border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex items-center gap-6 overflow-hidden h-12">
-            <span className="shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <section className="py-5 bg-gradient-to-r from-emerald-500/5 via-purple-500/5 to-pink-500/5 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center gap-8 overflow-hidden h-14">
+            {/* Animated Badge */}
+            <span className="shrink-0 flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-400 text-[#0A0A14] text-sm font-bold shadow-lg shadow-emerald-500/20">
+              <span className="w-2 h-2 rounded-full bg-[#0A0A14] animate-ping"></span>
               جديد
             </span>
+
+            {/* Rotating Headlines */}
             <div className="relative flex-1 overflow-hidden h-full">
               {rotatingHeadlines.map((item, index) => (
                 <Link
                   key={index}
                   href="/articles"
-                  className={`absolute inset-0 flex items-center gap-3 transition-all duration-700 ease-in-out ${
-                    index === currentHeadline ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'
+                  className={`absolute inset-0 flex items-center gap-4 transition-all duration-700 ease-out ${
+                    index === currentHeadline
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-4'
                   }`}
                 >
-                  <span className="text-white/30 text-sm shrink-0">{item.category}</span>
-                  <span className="text-white hover:text-emerald-400 transition-colors truncate font-medium">
+                  <span className="shrink-0 px-3 py-1 rounded-full bg-white/10 text-white/60 text-sm font-medium border border-white/10">
+                    {item.category}
+                  </span>
+                  <span className="text-xl md:text-2xl font-bold text-white tracking-wide hover:text-emerald-400 transition-colors truncate">
                     {item.title}
-                    <span className="text-white/30 mx-3">•</span>
                   </span>
                 </Link>
               ))}
             </div>
-            <Link href="/articles" className="shrink-0 text-white/40 hover:text-emerald-400 text-sm transition-colors">
-              عرض الكل →
+
+            {/* View All Link */}
+            <Link href="/articles" className="shrink-0 flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white/60 hover:text-emerald-400 hover:border-emerald-500/30 transition-all text-sm font-medium">
+              عرض الكل
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
         </div>
