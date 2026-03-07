@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 import { articles as allArticles } from '../lib/articles-data';
+import { Newsletter } from '../components/Newsletter';
 
 interface Article {
   title: string;
@@ -316,7 +317,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full blur-[180px] opacity-20 bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-500" />
         </div>
-        
+
         <div className="max-w-3xl mx-auto px-4 relative z-10 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             هل تريد <span className="bg-gradient-to-r from-emerald-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">المزيد؟</span>
@@ -331,6 +332,80 @@ export default function Home() {
             <Link href="/about" className="px-10 py-5 rounded-2xl bg-white/5 border border-white/10 text-white font-semibold text-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
               عن المنصة
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <Newsletter />
+
+      {/* Job Board Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-purple-500/5 to-pink-500/5" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full blur-[150px] opacity-15 bg-gradient-to-r from-emerald-500 via-purple-500 to-pink-500" />
+
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-green/10 border border-accent-green/20 text-accent-green text-sm mb-4">
+              <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
+              وظائف SaaS
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              وظائف في <span className="bg-gradient-to-r from-emerald-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">قطاع التقنية</span>
+            </h2>
+            <p className="text-white/40 text-lg max-w-xl mx-auto">اكتشف أحدث الفرص الوظيفية في شركات SaaS بالمملكة</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: 'Senior Backend Engineer', company: 'TechCorp Saudi', location: 'الرياض', type: 'دوام كامل', salary: '35,000 - 50,000 ر.س' },
+              { title: 'Product Manager', company: 'SaaS Solutions', location: 'جدة', type: 'دوام كامل', salary: '30,000 - 45,000 ر.س' },
+              { title: 'DevOps Engineer', company: 'CloudTech KSA', location: 'الرياض', type: 'دوام كامل', salary: '28,000 - 42,000 ر.س' },
+              { title: 'Frontend Developer', company: 'Digital Hub', location: 'الدمام', type: 'دوام كامل', salary: '20,000 - 35,000 ر.س' },
+              { title: 'Sales Manager', company: 'Enterprise SaaS', location: 'الرياض', type: 'دوام كامل', salary: '25,000 - 40,000 ر.س' },
+              { title: 'Data Analyst', company: 'Analytics Co', location: 'الرياض', type: 'دوام كامل', salary: '22,000 - 35,000 ر.س' },
+            ].map((job, i) => (
+              <div key={i} className="group relative p-6 rounded-2xl bg-white/[0.02] border border-white/8 backdrop-blur-sm hover:border-emerald-500/30 transition-all duration-300">
+                <div className="absolute top-4 left-4 flex gap-2">
+                  <span className="px-3 py-1 rounded-full text-xs bg-emerald-500/20 text-emerald-400 border border-emerald-500/20">{job.type}</span>
+                </div>
+                <div className="mt-8">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-green transition-colors">{job.title}</h3>
+                  <p className="text-white/60 text-sm mb-4">{job.company}</p>
+                  <div className="flex items-center gap-4 text-white/40 text-sm">
+                    <span className="flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                      {job.location}
+                    </span>
+                  </div>
+                  <p className="text-accent-green text-sm font-semibold mt-3">{job.salary}</p>
+                </div>
+                <div className="mt-4 pt-4 border-t border-white/5">
+                  <button className="w-full py-2.5 rounded-xl bg-white/5 border border-white/10 text-white text-sm font-semibold hover:bg-accent-green hover:text-background transition-all">
+                    قدم الآن
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-accent-green to-emerald-400 text-background font-bold hover:shadow-[0_0_30px_rgba(0,217,165,0.3)] transition-all">
+              أضف وظيفة
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners/Stats Section */}
+      <section className="py-16 bg-white/[0.02]">
+        <div className="max-w-7xl mx-auto px-4">
+          <p className="text-center text-white/40 text-sm mb-8">شركاؤنا في النجاح</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50">
+            {['NVIDIA', 'Google', 'Microsoft', 'AWS', 'Oracle', 'Salesforce'].map((brand, i) => (
+              <div key={i} className="text-white/30 font-bold text-xl">{brand}</div>
+            ))}
           </div>
         </div>
       </section>
