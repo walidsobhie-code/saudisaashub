@@ -45,15 +45,6 @@ function Hero() {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-  const [currentHeadline, setCurrentHeadline] = useState(0);
-
-  // Rotate headlines every 4 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentHeadline((prev) => (prev + 1) % rotatingHeadlines.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
