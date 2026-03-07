@@ -354,7 +354,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-bold text-white">
                 أحدث <span className="bg-gradient-to-r from-emerald-400 via-purple-400 to-pink-500 bg-clip-text text-transparent">المقالات</span>
               </h2>
-              <p className="text-white/40 mt-2">Stay ahead with latest insights</p>
+              <p className="text-white/40 mt-2 text-lg font-light">أحدث التحليلات والتقارير التقنية</p>
             </div>
             <Link href="/articles" className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-emerald-500/30 transition-all">
               عرض الكل
