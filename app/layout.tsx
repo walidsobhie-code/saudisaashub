@@ -61,6 +61,7 @@ export async function generateMetadata(): Promise<Metadata> {
       'article:published_time': latestDate,
       'article:modified_time': latestDate,
       'Impact-Site-Verification': '0650d577-f35c-4622-aa6d-c744ba42eb65',
+      'google-site-verification': 'phvzhRL3PSSslLSubhpTTFC5HGIDjyKJFtnCZpB02X0',
     },
     twitter: {
       card: 'summary_large_image',
