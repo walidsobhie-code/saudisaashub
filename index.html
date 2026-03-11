@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaudiSaaSHub | بوابة السعودية للبرمجيات كخدمة</title>
+    <meta name="description" content="اكتشف أفضل حلول SaaS في المملكة العربية السعودية. قارن المنصات، اقرأ المراجعات، وابحث عن شريك تقني موثوق.">
+    <meta name="keywords" content="SaaS Saudi Arabia, برمجيات سحابية, سعودي ساس, Saudi tech, فينتك السعودية, Saudi startup software">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SaudiSaaSHub">
+    <link rel="canonical" href="https://saudisaashub.com/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇸🇦</text></svg>">
+    <link rel="alternate" hreflang="ar" href="https://saudisaashub.com/ar/">
+    <link rel="alternate" hreflang="en" href="https://saudisaashub.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://saudisaashub.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SaudiSaaSHub | بوابة السعودية للبرمجيات كخدمة">
+    <meta property="og:description" content="اكتشف أفضل حلول SaaS في المملكة العربية السعودية">
+    <meta property="og:image" content="file:///Users/walidsobhi/Desktop/og-image.png">
+    <meta property="og:url" content="https://saudisaashub.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="SaudiSaaSHub">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SaudiSaaSHub">
+    <meta name="twitter:title" content="SaudiSaaSHub | بوابة السعودية للبرمجيات كخدمة">
+    <meta name="twitter:description" content="اكتشف أفضل حلول SaaS في المملكة العربية السعودية">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #030407;
+            --bg-secondary: #080C14;
+            --bg-card: rgba(12, 20, 38, 0.8);
+            --accent-green: #145E30;
+            --accent-green-light: #17954D;
+            --accent-green-dark: #0A3D1F;
+            --accent-green-glow: #22C55E;
+            --accent-cyan: #06B6D4;
+            --accent-cyan-bright: #22D3EE;
+            --accent-purple: #7C3AED;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --text-muted: #475569;
+            --glass-bg: rgba(8, 14, 28, 0.85);
+            --glass-border: rgba(34, 197, 94, 0.12);
+            --shadow-glow: 0 0 80px rgba(20, 94, 48, 0.35);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-heading: 'IBM Plex Sans Arabic', 'Tajawal', sans-serif;
+            --font-display: 'Tajawal', 'IBM Plex Sans Arabic', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        [dir="ltr"] body {
+            font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        /* Starfield Canvas */
+        #starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            display: flex;
+            background: var(--bg-card);
+            border-radius: 30px;
+            padding: 4px;
+            border: 1px solid var(--glass-border);
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .lang-toggle span {
+            padding: 6px 16px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .lang-toggle span.active {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-cyan));
+            color: var(--bg-primary);
+        }
+
+        /* CTA Button */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            color: var(--bg-primary);
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245, 197, 66, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-cyan);
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 2px solid var(--accent-cyan);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-cyan);
+            color: var(--bg-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 140px 5% 100px;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at 50% 0%, rgba(20, 94, 54, 0.15) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+                        radial-gradient(ellipse at 20% 60%, rgba(34, 211, 238, 0.06) 0%, transparent 40%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(13, 27, 42, 0.8) 0%, transparent 70%),
+                        radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(ellipse at 20% 60%, rgba(0, 212, 255, 0.05) 0%, transparent 40%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+        }
+
+        .hero h1 .title-text {
+            background: linear-gradient(135deg, #165030 0%, #177D3E 25%, #00D4FF 50%, #165030 75%, #177D3E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 300% 300%;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards, gradientShiftLogo 4s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes gradientShiftLogo {
+            0%, 100% { background-position: 0% 50%; }
+            25% { background-position: 50% 25%; }
+            50% { background-position: 100% 50%; }
+            75% { background-position: 50% 75%; }
+        }
+
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            filter: blur(30px);
+            opacity: 0.4;
+            z-index: -1;
+            border-radius: 20px;
+            animation: glowPulse 2s ease-in-out infinite;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.1s forwards;
+        }
+
+        .hero .tagline {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            background: linear-gradient(135deg, #165030 0%, #177D3E 50%, #00D4FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            margin: 1.5rem 0;
+            letter-spacing: 4px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.15s forwards, gradientShiftLogo 4s ease-in-out infinite;
+        }
+
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { opacity: 0.3; filter: blur(25px); }
+            50% { opacity: 0.5; filter: blur(35px); }
+        }
+
+        @keyframes subtlePulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        /* Typing Animation */
+        .typing-container {
+            font-size: 1.3rem;
+            margin: 1.5rem 0;
+            height: 2rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.2s forwards;
+        }
+
+        .typing-text {
+            color: var(--accent-gold);
+            font-weight: 600;
+            border-right: 3px solid var(--accent-gold);
+            padding-right: 5px;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { border-color: var(--accent-gold); }
+            51%, 100% { border-color: transparent; }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.3s forwards;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            padding: 1.5rem 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.4s forwards;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-item .value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .stat-item .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.5s forwards, bounce 2s 1s infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--text-muted);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Title with Logo Gradient */
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .hero-title .title-text {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-cyan) 50%, var(--accent-gold-light) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+            display: inline-block;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+        }
+
+        .hero-title .title-text::after {
+            content: '';
+            display: block;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-cyan), var(--accent-gold-light));
+            border-radius: 2px;
+            margin-top: 10px;
+            animation: lineExpand 1s ease 0.5s forwards;
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+
+        @keyframes lineExpand {
+            to { transform: scaleX(1); }
+        }
+
+        [dir="ltr"] .hero-title .title-text::after {
+            transform-origin: left;
+        }
+
+        /* Hero Subtitle */
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.35rem);
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.15s forwards;
+        }
+
+        /* Search Container */
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.25s forwards;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 8px 8px 8px 20px;
+            transition: var(--transition);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-box:focus-within {
+            border-color: var(--accent-green-light);
+            box-shadow: 0 4px 30px rgba(20, 94, 48, 0.25);
+        }
+
+        .search-icon {
+            width: 22px;
+            height: 22px;
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .search-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text-primary);
+            font-size: 1rem;
+            padding: 12px 16px;
+            font-family: inherit;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-btn {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-light) 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .search-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(20, 94, 48, 0.4);
+        }
+
+        /* Categories Section */
+        .categories-section {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.35s forwards;
+        }
+
+        .categories-title {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-weight: 500;
+        }
+
+        .categories-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+            min-width: 130px;
+        }
+
+        .category-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-green-light);
+            box-shadow: 0 12px 32px rgba(20, 94, 48, 0.2);
+            background: rgba(20, 94, 48, 0.1);
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--accent-green-dark) 0%, var(--accent-green) 100%);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .category-item:hover .category-icon {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-light) 100%);
+        }
+
+        .category-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent-green-glow);
+        }
+
+        .category-item:hover .category-icon svg {
+            color: white;
+        }
+
+        .category-name {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .category-item:hover .category-name {
+            color: var(--text-primary);
+        }
+
+        /* Hero Stats - Updated Style */
+        .hero-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1.5rem 3rem;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.45s forwards;
+        }
+
+        .hero-stats .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0 1rem;
+        }
+
+        .hero-stats .stat-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--text-primary);
+        }
+
+        .hero-stats .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: var(--glass-border);
+        }
+
+        /* Floating 3D Shapes */
+        .floating-shapes {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.15;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape-1 {
+            top: 20%;
+            left: 10%;
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--accent-gold);
+            transform: rotate(45deg);
+            animation-delay: 0s;
+        }
+
+        .shape-2 {
+            top: 60%;
+            right: 15%;
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--accent-cyan);
+            border-radius: 50%;
+            animation-delay: -5s;
+        }
+
+        .shape-3 {
+            bottom: 30%;
+            left: 20%;
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 70px solid var(--accent-purple);
+            opacity: 0.2;
+            animation-delay: -10s;
+        }
+
+        .shape-4 {
+            top: 40%;
+            right: 25%;
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--accent-gold);
+            transform: rotate(20deg);
+            animation-delay: -7s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(5deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(20px) rotate(-5deg); }
+        }
+
+        /* Section Styles */
+        section {
+            position: relative;
+            z-index: 2;
+            padding: 100px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Trusted Companies - Marquee */
+        .companies-section {
+            background: var(--bg-secondary);
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .marquee-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 40px;
+            animation: marquee 30s linear infinite;
+            width: max-content;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .company-badge {
+            flex-shrink: 0;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .company-badge:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 40px rgba(245, 197, 66, 0.2);
+        }
+
+        .company-badge .logo-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--bg-primary);
+            overflow: hidden;
+            background: var(--glass-bg);
+        }
+
+        .company-badge .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 4px;
+        }
+
+        .company-badge .name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        /* Categories Grid - 3D Cards */
+        .categories-section {
+            background: var(--bg-primary);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            position: relative;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .category-card-inner {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        .category-card:hover .category-card-inner {
+            transform: translateY(-10px) rotateX(5deg);
+            border-color: var(--accent-gold);
+            box-shadow: 0 20px 60px rgba(245, 197, 66, 0.2);
+        }
+
+        .category-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .category-card .name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-card .count {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: rgba(245, 197, 66, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* Featured Products */
+        .products-section {
+            background: var(--bg-secondary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-cyan), var(--accent-purple));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .product-logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--bg-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card .description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-badge {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent-cyan);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .rating {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+        }
+
+        /* Why SaudiSaaSHub */
+        .why-section {
+            background: var(--bg-primary);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 15px 50px rgba(0, 212, 255, 0.15);
+        }
+
+        .why-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .why-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Articles Section */
+        .articles-section {
+            background: var(--bg-secondary);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .article-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .article-card:hover .article-image img {
+            transform: scale(1.1);
+        }
+
+        .article-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .article-content {
+            padding: 25px;
+        }
+
+        .article-content .category {
+            display: inline-block;
+            background: rgba(245, 197, 66, 0.1);
+            color: var(--accent-gold);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .article-content .excerpt {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .article-link {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .article-link:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Events Section */
+        .events-section {
+            background: var(--bg-primary);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--accent-gold), var(--accent-cyan));
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .event-date {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-date .calendar-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-primary);
+        }
+
+        .event-date .month {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .event-date .day {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .event-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-card .location {
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .event-card .description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .newsletter-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-content p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 16px 24px;
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 20px rgba(245, 197, 66, 0.2);
+        }
+
+        .newsletter-form input::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 80px 5% 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--text-secondary);
+        }
+
+        .social-links a:hover {
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(245, 197, 66, 0.3);
+        }
+
+        .social-links svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--glass-border);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom span {
+            color: var(--accent-gold);
+        }
+
+        /* Reveal on Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .products-grid, .articles-grid, .events-grid, .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .categories-grid, .products-grid, .articles-grid, .events-grid, .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats {
+                gap: 1rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        /* Mobile Menu Open */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 15, 0.98);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu a {
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-primary);
+        }
+    </style>
+
+    <!-- Professional Custom Styles -->
+    <style>
+        /* Enhanced Professional Typography */
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.5rem) !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.04em !important;
+            line-height: 1.4 !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .hero-title .title-text {
+            background: linear-gradient(135deg, #145E36 0%, #22C55E 35%, #22D3EE 65%, #145E36 100%) !important;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 300% 300%;
+            animation: gradientShift 4s ease-in-out infinite;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .hero-title .title-text::after {
+            content: '';
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, #145E36, #22C55E, #22D3EE);
+            border-radius: 2px;
+            margin-top: 16px;
+            width: 120px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: lineExpand 1s ease 0.8s forwards;
+            transform: scaleX(0);
+        }
+
+        @keyframes lineExpand {
+            to { transform: scaleX(1); }
+        }
+
+        .tagline {
+            font-size: clamp(1.25rem, 3vw, 2rem) !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.15em !important;
+            color: #94A3B8 !important;
+            margin: 1.5rem auto !important;
+            max-width: 600px;
+        }
+
+        .typing-container {
+            margin: 2rem 0 !important;
+        }
+
+        .typing-text {
+            font-size: 1.5rem !important;
+            font-weight: 600 !important;
+            color: #22C55E !important;
+            border-right: 3px solid #22C55E !important;
+        }
+
+        .hero-stats {
+            margin-top: 4rem !important;
+            padding: 2rem 3rem !important;
+            gap: 3rem !important;
+        }
+
+        .stat-item .value {
+            font-size: 2rem !important;
+            font-weight: 700 !important;
+            color: #22C55E !important;
+        }
+
+        .stat-item .label {
+            font-size: 0.9rem !important;
+            font-weight: 500 !important;
+            color: #64748B !important;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Enhanced Section Headers */
+        .section-header {
+            margin-bottom: 4rem !important;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.75rem, 4vw, 2.75rem) !important;
+            font-weight: 700 !important;
+            letter-spacing: -0.03em !important;
+            background: linear-gradient(135deg, #F1F5F9 0%, #22C55E 50%, #22D3EE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            height: 3px;
+            background: linear-gradient(90deg, #145E36, #22C55E);
+            border-radius: 2px;
+            margin-top: 12px;
+            width: 80px;
+        }
+
+        /* Enhanced Cards */
+        .category-card-inner,
+        .product-card,
+        .why-card,
+        .article-card,
+        .event-card {
+            border-radius: 24px !important;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        .category-card:hover .category-card-inner {
+            transform: translateY(-12px) !important;
+            box-shadow: 0 25px 50px -12px rgba(34, 197, 94, 0.25) !important;
+            border-color: #22C55E !important;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px) !important;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .product-card::before {
+            border-radius: 24px !important;
+        }
+
+        /* Enhanced Buttons */
+        .btn-primary {
+            padding: 14px 32px !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            border-radius: 50px !important;
+            background: linear-gradient(135deg, #145E36, #22C55E) !important;
+            box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3) !important;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 8px 30px rgba(34, 197, 94, 0.5) !important;
+        }
+
+        .btn-secondary {
+            padding: 14px 32px !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            border-radius: 50px !important;
+            border: 2px solid #22C55E !important;
+            color: #22C55E !important;
+        }
+
+        .btn-secondary:hover {
+            background: #22C55E !important;
+            color: #030407 !important;
+            transform: translateY(-3px) !important;
+        }
+
+        /* Enhanced Navigation */
+        nav {
+            padding: 1.25rem 5% !important;
+        }
+
+        nav.scrolled {
+            padding: 0.875rem 5% !important;
+            background: rgba(3, 4, 7, 0.95) !important;
+            backdrop-filter: blur(20px);
+        }
+
+        .nav-links a {
+            font-size: 0.95rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.02em;
+        }
+
+        /* Enhanced Glass Cards */
+        .glass {
+            border-radius: 20px !important;
+            border: 1px solid rgba(34, 197, 94, 0.12) !important;
+        }
+
+        /* Better Spacing */
+        section {
+            padding: 100px 5% !important;
+        }
+
+        .categories-grid,
+        .products-grid,
+        .articles-grid,
+        .events-grid,
+        .why-grid {
+            gap: 28px !important;
+        }
+
+        /* Company Badge Enhancement */
+        .company-badge {
+            border-radius: 16px !important;
+            padding: 20px 28px !important;
+        }
+
+        .company-badge:hover {
+            border-color: #22C55E !important;
+            box-shadow: 0 12px 40px rgba(34, 197, 94, 0.2) !important;
+        }
+
+        /* Event Card Enhancement */
+        .event-card::before {
+            width: 4px !important;
+            background: linear-gradient(180deg, #145E36, #22C55E, #22D3EE) !important;
+        }
+
+        /* Newsletter Enhancement */
+        .newsletter-form input {
+            padding: 18px 28px !important;
+            border-radius: 50px !important;
+            font-size: 1rem !important;
+        }
+
+        .newsletter-form input:focus {
+            border-color: #22C55E !important;
+            box-shadow: 0 0 30px rgba(34, 197, 94, 0.2) !important;
+        }
+
+        /* Footer Enhancement */
+        footer {
+            padding: 80px 5% 40px !important;
+        }
+
+        .footer-column a:hover {
+            color: #22C55E !important;
+            padding-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="starfield"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <div class="logo-icon"><img src="file:///Users/walidsobhi/Desktop/logo.png" alt="SaudiSaaSHub"></div>
+            <span>SaudiSaaSHub</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="#categories" data-ar="التصنيفات" data-en="Categories">التصنيفات</a></li>
+            <li><a href="#companies" data-ar="الشركات" data-en="Companies">الشركات</a></li>
+            <li><a href="#articles" data-ar="المقالات" data-en="Articles">المقالات</a></li>
+            <li><a href="#events" data-ar="الفعاليات" data-en="Events">الفعاليات</a></li>
+            <li><a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="lang-toggle" onclick="toggleLanguage()">
+                <span class="active" data-lang="ar">العربية</span>
+                <span data-lang="en">English</span>
+            </div>
+            <a href="#contact" class="btn-primary" data-ar="أضف منتجك" data-en="Add Your Product">أضف منتجك</a>
+            <div class="menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-menu" onclick="toggleMobileMenu()">×</div>
+        <a href="#hero" onclick="toggleMobileMenu()">الرئيسية</a>
+        <a href="#categories" onclick="toggleMobileMenu()">التصنيفات</a>
+        <a href="#companies" onclick="toggleMobileMenu()">الشركات</a>
+        <a href="#articles" onclick="toggleMobileMenu()">المقالات</a>
+        <a href="#events" onclick="toggleMobileMenu()">الفعاليات</a>
+        <a href="#contact" onclick="toggleMobileMenu()">تواصل</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-main">Saudi SaaS Hub</span>
+                <span class="title-sub" data-ar="🇸🇦 في السعودية مصدرك الأول لـ" data-en="🇸🇦 Your #1 Source in Saudi Arabia">🇸🇦 في السعودية مصدرك الأول لـ</span>
+            </h1>
+            <p class="tagline" data-ar="اكتشف.. قارن.. انطلق" data-en="Discover.. Compare.. Launch">اكتشف.. قارن.. انطلق</p>
+            <div class="typing-container">
+                <span class="typing-text" id="typingText">منصات</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#categories" class="btn-primary" data-ar="استكشف الآن" data-en="Explore Now">استكشف الآن</a>
+                <a href="#contact" class="btn-secondary" data-ar="أضف شركتك" data-en="Add Your Company">أضف شركتك</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="icon">🏢</div>
+                    <div class="value">+<span class="counter" data-target="120">120</span></div>
+                    <div class="label" data-ar="شركة" data-en="Companies">شركة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="icon">📦</div>
+                    <div class="value">+<span class="counter" data-target="40">40</span></div>
+                    <div class="label" data-ar="تصنيف" data-en="Categories">تصنيف</div>
+                </div>
+                <div class="stat-item">
+                    <div class="icon">🚀</div>
+                    <div class="value">+<span class="counter" data-target="5000">5000</span></div>
+                    <div class="label" data-ar="مستخدم" data-en="Users">مستخدم</div>
+                </div>
+                <div class="stat-item">
+                    <div class="icon">🇸🇦</div>
+                    <div class="value" data-ar="مبني للسوق" data-en="Built for KSA">مبني للسوق</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Trusted Companies -->
+    <section class="companies-section" id="companies">
+        <div class="section-header reveal">
+            <h2 data-ar="شركات SaaS رائدة في المملكة" data-en="Leading SaaS Companies in the Kingdom">شركات SaaS رائدة في المملكة</h2>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <!-- Duplicate for seamless loop -->
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/foodics.png" alt="Foodics"></div><span class="name">Foodics</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/lean.png" alt="Lean"></div><span class="name">Lean</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/mozn.png" alt="Mozn"></div><span class="name">Mozn</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/salla.png" alt="Salla"></div><span class="name">Salla</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/zid.png" alt="Zid"></div><span class="name">Zid</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/qiwa.jpeg" alt="Qiwa"></div><span class="name">Qiwa</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/tamara.jpeg" alt="Tamara"></div><span class="name">Tamara</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/hala.png" alt="Hala"></div><span class="name">Hala</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/wafeq.png" alt="Wafeq"></div><span class="name">Wafeq</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/Google.png" alt="Google"></div><span class="name">Google</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/AWS.png" alt="AWS"></div><span class="name">AWS</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/Microsoft.png" alt="Microsoft"></div><span class="name">Microsoft</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/NVIDIA.png" alt="NVIDIA"></div><span class="name">NVIDIA</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/Oracle.png" alt="Oracle"></div><span class="name">Oracle</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/Salesforce.png" alt="Salesforce"></div><span class="name">Salesforce</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/foodics.png" alt="Foodics"></div><span class="name">Foodics</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/lean.png" alt="Lean"></div><span class="name">Lean</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/mozn.png" alt="Mozn"></div><span class="name">Mozn</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/salla.png" alt="Salla"></div><span class="name">Salla</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/zid.png" alt="Zid"></div><span class="name">Zid</span></div>
+                <div class="company-badge"><div class="logo-box"><img src="file:///Users/walidsobhi/Desktop/qiwa.jpeg" alt="Qiwa"></div><span class="name">Qiwa</span></div>
+                <div class="company-badge"><div class="logo-box" style="background:#84CC16; color: white; font-weight: bold;">B</div><span class="name">Bosta</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories-section" id="categories">
+        <div class="section-header reveal">
+            <h2 data-ar="استكشف حسب التصنيف" data-en="Browse by Category">استكشف حسب التصنيف</h2>
+        </div>
+        <div class="categories-grid">
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">🏦</span>
+                    <div class="name" data-ar="فينتك" data-en="Fintech">فينتك</div>
+                    <span class="count">+25 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">🛒</span>
+                    <div class="name" data-ar="تجارة إلكترونية" data-en="E-commerce">تجارة إلكترونية</div>
+                    <span class="count">+30 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">🏥</span>
+                    <div class="name" data-ar="صحة" data-en="Healthcare">صحة</div>
+                    <span class="count">+18 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">🎓</span>
+                    <div class="name" data-ar="تعليم" data-en="Education">تعليم</div>
+                    <span class="count">+22 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">🏗️</span>
+                    <div class="name" data-ar="بناء وعقارات" data-en="Construction">بناء وعقارات</div>
+                    <span class="count">+15 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">👥</span>
+                    <div class="name" data-ar="موارد بشرية" data-en="HR">موارد بشرية</div>
+                    <span class="count">+28 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">📊</span>
+                    <div class="name" data-ar="تحليلات" data-en="Analytics">تحليلات</div>
+                    <span class="count">+20 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">🔐</span>
+                    <div class="name" data-ar="أمن سيبراني" data-en="Cybersecurity">أمن سيبراني</div>
+                    <span class="count">+16 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">🚚</span>
+                    <div class="name" data-ar="لوجستيات" data-en="Logistics">لوجستيات</div>
+                    <span class="count">+24 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">📱</span>
+                    <div class="name" data-ar="تواصل اجتماعي" data-en="Social Media">تواصل اجتماعي</div>
+                    <span class="count">+19 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">⚙️</span>
+                    <div class="name" data-ar="عمليات" data-en="Operations">عمليات</div>
+                    <span class="count">+21 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+            <div class="category-card reveal">
+                <div class="category-card-inner">
+                    <span class="icon">🤖</span>
+                    <div class="name" data-ar="ذكاء اصطناعي" data-en="AI">ذكاء اصطناعي</div>
+                    <span class="count">+32 <span data-ar="منصة" data-en="platforms">منصة</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products-section" id="products">
+        <div class="section-header reveal">
+            <h2 data-ar="منتجات مميزة هذا الشهر" data-en="Featured Products This Month">منتجات مميزة هذا الشهر</h2>
+        </div>
+        <div class="products-grid">
+            <div class="product-card reveal">
+                <div class="product-logo" style="background: linear-gradient(135deg, #FF6B35, #FF8F65)">ف</div>
+                <h3 data-ar="فودتكس" data-en="Foodics">فودتكس</h3>
+                <p class="description" data-ar="نظام متكامل لإدارة المطاعم والنقاط الذكية" data-en="Complete restaurant management system">نظام متكامل لإدارة المطاعم والنقاط الذكية</p>
+                <div class="product-meta">
+                    <span class="category-badge" data-ar="مطاعم" data-en="Restaurants">مطاعم</span>
+                    <span class="rating">★★★★★ 4.9</span>
+                </div>
+                <a href="#" class="btn-secondary" data-ar="اكتشف المزيد" data-en="Discover More">اكتشف المزيد</a>
+            </div>
+            <div class="product-card reveal">
+                <div class="product-logo" style="background: linear-gradient(135deg, #EC4899, #F472B6)">ص</div>
+                <h3 data-ar="صلة" data-en="Salla">صلة</h3>
+                <p class="description" data-ar="منصة متاجر إلكترونية سعودية متكاملة" data-en="Saudi e-commerce platform">منصة متاجر إلكترونية سعودية متكاملة</p>
+                <div class="product-meta">
+                    <span class="category-badge" data-ar="متاجر" data-en="Stores">متاجر</span>
+                    <span class="rating">★★★★★ 4.8</span>
+                </div>
+                <a href="#" class="btn-secondary" data-ar="اكتشف المزيد" data-en="Discover More">اكتشف المزيد</a>
+            </div>
+            <div class="product-card reveal">
+                <div class="product-logo" style="background: linear-gradient(135deg, #6366F1, #818CF8)">ر</div>
+                <h3 data-ar="رّوّاد" data-en="Rewaa">رّوّاد</h3>
+                <p class="description" data-ar="حلول متكاملة لإدارة المخزون والمحلات" data-en="Complete inventory and store management">حلول متكاملة لإدارة المخزون والمحلات</p>
+                <div class="product-meta">
+                    <span class="category-badge" data-ar="مخازن" data-en="Warehouses">مخازن</span>
+                    <span class="rating">★★★★★ 4.7</span>
+                </div>
+                <a href="#" class="btn-secondary" data-ar="اكتشف المزيد" data-en="Discover More">اكتشف المزيد</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why SaudiSaaSHub -->
+    <section class="why-section" id="why">
+        <div class="section-header reveal">
+            <h2 data-ar="لماذا SaudiSaaSHub؟" data-en="Why SaudiSaaSHub?">لماذا SaudiSaaSHub؟</h2>
+        </div>
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="icon">🎯</div>
+                <h3 data-ar="مخصص للسوق السعودي" data-en="Built for Saudi Market">مخصص للسوق السعودي</h3>
+                <p data-ar="منصات مختارة خصيصاً لتلبية احتياجات السوق المحلي" data-en="Platforms carefully selected for local market needs">منصات مختارة خصيصاً لتلبية احتياجات السوق المحلي</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="icon">🔍</div>
+                <h3 data-ar="مقارنة شاملة" data-en="Comprehensive Comparison">مقارنة شاملة</h3>
+                <p data-ar="قارن بين الحلول بناءً على السعر، الميزات، والتقييمات" data-en="Compare solutions by price, features, and reviews">قارن بين الحلول بناءً على السعر، الميزات، والتقييمات</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="icon">🤝</div>
+                <h3 data-ar="شبكة موثوقة" data-en="Trusted Network">شبكة موثوقة</h3>
+                <p data-ar="شركات مدققة وموثقة من قبل مجتمعنا" data-en="Verified and trusted companies by our community">شركات مدققة وموثقة من قبل مجتمعنا</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="icon">📰</div>
+                <h3 data-ar="محتوى محلي" data-en="Local Content">محتوى محلي</h3>
+                <p data-ar="مقالات ومراجعات عربية متخصصة بالسوق السعودي" data-en="Arabic articles and reviews specialized for Saudi market">مقالات ومراجعات عربية متخصصة بالسوق السعودي</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="icon">🚀</div>
+                <h3 data-ar="اكتشاف أسرع" data-en="Faster Discovery">اكتشاف أسرع</h3>
+                <p data-ar="ابحث واطلع على الحلول المناسبة في دقائق" data-en="Find and explore suitable solutions in minutes">ابحث واطلع على الحلول المناسبة في دقائق</p>
+            </div>
+            <div class="why-card reveal">
+                <div class="icon">💼</div>
+                <h3 data-ar="للأفراد والمؤسسات" data-en="For Individuals & Business">للأفراد والمؤسسات</h3>
+                <p data-ar="حلول تناسب startups، SMEs، والمؤسسات الكبرى" data-en="Solutions for startups, SMEs, and large enterprises">حلول تناسب startups، SMEs، والمؤسسات الكبرى</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="articles-section" id="articles">
+        <div class="section-header reveal">
+            <h2 data-ar="أحدث المقالات" data-en="Latest Articles">أحدث المقالات</h2>
+        </div>
+        <div class="articles-grid">
+            <article class="article-card reveal">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=600" alt="Fintech Saudi" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <span class="category" data-ar="فينتك" data-en="Fintech">فينتك</span>
+                    <h3 data-ar="أفضل منصات الفينتك في السعودية 2025" data-en="Best Fintech Platforms in Saudi Arabia 2025">أفضل منصات الفينتك في السعودية 2025</h3>
+                    <p class="excerpt" data-ar="اكتشف أبرز منصات الفينتك التي تُحدث نقلة فيPayments والخدمات المالية بالمملكة" data-en="Discover the top fintech platforms revolutionizing payments in the Kingdom">اكتشف أبرز منصات الفينتك التي تُحدث نقلة فيPayments والخدمات المالية بالمملكة</p>
+                    <div class="article-meta">
+                        <span>🎯 8 <span data-ar="دقائق قراءة" data-en="min read">دقائق قراءة</span></span>
+                        <a href="#" class="article-link">اقرأ المزيد ←</a>
+                    </div>
+                </div>
+            </article>
+            <article class="article-card reveal">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" alt="ERP Saudi" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <span class="category" data-ar="عمليات" data-en="Operations">عمليات</span>
+                    <h3 data-ar="كيف تختار نظام ERP مناسب لشركتك؟" data-en="How to Choose the Right ERP for Your Company?">كيف تختار نظام ERP مناسب لشركتك؟</h3>
+                    <p class="excerpt" data-ar="دليل شامل لاختيار نظام تخطيط الموارد المؤسسية المناسب لنشاطك التجاري" data-en="Complete guide to choosing the right ERP system for your business">دليل شامل لاختيار نظام تخطيط الموارد المؤسسية المناسب لنشاطك التجاري</p>
+                    <div class="article-meta">
+                        <span>🎯 12 <span data-ar="دقائق قراءة" data-en="min read">دقائق قراءة</span></span>
+                        <a href="#" class="article-link">اقرأ المزيد ←</a>
+                    </div>
+                </div>
+            </article>
+            <article class="article-card reveal">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?w=600" alt="Ecommerce Saudi" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <span class="category" data-ar="تجارة إلكترونية" data-en="E-commerce">تجارة إلكترونية</span>
+                    <h3 data-ar="مستقبل التجارة الإلكترونية في المملكة" data-en="Future of E-commerce in Saudi Arabia">مستقبل التجارة الإلكترونية في المملكة</h3>
+                    <p class="excerpt" data-ar="تحليل معمّق لاتجاهات التجارة الإلكترونية下一个十年 في السعودية" data-en="In-depth analysis of e-commerce trends in Saudi Arabia for the next decade">تحليل معمّق لاتجاهات التجارة الإلكترونية下一个十年 في السعودية</p>
+                    <div class="article-meta">
+                        <span>🎯 10 <span data-ar="دقائق قراءة" data-en="min read">دقائق قراءة</span></span>
+                        <a href="#" class="article-link">اقرأ المزيد ←</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Events -->
+    <section class="events-section" id="events">
+        <div class="section-header reveal">
+            <h2 data-ar="الفعاليات القادمة" data-en="Upcoming Events">الفعاليات القادمة</h2>
+        </div>
+        <div class="events-grid">
+            <div class="event-card reveal">
+                <div class="event-date">
+                    <div class="calendar-icon">
+                        <span class="month">فبراير</span>
+                        <span class="day">15</span>
+                    </div>
+                </div>
+                <h3>LEAP 2026</h3>
+                <div class="location">📍 الرياض</div>
+                <p class="description" data-ar="أكبر مؤتمر تقني في العالم العربي" data-en="The largest tech conference in the Arab world">أكبر مؤتمر تقني في العالم العربي</p>
+                <a href="#" class="btn-primary" data-ar="سجّل الآن" data-en="Register Now">سجّل الآن</a>
+            </div>
+            <div class="event-card reveal">
+                <div class="event-date">
+                    <div class="calendar-icon">
+                        <span class="month">مارس</span>
+                        <span class="day">15</span>
+                    </div>
+                </div>
+                <h3>SaaS Connect KSA</h3>
+                <div class="location">📍 الرياض</div>
+                <p class="description" data-ar="ملتقى بناة السوق السعودي للسass" data-en="The gathering of Saudi SaaS builders">ملتقى بناة السوق السعودي للسass</p>
+                <a href="#" class="btn-primary" data-ar="سجّل الآن" data-en="Register Now">سجّل الآن</a>
+            </div>
+            <div class="event-card reveal">
+                <div class="event-date">
+                    <div class="calendar-icon">
+                        <span class="month">أبريل</span>
+                        <span class="day">15</span>
+                    </div>
+                </div>
+                <h3>Fintech Saudi Summit</h3>
+                <div class="location">📍 الرياض</div>
+                <p class="description" data-ar="قمة الفينتك السنوية في المملكة" data-en="Annual fintech summit in the Kingdom">قمة الفينتك السنوية في المملكة</p>
+                <a href="#" class="btn-primary" data-ar="سجّل الآن" data-en="Register Now">سجّل الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="newsletter-content reveal">
+            <h2 data-ar="كن أول من يعلم" data-en="Be the First to Know">كن أول من يعلم بأحدث حلول SaaS السعودية</h2>
+            <p data-ar="اشترك في نشرتنا الإخبارية للحصول على آخر التحديثات" data-en="Subscribe to our newsletter for the latest updates">اشترك في نشرتنا الإخبارية للحصول على آخر التحديثات</p>
+            <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                <input type="email" placeholder="بريدك الإلكتروني" data-ar-placeholder="بريدك الإلكتروني" data-en-placeholder="Your email" required>
+                <button type="submit" class="btn-primary" data-ar="اشترك" data-en="Subscribe">اشترك</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon"><img src="file:///Users/walidsobhi/Desktop/logo.png" alt="SaudiSaaSHub"></div>
+                    <span>SaudiSaaSHub</span>
+                </div>
+                <p data-ar="بوابتك الأولى لاكتشاف أفضل حلول SaaS في المملكة العربية السعودية" data-en="Your gateway to discover the best SaaS solutions in Saudi Arabia">بوابتك الأولى لاكتشاف أفضل حلول SaaS في المملكة العربية السعودية</p>
+                <div class="social-links">
+                    <a href="https://twitter.com/SaudiSaaSHub" target="_blank" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/company/SaudiSaaSHub" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/SaudiSaaSHub" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@SaudiSaaSHub" target="_blank" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://tiktok.com/@SaudiSaaSHub" target="_blank" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v6.16c0 2.52-1.12 4.84-3.11 6.24-2.22 1.57-5.22 1.57-7.41 0-1.99-1.4-3.11-3.72-3.11-6.24V6.56c-.54-.32-1.09-.64-1.66-.93-1.32-.62-2.76-.92-4.2-.97v4.14c1.12-.17 2.21-.5 3.2-1 .98-.49 1.84-1.16 2.52-1.98.7-.84 1.27-1.82 1.67-2.9.38-1.03.58-2.13.58-3.25 0-.34-.02-.68-.05-1.01z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+                <ul>
+                    <li><a href="#hero" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                    <li><a href="#categories" data-ar="التصنيفات" data-en="Categories">التصنيفات</a></li>
+                    <li><a href="#companies" data-ar="الشركات" data-en="Companies">الشركات</a></li>
+                    <li><a href="#articles" data-ar="المقالات" data-en="Articles">المقالات</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 data-ar="التصنيفات" data-en="Categories">التصنيفات</h4>
+                <ul>
+                    <li><a href="#" data-ar="فينتك" data-en="Fintech">فينتك</a></li>
+                    <li><a href="#" data-ar="تجارة إلكترونية" data-en="E-commerce">تجارة إلكترونية</a></li>
+                    <li><a href="#" data-ar="صحة" data-en="Healthcare">صحة</a></li>
+                    <li><a href="#" data-ar="ذكاء اصطناعي" data-en="AI">ذكاء اصطناعي</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h4>
+                <ul>
+                    <li><a href="mailto:hello@saudisaashub.com">hello@saudisaashub.com</a></li>
+                    <li><a href="#" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a></li>
+                    <li><a href="#" data-ar="الشروط والأحكام" data-en="Terms & Conditions">الشروط والأحكام</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 SaudiSaaSHub | <span data-ar="جميع الحقوق محفوظة" data-en="All Rights Reserved">جميع الحقوق محفوظة</span> |Made with 🇸🇦 in Saudi Arabia</p>
+        </div>
+    </footer>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SaudiSaaSHub",
+        "url": "https://saudisaashub.com",
+        "logo": "https://saudisaashub.com/logo.png",
+        "sameAs": [
+            "https://twitter.com/SaudiSaaSHub",
+            "https://linkedin.com/company/SaudiSaaSHub",
+            "https://instagram.com/SaudiSaaSHub",
+            "https://youtube.com/@SaudiSaaSHub",
+            "https://tiktok.com/@SaudiSaaSHub"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hello@saudisaashub.com",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SaudiSaaSHub",
+        "url": "https://saudisaashub.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://saudisaashub.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script>
+        // Starfield Animation
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let stars = [];
+        let animationId;
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createStars() {
+            stars = [];
+            const starCount = 200;
+            for (let i = 0; i < starCount; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 1.5,
+                    alpha: Math.random(),
+                    speed: Math.random() * 0.5 + 0.1
+                });
+            }
+        }
+
+        function animateStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            stars.forEach(star => {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+                ctx.fill();
+
+                star.y -= star.speed;
+                if (star.y < 0) {
+                    star.y = canvas.height;
+                    star.x = Math.random() * canvas.width;
+                }
+            });
+
+            animationId = requestAnimationFrame(animateStars);
+        }
+
+        initCanvas();
+        createStars();
+        animateStars();
+
+        window.addEventListener('resize', () => {
+            initCanvas();
+            createStars();
+        });
+
+        // Language Toggle
+        let currentLang = localStorage.getItem('lang') || 'ar';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            // Update toggle buttons
+            document.querySelectorAll('.lang-toggle span').forEach(span => {
+                span.classList.toggle('active', span.dataset.lang === lang);
+            });
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+                el.textContent = el.dataset[lang];
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-ar-placeholder][data-en-placeholder]').forEach(el => {
+                el.placeholder = el.dataset[lang + '-placeholder'];
+            });
+        }
+
+        function toggleLanguage() {
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            setLanguage(newLang);
+        }
+
+        // Initialize language
+        setLanguage(currentLang);
+
+        // Navigation Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+
+        // Typing Animation
+        const typingWords = {
+            ar: ['منصات', 'حلول', 'شركاء', 'ابتكارات'],
+            en: ['platforms', 'solutions', 'partners', 'innovations']
+        };
+
+        let wordIndex = 0;
+
+        function updateTyping() {
+            const words = typingWords[currentLang];
+            const textEl = document.getElementById('typingText');
+            textEl.textContent = words[wordIndex];
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+
+        setInterval(updateTyping, 2000);
+        updateTyping();
+
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.dataset.target);
+                    animateCounter(counter, target);
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        function animateCounter(el, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    el.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    el.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        // Newsletter Subscribe
+        function handleSubscribe(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input').value;
+            alert(currentLang === 'ar' ? 'شكراً لاشتراكك!' : 'Thank you for subscribing!');
+            e.target.reset();
+        }
+
+        // 3D Card Tilt Effect
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+
+                card.querySelector('.category-card-inner').style.transform =
+                    `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('.category-card-inner').style.transform =
+                    'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
