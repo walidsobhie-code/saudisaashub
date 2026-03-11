@@ -1,0 +1,6 @@
+# Cloudflare Pages Redirects
+# Example: /old-url /new-url 301
+
+# Language redirects (if you create separate pages)
+/ar / 302
+/en / 302
