@@ -1,7 +1,7 @@
 /**
  * Service Worker for SaudiSaaSHub
  * Provides offline support and caching
- * Generated: 2026-03-12T02:32:00.776Z
+ * Generated: 2026-03-12T02:34:26.591Z
  */
 
 const CACHE_NAME = 'saudisaashub-v1';
