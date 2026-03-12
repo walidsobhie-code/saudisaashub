@@ -113,7 +113,7 @@ export const saudiSaaSCompanies: SaudiSaaSCompany[] = [
   {
     name: 'Foodics',
     slug: 'foodics',
-    description: 'نظام نقاط بيع (POS) متكامل لإدارة المطاعم والمقاهي王安، يعمل بالذكاء الاصطناعي',
+    description: 'نظام نقاط بيع (POS) متكامل لإدارة المطاعم والمقاهي، يعمل بالذكاء الاصطناعي',
     category: 'Restaurant Tech',
     founded: 2014,
     website: 'https://foodics.com',
