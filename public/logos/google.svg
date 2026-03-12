@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Simplified Google G with official colors -->
+  <path d="M 100 20 L 160 60 L 160 100 L 100 140 L 40 100 L 40 60 Z" fill="#4285F4"/>
+  <polygon points="100,20 100,140 160,100" fill="#34A853"/>
+  <polygon points="40,60 100,20 100,100" fill="#FBBC05"/>
+  <polygon points="160,60 160,100 100,140" fill="#EA4335"/>
+</svg>

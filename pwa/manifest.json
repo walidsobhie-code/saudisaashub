@@ -1,0 +1,190 @@
+{
+  "name": "SaudiSaaSHub - Your Gateway to Saudi SaaS",
+  "short_name": "SaaS Hub",
+  "description": {
+    "ar": "الدليل الشامل لأفضل حلول SaaS في السوق السعودي. اكتشف، قارن، وقيّم أكثر من 500+ أداة سحابية.",
+    "en": "Your comprehensive guide to the best SaaS solutions in the Saudi market. Discover, compare, and rate 500+ cloud tools."
+  },
+  "start_url": "/?utm_source=pwa&utm_medium=manifest",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["windowed", "minimal-ui", "standalone"],
+  "orientation": "any",
+  "theme_color": "#0A0A0F",
+  "background_color": "#0A0A0F",
+  "dir": "rtl",
+  "lang": "ar-SA",
+  "categories": ["business", "productivity", "finance", "utilities"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/assets/icons/icon-72x72.svg",
+      "sizes": "72x72",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-96x96.svg",
+      "sizes": "96x96",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-128x128.svg",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-144x144.svg",
+      "sizes": "144x144",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-152x152.svg",
+      "sizes": "152x152",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-256x256.svg",
+      "sizes": "256x256",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-384x384.svg",
+      "sizes": "384x384",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/screenshots/wide-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": {
+        "ar": "صفحة الرئيسية - سطح المكتب",
+        "en": "Homepage - Desktop"
+      }
+    },
+    {
+      "src": "/assets/screenshots/narrow-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": {
+        "ar": "صفحة الرئيسية - الجوال",
+        "en": "Homepage - Mobile"
+      }
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "بحث عن SaaS",
+      "short_name": "بحث",
+      "description": "البحث عن أداة SaaS",
+      "url": "/?action=search",
+      "icons": [{ "src": "/assets/icons/search-96x96.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "التصنيفات",
+      "short_name": "تصنيفات",
+      "description": "تصفح التصنيفات",
+      "url": "/categories",
+      "icons": [{ "src": "/assets/icons/category-96x96.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "إضافة شركة",
+      "short_name": "إضافة",
+      "description": "إضافة شركة SaaS جديدة",
+      "url": "/add-company",
+      "icons": [{ "src": "/assets/icons/add-96x96.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Latest Articles",
+      "short_name": "Articles",
+      "description": "View latest SaaS articles and news",
+      "url": "/articles",
+      "icons": [{ "src": "/assets/icons/article-96x96.svg", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.saudisaashub.app",
+      "id": "com.saudisaashub.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/sa/app/saudisaashub/id1234567890"
+    }
+  ],
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 480
+  },
+  "file_handler": {
+    "action": "navigate"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+saudisaashub",
+      "url": "/?action=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "precache": {
+    "dynamic": true
+  },
+  "screenshots_enabled": true,
+  "widgets": [
+    {
+      "name": "بحث سريع",
+      "description": "البحث عن شركات SaaS من الشاشة الرئيسية",
+      "short_name": "بحث",
+      "tag": "saudisaashub-search",
+      "ms_ac_template": "search-widget.html"
+    },
+    {
+      "name": "Quick Search",
+      "description": "Search SaaS companies from home screen",
+      "short_name": "Search",
+      "tag": "saudisaashub-search-en",
+      "ms_ac_template": "search-widget-en.html"
+    }
+  ],
+  "features": [
+    "Cross Platform",
+    "Fast User Experience",
+    "Offline Support",
+    "Push Notifications",
+    "Installable"
+  ]
+}

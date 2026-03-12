@@ -1,407 +1,280 @@
+#!/usr/bin/env node
+
 /**
- * SaudiSaaSHub - Build Script
- * Optimizes assets for production using esbuild
+ * SaudiSaaSHub Build Script
+ * Optimizes HTML, CSS, JS and generates service worker for GitHub Pages
+ * Usage: node build.js
  */
 
-const esbuild = require('esbuild');
 const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const config = {
-  root: __dirname,
-  entryPoints: {
-    app: 'js/app.js',
-    'structured-data': 'js/structured-data.js',
-    'ga4-setup': 'js/ga4-setup.js'
-  },
-  outdir: 'dist',
-  cssEntryPoints: [
-    'css/design-system.css',
-    'css/components.css',
-    'css/utilities.css'
-  ],
-  assetsDir: 'dist/assets',
-  publicPath: '/'
+const CONFIG = {
+  inputFile: 'index.html',
+  outputFile: 'index.min.html',
+  swFile: 'sw.js',
+  nojekyllFile: '.nojekyll',
+  cnameFile: 'CNAME',
+  ghPagesBranch: 'gh-pages'
 };
 
-// Ensure output directory exists
-fs.mkdirSync(config.outdir, { recursive: true });
-fs.mkdirSync(config.assetsDir, { recursive: true });
+// Colors for console output
+const colors = {
+  reset: '\x1b[0m',
+  green: '\x1b[32m',
+  yellow: '\x1b[33m',
+  cyan: '\x1b[36m',
+  red: '\x1b[31m'
+};
 
-// Build JavaScript bundles
-const buildJS = async () => {
-  console.log('🔨 Building JavaScript bundles...');
+function log(message, color = 'reset') {
+  console.log(`${colors[color]}${message}${colors.reset}`);
+}
 
-  const buildPromises = Object.entries(config.entryPoints).map(([name, entryPoint]) => {
-    return esbuild.build({
-      entryPoints: [path.join(config.root, entryPoint)],
-      bundle: true,
-      minify: true,
-      sourcemap: false, // Set to true for debugging
-      target: ['es2017'], // Good compatibility with modern browsers
-      format: 'esm',
-      outfile: path.join(config.root, config.outdir, `${name}.js`),
-      define: {
-        'process.env.NODE_ENV': '"production"'
-      },
-      treeShaking: true,
-      chunkNames: 'chunks/[name]-[hash]',
-      splitting: true, // Code splitting
-      // Optimize for performance
-      compression: true,
-      /* metafile: path.join(config.root, config.outdir, 'meta.json') */
-    });
+function minifyCSS(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
+    .replace(/\s+/g, ' ') // Collapse whitespace
+    .replace(/\s?([\{\}\:;\,])\s?/g, '$1') // Remove space around operators
+    .replace(/;}/g, '}') // Remove last semicolon
+    .replace(/#([0-9a-f])([0-9a-f])([0-9a-f])([0-9a-f])([0-9a-f])([0-9a-f])/g, '#$1$3$5') // Shorten hex colors
+    .replace(/#([0-9a-f])([0-9a-f])([0-9a-f])/g, '#$1$2$3') // Shorten 3-digit hex
+    .trim();
+}
+
+function minifyJS(js) {
+  return js
+    .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
+    .replace(/\/\/.*$/gm, '') // Remove single-line comments
+    .replace(/\s+/g, ' ') // Collapse whitespace
+    .replace(/\s?([\{\}\(\)\[\]\;\,])\s?/g, '$1') // Remove space around operators
+    .replace(/;\}/g, '}') // Remove last semicolon
+    .replace(/var /g, '') // Optional: remove var keyword
+    .replace(/let /g, '') // Optional: remove let keyword
+    .replace(/const /g, '') // Optional: remove const keyword
+    .trim();
+}
+
+function minifyHTML(html) {
+  return html
+    .replace(/<!--[\s\S]*?-->/g, '') // Remove HTML comments
+    .replace(/\s+/g, ' ') // Collapse whitespace
+    .replace(/>\s+</g, '><') // Remove whitespace between tags
+    .replace(/\s?=\s?/g, '=') // Remove spaces around equals
+    .replace(/<!--(.*?)-->/g, '') // Remove conditional comments
+    .replace(/<meta[^>]*>/g, match => match.trim()) // Clean meta tags
+    .replace(/<link[^>]*>/g, match => match.trim()) // Clean link tags
+    .replace(/<script[^>]*>/g, match => match.trim()) // Clean script open tags
+    .replace(/<\/script>/g, match => match.trim()) // Clean script close tags
+    .trim();
+}
+
+function extractStylesAndScripts(html) {
+  const styles = [];
+  const scripts = [];
+  
+  // Extract inline styles
+  html = html.replace(/<style[^>]*>([\s\S]*?)<\/style>/g, (match, css) => {
+    styles.push(minifyCSS(css));
+    return '';
   });
+  
+  // Extract inline scripts
+  html = html.replace(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/script>/g, (match, js) => {
+    scripts.push(minifyJS(js));
+    return '';
+  });
+  
+  return { html, styles, scripts };
+}
 
-  await Promise.all(buildPromises);
-  console.log('✅ JavaScript bundles built');
-};
+function generateServiceWorker() {
+  const swCode = `/**
+ * Service Worker for SaudiSaaSHub
+ * Provides offline support and caching
+ * Generated: ${new Date().toISOString()}
+ */
 
-// Build CSS bundles
-const buildCSS = async () => {
-  console.log('🎨 Building CSS bundles...');
+const CACHE_NAME = 'saudisaashub-v1';
+const ASSETS_TO_CACHE = [
+  '/',
+  '/index.html',
+  'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700&display=swap',
+  'https://fonts.gstatic.com/s/notosansarabic/v27/nwpTtKz1CJkTUACbsFHgklK5p6v6m7w3mjxo.woff2'
+];
 
-  // If cssnano is available, use it; otherwise just copy
-  try {
-    const postcss = require('postcss');
-    const autoprefixer = require('autoprefixer');
-    const cssnano = require('cssnano');
-
-    // Read all CSS files and combine
-    const cssContent = config.cssEntryPoints.map(file => {
-      return fs.readFileSync(path.join(config.root, file), 'utf-8');
-    }).join('\n');
-
-    // Process with PostCSS
-    const result = await postcss([
-      autoprefixer({
-        overrideBrowserslist: ['> 0.5%', 'last 2 versions', 'not dead', 'not IE 11'],
-        cascade: false
-      }),
-      cssnano({
-        preset: 'default',
-        autoprefixer: false // Already handled above
+// Install event - cache assets
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        log('[SW] Caching assets');
+        return cache.addAll(ASSETS_TO_CACHE);
       })
-    ]).process(cssContent, { from: undefined });
-
-    // Write combined CSS
-    fs.writeFileSync(
-      path.join(config.root, config.outdir, 'styles.css'),
-      result.css
-    );
-
-    console.log('✅ CSS bundles built and minified');
-  } catch (error) {
-    console.log('⚠️  PostCSS not available, copying CSS files as-is...');
-
-    // Fallback: just copy and concat
-    const cssContent = config.cssEntryPoints.map(file => {
-      return fs.readFileSync(path.join(config.root, file), 'utf-8');
-    }).join('\n');
-
-    fs.writeFileSync(
-      path.join(config.root, config.outdir, 'styles.css'),
-      cssContent
-    );
-
-    console.log('✅ CSS files copied (not minified)');
-  }
-};
-
-// Copy assets
-const copyAssets = async () => {
-  console.log('📦 Copying assets...');
-
-  const assetsDir = path.join(config.root, 'assets');
-  if (fs.existsSync(assetsDir)) {
-    const copyRecursive = (src, dest) => {
-      const stats = fs.statSync(src);
-      if (stats.isDirectory()) {
-        fs.mkdirSync(dest, { recursive: true });
-        const entries = fs.readdirSync(src);
-        entries.forEach(entry => {
-          copyRecursive(path.join(src, entry), path.join(dest, entry));
-        });
-      } else {
-        fs.copyFileSync(src, dest);
-      }
-    };
-
-    copyRecursive(assetsDir, path.join(config.root, config.assetsDir));
-  }
-
-  // Copy manifest, service worker, and other root files
-  const rootFiles = [
-    'manifest.json',
-    'sw.js',
-    'robots.txt',
-    'sitemap.xml'
-  ];
-
-  rootFiles.forEach(file => {
-    const src = path.join(config.root, file);
-    const dest = path.join(config.root, config.outdir, file);
-    if (fs.existsSync(src)) {
-      fs.copyFileSync(src, dest);
-    }
-  });
-
-  console.log('✅ Assets copied');
-};
-
-// Generate critical CSS file (for inline in HTML)
-const generateCriticalCSS = async () => {
-  console.log('✂️  Generating critical CSS...');
-
-  try {
-    // Extract critical CSS from the combined file
-    const fullCSS = fs.readFileSync(
-      path.join(config.root, config.outdir, 'styles.css'),
-      'utf-8'
-    );
-
-    // Critical selectors: above-the-fold styles
-    const criticalSelectors = [
-      ':root',
-      '*',
-      'body',
-      '.header',
-      '.nav-container',
-      '.logo',
-      '.nav-links',
-      '.nav-link',
-      '.hero',
-      '.hero h1',
-      '.hero p',
-      '.search-container',
-      '.search-input',
-      '.search-btn',
-      '.btn',
-      '.btn-primary',
-      '.categories',
-      '.section-title',
-      '.category-grid',
-      '.category-card',
-      '.category-icon',
-      '.category-card h3',
-      '.category-card p',
-      '.skip-link',
-      '.skeleton',
-      '@keyframes skeleton-loading',
-      '@keyframes slide-up'
-    ];
-
-    // Simple regex-based extraction (for demo; consider critical in production)
-    let criticalCSS = fullCSS;
-
-    // Minify and compress further
-    criticalCSS = criticalCSS
-      .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
-      .replace(/\s+/g, ' ') // Collapse whitespace
-      .replace(/\s?([{:;,])\s?/g, '$1') // Remove spaces around punctuation
-      .replace(/;(})/g, '}') // Remove trailing semicolons
-      .trim();
-
-    fs.writeFileSync(
-      path.join(config.root, config.outdir, 'critical.css'),
-      criticalCSS
-    );
-
-    console.log('✅ Critical CSS generated');
-  } catch (error) {
-    console.log('⚠️  Could not generate critical CSS:', error.message);
-  }
-};
-
-// Create manifest for PWA
-const generateManifest = () => {
-  console.log('📱 Generating Web App Manifest...');
-
-  const manifest = {
-    name: 'سعودي ساس هب',
-    short_name: 'ساس هب',
-    description: 'الدليل الشامل لأفضل حلول SaaS في السعودية',
-    start_url: '/?utm_source=pwa',
-    display: 'standalone',
-    background_color: '#f9fafb',
-    theme_color: '#1e3a5f',
-    orientation: 'portrait-primary',
-    icons: [
-      {
-        src: '/assets/icons/icon-72x72.png',
-        sizes: '72x72',
-        type: 'image/png'
-      },
-      {
-        src: '/assets/icons/icon-96x96.png',
-        sizes: '96x96',
-        type: 'image/png'
-      },
-      {
-        src: '/assets/icons/icon-128x128.png',
-        sizes: '128x128',
-        type: 'image/png'
-      },
-      {
-        src: '/assets/icons/icon-144x144.png',
-        sizes: '144x144',
-        type: 'image/png'
-      },
-      {
-        src: '/assets/icons/icon-152x152.png',
-        sizes: '152x152',
-        type: 'image/png'
-      },
-      {
-        src: '/assets/icons/icon-192x192.png',
-        sizes: '192x192',
-        type: 'image/png',
-        purpose: 'any maskable'
-      },
-      {
-        src: '/assets/icons/icon-256x256.png',
-        sizes: '256x256',
-        type: 'image/png'
-      },
-      {
-        src: '/assets/icons/icon-384x384.png',
-        sizes: '384x384',
-        type: 'image/png'
-      },
-      {
-        src: '/assets/icons/icon-512x512.png',
-        sizes: '512x512',
-        type: 'image/png',
-        purpose: 'any maskable'
-      }
-    ],
-    categories: ['business', 'productivity', 'utilities'],
-    lang: 'ar-SA',
-    dir: 'rtl',
-    scope: '/',
-    id: '/?source=pwa'
-  };
-
-  fs.writeFileSync(
-    path.join(config.root, config.outdir, 'manifest.json'),
-    JSON.stringify(manifest, null, 2)
+      .then(() => self.skipWaiting())
   );
+});
 
-  console.log('✅ Manifest generated');
-};
-
-// Copy and optimize index.html
-const processHTML = async () => {
-  console.log('📄 Processing HTML...');
-
-  const htmlPath = path.join(config.root, 'index.html');
-  let html = fs.readFileSync(htmlPath, 'utf-8');
-
-  // Replace script and link references with bundled versions
-  html = html.replace(
-    /<link rel="stylesheet" href="\/css\/(.*\.css)">/g,
-    (match, p1) => {
-      if (p1 === 'critical.css') return match; // Keep critical inline
-      return `<link rel="stylesheet" href="/dist/styles.css">`;
-    }
+// Activate event - clean old caches
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_NAME) {
+            log('[SW] Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => self.clients.claim())
   );
+});
 
-  html = html.replace(
-    /<script defer src="\/js\/(.*\.js)"><\/script>/g,
-    (match, p1) => {
-      if (p1 === 'app.js') {
-        return `<script defer src="/dist/app.js"></script>`;
-      }
-      if (p1 === 'structured-data.js') {
-        return `<script defer src="/dist/structured-data.js"></script>`;
-      }
-      if (p1 === 'ga4-setup.js') {
-        return `<script defer src="/dist/ga4-setup.js"></script>`;
-      }
-      return '';
-    }
+// Fetch event - serve from cache, fallback to network
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+  
+  // Skip non-GET requests or chrome-extension requests
+  if (request.method !== 'GET' || url.protocol === 'chrome-extension:') {
+    return;
+  }
+  
+  event.respondWith(
+    caches.match(request)
+      .then(cachedResponse => {
+        if (cachedResponse) {
+          // Return cached version
+          return cachedResponse;
+        }
+        
+        // Fetch from network
+        return fetch(request)
+          .then(response => {
+            // Don't cache if not successful
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+            
+            // Clone response to cache
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME).then(cache => {
+              cache.put(request, responseToCache);
+            });
+            
+            return response;
+          })
+          .catch(() => {
+            // Return offline fallback for HTML pages
+            if (request.headers.get('accept').includes('text/html')) {
+              return caches.match('/index.html');
+            }
+          });
+      })
   );
+});
 
-  // Add resource hints if not present
-  if (!html.includes('preconnect')) {
-    const headEnd = '</head>';
-    const hints = `
-    <!-- Performance: Resource hints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+function log(...args) {
+  // Only log in development
+  if (location.hostname === 'localhost') {
+    console.log('[SW]', ...args);
+  }
+}
 `;
-    html = html.replace(headEnd, hints + headEnd);
-  }
+  return swCode;
+}
 
-  // Write processed HTML
-  fs.writeFileSync(
-    path.join(config.root, config.outdir, 'index.html'),
-    html
-  );
-
-  console.log('✅ HTML processed');
-};
-
-// Generate performance report
-const generateReport = () => {
-  console.log('\n📊 Build Report');
-  console.log('---------------');
-
-  const jsFiles = ['app.js', 'structured-data.js', 'ga4-setup.js'];
-  jsFiles.forEach(file => {
-    const filepath = path.join(config.root, config.outdir, file);
-    if (fs.existsSync(filepath)) {
-      const stats = fs.statSync(filepath);
-      console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
-    }
-  });
-
-  const cssPath = path.join(config.root, config.outdir, 'styles.css');
-  if (fs.existsSync(cssPath)) {
-    const stats = fs.statSync(cssPath);
-    console.log(`   styles.css: ${(stats.size / 1024).toFixed(2)} KB`);
-  }
-
-  const htmlPath = path.join(config.root, config.outdir, 'index.html');
-  if (fs.existsSync(htmlPath)) {
-    const stats = fs.statSync(htmlPath);
-    console.log(`   index.html: ${(stats.size / 1024).toFixed(2)} KB`);
-  }
-
-  const totalSize = fs.readdirSync(config.outdir).reduce((total, file) => {
-    const filepath = path.join(config.root, config.outdir, file);
-    if (fs.statSync(filepath).isFile()) {
-      return total + fs.statSync(filepath).size;
-    }
-    return total;
-  }, 0);
-
-  console.log(`\n   Total build size: ${(totalSize / 1024).toFixed(2)} KB`);
-  console.log('✅ Build complete!\n');
-};
-
-// Main build function
-const build = async () => {
-  console.log('\n🚀 Starting SaudiSaaSHub build...\n');
-
+function main() {
   try {
-    await buildJS();
-    await buildCSS();
-    await copyAssets();
-    await generateCriticalCSS();
-    generateManifest();
-    await processHTML();
-    generateReport();
-
-    // Create a simple .nojekyll file for GitHub Pages
-    fs.writeFileSync(path.join(config.root, config.outdir, '.nojekyll'), '');
+    log('\n🚀 SaudiSaaSHub Build Process\n', 'cyan');
+    
+    // Read input HTML
+    const inputPath = path.join(__dirname, CONFIG.inputFile);
+    if (!fs.existsSync(inputPath)) {
+      log(`❌ Error: ${CONFIG.inputFile} not found`, 'red');
+      process.exit(1);
+    }
+    
+    const html = fs.readFileSync(inputPath, 'utf8');
+    log(`✓ Read ${CONFIG.inputFile}`, 'green');
+    
+    // Extract and minify
+    const { html: cleanHTML, styles, scripts } = extractStylesAndScripts(html);
+    
+    // Reconstruct HTML with minified inline code
+    let optimizedHTML = cleanHTML;
+    
+    // Check if there were any styles extracted
+    if (styles.length > 0) {
+      const minifiedStyles = minifyCSS(styles.join(' '));
+      optimizedHTML = optimizedHTML.replace(
+        '<style></style>',
+        `<style>${minifiedStyles}</style>`
+      );
+    }
+    
+    // Check if there were any scripts extracted
+    if (scripts.length > 0) {
+      const minifiedScripts = minifyJS(scripts.join(' '));
+      optimizedHTML = optimizedHTML.replace(
+        '<script></script>',
+        `<script>${minifiedScripts}</script>`
+      );
+    }
+    
+    // Final minification of entire HTML
+    const finalHTML = minifyHTML(optimizedHTML);
+    
+    // Write optimized HTML
+    const outputPath = path.join(__dirname, CONFIG.outputFile);
+    fs.writeFileSync(outputPath, finalHTML);
+    log(`✓ Wrote ${CONFIG.outputFile}`, 'green');
+    
+    // Generate service worker
+    const swCode = generateServiceWorker();
+    const swPath = path.join(__dirname, CONFIG.swFile);
+    fs.writeFileSync(swPath, swCode);
+    log(`✓ Generated ${CONFIG.swFile}`, 'green');
+    
+    // Create .nojekyll for GitHub Pages (prevents Jekyll processing)
+    const nojekyllPath = path.join(__dirname, CONFIG.nojekyllFile);
+    fs.writeFileSync(nojekyllPath, '');
+    log(`✓ Created ${CONFIG.nojekyllFile}`, 'green');
+    
+    // Create CNAME file for custom domain (optional)
+    // User can edit this file to add their custom domain
+    const cnamePath = path.join(__dirname, CONFIG.cnameFile);
+    if (!fs.existsSync(cnamePath)) {
+      fs.writeFileSync(cnamePath, 'saudisaashub.pages.dev\n');
+      log(`✓ Created ${CONFIG.cnameFile} (edit for custom domain)`, 'green');
+    }
+    
+    // Calculate savings
+    const originalSize = Buffer.byteLength(html, 'utf8');
+    const optimizedSize = Buffer.byteLength(finalHTML, 'utf8');
+    const swSize = Buffer.byteLength(swCode, 'utf8');
+    const savings = ((originalSize - optimizedSize) / originalSize * 100).toFixed(1);
+    
+    log('\n📊 Build Summary:', 'cyan');
+    log(`  Original HTML:     ${(originalSize / 1024).toFixed(2)} KB`, 'yellow');
+    log(`  Optimized HTML:   ${(optimizedSize / 1024).toFixed(2)} KB (${savings}% smaller)`, 'yellow');
+    log(`  Service Worker:   ${(swSize / 1024).toFixed(2)} KB`, 'yellow');
+    log(`  Total added:      ~${((swSize + 64) / 1024).toFixed(2)} KB (SW + .nojekyll)`, 'yellow');
+    log('\n✅ Build complete!', 'green');
+    log('\n📝 Next steps:', 'cyan');
+    log('  1. Deploy optimized index.min.html as index.html to GitHub Pages', 'yellow');
+    log('  2. Commit and push sw.js, .nojekyll, CNAME', 'yellow');
+    log('  3. Configure repository GitHub Pages from main/gh-pages branch', 'yellow');
+    log('  4. Run Lighthouse audit to verify 100 scores\n', 'yellow');
+    
   } catch (error) {
-    console.error('❌ Build failed:', error);
+    log(`\n❌ Build failed: ${error.message}`, 'red');
+    console.error(error);
     process.exit(1);
   }
-};
+}
 
 // Run build
-build();
+main();

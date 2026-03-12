@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Minimalist stacked bars representing efficiency -->
+  <rect x="50" y="80" width="30" height="100" fill="#2E86AB" rx="4"/>
+  <rect x="90" y="50" width="30" height="130" fill="#A23B72" rx="4"/>
+  <rect x="130" y="65" width="30" height="115" fill="#F18F01" rx="4"/>
+</svg>

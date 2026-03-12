@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0A0A0F">
+  <title>سعودي ساس هب - غير متصل</title>
+  <meta name="description" content="سعودي ساس هب - أنت حالياً غير متصل بالإنترنت">
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    :root {
+      --bg-dark: #0A0A0F;
+      --gold: #F5C542;
+      --cyan: #00E5FF;
+      --text-light: #ffffff;
+      --text-muted: #9ca3af;
+      --card-bg: rgba(255,255,255,0.05);
+      --border-color: rgba(255,255,255,0.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      direction: rtl;
+    }
+
+    .offline-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Starfield background */
+    #starfield {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .offline-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .offline-icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      fill: var(--gold);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .offline-icon { animation: none; }
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--gold), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .offline-message {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .offline-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      background: var(--gold);
+      color: var(--bg-dark);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-family: 'Noto Sans Arabic', sans-serif;
+      font-size: 1rem;
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    .btn:hover {
+      background: var(--cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(245,197,66,0.3);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-light);
+      border: 2px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      background: rgba(245,197,66,0.1);
+    }
+
+    .offline-tips {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      margin-top: 2rem;
+      text-align: right;
+    }
+
+    .offline-tips h3 {
+      color: var(--gold);
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .offline-tips ul {
+      list-style: none;
+    }
+
+    .offline-tips li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .offline-tips li:last-child {
+      border-bottom: none;
+    }
+
+    .checkmark {
+      color: var(--cyan);
+      font-weight: bold;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .offline-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(245,197,66,0.1);
+      border-radius: 20px;
+      font-size: 0.875rem;
+      color: var(--gold);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    @media (max-width: 768px) {
+      .offline-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .offline-tips {
+        text-align: center;
+      }
+
+      .offline-tips li {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    /* Safe area insets for notched devices */
+    @supports (padding: env(safe-area-inset-top)) {
+      .offline-container {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <div class="offline-container">
+    <div class="offline-content">
+      <!-- Offline Icon -->
+      <svg class="offline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+      </svg>
+
+      <h1>أنت غير متصل</h1>
+      <p class="offline-message">
+        يبدو أنك فقدت الاتصال بالإنترنت. لا تقلق! يمكنك الاستمرار في تصفح المحتوى المخزن محلياً.
+        سنحاول إعادة الاتصال تلقائياً.
+      </p>
+
+      <div class="offline-actions">
+        <button class="btn" onclick="window.location.reload()" data-track="retry">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 4v6h-6M1 20v-6h6"/>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+          </svg>
+          إعادة المحاولة
+        </button>
+        <button class="btn btn-secondary" onclick="window.close()" data-track="close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+          إغلاق
+        </button>
+      </div>
+
+      <div class="offline-status">
+        <span class="status-dot"></span>
+        <span>جاري محاولة إعادة الاتصال...</span>
+      </div>
+
+      <div class="offline-tips">
+        <h3>ما يمكنك فعله دون اتصال:</h3>
+        <ul>
+          <li>
+            <span class="checkmark">✓</span>
+            <span>تصفح الصفحات التي شاهدتها سابقاً من ذاكرة التخزين المؤقت</span>
+          </li>
+          <li>
+            <span class="checkmark">✓</span>
+            <span>البحث في الشركات والتصنيفات المخزنة محلياً</span>
+          </li>
+          <li>
+            <span class="checkmark">✓</span>
+            <span>قراءة المقالات المخزنة في ذاكرة التخزين المؤقت</span>
+          </li>
+          <li>
+            <span class="checkmark">✓</span>
+            <span>/gal/moai galleries0020ai/galleries</span>
+          </li>
+        </ul>
+      </div>
+
+      <p style="margin-top: 2rem; font-size: 0.875rem; color: var(--text-muted);">
+        سيتم استعادة الاتصال تلقائياً بمجرد عودة الشبكة.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Starfield animation for offline page
+    const canvas = document.getElementById('starfield');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const stars = [];
+    const numStars = 200;
+
+    for (let i = 0; i < numStars; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 2,
+        speed: Math.random() * 0.5 + 0.1
+      });
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#F5C542';
+
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        star.x -= star.speed;
+        if (star.x < 0) {
+          star.x = canvas.width;
+          star.y = Math.random() * canvas.height;
+        }
+      });
+
+      requestAnimationFrame(drawStars);
+    }
+
+    drawStars();
+
+    // Auto-reconnect when online
+    window.addEventListener('online', () => {
+      document.querySelector('.offline-status span:last-child').textContent = 'جاري إعادة الاتصال...';
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    });
+
+    // Update status periodically
+    setInterval(() => {
+      if (navigator.onLine) {
+        document.querySelector('.offline-status span:last-child').textContent = 'متصل - جاري إعادة التحميل...';
+      } else {
+        document.querySelector('.offline-status span:last-child').textContent = 'غير متصل - جاري محاولة إعادة الاتصال...';
+      }
+    }, 3000);
+
+    // Track offline event
+    if (window.SaudiSaaSHubAnalytics) {
+      window.SaudiSaaSHubAnalytics.track('offline_page_view');
+    }
+  </script>
+</body>
+</html>

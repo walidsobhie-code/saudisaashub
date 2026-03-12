@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Salesforce cloud -->
+  <path d="M 40 110 Q 40 60 100 60 Q 160 60 160 110 L 160 130 Q 160 150 140 150 L 80 150 Q 60 150 60 130 L 60 110 Z" fill="#00A1E0"/>
+  <circle cx="100" cy="100" r="20" fill="white"/>
+  <circle cx="100" cy="100" r="8" fill="#00A1E0"/>
+</svg>
