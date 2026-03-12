@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   keywords: 'SaaS, startup, السعودية, التقنية, الأعمال, ZATCA, الفوترة الإلكترونية, مقالات تقنية, شركات ناشئة',
   openGraph: {
     title: 'SaudiSaaSHub - المصدرك الأول لـ SaaS في المملكة العربية السعودية',
-    description: 'اكتشف أحدث اتجاهات SaaS والشركات الناشئة والرؤى من المملكة العربية السعودية. نقدم تحليلات السوق الشاملة، مراجعات الشركات التقنية، وأدلة عملية لنمو أعمالك.',
+    description: 'اكتشف أحدث اتجاهات SaaS والشركات الناشئة والرؤى من المملكة العربية السعودية. نقدم تحليلات السوق الشاملة، مراجعات الشركات التقنية، وأدلة عملية لنمو أعمالك في قطاع التقنية والتمويل.',
     type: 'website',
     locale: 'ar_SA',
     siteName: 'Saudi SaaS Hub',
-    url: 'https://saudisaashub.com',
+    url: 'https://saudisaashub.pages.dev',
     images: [
       {
-        url: '/logo-og.png',
+        url: 'https://saudisaashub.pages.dev/logo-og.png',
         width: 1200,
         height: 630,
         alt: 'Saudi SaaS Hub - SaaS News Saudi Arabia',
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SaudiSaaSHub - تقنية وأعمال السعودية',
     description: 'مصدرك للمقالات التقنية والشركات الناشئة في السعودية',
-    images: ['/logo-og.png'],
+    images: ['https://saudisaashub.pages.dev/logo-og.png'],
   },
   alternates: {
-    canonical: 'https://saudisaashub.com',
+    canonical: 'https://saudisaashub.pages.dev',
     languages: {
-      'ar-SA': 'https://saudisaashub.com',
-      'en-US': 'https://saudisaashub.com/en',
+      'ar-SA': 'https://saudisaashub.pages.dev',
+      'en-US': 'https://saudisaashub.pages.dev/en',
     },
   },
   robots: {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    'script:plausible': `<script async defer data-domain="saudisaashub.com" src="https://plausible.io/js/plausible.js"></script>`,
+    'script:plausible': `<script async defer data-domain="saudisaashub.pages.dev" src="https://plausible.io/js/plausible.js"></script>`,
   },
 };
 

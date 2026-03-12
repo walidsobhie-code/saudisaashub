@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Saudi SaaS Hub',
-    url: 'https://saudisaashub.com/en',
+    url: 'https://saudisaashub.pages.dev/en',
     images: [
       {
-        url: '/logo-og.png',
+        url: 'https://saudisaashub.pages.dev/logo-og.png',
         width: 1200,
         height: 630,
         alt: 'Saudi SaaS Hub - SaaS News Saudi Arabia',
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Saudi SaaS Hub',
     description: 'Your source for SaaS and startup news in Saudi Arabia',
-    images: ['/logo-og.png'],
+    images: ['https://saudisaashub.pages.dev/logo-og.png'],
   },
   alternates: {
-    canonical: 'https://saudisaashub.com/en',
+    canonical: 'https://saudisaashub.pages.dev/en',
     languages: {
-      'en-US': 'https://saudisaashub.com/en',
-      'ar-SA': 'https://saudisaashub.com',
+      'en-US': 'https://saudisaashub.pages.dev/en',
+      'ar-SA': 'https://saudisaashub.pages.dev',
     },
   },
   robots: {
