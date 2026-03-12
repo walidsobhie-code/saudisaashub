@@ -30,14 +30,54 @@ export async function generateMetadata({ params }: PageProps) {
     return { title: 'المقال غير موجود - SaudiSaaSHub' };
   }
 
+  const url = `https://saudisaashub.com/articles/${article.slug}`;
+
   return {
     title: `${article.title} | SaudiSaaSHub`,
     description: article.excerpt,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
       type: 'article',
       publishedTime: article.date,
+      url: url,
+      images: article.image ? [article.image] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description: article.excerpt,
+      images: article.image ? [article.image] : [],
+    },
+    other: {
+      'script:ld+json': JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: article.title,
+        description: article.excerpt,
+        author: { '@type': 'Organization', name: 'Saudi SaaS Hub' },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Saudi SaaS Hub',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://saudisaashub.com/logo.png',
+          },
+        },
+        datePublished: article.date,
+        dateModified: article.date,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': url,
+        },
+        keywords: article.categories.join(', '),
+        wordCount: article.content.split(/\s+/).filter(w => w.length > 0).length,
+        articleSection: article.categories[0] || 'مقالات',
+        inLanguage: 'ar-SA',
+      }),
     },
   };
 }

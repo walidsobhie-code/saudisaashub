@@ -13,17 +13,9 @@ export default function ArticlesPage() {
   const [allCategories, setAllCategories] = useState<string[]>([]);
 
   useEffect(() => {
-    // Load articles data from generated module
     const loadedArticles = getArticles();
     setArticles(loadedArticles);
     setAllCategories(getAllCategories());
-
-    // Parse URL params on mount
-    const params = new URLSearchParams(window.location.search);
-    const category = params.get('category') || '';
-    const q = params.get('q') || '';
-    setSelectedCategory(category);
-    setSearchQuery(q);
   }, []);
 
   const filteredArticles = useMemo(() => {
@@ -53,24 +45,10 @@ export default function ArticlesPage() {
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
-    const params = new URLSearchParams(window.location.search);
-    if (category) {
-      params.set('category', category);
-    } else {
-      params.delete('category');
-    }
-    window.history.pushState({}, '', `/articles?${params.toString()}`);
   };
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
-    const params = new URLSearchParams(window.location.search);
-    if (query) {
-      params.set('q', query);
-    } else {
-      params.delete('q');
-    }
-    window.history.pushState({}, '', `/articles?${params.toString()}`);
   };
 
   return (
