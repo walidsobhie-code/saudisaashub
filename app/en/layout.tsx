@@ -10,11 +10,19 @@ export const metadata: Metadata = {
   keywords: 'SaaS, Saudi Arabia, startup, technology, business, tech articles, startups',
   openGraph: {
     title: 'Saudi SaaS Hub - Your Source for Saudi SaaS News',
-    description: 'Discover the latest SaaS trends, startups, and insights from Saudi Arabia.',
+    description: 'Discover the latest SaaS trends, startups, and insights from Saudi Arabia. Comprehensive market analysis, tech company reviews, and practical guides to grow your business.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Saudi SaaS Hub',
     url: 'https://saudisaashub.com/en',
+    images: [
+      {
+        url: 'https://saudisaashub.com/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Saudi SaaS Hub - Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
