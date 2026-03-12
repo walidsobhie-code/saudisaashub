@@ -36,6 +36,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  other: {
+    'script:plausible': `<script async defer data-domain="saudisaashub.com" src="https://plausible.io/js/plausible.js"></script>`,
+  },
 };
 
 export default function RootLayout({

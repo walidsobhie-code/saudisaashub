@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'الرئيسية' },
@@ -21,11 +22,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo with Verified Badge - Professional Style */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <img
+            <div className="relative w-10 h-10">
+              <Image
                 src="/logo.png"
                 alt="SaudiSaaSHub"
-                className="w-10 h-10 rounded-xl object-contain bg-white border-2 border-transparent"
+                width={40}
+                height={40}
+                className="rounded-xl object-contain bg-white border-2 border-transparent"
+                priority
               />
               {/* Green verified badge */}
               <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-accent-green rounded-full flex items-center justify-center border-2 border-background">
