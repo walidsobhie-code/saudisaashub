@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'اكتشف أحدث اتجاهات SaaS والشركات الناشئة والرؤى من المملكة العربية السعودية',
     type: 'website',
     locale: 'ar_SA',
-    siteName: 'SaudiSaaSHub',
+    siteName: 'Saudi SaaS Hub',
     url: 'https://saudisaashub.com',
   },
   twitter: {
@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://saudisaashub.com',
+    languages: {
+      'ar-SA': 'https://saudisaashub.com',
+      'en-US': 'https://saudisaashub.com/en',
+    },
   },
   robots: {
     index: true,

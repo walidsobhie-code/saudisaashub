@@ -45,6 +45,14 @@ export function Footer() {
             <p className="text-text-secondary text-sm mb-6">
               المصدرك الأول لأحدث أخبار التقنية والأعمال في المملكة العربية السعودية
             </p>
+            <div className="flex items-center gap-2 mb-6">
+              <Link
+                href="/en"
+                className="px-3 py-1.5 rounded-lg bg-card border border-white/10 text-sm text-text-secondary hover:text-white hover:border-accent-green/30 transition-all"
+              >
+                🇺🇸 English
+              </Link>
+            </div>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
                 <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer"

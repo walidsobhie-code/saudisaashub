@@ -62,6 +62,15 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
+            {/* Language Switcher */}
+            <Link
+              href="/en"
+              className="flex items-center px-3 py-1.5 rounded-lg bg-card border border-white/10 text-text-secondary hover:text-white hover:border-accent-green/30 transition-all text-sm"
+            >
+              🇺🇸 EN
+            </Link>
+
+            {/* Search Button */}
             <Link
               href="/articles"
               className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-white/10 text-text-secondary hover:text-white hover:border-accent-green/30 transition-all text-sm"
