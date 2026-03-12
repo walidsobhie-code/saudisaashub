@@ -31,7 +31,7 @@ export const saudiSaaSCompanies: SaudiSaaSCompany[] = [
   {
     name: 'Salla',
     slug: 'salla',
-    description: 'منصة搭建电商平台 - تمكين رواد الأعمال من إنشاء متاجر إلكترونية',
+    description: 'تمكين رواد الأعمال من إنشاء متاجر إلكترونية - منصة تجارة إلكترونية سعودية رائدة',
     category: 'E-commerce',
     founded: 2016,
     website: 'https://salla.sa',
