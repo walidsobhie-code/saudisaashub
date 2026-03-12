@@ -3,6 +3,9 @@ import { getArticles } from '@/lib/articles';
 import { ArticleCard } from '@/components/ArticleCard';
 import { Newsletter } from '@/components/Newsletter';
 import { Hero } from '@/components/Hero';
+import { TrustedCompanies } from '@/components/TrustedCompanies';
+import { SaudiSaaSCompanies } from '@/components/SaudiSaaSCompanies';
+import { UpcomingEvents } from '@/components/UpcomingEvents';
 
 export default async function Home() {
   const articles = await getArticles();
@@ -43,6 +46,9 @@ export default async function Home() {
 
       <Hero />
 
+      {/* Trusted Companies Section */}
+      <TrustedCompanies />
+
       {/* Articles Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -81,6 +87,12 @@ export default async function Home() {
           )}
         </div>
       </section>
+
+      {/* Saudi SaaS Companies Section */}
+      <SaudiSaaSCompanies />
+
+      {/* Upcoming Events Section */}
+      <UpcomingEvents />
 
       {/* Categories */}
       <section className="py-16 bg-card/30">
