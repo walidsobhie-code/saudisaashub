@@ -4,18 +4,66 @@ import { useState } from 'react';
 
 const FORMNSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPRARE_ENDPOINT || 'https://formspree.io/f/your-form-id';
 
+const MIN_MESSAGE_LENGTH = 10;
+const MAX_MESSAGE_LENGTH = 500;
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    message?: string;
+  }>({});
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
+  const validateField = (name: string, value: string): string | undefined => {
+    switch (name) {
+      case 'name':
+        if (!value.trim()) return 'الاسم مطلوب';
+        if (value.trim().length < 2) return 'الاسم قصير جداً (حد أدنى حرفين)';
+        if (value.trim().length > 100) return 'الاسم طويل جداً (حد أقصى 100 حرف)';
+        return undefined;
+      case 'email':
+        if (!value.trim()) return 'البريد الإلكتروني مطلوب';
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) return 'صيغة البريد الإلكتروني غير صحيحة';
+        return undefined;
+      case 'message':
+        if (!value.trim()) return 'الرسالة م cellular';
+        if (value.trim().length < MIN_MESSAGE_LENGTH) return `الرسالة قصيرة جداً (${MIN_MESSAGE_LENGTH} أحرف كحد الأدنى)`;
+        if (value.trim().length > MAX_MESSAGE_LENGTH) return `الرسالة طويلة جداً (${MAX_MESSAGE_LENGTH} أحرف كحد الأقصى)`;
+        return undefined;
+      default:
+        return undefined;
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+
+    // Real-time validation
+    const error = validateField(name, value);
+    setErrors(prev => ({ ...prev, [name]: error }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+
+    // Validate all fields
+    const newErrors: typeof errors = {};
+    Object.keys(formData).forEach(key => {
+      const error = validateField(key, formData[key as keyof typeof formData]);
+      if (error) newErrors[key as keyof typeof errors] = error;
+    });
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) return;
 
     setStatus('loading');
 
@@ -30,6 +78,7 @@ export default function ContactPage() {
         setStatus('success');
         setMessage('تم إرسال رسالتك بنجاح. سنتواصل معك قريباً!');
         setFormData({ name: '', email: '', message: '' });
+        setErrors({});
       } else {
         setStatus('error');
         setMessage('حدث خطأ. يرجى المحاولة مرة أخرى.');
@@ -39,6 +88,11 @@ export default function ContactPage() {
       setMessage('حدث خطأ في الاتصال');
     }
   };
+
+  const messageLength = formData.message.length;
+  const remainingChars = MAX_MESSAGE_LENGTH - messageLength;
+  const isMessageValid = !errors.message && messageLength >= MIN_MESSAGE_LENGTH && messageLength <= MAX_MESSAGE_LENGTH;
+  const showCharCount = messageLength > 0;
 
   return (
     <>
@@ -150,58 +204,82 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Name Field */}
                   <div>
                     <label htmlFor="name" className="block text-sm text-text-secondary mb-2">
-                      الاسم
+                      الاسم <span className="text-red-400">*</span>
                     </label>
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-background border border-white/10 text-white placeholder:text-text-muted focus:border-accent-pink focus:outline-none"
+                      className={`w-full px-4 py-3 rounded-xl bg-background border ${errors.name ? 'border-red-500' : 'border-white/10'} text-white placeholder:text-text-muted focus:border-accent-pink focus:outline-none`}
                       placeholder="اسمك"
                     />
+                    {errors.name && (
+                      <p className="text-red-400 text-sm mt-1">{errors.name}</p>
+                    )}
                   </div>
 
+                  {/* Email Field */}
                   <div>
                     <label htmlFor="email" className="block text-sm text-text-secondary mb-2">
-                      البريد الإلكتروني
+                      البريد الإلكتروني <span className="text-red-400">*</span>
                     </label>
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-background border border-white/10 text-white placeholder:text-text-muted focus:border-accent-pink focus:outline-none"
+                      className={`w-full px-4 py-3 rounded-xl bg-background border ${errors.email ? 'border-red-500' : 'border-white/10'} text-white placeholder:text-text-muted focus:border-accent-pink focus:outline-none`}
                       placeholder="بريدك@الإلكتروني.com"
                     />
+                    {errors.email && (
+                      <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                    )}
                   </div>
 
+                  {/* Message Field */}
                   <div>
-                    <label htmlFor="message" className="block text-sm text-text-secondary mb-2">
-                      الرسالة
-                    </label>
+                    <div className="flex justify-between items-center mb-2">
+                      <label htmlFor="message" className="block text-sm text-text-secondary">
+                        الرسالة <span className="text-red-400">*</span>
+                      </label>
+                      {showCharCount && (
+                        <span className={`text-sm ${remainingChars < 0 ? 'text-red-400' : remainingChars <= 20 ? 'text-yellow-400' : 'text-text-muted'}`}>
+                          {remainingChars >= 0 ? `${remainingChars} حرف متبقي` : `الحد الأقصى تجاوزت بـ ${Math.abs(remainingChars)} حرف`}
+                        </span>
+                      )}
+                    </div>
                     <textarea
                       id="message"
+                      name="message"
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 rounded-xl bg-background border border-white/10 text-white placeholder:text-text-muted focus:border-accent-pink focus:outline-none resize-none"
+                      className={`w-full px-4 py-3 rounded-xl bg-background border ${errors.message ? 'border-red-500' : 'border-white/10'} text-white placeholder:text-text-muted focus:border-accent-pink focus:outline-none resize-none`}
                       placeholder="كيف يمكننا مساعدتك؟"
                     />
+                    {errors.message && (
+                      <p className="text-red-400 text-sm mt-1">{errors.message}</p>
+                    )}
                   </div>
 
                   {status === 'error' && message && (
-                    <p className="text-red-400 text-sm">{message}</p>
+                    <div className="p-4 rounded-lg bg-red-500/10 border border-red-500/20">
+                      <p className="text-red-400 text-sm text-center">{message}</p>
+                    </div>
                   )}
 
                   <button
                     type="submit"
-                    disabled={status === 'loading'}
+                    disabled={status === 'loading' || Object.keys(errors).some(key => !!errors[key as keyof typeof errors])}
                     className="w-full px-6 py-3 rounded-xl gradient-bg text-white font-semibold hover:shadow-glow-pink transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {status === 'loading' ? 'جاري الإرسال...' : 'إرسال الرسالة'}
