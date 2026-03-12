@@ -7,8 +7,11 @@ import { SearchModal } from '@/components/SearchModal';
 const SITE_URL = 'https://saudisaashub.pages.dev';
 const EN_URL = 'https://saudisaashub.pages.dev/en';
 const OG_IMAGE = `${SITE_URL}/logo-og.png`;
+const NOW = new Date().toISOString();
 
 export async function generateMetadata(): Promise<Metadata> {
+  const now = new Date().toISOString();
+
   return {
     title: 'Saudi SaaS Hub - Your Source for Saudi SaaS News',
     description: 'Discover the latest SaaS trends, startups, and insights from Saudi Arabia. Comprehensive market analysis, tech company reviews, and practical guides.',
@@ -16,19 +19,19 @@ export async function generateMetadata(): Promise<Metadata> {
     creator: 'Saudi SaaS Hub',
     publisher: 'Saudi SaaS Hub',
     alternates: {
-      canonical: EN_URL,
+      canonical: `${SITE_URL}/en`,
       languages: {
-        'en-US': EN_URL,
+        'en-US': `${SITE_URL}/en`,
         'ar-SA': SITE_URL,
       },
     },
     openGraph: {
       title: 'Saudi SaaS Hub - Your Source for Saudi SaaS News',
-      description: 'Discover the latest SaaS trends, startups, and insights from Saudi Arabia. Comprehensive market analysis, tech company reviews, and practical guides to grow your business.',
+      description: 'Discover the latest SaaS trends, startups, and insights from Saudi Arabia. Comprehensive market analysis, tech company reviews, and practical guides.',
       type: 'website',
       locale: 'en_US',
       siteName: 'Saudi SaaS Hub',
-      url: EN_URL,
+      url: `${SITE_URL}/en`,
       images: [
         {
           url: OG_IMAGE,
@@ -55,6 +58,11 @@ export async function generateMetadata(): Promise<Metadata> {
         'max-snippet': -1,
       },
     },
+    other: {
+      'article:published_time': now,
+      'article:author': 'Saudi SaaS Hub Team',
+      'article:publisher': 'Saudi SaaS Hub',
+    },
   };
 }
 
@@ -63,12 +71,46 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Saudi SaaS Hub',
+    url: EN_URL,
+    logo: `${SITE_URL}/logo.png`,
+    description: 'Your source for SaaS and startup news in Saudi Arabia',
+    sameAs: [
+      'https://x.com/SaudiSaaSHub',
+      'https://instagram.com/saudisaashub',
+      'https://linkedin.com/company/saudisaashub',
+      'https://facebook.com/profile.php?id=61586893616132',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      availableLanguage: ['Arabic', 'English'],
+    },
+  };
+
   return (
     <html lang="en" dir="ltr">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col">
+        {/* Skip Navigation Link */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 px-4 py-2 bg-accent-green text-background font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-green focus:ring-offset-2 focus:ring-offset-background"
+        >
+          Skip to main content
+        </a>
+
         <Header />
         <SearchModal />
-        <main className="flex-1 pt-16 md:pt-20">
+        <main id="main-content" className="flex-1 pt-16 md:pt-20">
           {children}
         </main>
         <Footer />

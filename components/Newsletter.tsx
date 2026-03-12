@@ -44,27 +44,36 @@ export function Newsletter() {
         <p className="text-text-secondary mb-6">احصل على أحدث المقالات والتحديثات في بريدك</p>
 
         {status === 'success' ? (
-          <div className="bg-accent-green/10 border border-accent-green/30 rounded-xl p-4 text-accent-green">
+          <div className="bg-accent-green/10 border border-accent-green/30 rounded-xl p-4 text-accent-green" role="alert">
             {message}
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <label htmlFor="newsletter-email" className="sr-only">
+              البريد الإلكتروني
+            </label>
             <input
+              id="newsletter-email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="بريدك الإلكتروني"
-              className="flex-1 px-4 py-3 rounded-xl bg-background border border-white/10 text-white focus:border-accent-green focus:outline-none"
+              aria-required="true"
+              aria-describedby="newsletter-help"
+              className="flex-1 px-4 py-3 rounded-xl bg-background border border-white/10 text-white focus:border-accent-green focus:outline-none focus:ring-2 focus:ring-accent-green focus:ring-offset-2 focus:ring-offset-background"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-6 py-3 rounded-xl bg-accent-green text-background font-semibold hover:shadow-glow-green transition-all disabled:opacity-50"
+              className="px-6 py-3 rounded-xl bg-accent-green text-background font-semibold hover:shadow-glow-green transition-all disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-accent-green focus:ring-offset-2 focus:ring-offset-background"
             >
               {status === 'loading' ? 'جاري...' : 'اشتراك'}
             </button>
           </form>
         )}
+        <p id="newsletter-help" className="mt-3 text-text-muted text-sm">
+          لن نشارك بريدك مع أي شخص آخر. يمكنك إلغاء الاشتراك في أي وقت.
+        </p>
         {status === 'error' && <p className="mt-3 text-red-400 text-sm">{message}</p>}
       </div>
     </section>

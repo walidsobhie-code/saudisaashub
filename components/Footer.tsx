@@ -55,8 +55,14 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
-                <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-elevated flex items-center justify-center text-text-secondary hover:text-accent-green hover:bg-accent-green/10 transition-all text-xs font-bold">
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Follow us on ${social.name}`}
+                  className="w-10 h-10 rounded-full bg-elevated flex items-center justify-center text-text-secondary hover:text-accent-green hover:bg-accent-green/10 transition-all text-xs font-bold focus:outline-none focus:ring-2 focus:ring-accent-green focus:ring-offset-2 focus:ring-offset-background"
+                >
                   {social.icon}
                 </a>
               ))}

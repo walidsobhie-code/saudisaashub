@@ -6,8 +6,11 @@ import { SearchModal } from '@/components/SearchModal';
 
 const SITE_URL = 'https://saudisaashub.pages.dev';
 const OG_IMAGE = `${SITE_URL}/logo-og.png`;
+const NOW = new Date().toISOString();
 
 export async function generateMetadata(): Promise<Metadata> {
+  const now = new Date().toISOString();
+
   return {
     title: 'SaudiSaaSHub - المصدرك الأول لـ SaaS في المملكة العربية السعودية',
     description: 'اكتشف أحدث اتجاهات SaaS والشركات الناشئة والرؤى من المملكة العربية السعودية. نقدم تحليلات السوق الشاملة، مراجعات الشركات التقنية، وأدلة عملية لنمو أعمالك في قطاع التقنية والتمويل.',
@@ -55,23 +58,9 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     other: {
-      'script:plausible': `<script async defer data-domain="saudisaashub.pages.dev" src="https://plausible.io/js/plausible.js"></script>`,
-      'script:ld+json': JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: 'Saudi SaaS Hub',
-        url: SITE_URL,
-        description: 'مصدرك الأول لأخبار SaaS في السعودية',
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: {
-            '@type': 'EntryPoint',
-            urlTemplate: `${SITE_URL}/articles?search={search_term_string}`,
-          },
-          'query-input': 'required name=search_term_string',
-        },
-        inLanguage: 'ar-SA',
-      }),
+      'article:published_time': now,
+      'article:author': 'Saudi SaaS Hub Team',
+      'article:publisher': 'Saudi SaaS Hub',
     },
   };
 }
@@ -81,12 +70,46 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Saudi SaaS Hub',
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    description: 'المصدر الأول لـ SaaS في المملكة العربية السعودية',
+    sameAs: [
+      'https://x.com/SaudiSaaSHub',
+      'https://instagram.com/saudisaashub',
+      'https://linkedin.com/company/saudisaashub',
+      'https://facebook.com/profile.php?id=61586893616132',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      availableLanguage: ['Arabic', 'English'],
+    },
+  };
+
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col">
+        {/* Skip Navigation Link */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 px-4 py-2 bg-accent-green text-background font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-green focus:ring-offset-2 focus:ring-offset-background"
+        >
+          انتقل إلى المحتوى الرئيسي
+        </a>
+
         <Header />
         <SearchModal />
-        <main className="flex-1 pt-16 md:pt-20">
+        <main id="main-content" className="flex-1 pt-16 md:pt-20">
           {children}
         </main>
         <Footer />
