@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Abstract hexagon representing AI/tech -->
-  <polygon points="100,30 160,65 160,135 100,170 40,135 40,65" fill="#6C63FF" stroke="#4A44B3" stroke-width="3"/>
-  <circle cx="100" cy="100" r="25" fill="white"/>
-  <circle cx="100" cy="100" r="10" fill="#6C63FF"/>
-</svg>

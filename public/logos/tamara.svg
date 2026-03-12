@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Stylized T with payment wave -->
-  <rect x="70" y="50" width="60" height="20" fill="#E63946" rx="6"/>
-  <rect x="90" y="50" width="20" height="100" fill="#E63946" rx="6"/>
-  <path d="M 50 140 Q 80 160 110 140 Q 140 120 170 140" fill="none" stroke="#457B9D" stroke-width="8" stroke-linecap="round"/>
-</svg>

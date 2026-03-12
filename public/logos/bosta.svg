@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Abstract box with arrow (logistics/delivery) -->
-  <rect x="50" y="60" width="100" height="80" fill="#F56565" stroke="#E53E3E" stroke-width="4" rx="8"/>
-  <polygon points="130,80 150,100 130,120" fill="white"/>
-  <rect x="80" y="100" width="40" height="8" fill="white"/>
-</svg>

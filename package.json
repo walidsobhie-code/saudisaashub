@@ -1,18 +1,27 @@
 {
-  "name": "saudisaashub-premium",
+  "name": "saudisaashub-website",
   "version": "1.0.0",
-  "description": "World-class B2B SaaS directory with performance & SEO optimization",
+  "private": true,
   "scripts": {
-    "build": "node build.js",
-    "sitemap": "node generate-sitemap.js",
-    "serve": "npx serve .",
-    "dev": "npx serve . -l 3000",
-    "predeploy": "npm run sitemap && npm run build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.6.2",
+    "date-fns": "^4.1.0",
+    "fast-xml-parser": "^5.4.2",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "esbuild": "^0.19.0",
-    "cssnano": "^6.0.0",
-    "postcss": "^8.4.0",
-    "autoprefixer": "^10.4.0"
+    "@types/node": "^25.3.3",
+    "@types/react": "^19.2.14",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
