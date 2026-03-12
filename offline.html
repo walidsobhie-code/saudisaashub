@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سعودي ساس هب - غير متصل</title>
+  <meta name="description" content="سعودي ساس هب - أنت حالياً غير متصل بالإنترنت">
+  <style>
+    :root {
+      --color-primary: #1e3a5f;
+      --color-accent: #c9a227;
+      --color-neutral-100: #f3f4f6;
+      --color-neutral-600: #4b5563;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans Arabic', system-ui, sans-serif;
+      background: var(--color-neutral-100);
+      color: var(--color-neutral-600);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      direction: rtl;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      font-family: 'Noto Kufi Arabic', sans-serif;
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      fill: var(--color-primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      background: var(--color-primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+      font-family: 'Noto Sans Arabic', sans-serif;
+      font-size: 1rem;
+      margin: 0.5rem;
+    }
+
+    .btn:hover {
+      background: var(--color-accent);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-primary);
+      border: 2px solid var(--color-primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    .offline-tips {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      margin-top: 2rem;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+
+    .offline-tips h3 {
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      font-family: 'Noto Kufi Arabic', sans-serif;
+    }
+
+    .offline-tips ul {
+      list-style: none;
+      text-align: right;
+    }
+
+    .offline-tips li {
+      padding: 0.5rem 0;
+      position: relative;
+      padding-right: 1.5rem;
+    }
+
+    .offline-tips li::before {
+      content: "✓";
+      position: absolute;
+      right: 0;
+      color: var(--color-accent);
+      font-weight: bold;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 2rem; }
+      .icon { width: 80px; height: 80px; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Offline Icon -->
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+    </svg>
+
+    <h1>أنت غير متصل</h1>
+    <p>
+      يبدو أنك فقدت الاتصال بالإنترنت. لا تقلق! يمكنك الاستمرار في تصفح المحتوى المخزن محلياً.
+    </p>
+
+    <div>
+      <button class="btn" onclick="window.location.reload()" data-track="retry">
+        إعادة المحاولة
+      </button>
+      <button class="btn btn-secondary" onclick="window.close()" data-track="close">
+        إغلاق
+      </button>
+    </div>
+
+    <div class="offline-tips">
+      <h3>ما يمكنك فعله دون اتصال:</h3>
+      <ul>
+        <li>تصفح الصفحات التي شاهدتها سابقاً</li>
+        <li>البحث في الشركات والتصنيفات المخزنة محلياً</li>
+        <li>قراءة المقالات المخزنة في ذاكرة التخزين المؤقت</li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 2rem; font-size: 0.875rem; color: var(--color-neutral-600);">
+      سيتم استعادة الاتصال تلقائياً بمجرد عودة الشبكة.
+    </p>
+  </div>
+
+  <script>
+    // Auto-reconnect when online
+    window.addEventListener('online', () => {
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    });
+
+    // Track offline event
+    if (window.SaudiSaaSHubAnalytics) {
+      window.SaudiSaaSHubAnalytics.track('offline_page_view');
+    }
+  </script>
+</body>
+</html>

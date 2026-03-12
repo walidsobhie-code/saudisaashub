@@ -1,0 +1,16 @@
+{
+  "name": "saudisaashub-premium",
+  "version": "1.0.0",
+  "description": "World-class B2B SaaS directory with performance & SEO optimization",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "npx serve .",
+    "dev": "npx serve . -l 3000"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.0",
+    "cssnano": "^6.0.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0"
+  }
+}

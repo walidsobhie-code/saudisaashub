@@ -1,0 +1,283 @@
+{
+  "categories": [
+    {
+      "id": "crm",
+      "name": "إدارة علاقات العملاء",
+      "name_en": "CRM",
+      "slug": "crm",
+      "description": "أدوات لإدارة علاقات العملاء والمبيعات والتسويق",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg>",
+      "count": 45,
+      "color": "#1e3a5f",
+      "featured": true
+    },
+    {
+      "id": "erp",
+      "name": "تخطيط موارد المؤسسات",
+      "name_en": "ERP",
+      "slug": "erp",
+      "description": "أنظمة متكاملة لإدارة العمليات المالية والموارد البشرية والمخزون",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='2' y='3' width='20' height='14' rx='2' ry='2'></rect><line x1='8' y1='21' x2='16' y2='21'></line><line x1='12' y1='17' x2='12' y2='21'></line></svg>",
+      "count": 32,
+      "color": "#059669",
+      "featured": true
+    },
+    {
+      "id": "project-management",
+      "name": "إدارة المشاريع",
+      "name_en": "Project Management",
+      "slug": "project-management",
+      "description": "أدوات لتخطيط المهام وتتبع التقدم والتعاون بين الفرق",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M22 12h-4l-3 9L9 3l-3 9H2'></path></svg>",
+      "count": 67,
+      "color": "#7c3aed",
+      "featured": true
+    },
+    {
+      "id": "marketing-automation",
+      "name": "أتمتة التسويق",
+      "name_en": "Marketing Automation",
+      "slug": "marketing-automation",
+      "description": "منصات لأتمتة الحملات التسويقية وتتبع التحليلات",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'></path><polyline points='3.27 6.96 12 12.01 20.73 6.96'></polyline><line x1='12' y1='22.08' x2='12' y2='12'></line></svg>",
+      "count": 38,
+      "color": "#dc2626",
+      "featured": false
+    },
+    {
+      "id": "accounting",
+      "name": "المحاسبة والمالية",
+      "name_en": "Accounting & Finance",
+      "slug": "accounting",
+      "description": "برامج المحاسبة والفواتير والميزانية للشركات",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><line x1='12' y1='1' x2='12' y2='23'></line><path d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'></path></svg>",
+      "count": 41,
+      "color": "#0891b2",
+      "featured": true
+    },
+    {
+      "id": "hr",
+      "name": "الموارد البشرية",
+      "name_en": "Human Resources",
+      "slug": "hr",
+      "description": "أنظمة التوظيف وإدارة الرواتب والأداء",
+      "icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg>",
+      "count": 28,
+      "color": "#ea580c",
+      "featured": false
+    }
+  ],
+  "featured_companies": [
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "shortDescription": "أقوى منصة CRM عالمية مع دعم كامل للسوق السعودي",
+      "description": "Salesforce هي المنصة الرائدة عالمياً في إدارة علاقات العملاء، تقدم حلاً متكاملاً للمبيعات والخدمات والتسويق. تدعم اللغة العربية وتتوافق مع متطلبات هيئة البيانات السعودية (SDAIA).",
+      "category": "crm",
+      "categoryName": "إدارة علاقات العملاء",
+      "categorySlug": "crm",
+      "logo": "/assets/images/companies/salesforce.png",
+      "rating": 4.8,
+      "reviewCount": 1250,
+      "pricing": {
+        "startingPrice": 200,
+        "currency": "SAR",
+        "available": true,
+        "model": "per_user_monthly"
+      },
+      "platforms": ["الويب", "iOS", "Android"],
+      "featured": true
+    },
+    {
+      "id": "zoho",
+      "name": "Zoho",
+      "slug": "zoho",
+      "shortDescription": "مجموعة متكاملة من تطبيقات الأعمال بأسعار مناسبة للشركات الناشئة",
+      "description": "Zoho تقدم أكثر من 45 تطبيقاً لإدارة الأعمال من CRM والمحاسبة إلى إدارة المشاريع والتواصل.لها مركز بيانات في الشرق الأوسط لدعم الشركات السعودية.",
+      "category": "crm",
+      "categoryName": "إدارة علاقات العملاء",
+      "categorySlug": "crm",
+      "logo": "/assets/images/companies/zoho.png",
+      "rating": 4.6,
+      "reviewCount": 890,
+      "pricing": {
+        "startingPrice": 0,
+        "currency": "SAR",
+        "available": true,
+        "model": "freemium"
+      },
+      "platforms": ["الويب", "iOS", "Android"],
+      "featured": true
+    },
+    {
+      "id": "monday",
+      "name": "Monday.com",
+      "slug": "monday",
+      "shortDescription": "منصة إدارة مشاريع مرنة وسهلة الاستخدام للفرق من جميع الأحجام",
+      "description": "Monday.com تُبسّط سير العمل للفرق من خلال لوحات مخصصة وسير عمل تلقائي وتقارير متقدمة. تستخدمها آلاف الشركات في السعودية.",
+      "category": "project-management",
+      "categoryName": "إدارة المشاريع",
+      "categorySlug": "project-management",
+      "logo": "/assets/images/companies/monday.png",
+      "rating": 4.7,
+      "reviewCount": 1100,
+      "pricing": {
+        "startingPrice": 72,
+        "currency": "SAR",
+        "available": true,
+        "model": "per_user_monthly"
+      },
+      "platforms": ["الويب", "iOS", "Android", " desktop"],
+      "featured": true
+    },
+    {
+      "id": "sap",
+      "name": "SAP",
+      "slug": "sap",
+      "shortDescription": "حلول ERP领导者 للشركات الكبيرة والمؤسسات الحكومية",
+      "description": "SAP تقدم حلول ERP شاملة للشركات الكبيرة، من SAP S/4HANA إلى SAP Business One للشركات المتوسطة. شريك معتمد لرؤية السعودية 2030.",
+      "category": "erp",
+      "categoryName": "تخطيط موارد المؤسسات",
+      "categorySlug": "erp",
+      "logo": "/assets/images/companies/sap.png",
+      "rating": 4.5,
+      "reviewCount": 560,
+      "pricing": {
+        "startingPrice": 350,
+        "currency": "SAR",
+        "available": true,
+        "model": "custom_quote"
+      },
+      "platforms": ["الويب", "Windows", "Linux"],
+      "featured": true
+    },
+    {
+      "id": "quickbooks",
+      "name": "QuickBooks",
+      "slug": "quickbooks",
+      "shortDescription": "برنامج محاسبة سهل الاستخدام من Intuit للشركات الصغيرة والمتوسطة",
+      "description": "QuickBooks أسهل برنامج محاسبة للشركات الصغيرة. يدعم الفواتير والمصروفات وإحصاءات الضرائب والتقارير المالية. متوافق مع هيئة الزكاة والضرائب والجمارك السعودية.",
+      "category": "accounting",
+      "categoryName": "المحاسبة والمالية",
+      "categorySlug": "accounting",
+      "logo": "/assets/images/companies/quickbooks.png",
+      "rating": 4.4,
+      "reviewCount": 720,
+      "pricing": {
+        "startingPrice": 149,
+        "currency": "SAR",
+        "available": true,
+        "model": "monthly"
+      },
+      "platforms": ["الويب", "Windows", "macOS"],
+      "featured": true
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "shortDescription": "منصة CRM متكاملة مع أدوات تسويق ومبيعات وخدمة عملاء",
+      "description": "HubSpot تقدم مجموعة شاملة من أدوات التسويق والمبيعات وخدمة العملاء في منصة واحدة. متاحة باللغة العربية وتدعم TLS معايير البيانات السعودية.",
+      "category": "crm",
+      "categoryName": "إدارة علاقات العملاء",
+      "categorySlug": "crm",
+      "logo": "/assets/images/companies/hubspot.png",
+      "rating": 4.7,
+      "reviewCount": 980,
+      "pricing": {
+        "startingPrice": 0,
+        "currency": "SAR",
+        "available": true,
+        "model": "freemium"
+      },
+      "platforms": ["الويب", "iOS", "Android"],
+      "featured": true
+    }
+  ],
+  "articles": [
+    {
+      "id": "best-crm-saudi-arabia-2024",
+      "title": "أفضل 10 أدوات CRM للسعودية في 2024",
+      "slug": "best-crm-saudi-arabia-2024",
+      "excerpt": "دليل شامل لاختيار أفضل نظام إدارة علاقات العملاء للسوق السعودي. نقيّم أهم 10 منصات من حيث السعر والمزايا والتكامل مع الأنظمة السعودية.",
+      "content": "<p>محفوظة...</p>",
+      "featuredImage": "/assets/images/articles/crm-2024.jpg",
+      "category": "crm",
+      "categorySlug": "crm",
+      "tags": ["CRM", "SaaS", "2024", "مقارنة", "السعودية"],
+      "author": {
+        "name": "فريق سعودي ساس هب",
+        "avatar": "/assets/images/team/team-1.png",
+        "title": "محلل SaaS"
+      },
+      "publishedAt": "2024-03-01T08:00:00+03:00",
+      "updatedAt": "2024-03-01T08:00:00+03:00",
+      "wordCount": 2450,
+      "readTime": 12,
+      "viewCount": 5432
+    },
+    {
+      "id": "saudi-vision-2030-digital-transformation",
+      "title": "رحلة التحول الرقمي في السعودية: كيف يساهم SaaS؟",
+      "slug": "saudi-vision-2030-digital-transformation",
+      "excerpt": "تحليل دور حلول SaaS في تحقيق أهداف رؤية السعودية 2030 للتحول الرقمي وتمكين الشركات الصغيرة والمتوسطة.",
+      "content": "<p>محفوظة...</p>",
+      "featuredImage": "/assets/images/articles/vision2030.jpg",
+      "category": "articles",
+      "categorySlug": "articles",
+      "tags": ["رؤية 2030", "التحول الرقمي", "SaaS", "الشركات الناشئة"],
+      "author": {
+        "name": "أحمد الحديثي",
+        "avatar": "/assets/images/team/ahmed.png",
+        "title": "محرر تقني"
+      },
+      "publishedAt": "2024-02-15T10:30:00+03:00",
+      "updatedAt": "2024-02-20T14:15:00+03:00",
+      "wordCount": 3200,
+      "readTime": 15,
+      "viewCount": 3210
+    }
+  ],
+  "events": [
+    {
+      "id": "saudi-saas-summit-2024",
+      "title": "قمة SaaS السعودية 2024",
+      "slug": "saudi-saas-summit-2024",
+      "description": "أكبر تجمع لصناعة البرمجيات السحابية في الشرق الأوسط. أكثر من 1000 مشارك و50 متحدثاً من أفضل الشركات العالمية والمحلية.",
+      "startDate": "2024-06-15T09:00:00+03:00",
+      "endDate": "2024-06-15T17:00:00+03:00",
+      "url": "https://saudisaashub.com/event/saudi-saas-summit-2024",
+      "isFree": false,
+      "price": 1499,
+      "currency": "SAR",
+      "location": {
+        "type": "Place",
+        "name": "فندق ريتز كارلتون الرياض",
+        "address": {
+          "streetAddress": "الممر الشرقي، حي الملقا",
+          "addressLocality": "الرياض",
+          "addressRegion": "الرياض",
+          "postalCode": "11564",
+          "addressCountry": "SA"
+        }
+      },
+      "organizer": "سعودي ساس هب",
+      "organizerUrl": "https://saudisaashub.com",
+      "speakers": [
+        {
+          "name": "د. أحمد السعد",
+          "title": "الرئيس التنفيذي، ministry of communications",
+          "company": "وزارة الاتصالات وتقنية المعلومات"
+        },
+        {
+          "name": "مها الحميد",
+          "title": "الرئيسة التنفيذية، Saudi Cloud computing association",
+          "company": "جمعية الحوسبة السحابية السعودية"
+        }
+      ],
+      "image": "/assets/images/events/saas-summit-2024.jpg",
+      "registrationUrl": "https://saudisaashub.com/event/register/saas-summit-2024"
+    }
+  ]
+}
