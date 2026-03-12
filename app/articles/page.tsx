@@ -1,41 +1,77 @@
+'use client';
+
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import { getArticles } from '@/lib/articles';
+import { getArticles, getAllCategories } from '@/lib/articles';
 import { ArticleCard } from '@/components/ArticleCard';
 import { SearchForm } from '@/components/SearchForm';
 
-export default async function ArticlesPage({
-  searchParams,
-}: {
-  searchParams: { category?: string; q?: string };
-}) {
-  const articles = await getArticles();
+export default function ArticlesPage() {
+  const [articles, setArticles] = useState<any[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [allCategories, setAllCategories] = useState<string[]>([]);
 
-  // Filter by category if provided
-  let filteredArticles = articles;
-  if (searchParams.category) {
-    filteredArticles = articles.filter((article) =>
-      article.categories.some(
-        (cat) =>
-          cat.toLowerCase() === searchParams.category?.toLowerCase() ||
-          cat.includes(searchParams.category!)
-      )
-    );
-  }
+  useEffect(() => {
+    // Load articles data from generated module
+    const loadedArticles = getArticles();
+    setArticles(loadedArticles);
+    setAllCategories(getAllCategories());
 
-  // Filter by search query if provided
-  if (searchParams.q) {
-    const query = searchParams.q.toLowerCase();
-    filteredArticles = filteredArticles.filter(
-      (article) =>
-        article.title.toLowerCase().includes(query) ||
-        article.excerpt.toLowerCase().includes(query)
-    );
-  }
+    // Parse URL params on mount
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category') || '';
+    const q = params.get('q') || '';
+    setSelectedCategory(category);
+    setSearchQuery(q);
+  }, []);
 
-  // Get all unique categories
-  const allCategories = Array.from(
-    new Set(articles.flatMap((article) => article.categories))
-  ).sort();
+  const filteredArticles = useMemo(() => {
+    let result = articles;
+
+    if (selectedCategory) {
+      result = result.filter((article) =>
+        article.categories.some(
+          (cat: string) =>
+            cat.toLowerCase() === selectedCategory.toLowerCase() ||
+            cat.includes(selectedCategory)
+        )
+      );
+    }
+
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter(
+        (article) =>
+          article.title.toLowerCase().includes(query) ||
+          article.excerpt.toLowerCase().includes(query)
+      );
+    }
+
+    return result;
+  }, [articles, selectedCategory, searchQuery]);
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    const params = new URLSearchParams(window.location.search);
+    if (category) {
+      params.set('category', category);
+    } else {
+      params.delete('category');
+    }
+    window.history.pushState({}, '', `/articles?${params.toString()}`);
+  };
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    const params = new URLSearchParams(window.location.search);
+    if (query) {
+      params.set('q', query);
+    } else {
+      params.delete('q');
+    }
+    window.history.pushState({}, '', `/articles?${params.toString()}`);
+  };
 
   return (
     <>
@@ -52,31 +88,31 @@ export default async function ArticlesPage({
       {/* Search and Filters */}
       <section className="py-8 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 space-y-6">
-          <SearchForm />
+          <SearchForm onSearch={handleSearch} initialValue={searchQuery} />
 
           <div className="flex flex-wrap gap-3">
-            <Link
-              href="/articles"
+            <button
+              onClick={() => handleCategoryChange('')}
               className={`px-4 py-2 rounded-full transition-all ${
-                !searchParams.category
+                !selectedCategory
                   ? 'gradient-bg text-white'
                   : 'bg-card border border-white/10 text-text-secondary hover:border-accent-pink/30'
               }`}
             >
               الكل
-            </Link>
+            </button>
             {allCategories.slice(0, 8).map((category) => (
-              <Link
+              <button
                 key={category}
-                href={`/articles?category=${encodeURIComponent(category)}${searchParams.q ? `&q=${encodeURIComponent(searchParams.q)}` : ''}`}
+                onClick={() => handleCategoryChange(category)}
                 className={`px-4 py-2 rounded-full transition-all ${
-                  searchParams.category === category
+                  selectedCategory === category
                     ? 'gradient-bg text-white'
                     : 'bg-card border border-white/10 text-text-secondary hover:border-accent-pink/30'
                 }`}
               >
                 {category}
-              </Link>
+              </button>
             ))}
           </div>
         </div>
@@ -120,15 +156,18 @@ export default async function ArticlesPage({
               <p className="text-text-secondary mb-6">
                 لم يتم العثور على مقالات تطابق معايير البحث
               </p>
-              <Link
-                href="/articles"
+              <button
+                onClick={() => {
+                  handleCategoryChange('');
+                  handleSearch('');
+                }}
                 className="inline-flex items-center gap-2 text-accent-pink hover:text-accent-cyan"
               >
                 عرض جميع المقالات
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </button>
             </div>
           )}
         </div>

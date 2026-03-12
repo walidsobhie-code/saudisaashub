@@ -1,31 +1,31 @@
 'use client';
 
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-export function SearchForm() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const [query, setQuery] = useState(searchParams.get('q') || '');
+interface SearchFormProps {
+  onSearch?: (query: string) => void;
+  initialValue?: string;
+}
 
-  useEffect(() => {
-    setQuery(searchParams.get('q') || '');
-  }, [searchParams]);
+export function SearchForm({ onSearch, initialValue = '' }: SearchFormProps) {
+  const [query, setQuery] = useState(initialValue);
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const params = new URLSearchParams();
-    if (query.trim()) {
-      params.set('q', query.trim());
+    if (onSearch) {
+      onSearch(query);
     }
-    if (searchParams.get('category')) {
-      params.set('category', searchParams.get('category')!);
+  };
+
+  const handleClear = () => {
+    setQuery('');
+    if (onSearch) {
+      onSearch('');
     }
-    router.push(`/articles${params.toString() ? `?${params.toString()}` : ''}`);
   };
 
   return (
-    <form onSubmit={handleSearch} className="relative">
+    <form onSubmit={handleSubmit} className="relative">
       <div className="flex gap-2">
         <input
           type="text"
@@ -46,14 +46,7 @@ export function SearchForm() {
       {query && (
         <button
           type="button"
-          onClick={() => {
-            setQuery('');
-            const params = new URLSearchParams();
-            if (searchParams.get('category')) {
-              params.set('category', searchParams.get('category')!);
-            }
-            router.push(`/articles${params.toString() ? `?${params.toString()}` : ''}`);
-          }}
+          onClick={handleClear}
           className="absolute left-14 top-1/2 -translate-y-1/2 p-1 text-text-muted hover:text-white transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
