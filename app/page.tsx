@@ -69,6 +69,7 @@ export default async function Home() {
                 date={article.date}
                 categories={article.categories}
                 readingTime={article.readingTime}
+                image={article.image}
               />
             ))}
           </div>

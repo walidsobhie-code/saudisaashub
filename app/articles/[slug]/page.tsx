@@ -83,6 +83,18 @@ export default async function ArticlePage({ params }: PageProps) {
             <span className="text-text-secondary truncate max-w-[200px]">{article.title}</span>
           </nav>
 
+          {/* Featured Image */}
+          {article.image && (
+            <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden mb-8 shadow-2xl">
+              <img
+                src={article.image}
+                alt={article.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+            </div>
+          )}
+
           {/* Categories */}
           <div className="flex flex-wrap gap-2 mb-5">
             {article.categories.map((category) => (
@@ -227,6 +239,7 @@ export default async function ArticlePage({ params }: PageProps) {
                   date={related.date}
                   categories={related.categories}
                   readingTime={related.readingTime}
+                  image={related.image}
                 />
               ))}
             </div>

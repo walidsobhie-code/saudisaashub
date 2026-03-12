@@ -8,6 +8,7 @@ export interface Article {
   categories: string[];
   author: string;
   readingTime: number;
+  image: string; // Unsplash URL for featured image
 }
 
 export const articles: Article[] = [
@@ -21,7 +22,8 @@ export const articles: Article[] = [
       "التسويق"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 11
+    "readingTime": 11,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "كيفية العمل الحر في المملكة العربية السعودية",
@@ -33,7 +35,8 @@ export const articles: Article[] = [
       "العمل عن بُعد"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 11
+    "readingTime": 11,
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "أبرز إنجازات رؤية 2030 في القطاع التقني",
@@ -45,7 +48,8 @@ export const articles: Article[] = [
       "رؤية 2030"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 10
+    "readingTime": 10,
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "تطبيقات الذكاء الاصطناعي في الأعمال السعودية",
@@ -57,7 +61,8 @@ export const articles: Article[] = [
       "الذكاء الاصطناعي والتحول الرقمي"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 11
+    "readingTime": 11,
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "أفضل شركات الدفع الإلكتروني في السعودية 2026",
@@ -69,7 +74,8 @@ export const articles: Article[] = [
       "ال fintech والخدمات المصرفية"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 10
+    "readingTime": 10,
+    "image": "https://images.unsplash.com/photo-1559136555-9303b2b02285?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "أفضل شركات البرمجيات كخدمة SaaS سعودية 2026",
@@ -81,7 +87,8 @@ export const articles: Article[] = [
       "SaaS والتقنية"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 11
+    "readingTime": 11,
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "كيفية إنشاء متجر إلكتروني في المملكة العربية السعودية 2026",
@@ -93,7 +100,8 @@ export const articles: Article[] = [
       "التجارة الإلكترونية"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 11
+    "readingTime": 11,
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "مقارنة شاملة بين Tabby و Tamara لحلول الدفع المؤجل في السعودية",
@@ -105,7 +113,8 @@ export const articles: Article[] = [
       "ال fintech والخدمات المصرفية"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 11
+    "readingTime": 11,
+    "image": "https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "أفضل منصات التجارة الإلكترونية في السعودية 2026",
@@ -117,7 +126,8 @@ export const articles: Article[] = [
       "التجارة الإلكترونية"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 11
+    "readingTime": 11,
+    "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "دليل الفوترة الإلكترونية ZATCA الشامل للمؤسسات التجارية في السعودية 2026",
@@ -129,7 +139,8 @@ export const articles: Article[] = [
       "ZATCA - الفوترة الإلكترونية"
     ],
     "author": "Saudi SaaS Hub",
-    "readingTime": 8
+    "readingTime": 8,
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
   }
 ];
 
