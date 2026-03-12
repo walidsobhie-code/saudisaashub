@@ -5,6 +5,7 @@ import { Newsletter } from '@/components/Newsletter';
 import { Hero } from '@/components/Hero';
 import { TrustedCompanies } from '@/components/TrustedCompanies';
 import { SaudiSaaSCompanies } from '@/components/SaudiSaaSCompanies';
+import { CompanyComparer } from '@/components/CompanyComparer';
 import { UpcomingEvents } from '@/components/UpcomingEvents';
 
 export default async function Home() {
@@ -93,6 +94,9 @@ export default async function Home() {
 
       {/* Upcoming Events Section */}
       <UpcomingEvents />
+
+      {/* Company Comparer Section */}
+      <CompanyComparer />
 
       {/* Categories */}
       <section className="py-16 bg-card/30">
