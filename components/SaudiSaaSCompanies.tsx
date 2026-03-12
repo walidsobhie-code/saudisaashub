@@ -43,9 +43,40 @@ export function SaudiSaaSCompanies() {
                   {company.description}
                 </p>
 
-                {/* Meta */}
-                <div className="flex items-center justify-between text-xs text-text-muted">
-                  <span>تأسست {company.founded}</span>
+                {/* Meta Grid - Expanded */}
+                <div className="grid grid-cols-2 gap-3 mb-4 text-xs">
+                  <div className="p-2 rounded-lg bg-white/5">
+                    <div className="text-text-muted mb-1">الموظفين</div>
+                    <div className="text-white font-medium">{company.employees}</div>
+                  </div>
+                  <div className="p-2 rounded-lg bg-white/5">
+                    <div className="text-text-muted mb-1">التمويل</div>
+                    <div className="text-white font-medium line-clamp-2">{company.funding}</div>
+                  </div>
+                  <div className="p-2 rounded-lg bg-white/5 col-span-2">
+                    <div className="text-text-muted mb-1">المقر</div>
+                    <div className="text-white font-medium">{company.headquarters}</div>
+                  </div>
+                </div>
+
+                {/* Key Products */}
+                {company.keyProducts && company.keyProducts.length > 0 && (
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-1.5">
+                      {company.keyProducts.slice(0, 3).map((product, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2 py-1 text-xs rounded-md bg-accent-green/10 text-accent-green"
+                        >
+                          {product}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Actions */}
+                <div className="flex items-center justify-between text-xs text-text-muted pt-3 border-t border-white/5">
                   <Link
                     href={`/articles?q=${encodeURIComponent(company.name)}`}
                     className="text-accent-green hover:underline flex items-center gap-1"
@@ -55,6 +86,14 @@ export function SaudiSaaSCompanies() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
+                  <a
+                    href={company.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-accent-green transition-colors"
+                  >
+                    الموقع الإلكتروني
+                  </a>
                 </div>
               </div>
             </div>

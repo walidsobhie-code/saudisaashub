@@ -26,7 +26,7 @@ export function UpcomingEvents() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">الفعاليات القادمة</h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            لا تفوت أحدث الفعاليات التقنية في السعودية والشرق الأوسط
+            لا تفوت أحدث الفعاليات التقنية في السعودية والشرق الأوسط - احجز مقعدك الآن
           </p>
         </div>
 
@@ -70,12 +70,18 @@ export function UpcomingEvents() {
                 <p className="text-text-secondary text-sm mb-3 line-clamp-2">
                   {event.description}
                 </p>
-                <div className="flex items-center text-xs text-text-muted">
+                <div className="flex items-center text-xs text-text-muted mb-4">
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   {event.location}
+                </div>
+                {/* Registration CTA */}
+                <div className="mt-4">
+                  <span className="block w-full py-2 px-4 text-center text-sm font-semibold rounded-lg bg-accent-green text-background hover:shadow-glow-green transition-all">
+                    احجز مقعدك الآن
+                  </span>
                 </div>
               </div>
             </a>
@@ -96,7 +102,7 @@ export function UpcomingEvents() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent-green hover:text-white transition-colors"
           >
-            المزيد من الفعاليات
+            عرض كل الفعاليات
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

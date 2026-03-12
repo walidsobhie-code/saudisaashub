@@ -108,13 +108,17 @@ export function CompanyComparer() {
                     ? 'bg-accent-green text-background'
                     : 'bg-card border border-white/10 text-text-secondary hover:border-accent-green/30'
                 }`}
+                aria-pressed={selectedCompanies.includes(company.slug)}
               >
                 {company.name}
               </button>
             ))}
           </div>
           <p className="text-text-muted text-sm mt-2">
-            {selectedCompanies.length}/3 محددة
+            {selectedCompanies.length === 0
+              ? 'اختر شركة واحدة على الأقل للمقارنة'
+              : `${selectedCompanies.length} من 3 محددة`}
+            {selectedCompanies.length > 0 && selectedCompanies.length < 2 && ' - اختر شركة أخرى للمقارنة'}
           </p>
         </div>
 

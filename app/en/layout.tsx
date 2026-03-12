@@ -3,11 +3,27 @@ import '../globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SearchModal } from '@/components/SearchModal';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { Inter, Cairo } from 'next/font/google';
 
 const SITE_URL = 'https://saudisaashub.pages.dev';
 const EN_URL = 'https://saudisaashub.pages.dev/en';
 const OG_IMAGE = `${SITE_URL}/logo-og.png`;
-const NOW = new Date().toISOString();
+
+// Optimized font loading
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+  preload: true,
+});
+
+const cairo = Cairo({
+  subsets: ['arabic'],
+  display: 'swap',
+  variable: '--font-cairo',
+  preload: true,
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   const now = new Date().toISOString();
@@ -92,8 +108,13 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" className={`${inter.variable} ${cairo.variable}`}>
       <head>
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+        {/* JSON-LD Organization */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

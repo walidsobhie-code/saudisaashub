@@ -5,17 +5,20 @@ import Link from 'next/link';
 import { getArticles, getAllCategories } from '@/lib/articles';
 import { ArticleCard } from '@/components/ArticleCard';
 import { SearchForm } from '@/components/SearchForm';
+import { SkeletonCard } from '@/components/SkeletonCard';
 
 export default function ArticlesPage() {
   const [articles, setArticles] = useState<any[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [allCategories, setAllCategories] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadedArticles = getArticles();
     setArticles(loadedArticles);
     setAllCategories(getAllCategories());
+    setIsLoading(false);
   }, []);
 
   const filteredArticles = useMemo(() => {
@@ -100,21 +103,24 @@ export default function ArticlesPage() {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredArticles.map((article) => (
-              <ArticleCard
-                key={article.slug}
-                title={article.title}
-                excerpt={article.excerpt}
-                slug={article.slug}
-                date={article.date}
-                categories={article.categories}
-                readingTime={article.readingTime}
-                image={article.image}
-              />
-            ))}
+            {isLoading
+              ? // Show 6 skeleton cards while loading
+                Array.from({ length: 6 }).map((_, i) => <SkeletonCard key={i} />)
+              : filteredArticles.map((article) => (
+                  <ArticleCard
+                    key={article.slug}
+                    title={article.title}
+                    excerpt={article.excerpt}
+                    slug={article.slug}
+                    date={article.date}
+                    categories={article.categories}
+                    readingTime={article.readingTime}
+                    image={article.image}
+                  />
+                ))}
           </div>
 
-          {filteredArticles.length === 0 && (
+          {!isLoading && filteredArticles.length === 0 && (
             <div className="text-center py-20">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-card flex items-center justify-center">
                 <svg
