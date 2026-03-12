@@ -2,7 +2,8 @@ import { getArticles } from '@/lib/articles';
 
 export default async function sitemap() {
   const articles = await getArticles();
-  const baseUrl = 'https://saudisaashub.com';
+  // Use environment variable for base URL, defaults to Cloudflare Pages subdomain
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://saudisaashub.pages.dev';
 
   const staticPages = [
     { url: baseUrl, lastModified: new Date() },
