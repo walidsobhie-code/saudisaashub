@@ -37,8 +37,9 @@ yarn-error.log*
 next-env.d.ts
 
 # Database (local only)
-/data/
-*.db
+# Keep data/xml/ for article source files
+/data/*.db
+/data/*.sqlite
 
 # Logs
 logs
