@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     url: 'https://saudisaashub.com/en',
     images: [
       {
-        url: 'https://saudisaashub.com/logo.png',
+        url: 'https://saudisaashub.com/logo-og.png',
         width: 1200,
         height: 630,
-        alt: 'Saudi SaaS Hub - Logo',
+        alt: 'Saudi SaaS Hub - SaaS News Saudi Arabia',
       },
     ],
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Saudi SaaS Hub',
     description: 'Your source for SaaS and startup news in Saudi Arabia',
-    images: ['https://saudisaashub.com/logo.png'],
+    images: ['https://saudisaashub.com/logo-og.png'],
   },
   alternates: {
     canonical: 'https://saudisaashub.com/en',
