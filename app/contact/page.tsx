@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 
+const FORMNSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPRARE_ENDPOINT || 'https://formspree.io/f/your-form-id';
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,21 +20,19 @@ export default function ContactPage() {
     setStatus('loading');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(FORMNSPREE_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
       if (response.ok) {
         setStatus('success');
-        setMessage(data.message);
+        setMessage('تم إرسال رسالتك بنجاح. سنتواصل معك قريباً!');
         setFormData({ name: '', email: '', message: '' });
       } else {
         setStatus('error');
-        setMessage(data.error || 'حدث خطأ');
+        setMessage('حدث خطأ. يرجى المحاولة مرة أخرى.');
       }
     } catch {
       setStatus('error');

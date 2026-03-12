@@ -23,7 +23,7 @@ export function SearchModal() {
   useEffect(() => {
     const loadArticles = async () => {
       try {
-        const res = await fetch('/api/search');
+        const res = await fetch('/data/search-index.json');
         const data = await res.json();
         setArticles(data);
       } catch (e) {

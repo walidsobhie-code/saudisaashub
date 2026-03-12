@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPRARE_NEWSLETTER || 'https://formspree.io/f/your-newsletter-id';
+
 export function Newsletter() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -15,21 +17,19 @@ export function Newsletter() {
     setStatus('loading');
 
     try {
-      const response = await fetch('/api/newsletter', {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       });
 
-      const data = await response.json();
-
       if (response.ok) {
         setStatus('success');
-        setMessage(data.message);
+        setMessage('تم الاشتراك بنجاح!');
         setEmail('');
       } else {
         setStatus('error');
-        setMessage(data.error || 'حدث خطأ');
+        setMessage('حدث خطأ. يرجى المحاولة مرة أخرى.');
       }
     } catch {
       setStatus('error');

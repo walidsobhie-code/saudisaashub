@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "node scripts/build-search.js && next dev",
+    "build": "node scripts/build-search.js && next build",
+    "start": "next start",
+    "import-db": "node scripts/import-db.js"
   },
   "dependencies": {
     "better-sqlite3": "^12.6.2",
