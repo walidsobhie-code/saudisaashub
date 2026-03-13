@@ -1,4 +1,4 @@
-import { sql } from './neon';
+import { getSql } from './neon';
 
 export interface Company {
   id: string;
@@ -55,7 +55,7 @@ export interface Badge {
 
 // Fetch all companies from database (without relationships for now)
 export async function getAllCompaniesDB(): Promise<Company[]> {
-  const result = await sql`
+  const result = await getSql()`
     SELECT id, name, slug, description, founded_year, headquarters, employees, funding, website, logo_url, created_at, updated_at
     FROM companies
     ORDER BY name
@@ -65,7 +65,7 @@ export async function getAllCompaniesDB(): Promise<Company[]> {
 
 // Get company by slug with basic info
 export async function getCompanyBySlugDB(slug: string): Promise<Company | null> {
-  const result = await sql`
+  const result = await getSql()`
     SELECT * FROM companies WHERE slug = ${slug} LIMIT 1
   `;
   return result.length > 0 ? (result[0] as Company) : null;
@@ -73,7 +73,7 @@ export async function getCompanyBySlugDB(slug: string): Promise<Company | null> 
 
 // Get all categories (lookup table)
 export async function getAllCategoriesDB(): Promise<Category[]> {
-  const result = await sql`
+  const result = await getSql()`
     SELECT id, name, slug, description FROM categories ORDER BY name
   `;
   return result as Category[];
@@ -81,7 +81,7 @@ export async function getAllCategoriesDB(): Promise<Category[]> {
 
 // Get all certifications (lookup table)
 export async function getAllCertificationsDB(): Promise<Certification[]> {
-  const result = await sql`
+  const result = await getSql()`
     SELECT id, name, slug, description, category FROM certifications ORDER BY name
   `;
   return result as Certification[];
@@ -89,16 +89,16 @@ export async function getAllCertificationsDB(): Promise<Certification[]> {
 
 // Get unique employee sizes from companies
 export async function getUniqueEmployeeSizesDB(): Promise<string[]> {
-  const result = await sql`
+  const result = await getSql()`
     SELECT DISTINCT employees FROM companies WHERE employees IS NOT NULL AND employees != '' ORDER BY employees
   `;
-  return result.map(r => r.employees);
+  return result.map((r: { employees: string }) => r.employees);
 }
 
 // Search companies by name/description
 export async function searchCompaniesDB(query: string): Promise<Company[]> {
   const lowerQuery = `%${query.toLowerCase()}%`;
-  const result = await sql`
+  const result = await getSql()`
     SELECT id, name, slug, description, founded_year, headquarters, employees, funding, website, logo_url, created_at, updated_at
     FROM companies
     WHERE LOWER(name) LIKE ${lowerQuery} OR LOWER(description) LIKE ${lowerQuery}
