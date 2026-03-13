@@ -1,81 +1,28 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
-
-const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPRARE_NEWSLETTER || 'https://formspree.io/f/your-newsletter-id';
-
 export function Newsletter() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setStatus('loading');
-
-    try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-
-      if (response.ok) {
-        setStatus('success');
-        setMessage('تم الاشتراك بنجاح!');
-        setEmail('');
-      } else {
-        setStatus('error');
-        setMessage('حدث خطأ. يرجى المحاولة مرة أخرى.');
-      }
-    } catch {
-      setStatus('error');
-      setMessage('حدث خطأ في الاتصال');
-    }
-  };
-
   return (
-    <section className="py-20 bg-card/50">
-      <div className="max-w-2xl mx-auto px-4 text-center">
-        <h2 className="text-2xl font-bold mb-3">اشترك في النشرة البريدية</h2>
-        <p className="text-text-secondary mb-6">احصل على أحدث المقالات والتحديثات في بريدك</p>
-
-        {status === 'success' ? (
-          <div className="bg-accent-green/10 border border-accent-green/30 rounded-xl p-4 text-accent-green" role="alert">
-            {message}
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <label htmlFor="newsletter-email" className="sr-only">
-              البريد الإلكتروني
-            </label>
-            <input
-              id="newsletter-email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="بريدك الإلكتروني"
-              aria-required="true"
-              aria-describedby="newsletter-help"
-              className="flex-1 px-4 py-3 rounded-xl bg-background border border-white/10 text-white focus:border-accent-green focus:outline-none focus:ring-2 focus:ring-accent-green focus:ring-offset-2 focus:ring-offset-background"
-            />
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="px-6 py-3 rounded-xl bg-accent-green text-background font-semibold hover:shadow-glow-green transition-all disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-accent-green focus:ring-offset-2 focus:ring-offset-background"
-            >
-              {status === 'loading' ? 'جاري...' : 'اشتراك'}
-            </button>
-          </form>
-        )}
-        <p id="newsletter-help" className="mt-3 text-text-muted text-sm">
-          لن نشارك بريدك مع أي شخص آخر. يمكنك إلغاء الاشتراك في أي وقت.
-        </p>
-        {status === 'error' && <p className="mt-3 text-red-400 text-sm">{message}</p>}
-      </div>
-    </section>
+    <div className="bg-card rounded-xl border border-white/5 p-12 text-center">
+      <h2 className="text-3xl font-bold text-white mb-4">Stay in the Loop</h2>
+      <p className="text-text-secondary mb-8 max-w-xl mx-auto">
+        Get weekly insights on Saudi SaaS companies, funding rounds, and compliance updates delivered to your inbox.
+      </p>
+      <form className="max-w-md mx-auto flex gap-3">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="flex-1 px-4 py-3 rounded-lg bg-background border border-white/10 text-white focus:border-accent-green focus:outline-none"
+        />
+        <button
+          type="submit"
+          className="px-6 py-3 bg-accent-green text-background font-semibold rounded-lg hover:bg-accent-green/90 transition-all"
+        >
+          Subscribe
+        </button>
+      </form>
+      <p className="text-text-muted text-xs mt-4">
+        No spam, unsubscribe anytime. By subscribing, you agree to our Terms.
+      </p>
+    </div>
   );
 }

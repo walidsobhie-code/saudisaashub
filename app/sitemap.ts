@@ -12,13 +12,16 @@ export default async function sitemap() {
     { url: `${baseUrl}/search`, lastModified: new Date() },
     { url: `${baseUrl}/zatca`, lastModified: new Date() },
     { url: `${baseUrl}/funding`, lastModified: new Date() },
+    { url: `${baseUrl}/reports`, lastModified: new Date() },
     { url: `${baseUrl}/reports/state-of-saudi-saas-2026`, lastModified: new Date() },
+    { url: `${baseUrl}/guides`, lastModified: new Date() },
     { url: `${baseUrl}/articles/zatca-compliance-guide`, lastModified: new Date() },
     { url: `${baseUrl}/articles/raise-seed-saudi`, lastModified: new Date() },
     { url: `${baseUrl}/articles/top-10-saudi-saas`, lastModified: new Date() },
     { url: `${baseUrl}/articles`, lastModified: new Date() },
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/contact`, lastModified: new Date() },
+    { url: `${baseUrl}/events`, lastModified: new Date() },
   ];
 
   const articlePages = articles.map((article) => ({

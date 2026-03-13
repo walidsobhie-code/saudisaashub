@@ -1,260 +1,219 @@
 import Link from 'next/link';
 import { getArticles } from '@/lib/articles';
+import { editorialPicks } from '@/lib/editorial-picks';
+import { getTrendingCompanies, getTrendingArticleSlugs } from '@/lib/trending';
+import { companies } from '@/lib/companies';
 import { ArticleCard } from '@/components/ArticleCard';
-import { Newsletter } from '@/components/Newsletter';
+import { CompanyCard } from '@/components/CompanyCard';
 import { Hero } from '@/components/Hero';
-import { TrustedCompanies } from '@/components/TrustedCompanies';
-import { SaudiSaaSCompanies } from '@/components/SaudiSaaSCompanies';
-import { CompanyComparer } from '@/components/CompanyComparer';
-import { UpcomingEvents } from '@/components/UpcomingEvents';
 
 export default async function Home() {
   const articles = await getArticles();
-  const featuredArticles = articles.slice(0, 6);
+  const featuredArticles = articles.slice(0, 3);
+  const trendingCompanies = getTrendingCompanies();
+  const trendingArticleSlugs = getTrendingArticleSlugs();
+  const trendingArticles = articles.filter(a => trendingArticleSlugs.includes(a.slug));
 
-  // JSON-LD for Organization + Website (Arabic)
+  // Get editorial spotlight items
+  const spotlight = editorialPicks.slice(0, 2);
+
+  // Get deep dives (reports)
+  const reports = [
+    {
+      slug: 'state-of-saudi-saas-2026',
+      title: 'State of Saudi SaaS 2026',
+      description: 'Comprehensive market analysis covering 252 companies, funding trends, and ZATCA impact.',
+      date: '2026-03-13',
+    },
+  ];
+
+  // JSON-LD (keep minimal)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Saudi SaaS Hub',
     url: 'https://saudisaashub.pages.dev',
     description: 'المصدر الأول لـ SaaS في المملكة العربية السعودية',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Saudi SaaS Hub',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://saudisaashub.pages.dev/logo.png',
-      },
-    },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://saudisaashub.pages.dev/articles?search={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
-    inLanguage: 'ar-SA',
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      {/* Hreflang alternates */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <link rel="alternate" hrefLang="ar" href="https://saudisaashub.pages.dev/" />
       <link rel="alternate" hrefLang="en" href="https://saudisaashub.pages.dev/en" />
       <link rel="alternate" hrefLang="x-default" href="https://saudisaashub.pages.dev/" />
 
       <Hero />
 
-      {/* Featured Reports & Guides */}
-      <section className="py-20 bg-gradient-to-b from-accent-green/5 to-transparent">
+      {/* Editorial Spotlight */}
+      <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">تقرير ومقالات مميزة</h2>
-            <p className="text-text-secondary max-w-2xl mx-auto">
-              اكتشف أبحاثنا الشاملة وأدلةنا العملية لمساعدتك على فهم سوق SaaS السعودي
-            </p>
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-1 h-8 bg-accent-green rounded-full" />
+            <h2 className="text-3xl font-bold text-white">Editorial Spotlight</h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* State of Saudi SaaS 2026 */}
-            <Link
-              href="/reports/state-of-saudi-saas-2026"
-              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
-            >
-              <div className="p-8 bg-gradient-to-br from-accent-green/10 to-transparent">
-                <div className="text-4xl font-bold text-accent-green mb-4">📊</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
-                  حالة سوق SaaS السعودية 2026
-                </h3>
-                <p className="text-text-secondary text-sm mb-4">
-                  تقرير سنوي شامل يحلل حجم السوق، الاتجاهات، التمويل، وتأثير ZATCA
-                </p>
-                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
-                  اقرأ التقرير
-                  <span>→</span>
-                </div>
-              </div>
-            </Link>
-
-            {/* ZATCA Compliance Guide */}
-            <Link
-              href="/articles/zatca-compliance-guide"
-              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
-            >
-              <div className="p-8 bg-gradient-to-br from-accent-cyan/10 to-transparent">
-                <div className="text-4xl font-bold text-accent-cyan mb-4">⚖️</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
-                  دليل امتثال ZATCA للفواتير الإلكترونية
-                </h3>
-                <p className="text-text-secondary text-sm mb-4">
-                  كل ما تحتاج معرفته about نظام Fatoora: المراحل، المتطلبات، والعقوبات
-                </p>
-                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
-                  اقرأ الدليل
-                  <span>→</span>
-                </div>
-              </div>
-            </Link>
-
-            {/* Raise Seed Funding */}
-            <Link
-              href="/articles/raise-seed-saudi"
-              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
-            >
-              <div className="p-8 bg-gradient-to-br from-purple-500/10 to-transparent">
-                <div className="text-4xl font-bold text-purple-400 mb-4">💰</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
-                  كيفية جمع التمويل المبدئي في السعودية
-                </h3>
-                <p className="text-text-secondary text-sm mb-4">
-                  دليل عملي خطوة بخطوة: من التحضير إلى إبرام الصفقة مع المستثمرين
-                </p>
-                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
-                  اقرأ الدليل
-                  <span>→</span>
-                </div>
-              </div>
-            </Link>
-
-            {/* Top 10 SaaS Companies */}
-            <Link
-              href="/articles/top-10-saudi-saas"
-              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
-            >
-              <div className="p-8 bg-gradient-to-br from-pink-500/10 to-transparent">
-                <div className="text-4xl font-bold text-pink-400 mb-4">🏆</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
-                  أفضل 10 شركات SaaS في السعودية
-                </h3>
-                <p className="text-text-secondary text-sm mb-4">
-                  تحليل مقارن مفصل لأبرز الشركات مع نقاط القوة والضعف
-                </p>
-                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
-                  عرض القائمة
-                  <span>→</span>
-                </div>
-              </div>
-            </Link>
-
-            {/* ZATCA Hub */}
-            <Link
-              href="/zatca"
-              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
-            >
-              <div className="p-8 bg-gradient-to-br from-yellow-500/10 to-transparent">
-                <div className="text-4xl font-bold text-yellow-400 mb-4">📋</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
-                  مركز ZATCA للامتثال
-                </h3>
-                <p className="text-text-secondary text-sm mb-4">
-                  قائمة بالشركات المتوافقة، متطلبات، وآخر التحديثات
-                </p>
-                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
-                  تصفح المركز
-                  <span>→</span>
-                </div>
-              </div>
-            </Link>
-
-            {/* Funding Tracker */}
-            <Link
-              href="/funding"
-              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
-            >
-              <div className="p-8 bg-gradient-to-br from-blue-500/10 to-transparent">
-                <div className="text-4xl font-bold text-blue-400 mb-4">📈</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
-                  Funding Tracker
-                </h3>
-                <p className="text-text-secondary text-sm mb-4">
-                  Track investment rounds and funding deals of Saudi companies
-                </p>
-                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
-                  View Data
-                  <span>→</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Trusted Companies Section */}
-      <TrustedCompanies />
-
-      {/* Articles Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">أحدث المقالات</h2>
-            <Link
-              href="/articles"
-              className="text-accent-green hover:text-white transition-colors text-sm flex items-center gap-1"
-            >
-              عرض الكل
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredArticles.map((article) => (
-              <ArticleCard
-                key={article.slug}
-                title={article.title}
-                excerpt={article.excerpt}
-                slug={article.slug}
-                date={article.date}
-                categories={article.categories}
-                readingTime={article.readingTime}
-                image={article.image}
-              />
-            ))}
-          </div>
-
-          {featuredArticles.length === 0 && (
-            <div className="text-center py-20 text-text-muted">
-              جاري تحميل المقالات...
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Saudi SaaS Companies Section */}
-      <SaudiSaaSCompanies />
-
-      {/* Upcoming Events Section */}
-      <UpcomingEvents />
-
-      {/* Company Comparer Section */}
-      <CompanyComparer />
-
-      {/* Categories */}
-      <section className="py-16 bg-card/30">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-white text-center mb-8">تصفح حسب الفئة</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {['SaaS', 'Startup', 'التسويق', 'التقنية', 'الأعمال', 'ZATCA', 'الفوترة الإلكترونية'].map((category) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {spotlight.map(pick => (
               <Link
-                key={category}
-                href={`/articles?category=${encodeURIComponent(category)}`}
-                className="px-5 py-2.5 rounded-xl bg-card border border-white/5 text-text-secondary hover:text-accent-green hover:border-accent-green/30 transition-all"
+                key={pick.id}
+                href={pick.link}
+                className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
               >
-                {category}
+                <div className="p-8">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="px-3 py-1 bg-accent-green/10 text-accent-green text-xs font-semibold rounded-full uppercase">
+                      {pick.type}
+                    </span>
+                    <span className="text-text-muted text-sm">• Editor's Pick</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-accent-green transition-colors">
+                    {pick.headline}
+                  </h3>
+                  <p className="text-text-secondary mb-6">{pick.excerpt}</p>
+                  <div className="flex items-center gap-2 text-accent-green font-medium">
+                    Read More <span>→</span>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <Newsletter />
+      {/* Trending Now */}
+      <section className="py-24 bg-gradient-to-b from-accent-green/5 to-transparent">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-3">
+              <div className="w-1 h-8 bg-accent-cyan rounded-full" />
+              <h2 className="text-3xl font-bold text-white">Trending Now</h2>
+            </div>
+            <Link href="/companies" className="text-accent-cyan hover:underline text-sm font-medium">
+              View All
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {trendingCompanies.slice(0, 4).map(company => (
+              <CompanyCard key={company.id} company={company} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Insights (Articles) */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-3">
+              <div className="w-1 h-8 bg-purple-400 rounded-full" />
+              <h2 className="text-3xl font-bold text-white">Latest Insights</h2>
+            </div>
+            <Link href="/articles" className="text-purple-400 hover:underline text-sm font-medium">
+              All Articles
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredArticles.map(article => (
+              <ArticleCard key={article.slug} {...article} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Deep Dives (Reports) */}
+      <section className="py-24 bg-card/30">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-1 h-8 bg-yellow-400 rounded-full" />
+            <h2 className="text-3xl font-bold text-white">Deep Dives</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {reports.map(report => (
+              <Link
+                key={report.slug}
+                href={`/reports/${report.slug}`}
+                className="group bg-card rounded-xl border border-white/5 p-8 hover:border-accent-green/30 transition-all"
+              >
+                <div className="text-4xl font-bold text-yellow-400 mb-4">📈</div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
+                  {report.title}
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">{report.description}</p>
+                <div className="flex items-center gap-2 text-accent-green font-medium">
+                  Explore Report <span>→</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Browse Companies */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-3">
+              <div className="w-1 h-8 bg-accent-green rounded-full" />
+              <h2 className="text-3xl font-bold text-white">Browse Companies</h2>
+            </div>
+            <Link href="/companies" className="text-accent-green hover:underline text-sm font-medium">
+              View All 250+
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* Stats */}
+            <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-8 text-center">
+              <div className="text-5xl font-bold text-accent-green mb-2">250+</div>
+              <div className="text-text-secondary">Saudi Companies</div>
+            </div>
+            <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-8 text-center">
+              <div className="text-5xl font-bold text-accent-cyan mb-2">15+</div>
+              <div className="text-text-secondary">Categories</div>
+            </div>
+            <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-8 text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">ZATCA</div>
+              <div className="text-text-secondary">Compliant Solutions</div>
+            </div>
+          </div>
+          {/* Featured Companies */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {companies.slice(0, 6).map(company => (
+              <CompanyCard key={company.id} company={company} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tools CTA */}
+      <section className="py-24 bg-gradient-to-b from-purple-900/20 to-transparent">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Powerful Tools</h2>
+          <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
+            Compare companies side-by-side, search across the entire database, and find the perfect SaaS solution for your needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/companies?comparison=true"
+              className="px-8 py-4 bg-accent-green text-background font-semibold rounded-xl hover:bg-accent-green/90 transition-all"
+            >
+              Start Comparison
+            </Link>
+            <Link
+              href="/search"
+              className="px-8 py-4 bg-card border border-white/20 text-white font-medium rounded-xl hover:border-accent-green transition-all"
+            >
+              Search Companies
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <Newsletter />
+        </div>
+      </section>
     </>
   );
 }
