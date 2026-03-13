@@ -1,0 +1,12 @@
+name = "saudisaashub"
+type = "webpack"
+
+[build]
+command = "npm run build"
+output_directory = ".next"
+
+[build.environment]
+NODE_VERSION = "22"
+
+[[plugins]]
+package = "@cloudflare/next-on-pages"
