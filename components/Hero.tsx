@@ -34,7 +34,7 @@ export function Hero() {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-          <span className="block text-white">Saudi</span>
+          <span className="block text-accent-green">Saudi</span>
           <span className="block gradient-text">SaaS Hub</span>
         </h1>
 
