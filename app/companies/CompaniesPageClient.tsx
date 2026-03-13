@@ -83,8 +83,7 @@ export default function CompaniesPageClient({
     setCurrentPage(1); // Reset to page 1 on filter change
   }, [initialCompanies, searchQuery, selectedCategories, selectedCertifications, selectedEmployeeSize]);
 
-  // Pagination
-  const companiesPerPage = 20;
+  // Pagination calculations
   const totalPages = Math.ceil(companies.length / companiesPerPage);
   const paginatedCompanies = companies.slice(
     (currentPage - 1) * companiesPerPage,
