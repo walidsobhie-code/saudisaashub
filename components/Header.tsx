@@ -9,6 +9,8 @@ const navLinks = [
   { href: '/', label: 'الرئيسية' },
   { href: '/companies', label: 'شركات SaaS' },
   { href: '/search', label: 'بحث' },
+  { href: '/zatca', label: 'ZATCA' },
+  { href: '/funding', label: 'تمويل' },
   { href: '/articles', label: 'المقالات' },
   { href: '/about', label: 'عن المنصة' },
   { href: '/contact', label: 'اتصل بنا' },
