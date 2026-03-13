@@ -10,6 +10,7 @@ const navLinks = [
   { href: '/companies', label: 'شركات SaaS' },
   // Research is a mega-menu, not a simple link
   { href: '/events', label: 'الفعاليات' },
+  { href: '/news', label: 'الأخبار' },
   { href: '/about', label: 'عن المنصة' },
 ];
 
