@@ -170,7 +170,7 @@ export function CompanyComparer() {
                         <div className="flex flex-col items-center">
                           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-green/10 to-purple-500/10 flex items-center justify-center mb-2">
                             <span className="font-bold text-accent-green">
-                              {company.name.charAt(0)}
+                              {company.name ? company.name.charAt(0) : '?'}
                             </span>
                           </div>
                           <span className="text-white font-semibold">{company.name}</span>

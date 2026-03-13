@@ -136,7 +136,7 @@ export default function CompanyProfileClient({
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-accent-pink/20 to-accent-purple/20">
                   <span className="text-4xl font-bold text-white/60">
-                    {company.name.charAt(0)}
+                    {company.name ? company.name.charAt(0) : '?'}
                   </span>
                 </div>
               )}

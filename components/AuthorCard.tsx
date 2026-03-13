@@ -25,7 +25,7 @@ export function AuthorCard({ author, size = 'md' }: AuthorCardProps) {
       <div
         className={`${sizeClasses[size]} rounded-full bg-gradient-to-br from-accent-green/20 to-purple-500/20 flex items-center justify-center text-accent-green font-bold`}
       >
-        {author.name.charAt(0)}
+        {author.name ? author.name.charAt(0) : '?'}
       </div>
       <div>
         <h4 className={`${nameSize[size]} font-semibold text-white`}>
@@ -47,7 +47,7 @@ export function AuthorBio({ author }: AuthorBioProps) {
     <div className="mt-12 pt-8 border-t border-white/10">
       <div className="flex items-start gap-4 p-6 bg-card/50 rounded-2xl">
         <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent-green/20 to-purple-500/20 flex items-center justify-center text-accent-green text-xl font-bold flex-shrink-0">
-          {author.name.charAt(0)}
+          {author.name ? author.name.charAt(0) : '?'}
         </div>
         <div className="flex-1">
           <h4 className="font-semibold text-white mb-1">{author.name}</h4>
