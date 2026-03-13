@@ -7,8 +7,12 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
+export async function generateStaticParams() {
+  const companies = await getAllCompaniesDB();
+  return companies.map((company) => ({
+    slug: company.slug,
+  }));
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   // During Cloudflare build, DATABASE_URL is not set - return generic metadata
@@ -67,16 +71,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function CompanyProfilePage({ params }: PageProps) {
-  // During Cloudflare build, DATABASE_URL is not set - render placeholder
-  if (!process.env.DATABASE_URL) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4">Company Profile</h1>
-        <p className="text-gray-500">Loading company details...</p>
-      </div>
-    );
-  }
-
   const { slug } = await params;
   const company = await getCompanyBySlugDB(slug);
 
