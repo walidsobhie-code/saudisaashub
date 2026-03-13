@@ -12,38 +12,42 @@ export default async function Home() {
   const articles = await getArticles();
   const featuredArticles = articles.slice(0, 6);
 
-  // JSON-LD for Organization + Website
+  // JSON-LD for Organization + Website (Arabic)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Saudi SaaS Hub',
-    url: 'https://saudisaashub.com',
+    url: 'https://saudisaashub.pages.dev',
     description: 'المصدر الأول لـ SaaS في المملكة العربية السعودية',
     publisher: {
       '@type': 'Organization',
       name: 'Saudi SaaS Hub',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://saudisaashub.com/logo.png',
+        url: 'https://saudisaashub.pages.dev/logo.png',
       },
     },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://saudisaashub.com/articles?search={search_term_string}',
+        urlTemplate: 'https://saudisaashub.pages.dev/articles?search={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },
+    inLanguage: 'ar-SA',
   };
 
   return (
     <>
-      {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* Hreflang alternates */}
+      <link rel="alternate" hrefLang="ar" href="https://saudisaashub.pages.dev/" />
+      <link rel="alternate" hrefLang="en" href="https://saudisaashub.pages.dev/en" />
+      <link rel="alternate" hrefLang="x-default" href="https://saudisaashub.pages.dev/" />
 
       <Hero />
 

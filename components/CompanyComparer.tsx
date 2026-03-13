@@ -161,12 +161,12 @@ export function CompanyComparer() {
         {showComparison && selectedData.length >= 2 && (
           <div className="bg-card rounded-xl border border-white/5 overflow-hidden mb-8">
             <div className="overflow-x-auto">
-              <table className="w-full">
+              <table className="w-full" aria-label="Company comparison table">
                 <thead>
                   <tr className="border-b border-white/5">
-                    <th className="p-4 text-right text-text-secondary text-sm">الميزة</th>
+                    <th scope="col" className="p-4 text-right text-text-secondary text-sm">الميزة</th>
                     {selectedData.map(company => (
-                      <th key={company.slug} className="p-4 text-center">
+                      <th key={company.slug} scope="col" className="p-4 text-center">
                         <div className="flex flex-col items-center">
                           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-green/10 to-purple-500/10 flex items-center justify-center mb-2">
                             <span className="font-bold text-accent-green">

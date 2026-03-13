@@ -17,7 +17,7 @@ export const upcomingEvents: TechEvent[] = [
     date: '2026-04-15',
     location: 'الرياض، المملكة العربية السعودية',
     description: 'أكبر حدث تقني في الشرق الأوسط - يجمع رواد الأعمال والمستثمرين والشركات التقنية',
-    website: 'https://leap.sa',
+    website: 'https://leap.sa', // TODO: Verify URL
     type: 'conference',
     region: 'Saudi'
   },
@@ -27,7 +27,7 @@ export const upcomingEvents: TechEvent[] = [
     date: '2026-05-20',
     location: 'جدة، المملكة العربية السعودية',
     description: 'قمة متخصصة في حلول SaaS - استراتيجيات النمو والتحول الرقمي',
-    website: 'https://saassummit.com/saudi-arabia',
+    website: 'https://saassummit.com/saudi-arabia', // TODO: Verify URL
     type: 'conference',
     region: 'Saudi'
   },
@@ -37,7 +37,7 @@ export const upcomingEvents: TechEvent[] = [
     date: '2026-06-10',
     location: 'الرياض، المملكة العربية السعودية',
     description: 'أسبوع التقنية في الرياض - ورش عمل وجلسات حوارية',
-    website: 'https://riyadhtech.sa',
+    website: 'https://riyadhtech.sa', // TODO: Verify URL
     type: 'workshop',
     region: 'Saudi'
   },
@@ -47,7 +47,7 @@ export const upcomingEvents: TechEvent[] = [
     date: '2026-10-01',
     location: 'الرياض، المملكة العربية السعودية',
     description: 'معرض التقنية العالمي - أحدث الابتكارات والحلول التقنية',
-    website: 'https://gitex.sa',
+    website: 'https://gitex.sa', // TODO: Verify URL
     type: 'conference',
     region: 'Saudi'
   },
@@ -57,7 +57,7 @@ export const upcomingEvents: TechEvent[] = [
     date: '2026-03-25',
     location: 'الرياض، المملكة العربية السعودية',
     description: 'مؤتمر التكنولوجيا المالية - مستقبل المدفوعات والخدمات المالية',
-    website: 'https://fintech.sa',
+    website: 'https://fintech.sa', // TODO: Verify URL
     type: 'conference',
     region: 'Saudi'
   },
@@ -67,7 +67,7 @@ export const upcomingEvents: TechEvent[] = [
     date: '2026-04-28',
     location: 'دبي، الإمارات العربية المتحدة',
     description: 'قمة الذكاء الاصطناعي - تحديثات وتطبيقات AI في المنطقة',
-    website: 'https://dubaiaisummit.ae',
+    website: 'https://dubaiaisummit.ae', // TODO: Verify URL
     type: 'conference',
     region: 'Middle East'
   },
@@ -77,7 +77,7 @@ export const upcomingEvents: TechEvent[] = [
     date: '2026-05-15',
     location: 'أبوظبي، الإمارات العربية المتحدة',
     description: 'مهرجان التكنولوجيا المالية في أبوظبي - الابتكار في الخدمات المالية',
-    website: 'https://adfintech.ae',
+    website: 'https://adfintech.ae', // TODO: Verify URL
     type: 'conference',
     region: 'Middle East'
   },
@@ -87,7 +87,7 @@ export const upcomingEvents: TechEvent[] = [
     date: '2026-09-20',
     location: 'الدوحة، قطر',
     description: 'أسبوع التقنية في قطر -focus على الاستدامة والتقنية الحديثة',
-    website: 'https://qatartech.qa',
+    website: 'https://qatartech.qa', // TODO: Verify URL
     type: 'meetup',
     region: 'Middle East'
   }

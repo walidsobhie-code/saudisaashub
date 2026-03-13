@@ -39,6 +39,11 @@ export default async function HomeEN() {
         }}
       />
 
+      {/* Hreflang alternates */}
+      <link rel="alternate" hrefLang="en" href="https://saudisaashub.pages.dev/en" />
+      <link rel="alternate" hrefLang="ar" href="https://saudisaashub.pages.dev/" />
+      <link rel="alternate" hrefLang="x-default" href="https://saudisaashub.pages.dev/en" />
+
       {/* Language Switcher */}
       <div className="fixed top-20 left-4 z-40">
         <Link
