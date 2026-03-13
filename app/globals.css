@@ -166,8 +166,8 @@ a:focus:not(:focus-visible) {
 }
 
 @keyframes fadeInOut {
-  0%, 100% { opacity: 0; transform: translateY(10px); }
-  50% { opacity: 1; transform: translateY(0); }
+  0%, 100% { opacity: 0; transform: translateY(20px); }
+  15%, 85% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {

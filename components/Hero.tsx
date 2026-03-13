@@ -27,29 +27,29 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-[var(--color-primary)]/30 mb-8 animate-fade-in">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-[var(--color-primary)]/30 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
           <span className="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse" />
           <span className="text-text-secondary text-sm">المصدر الأول لـ SaaS في المملكة العربية السعودية</span>
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <span className="block text-white">Saudi</span>
           <span className="block gradient-headline">SaaS Hub</span>
         </h1>
 
         {/* Subheadline */}
         <div className="max-w-3xl mx-auto mb-16 space-y-3">
-          <p className="text-base md:text-lg text-text-secondary leading-relaxed animate-fade-in-out" style={{ animationDuration: '4s' }}>
+          <p className="text-base md:text-lg text-text-secondary leading-relaxed animate-fade-in-out" style={{ animationDuration: '6s' }}>
             اكتشف أكثر من 250 شركة SaaS سعودية، ابحث عن حلول متوافقة مع ZATCA، وكن على اطلاع بأحدث التمويل والمقالات
           </p>
-          <p className="text-lg md:text-xl text-text-secondary leading-relaxed animate-fade-in-out" style={{ animationDuration: '4s', animationDelay: '2s', opacity: 0 }}>
+          <p className="text-lg md:text-xl text-text-secondary leading-relaxed animate-fade-in-out" style={{ animationDuration: '6s', animationDelay: '3s', opacity: 0 }}>
             Discover 250+ Saudi SaaS companies, find ZATCA-compliant solutions, and stay updated with funding and articles
           </p>
         </div>
 
         {/* Primary CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <Link
             href="/companies"
             className="group px-8 py-4 rounded-xl bg-gradient-to-r from-accent-green to-accent-green/80 text-background font-bold text-lg hover:shadow-glow-green transition-all hover:scale-105 active:scale-95"
@@ -76,26 +76,26 @@ export function Hero() {
 
         {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto mb-16">
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
             <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">250+</div>
             <div className="text-text-secondary text-sm">Saudi Companies</div>
           </div>
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6 animate-fade-in-up" style={{ animationDelay: '1.0s' }}>
             <div className="text-4xl font-bold text-accent-cyan mb-2">15+</div>
             <div className="text-text-secondary text-sm">Categories</div>
           </div>
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6 animate-fade-in-up" style={{ animationDelay: '1.1s' }}>
             <div className="text-4xl font-bold text-purple-400 mb-2">10+</div>
             <div className="text-text-secondary text-sm">Articles</div>
           </div>
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6 animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
             <div className="text-4xl font-bold text-white mb-2">1</div>
             <div className="text-text-secondary text-sm">Platform</div>
           </div>
         </div>
 
         {/* Quick Search & Categories */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '1.3s' }}>
           {/* Search */}
           <div className="relative mb-6">
             <input
