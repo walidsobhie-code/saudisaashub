@@ -1,0 +1,8 @@
+name = "saudisaashub"
+
+[pages_build]
+command = "npm run build"
+output_directory = "out"
+
+[env]
+NODE_VERSION = "22"
