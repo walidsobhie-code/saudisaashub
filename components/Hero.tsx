@@ -1,10 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export function Hero() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger entrance animations after mount
+    const timer = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const categories = [
     { name: 'FinTech', slug: 'fintech', icon: '💳' },
@@ -19,37 +26,37 @@ export function Hero() {
       {/* Animated Mesh Gradient Background */}
       <div className="absolute inset-0 bg-background">
         {/* Floating Blobs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-accent-green/20 to-accent-green/5 blur-3xl animate-float" style={{ animationDelay: '0s' }} />
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-500/5 blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/5 blur-3xl animate-float" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-accent-green/20 to-accent-green/5 blur-3xl animate-float" style={{ animationDuration: '12s' }} />
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-500/5 blur-3xl animate-float" style={{ animationDuration: '15s', animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/5 blur-3xl animate-float" style={{ animationDuration: '14s', animationDelay: '4s' }} />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-[var(--color-primary)]/30 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+        <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-[var(--color-primary)]/30 mb-8 transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <span className="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse" />
           <span className="text-text-secondary text-sm">المصدر الأول لـ SaaS في المملكة العربية السعودية</span>
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+        <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight transition-all duration-1000 ease-out delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="block text-white">Saudi</span>
           <span className="block gradient-headline">SaaS Hub</span>
         </h1>
 
-        {/* Subheadline */}
+        {/* Subheadline - No more rapid fade! Static, clean */}
         <div className="max-w-3xl mx-auto mb-16 space-y-3">
-          <p className="text-base md:text-lg text-text-secondary leading-relaxed animate-fade-in-out" style={{ animationDuration: '6s' }}>
+          <p className="text-base md:text-lg text-text-secondary leading-relaxed">
             اكتشف أكثر من 250 شركة SaaS سعودية، ابحث عن حلول متوافقة مع ZATCA، وكن على اطلاع بأحدث التمويل والمقالات
           </p>
-          <p className="text-lg md:text-xl text-text-secondary leading-relaxed animate-fade-in-out" style={{ animationDuration: '6s', animationDelay: '3s', opacity: 0 }}>
+          <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
             Discover 250+ Saudi SaaS companies, find ZATCA-compliant solutions, and stay updated with funding and articles
           </p>
         </div>
 
         {/* Primary CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+        <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 transition-all duration-1000 ease-out delay-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <Link
             href="/companies"
             className="group px-8 py-4 rounded-xl bg-gradient-to-r from-accent-green to-accent-green/80 text-background font-bold text-lg hover:shadow-glow-green transition-all hover:scale-105 active:scale-95"
@@ -76,26 +83,26 @@ export function Hero() {
 
         {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto mb-16">
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
             <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">250+</div>
             <div className="text-text-secondary text-sm">Saudi Companies</div>
           </div>
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6 animate-fade-in-up" style={{ animationDelay: '1.0s' }}>
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
             <div className="text-4xl font-bold text-accent-cyan mb-2">15+</div>
             <div className="text-text-secondary text-sm">Categories</div>
           </div>
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6 animate-fade-in-up" style={{ animationDelay: '1.1s' }}>
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
             <div className="text-4xl font-bold text-purple-400 mb-2">10+</div>
             <div className="text-text-secondary text-sm">Articles</div>
           </div>
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6 animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
             <div className="text-4xl font-bold text-white mb-2">1</div>
             <div className="text-text-secondary text-sm">Platform</div>
           </div>
         </div>
 
         {/* Quick Search & Categories */}
-        <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '1.3s' }}>
+        <div className="max-w-4xl mx-auto">
           {/* Search */}
           <div className="relative mb-6">
             <input
