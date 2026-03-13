@@ -1,17 +1,45 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export function Hero() {
   const [searchQuery, setSearchQuery] = useState('');
   const [visible, setVisible] = useState(false);
+  const [statsAnimated, setStatsAnimated] = useState(false);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Trigger entrance animations after mount
     const timer = setTimeout(() => setVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  // Count-up animation for stats
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !statsAnimated) {
+            setStatsAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [statsAnimated]);
+
+  const stats = [
+    { value: 250, suffix: '+', label: 'Saudi Companies', link: '/companies', color: 'accent-green' },
+    { value: 15, suffix: '+', label: 'Categories', link: '/companies', color: 'accent-cyan' },
+    { value: 10, suffix: '+', label: 'Articles', link: '/articles', color: 'purple-400' },
+    { value: 1, suffix: '', label: 'Platform', link: '/about', color: 'white' },
+  ];
 
   const categories = [
     { name: 'FinTech', slug: 'fintech', icon: '💳' },
@@ -94,24 +122,25 @@ export function Hero() {
           </Link>
         </div>
 
-        {/* Stats Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto mb-16">
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
-            <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">250+</div>
-            <div className="text-text-secondary text-sm">Saudi Companies</div>
-          </div>
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
-            <div className="text-4xl font-bold text-accent-cyan mb-2">15+</div>
-            <div className="text-text-secondary text-sm">Categories</div>
-          </div>
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
-            <div className="text-4xl font-bold text-purple-400 mb-2">10+</div>
-            <div className="text-text-secondary text-sm">Articles</div>
-          </div>
-          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6">
-            <div className="text-4xl font-bold text-white mb-2">1</div>
-            <div className="text-text-secondary text-sm">Platform</div>
-          </div>
+        {/* Stats Row - Animated & Clickable */}
+        <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto mb-16">
+          {stats.map((stat, index) => (
+            <Link
+              key={stat.label}
+              href={stat.link}
+              className={`group bg-card/40 backdrop-blur-sm rounded-xl border border-[var(--color-border)] p-6 hover:border-accent-green/50 hover:shadow-glow-green hover:-translate-y-1 transition-all duration-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              style={{ animationDelay: `${0.6 + index * 0.1}s` }}
+            >
+              <div className={`text-4xl font-bold mb-2 ${stat.color === 'accent-green' ? 'text-[var(--color-primary)]' : stat.color === 'accent-cyan' ? 'text-accent-cyan' : stat.color === 'purple-400' ? 'text-purple-400' : 'text-white'}`}>
+                {stat.value === 250 ? `${companiesCount}+` :
+                 stat.value === 15 ? `${categoriesCount}+` :
+                 stat.value === 10 ? `${articlesCount}+` :
+                 stat.value}
+                {stat.suffix}
+              </div>
+              <div className="text-text-secondary text-sm group-hover:text-white transition-colors">{stat.label}</div>
+            </Link>
+          ))}
         </div>
 
         {/* Quick Search & Categories */}
@@ -132,18 +161,28 @@ export function Hero() {
             </button>
           </div>
 
-          {/* Category Pills */}
+          {/* Category Pills - Enhanced Hover */}
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/companies?category=${cat.slug}`}
-                className="px-4 py-2 rounded-full bg-card/50 border border-white/5 text-text-secondary hover:text-white hover:border-accent-green/30 transition-all text-sm flex items-center gap-2"
+                className="px-4 py-2 rounded-full bg-card/50 border border-white/5 text-text-secondary hover:text-white hover:border-accent-green/30 hover:shadow-glow-green hover:scale-105 active:scale-95 transition-all text-sm flex items-center gap-2 group"
               >
-                <span>{cat.icon}</span>
+                <span className="group-hover:scale-110 transition-transform">{cat.icon}</span>
                 <span>{cat.name}</span>
               </Link>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className="flex flex-col items-center gap-2 text-text-muted hover:text-accent-green cursor-pointer transition-colors">
+          <span className="text-xs uppercase tracking-widest">Explore</span>
+          <div className="w-6 h-10 rounded-full border-2 border-current flex items-start justify-center p-1">
+            <div className="w-1.5 h-3 rounded-full bg-current animate-bounce" />
           </div>
         </div>
       </div>
