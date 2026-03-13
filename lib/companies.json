@@ -1,6 +1,1174 @@
 [
   {
-    "id": "42",
+    "id": "4825018421258417",
+    "name": "Absher",
+    "slug": "absher",
+    "description": "حكومة إلكترونية - منصة خدمات حكومية رقمية متكاملة توفر أكثر من 200 خدمة للمواطنين والمقيمين",
+    "founded_year": 2015,
+    "headquarters": "الرياض",
+    "employees": "1000+",
+    "funding": "Govt funded",
+    "website": "https://absher.sa",
+    "logo_url": "https://absher.sa/assets/images/logo.png",
+    "categories": [
+      "GovTech"
+    ],
+    "integrations": [
+      "خدمات المرور"
+    ],
+    "certifications": [
+      "خدمات الأحوال المدنية"
+    ],
+    "badges": [
+      "التحقق من الصلاحية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.422Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "38428754081358507",
+    "name": "Taqat",
+    "slug": "taqat",
+    "description": "منصة توظيف وموارد بشرية متطورة تربط بين الباحثين عن العمل والشركات بمهارات ذكية",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "100-500",
+    "funding": "Series A - $15M",
+    "website": "https://taqat.sa",
+    "logo_url": "https://taqat.sa/logo.png",
+    "categories": [
+      "HR Tech"
+    ],
+    "integrations": [
+      "تقييم المهارات"
+    ],
+    "certifications": [
+      "التدريب الإلكتروني"
+    ],
+    "badges": [
+      "التوظيف المتميز"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "47350673415740097",
+    "name": "Salla",
+    "slug": "salla",
+    "description": "تمكين رواد الأعمال من إنشاء متاجر إلكترونية - منصة تجارة إلكترونية سعودية رائدة",
+    "founded_year": 2016,
+    "headquarters": "جدة",
+    "employees": "500-1000",
+    "funding": "Series B - $40M",
+    "website": "https://salla.sa",
+    "logo_url": "https://salla.sa/logo.png",
+    "categories": [
+      "E-commerce"
+    ],
+    "integrations": [
+      "نظام الدفع"
+    ],
+    "certifications": [
+      "التكامل مع وسائل التواصل"
+    ],
+    "badges": [
+      "تحليلات المتجر"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "4236211139458742",
+    "name": "HyperPay",
+    "slug": "hyperpay",
+    "description": "بوابة دفع إلكتروني متكاملة توفر حلول دفع آمنة للمتاجر الإلكترونية والتطبيقات",
+    "founded_year": 2014,
+    "headquarters": "الرياض",
+    "employees": "200-500",
+    "funding": "Series B - $30M",
+    "website": "https://hyperpay.com",
+    "logo_url": "https://hyperpay.com/assets/logo.png",
+    "categories": [
+      "Fintech"
+    ],
+    "integrations": [
+      "محافظ رقمية"
+    ],
+    "certifications": [
+      "حلول الاشتراكات"
+    ],
+    "badges": [
+      "مكافحة الغش"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "4827749053128676",
+    "name": "Ajmotly",
+    "slug": "ajmotly",
+    "description": "منصة إدارة وتتبع الشحنات - خدمات لوجستية ذكية للشركات والأفراد",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series A - $10M",
+    "website": "https://ajmotly.com",
+    "logo_url": "https://ajmotly.com/logo.png",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "إدارة الشحنات"
+    ],
+    "certifications": [
+      "التكامل مع شركات الشحن"
+    ],
+    "badges": [
+      "تنبؤات التسليم"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "2578255338114378",
+    "name": "Foodics",
+    "slug": "foodics",
+    "description": "نظام نقاط بيع (POS) متكامل لإدارة المطاعم والمقاهي، يعمل بالذكاء الاصطناعي",
+    "founded_year": 2014,
+    "headquarters": "جدة",
+    "employees": "500-1000",
+    "funding": "Series B - $21M",
+    "website": "https://foodics.com",
+    "logo_url": "https://foodics.com/logo.png",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "إدارة الطلبات"
+    ],
+    "certifications": [
+      "تحليل البيانات"
+    ],
+    "badges": [
+      "التكامل مع Deliveroo"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "976016253370909",
+    "name": "Nana",
+    "slug": "nana",
+    "description": "تطبيق تسوق وخدمات غذائية شامل - توصيل البقالة والأطعمة الطازجة للمنازل",
+    "founded_year": 2016,
+    "headquarters": "جدة",
+    "employees": "200-500",
+    "funding": "Series C - $135M",
+    "website": "https://nana.sa",
+    "logo_url": "https://nana.sa/logo.png",
+    "categories": [
+      "E-commerce"
+    ],
+    "integrations": [
+      "التسوق من المتاجر"
+    ],
+    "certifications": [
+      "الاشتراك الشهري"
+    ],
+    "badges": [
+      "المخازن السحابية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "7368930613041794",
+    "name": "Jahez",
+    "slug": "jahez",
+    "description": "منصة توصيل الطعام الرائدة - ربط المطاعم بالمستخدمين مع خدمة التوصيل السريع",
+    "founded_year": 2016,
+    "headquarters": "جدة",
+    "employees": "1000-5000",
+    "funding": "Series B - $36.5M",
+    "website": "https://jahez.net",
+    "logo_url": "https://jahez.net/logo.png",
+    "categories": [
+      "Food Delivery"
+    ],
+    "integrations": [
+      "Jahez Kitchen"
+    ],
+    "certifications": [
+      "برنامج الولاء"
+    ],
+    "badges": [
+      "خدمات المطاعم السحابية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9987996494314928",
+    "name": "Tabby",
+    "slug": "tabby",
+    "description": "حلول دفع بالتقسيط - تمكين العملاء من الشراء الآن والدفع لاحقاً بدون فوائد",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "200-500",
+    "funding": "Series C - $150M",
+    "website": "https://tabby.ai",
+    "logo_url": "https://tabby.ai/logo.png",
+    "categories": [
+      "Fintech"
+    ],
+    "integrations": [
+      "Tabby Plus"
+    ],
+    "certifications": [
+      "تطبيق المحفظة"
+    ],
+    "badges": [
+      "حلول المالكين"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9185540267247462",
+    "name": "Tamara",
+    "slug": "tamara",
+    "description": "بطاقات ائتمان وشكل دفع بالتقسيط - حلول مالية مبتكرة للعملاء والتجار",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series B - $110M",
+    "website": "https://tamara.co",
+    "logo_url": "https://tamara.co/logo.png",
+    "categories": [
+      "Fintech"
+    ],
+    "integrations": [
+      "الدفع بالتقسيط"
+    ],
+    "certifications": [
+      "حلول التجار"
+    ],
+    "badges": [
+      "المحفظة الرقمية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9038344565609981",
+    "name": "AqarGate",
+    "slug": "aqargate",
+    "description": "منصة إدارة العقارات الشاملة - إدارة العقارات، الإيجارات، والمستأجرين",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Seed - $2M",
+    "website": "https://aqargate.sa",
+    "logo_url": "https://placehold.co/80x80?text=AqarGate",
+    "categories": [
+      "PropTech"
+    ],
+    "integrations": [
+      "إدارة الإيجارات"
+    ],
+    "certifications": [
+      "التواصل مع المستأجرين"
+    ],
+    "badges": [
+      "تحليل الأداء"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9015301366112103",
+    "name": "MakanHub",
+    "slug": "makanhub",
+    "description": "منصة عقارية ذكية للبحث والعروض - أداة احترافية للوكلاء والمستثمرين",
+    "founded_year": 2021,
+    "headquarters": "جدة",
+    "employees": "10-50",
+    "funding": "Pre-seed - $500K",
+    "website": "https://makanhub.sa",
+    "logo_url": "https://placehold.co/80x80?text=MakanHub",
+    "categories": [
+      "PropTech"
+    ],
+    "integrations": [
+      "إدارة العروض"
+    ],
+    "certifications": [
+      "تحليل السوق"
+    ],
+    "badges": [
+      "تقارير استثمارية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "05879653182335254",
+    "name": "EjariTech",
+    "slug": "ejaritech",
+    "description": "نظام إدارة الإيجارات الإلكتروني - أتمتة العقود والتحصيل",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "20-50",
+    "funding": "Seed - $1.2M",
+    "website": "https://ejaritech.sa",
+    "logo_url": "https://placehold.co/80x80?text=EjariTech",
+    "categories": [
+      "PropTech"
+    ],
+    "integrations": [
+      "التحصيل الإلكتروني"
+    ],
+    "certifications": [
+      "التذكير الآلي"
+    ],
+    "badges": [
+      "التقارير المالية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "03999565727045906",
+    "name": "SaudiProperties",
+    "slug": "saudiproperties",
+    "description": "منصة استثمار عقاري ذكية - فرص استثمارية وتقييم العقارات",
+    "founded_year": 2022,
+    "headquarters": "الدمام",
+    "employees": "10-50",
+    "funding": "Undisclosed",
+    "website": "https://saudiproperties.sa",
+    "logo_url": "https://placehold.co/80x80?text=SaudiProperties",
+    "categories": [
+      "PropTech"
+    ],
+    "integrations": [
+      "فرص استثمارية"
+    ],
+    "certifications": [
+      "محفظة استثمارية"
+    ],
+    "badges": [
+      "تحليل العائد"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "8105045306971791",
+    "name": "HouseBank",
+    "slug": "housebank",
+    "description": "بنك العقارات - إدارة المحافظ العقارية والاستثمار الجماعي",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "20-50",
+    "funding": "Series A - $8M",
+    "website": "https://housebank.sa",
+    "logo_url": "https://placehold.co/80x80?text=HouseBank",
+    "categories": [
+      "PropTech"
+    ],
+    "integrations": [
+      "الاستثمار الجماعي"
+    ],
+    "certifications": [
+      "التقاسم في الأرباح"
+    ],
+    "badges": [
+      "المتابعة اللحظية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "18766462304248788",
+    "name": "SquareYard",
+    "slug": "squareyard",
+    "description": "تحليلات عقارية بالذكاء الاصطناعي - توقعات الأسعار وتحليل المنافسة",
+    "founded_year": 2022,
+    "headquarters": "جدة",
+    "employees": "10-50",
+    "funding": "Seed - $1.5M",
+    "website": "https://squareyard.sa",
+    "logo_url": "https://placehold.co/80x80?text=SquareYard",
+    "categories": [
+      "PropTech"
+    ],
+    "integrations": [
+      "مقارنة الأسعار"
+    ],
+    "certifications": [
+      "مؤشرات السوق"
+    ],
+    "badges": [
+      "خرائط حرارية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "26235243508933115",
+    "name": "MarketR",
+    "slug": "marketr",
+    "description": "منصة أتمتة التسويق الشاملة - إدارة الحملات والتحليلات",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series B - $12M",
+    "website": "https://marketr.sa",
+    "logo_url": "https://placehold.co/80x80?text=MarketR",
+    "categories": [
+      "Marketing Tech"
+    ],
+    "integrations": [
+      "تحليل البيانات"
+    ],
+    "certifications": [
+      "تقسيم الجمهور"
+    ],
+    "badges": [
+      "التكامل مع وسائل التواصل"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "1704138929549801",
+    "name": "SaudiAds",
+    "slug": "saudiads",
+    "description": "شبكة إعلانات رقمية متكاملة - استهداف الجمهور السعودي بدقة",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series A - $7M",
+    "website": "https://saudiads.sa",
+    "logo_url": "https://placehold.co/80x80?text=SaudiAds",
+    "categories": [
+      "Marketing Tech"
+    ],
+    "integrations": [
+      "استهداف جغرافي"
+    ],
+    "certifications": [
+      "تحليل الأداء"
+    ],
+    "badges": [
+      "إدارة الميزانية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "23166529265272917",
+    "name": "BuzzMe",
+    "slug": "buzzme",
+    "description": "إدارة وسائل التواصل الاجتماعي - جدولة وتحليل تفاعل الجمهور",
+    "founded_year": 2019,
+    "headquarters": "جدة",
+    "employees": "20-50",
+    "funding": "Seed - $2M",
+    "website": "https://buzzme.sa",
+    "logo_url": "https://placehold.co/80x80?text=BuzzMe",
+    "categories": [
+      "Marketing Tech"
+    ],
+    "integrations": [
+      "تحليلات تفاعل"
+    ],
+    "certifications": [
+      "مراقبة العلامة التجارية"
+    ],
+    "badges": [
+      "تقارير الأداء"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "13501193490532182",
+    "name": "ReachSEO",
+    "slug": "reachseo",
+    "description": "أدوات تحسين محركات البحث - تحليل وتتبع الترتيب والكلمات المفتاحية",
+    "founded_year": 2017,
+    "headquarters": "الرياض",
+    "employees": "10-50",
+    "funding": "Seed - $800K",
+    "website": "https://reachseo.sa",
+    "logo_url": "https://placehold.co/80x80?text=ReachSEO",
+    "categories": [
+      "Marketing Tech"
+    ],
+    "integrations": [
+      "تتبع الكلمات المفتاحية"
+    ],
+    "certifications": [
+      "تحليل المنافسين"
+    ],
+    "badges": [
+      "تحسين المحتوى"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "2769747223820971",
+    "name": "Convertly",
+    "slug": "convertly",
+    "description": "تحسين معدلات التحويل - اختبار A/B وتحسين تجربة المستخدم",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "10-50",
+    "funding": "Pre-seed - $600K",
+    "website": "https://convertly.sa",
+    "logo_url": "https://placehold.co/80x80?text=Convertly",
+    "categories": [
+      "Marketing Tech"
+    ],
+    "integrations": [
+      "تحسين تجربة المستخدم"
+    ],
+    "certifications": [
+      "تحليل المسار"
+    ],
+    "badges": [
+      "تحسين معدلات التحويل"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "27282585279349325",
+    "name": "MediaOwm",
+    "slug": "mediaowm",
+    "description": "تحليلات وسائل الإعلام - قياس تأثير الحملات الإعلامية",
+    "founded_year": 2022,
+    "headquarters": "جدة",
+    "employees": "10-50",
+    "funding": "Seed - $1M",
+    "website": "https://mediaowm.sa",
+    "logo_url": "https://placehold.co/80x80?text=MediaOwm",
+    "categories": [
+      "Marketing Tech"
+    ],
+    "integrations": [
+      "تحليل الوسائط"
+    ],
+    "certifications": [
+      "تقارير الأداء"
+    ],
+    "badges": [
+      "عرض البيانات"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "5108359465195808",
+    "name": "ZakatLedger",
+    "slug": "zakatledger",
+    "description": "محاسبة زكاة متكاملة - حساب وتوزيع الزكاة وفق الفقه الإسلامي",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "20-50",
+    "funding": "Series A - $3M",
+    "website": "https://zakatledger.sa",
+    "logo_url": "https://placehold.co/80x80?text=ZakatLedger",
+    "categories": [
+      "Accounting"
+    ],
+    "integrations": [
+      "إصدار التقارير"
+    ],
+    "certifications": [
+      "التكامل مع البنوك"
+    ],
+    "badges": [
+      "الامتثال الشرعي"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "5943699326472563",
+    "name": "SaaSBooks",
+    "slug": "saasbooks",
+    "description": "نظام محاسبة SaaS شامل - الفواتير، المصروفات، والضرائب",
+    "founded_year": 2016,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series B - $10M",
+    "website": "https://saasbooks.sa",
+    "logo_url": "https://placehold.co/80x80?text=SaaSBooks",
+    "categories": [
+      "Accounting"
+    ],
+    "integrations": [
+      "الفواتير الإلكترونية"
+    ],
+    "certifications": [
+      "إدارة المصروفات"
+    ],
+    "badges": [
+      "الضرائب الآلية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9293473917191264",
+    "name": "SaudiTax",
+    "slug": "sauditax",
+    "description": "حلول ضريبية متكاملة - الإقرارات الضريبية والامتثال",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "30-60",
+    "funding": "Seed - $2.5M",
+    "website": "https://sauditax.sa",
+    "logo_url": "https://placehold.co/80x80?text=SaudiTax",
+    "categories": [
+      "Accounting"
+    ],
+    "integrations": [
+      "حساب الضرائب"
+    ],
+    "certifications": [
+      "التقارير التفصيلية"
+    ],
+    "badges": [
+      "التحديث التلقائي"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "21440950182049112",
+    "name": "AuditTrack",
+    "slug": "audittrack",
+    "description": "إدارة التدقيق الداخلي - متابعة المهام والتحقيقات",
+    "founded_year": 2020,
+    "headquarters": "جدة",
+    "employees": "20-40",
+    "funding": "Seed - $1.8M",
+    "website": "https://audittrack.sa",
+    "logo_url": "https://placehold.co/80x80?text=AuditTrack",
+    "categories": [
+      "Accounting"
+    ],
+    "integrations": [
+      "تتبع المهام"
+    ],
+    "certifications": [
+      "التحقيقات"
+    ],
+    "badges": [
+      "التوثيق الآمن"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "12430212127231788",
+    "name": "InvoiceFlow",
+    "slug": "invoiceflow",
+    "description": "معالجة الفواتير الذكية - OCR وإدارة الفواتير آلياً",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "10-30",
+    "funding": "Pre-seed - $700K",
+    "website": "https://invoiceflow.sa",
+    "logo_url": "https://placehold.co/80x80?text=InvoiceFlow",
+    "categories": [
+      "Accounting"
+    ],
+    "integrations": [
+      "التحقق الآلي"
+    ],
+    "certifications": [
+      "الدفع الإلكتروني"
+    ],
+    "badges": [
+      "التكامل مع ERP"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9624675360202571",
+    "name": "FinancialEye",
+    "slug": "financialeye",
+    "description": "إعداد التقارير المالية - لوحات تحكم تفاعلية وتحليل",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "30-50",
+    "funding": "Series A - $5M",
+    "website": "https://financialeye.sa",
+    "logo_url": "https://placehold.co/80x80?text=FinancialEye",
+    "categories": [
+      "Accounting"
+    ],
+    "integrations": [
+      "لوحات التحكم"
+    ],
+    "certifications": [
+      "تحليل الاتجاهات"
+    ],
+    "badges": [
+      "التنبؤ المالي"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "3065685815185305",
+    "name": "Najis",
+    "slug": "najis",
+    "description": "منصة الهوية الرقمية - التحقق من الهوية والتوقيع الإلكتروني",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series B - $25M",
+    "website": "https://najis.sa",
+    "logo_url": "https://placehold.co/80x80?text=Najis",
+    "categories": [
+      "GovTech"
+    ],
+    "integrations": [
+      "التوقيع الإلكتروني"
+    ],
+    "certifications": [
+      "المصادقة المتعددة"
+    ],
+    "badges": [
+      "الامتثال PDPL"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "7589665028881292",
+    "name": "EMarine",
+    "slug": "emarine",
+    "description": "إدارة الموانئ والمحارف - متابعة الشحنات والإجراءات",
+    "founded_year": 2019,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Series A - $15M",
+    "website": "https://emarine.sa",
+    "logo_url": "https://placehold.co/80x80?text=EMarine",
+    "categories": [
+      "GovTech"
+    ],
+    "integrations": [
+      "تتبع الشحنات"
+    ],
+    "certifications": [
+      "الإجراءات الإلكترونية"
+    ],
+    "badges": [
+      "التكامل مع الجمارك"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9665562488382548",
+    "name": "SaudiVisa",
+    "slug": "saudivisa",
+    "description": "منصة التأشيرات الإلكترونية - تجديد الإقامة والأحوال",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "20-50",
+    "funding": "Seed - $3M",
+    "website": "https://saudivisa.sa",
+    "logo_url": "https://placehold.co/80x80?text=SaudiVisa",
+    "categories": [
+      "GovTech"
+    ],
+    "integrations": [
+      "التحقق من الأهلية"
+    ],
+    "certifications": [
+      "الدفع الإلكتروني"
+    ],
+    "badges": [
+      "التذكير الآلي"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "20201933688811857",
+    "name": "RailLink",
+    "slug": "raillink",
+    "description": "إدارة السكك الحديدية - تتبع القطارات والحجوزات",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Government Contract",
+    "website": "https://raillink.sa",
+    "logo_url": "https://placehold.co/80x80?text=RailLink",
+    "categories": [
+      "GovTech"
+    ],
+    "integrations": [
+      "إدارة الحجوزات"
+    ],
+    "certifications": [
+      "تحليل التشغيل"
+    ],
+    "badges": [
+      "التكامل مع الأنظمة"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "34679932706062055",
+    "name": "SaudiOil",
+    "slug": "saudioil",
+    "description": "الامتثال النفطي - إدارة التراخيص والسلامة",
+    "founded_year": 2022,
+    "headquarters": "الظهران",
+    "employees": "30-60",
+    "funding": "Undisclosed",
+    "website": "https://saudioil.sa",
+    "logo_url": "https://placehold.co/80x80?text=SaudiOil",
+    "categories": [
+      "GovTech"
+    ],
+    "integrations": [
+      "السلامة"
+    ],
+    "certifications": [
+      "التقارير البيئية"
+    ],
+    "badges": [
+      "الامتثال التنظيمي"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "7151334119891084",
+    "name": "HajjConnect",
+    "slug": "hajjconnect",
+    "description": "منصة الحجاج - إدارة波罗 Hajj للمستخدمين والمؤسسات",
+    "founded_year": 2021,
+    "headquarters": "مكة المكرمة",
+    "employees": "50-100",
+    "funding": "Series A - $10M",
+    "website": "https://hajjconnect.sa",
+    "logo_url": "https://placehold.co/80x80?text=HajjConnect",
+    "categories": [
+      "GovTech"
+    ],
+    "integrations": [
+      "الحجوزات"
+    ],
+    "certifications": [
+      "التتبع"
+    ],
+    "badges": [
+      "الخدمات اللوجستية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "272148330926655",
+    "name": "TaskFlow",
+    "slug": "taskflow",
+    "description": "إدارة المشاريع ومهام الفريق - لوحات kanban وتتبع الوقت",
+    "founded_year": 2017,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series B - $18M",
+    "website": "https://taskflow.sa",
+    "logo_url": "https://placehold.co/80x80?text=TaskFlow",
+    "categories": [
+      "Misc SaaS"
+    ],
+    "integrations": [
+      "تتبع الوقت"
+    ],
+    "certifications": [
+      "التعاون الفريق"
+    ],
+    "badges": [
+      "التقارير"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "7072726822058483",
+    "name": "SaudiHR",
+    "slug": "saudihr",
+    "description": "نظام موارد بشرية متكامل - التوظيف، الرواتب، والأداء",
+    "founded_year": 2015,
+    "headquarters": "الرياض",
+    "employees": "200-500",
+    "funding": "Series C - $45M",
+    "website": "https://saudihr.sa",
+    "logo_url": "https://placehold.co/80x80?text=SaudiHR",
+    "categories": [
+      "Misc SaaS"
+    ],
+    "integrations": [
+      "臼臼IRCipe"
+    ],
+    "certifications": [
+      "الأداء"
+    ],
+    "badges": [
+      "الامتثالlabor"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "047366259859873305",
+    "name": "CloudSync",
+    "slug": "cloudsync",
+    "description": "مزامنة ومشاركة الملفات - تخزين سحابي آمن للشركات",
+    "founded_year": 2019,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Series A - $8M",
+    "website": "https://cloudsync.sa",
+    "logo_url": "https://placehold.co/80x80?text=CloudSync",
+    "categories": [
+      "Misc SaaS"
+    ],
+    "integrations": [
+      "مشاركة الملفات"
+    ],
+    "certifications": [
+      "النسخ الاحتياطي"
+    ],
+    "badges": [
+      "الأمان المتقدم"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "7190443283124486",
+    "name": "EduLearn",
+    "slug": "edulearn",
+    "description": "منصة تعليم إلكتروني - إدارة الدورات والتقييمات",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series B - $20M",
+    "website": "https://edulearn.sa",
+    "logo_url": "https://placehold.co/80x80?text=EduLearn",
+    "categories": [
+      "Misc SaaS"
+    ],
+    "integrations": [
+      "التقييمAutomatic"
+    ],
+    "certifications": [
+      "تحليل الأداء"
+    ],
+    "badges": [
+      "شهادات رقمية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "6888707896777629",
+    "name": "HealthTrack",
+    "slug": "healthtrack",
+    "description": "إدارة العيادات والمستشفيات - السجلات الطبية والحجوزات",
+    "founded_year": 2016,
+    "headquarters": "جدة",
+    "employees": "100-300",
+    "funding": "Series B - $30M",
+    "website": "https://healthtrack.sa",
+    "logo_url": "https://placehold.co/80x80?text=HealthTrack",
+    "categories": [
+      "Misc SaaS"
+    ],
+    "integrations": [
+      "حجوزات المرضى"
+    ],
+    "certifications": [
+      "إدارة الأطباء"
+    ],
+    "badges": [
+      "تحليل البيانات"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "021715170597816025",
+    "name": "LegalEase",
+    "slug": "legalease",
+    "description": "إدارة الملفات القانونية - تتبع القضايا والوثائق",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "20-50",
+    "funding": "Seed - $2M",
+    "website": "https://legalease.sa",
+    "logo_url": "https://placehold.co/80x80?text=LegalEase",
+    "categories": [
+      "Misc SaaS"
+    ],
+    "integrations": [
+      "المستندات القانونية"
+    ],
+    "certifications": [
+      "التقارير"
+    ],
+    "badges": [
+      "التكامل مع المحاكم"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "04529532711391593",
+    "description": "",
+    "founded_year": null,
+    "headquarters": "",
+    "employees": "",
+    "funding": "",
+    "website": "",
+    "logo_url": null,
+    "categories": [],
+    "integrations": [],
+    "certifications": [],
+    "badges": [],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "6710648116963479",
+    "name": "TestCo",
+    "slug": "testco",
+    "description": "Test description",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Seed - $5M",
+    "website": "https://testco.sa",
+    "logo_url": "https://placehold.co/80x80?text=TestCo",
+    "categories": [
+      "SaaS"
+    ],
+    "integrations": [
+      "feature2"
+    ],
+    "certifications": [
+      "Mada"
+    ],
+    "badges": [
+      "Zid"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=TestCo"
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "03452606895823884",
     "name": "Ajeetly",
     "slug": "ajeetly",
     "description": "منصة لوجستية ذكية لإدارة سلسلة التوريد والتوصيل - تحسين المسارات وتتبع الشحنات بشكل فوري",
@@ -26,12 +1194,15 @@
       "Saudi-owned",
       "Fastest Growing"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=Ajeetly+Dashboard"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "43",
+    "id": "6796370813985357",
     "name": "Ruzzle",
     "slug": "ruzzle",
     "description": "منصة تعليم الألغاز والألعاب التعليمية - محتوى تفاعلي باللغة العربية مع تحليلات الأداء",
@@ -57,12 +1228,15 @@
       "Saudi-owned",
       "Innovative EdTech"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=Ruzzle+App"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "44",
+    "id": "3483726959759681",
     "name": "Resly",
     "slug": "resly",
     "description": "نظام إدارة المطاعم الشامل - حجوزات الطاولات، إدارة الطلبات، والتواصل مع العملاء",
@@ -88,45 +1262,43 @@
       "Saudi-owned",
       "Restaurant Management"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=Resly+POS"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "45",
-    "name": "Altibbi",
+    "id": "4656489894287108",
+    "name": "AltibbiPro",
     "slug": "altibbi",
-    "description": "منصة استشارات طبية عن بُعد - تواصل مباشر مع الأطباء المتخصصين ووصفات إلكترونية",
-    "founded_year": 2018,
+    "description": "منصة استشارات طبية للشركات - صحة الموظفين وال Checkup packages",
+    "founded_year": 2021,
     "headquarters": "الرياض",
-    "employees": "200-500",
-    "funding": "Series B - $50M",
-    "website": "https://altibbi.com",
-    "logo_url": "https://placehold.co/80x80?text=Altibbi",
+    "employees": "50-100",
+    "funding": "Series A - $10M",
+    "website": "https://altibbi.sa/pro",
+    "logo_url": "https://placehold.co/80x80?text=AltibbiPro",
     "categories": [
       "HealthTech"
     ],
     "integrations": [
-      "Mada",
-      "STC Pay",
-      "SEHA",
-      "Zid"
+      "فحوصات دورية"
     ],
     "certifications": [
-      "HIPAA",
-      "ISO27001",
-      "Saudi FDA"
+      "صحة الموظفين"
     ],
     "badges": [
-      "Saudi-owned",
-      "Telemedicine Leader"
+      "إدارة الحالات"
     ],
-    "screenshot_urls": [
-      "https://placehold.co/400x300?text=Altibbi+Consultation"
-    ]
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "46",
+    "id": "38045843572166615",
     "name": "SaudiLogix",
     "slug": "saudilogix",
     "description": "حلول لوجستية متكاملة للشركات - إدارة المستودعات، التوزيع، والخدمات اللوجستية الدولية",
@@ -153,12 +1325,15 @@
       "Saudi-owned",
       "Integrated Logistics"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=SaudiLogix+Warehouse"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "47",
+    "id": "7075021570863894",
     "name": "EdAdvisor",
     "slug": "edadvisor",
     "description": "منصة استشارات التعليم العالي - مساعدة الطلاب في اختيار الجامعات والبرامج المناسبة",
@@ -183,12 +1358,15 @@
       "Saudi-owned",
       "Education Counseling"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=EdAdvisor+Counseling"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "48",
+    "id": "3637059374611542",
     "name": "KitchenPro",
     "slug": "kitchenpro",
     "description": "نظام إدارة المطابخ السحابي - تحسين العمليات، إدارة المخزون، والجودة الغذائية",
@@ -215,12 +1393,15 @@
       "Saudi-owned",
       "Kitchen Operations"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=KitchenPro+Dashboard"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "49",
+    "id": "21764706061147066",
     "name": "MediCare+",
     "slug": "medicareplus",
     "description": "منصة إدارة العيادات والمستشفيات - حجز المواعيد، إدارة السجلات، والاستشارات الطبية",
@@ -248,12 +1429,15 @@
       "Saudi-owned",
       "Healthcare Management"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=MediCare+Dashboard"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "50",
+    "id": "33776166888830195",
     "name": "ExpressShip",
     "slug": "expressship",
     "description": "خدمات توصيل سريع للمتاجر الإلكترونية - التوصيل في نفس اليوم والتتبع الفوري",
@@ -280,12 +1464,15 @@
       "Saudi-owned",
       "Same-Day Delivery"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=ExpressShip+Delivery"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "51",
+    "id": "5476860916045105",
     "name": "LearnSmart",
     "slug": "learnsmart",
     "description": "منصة تعليم ذكية معذكاء اصطناعي - تخصيص المحتوى وتحليل أداء الطلاب",
@@ -311,12 +1498,15 @@
       "Saudi-owned",
       "AI EdTech"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=LearnSmart+AI"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "52",
+    "id": "25832731667375386",
     "name": "TableMate",
     "slug": "tablemate",
     "description": "نظام حجوزات الطاولات والخدمة الذاتية - زيادة الإيرادات وتحسين تجربة العملاء",
@@ -342,12 +1532,15 @@
       "Saudi-owned",
       "Restaurant Booking"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=TableMate+Booking"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "53",
+    "id": "3851338236361006",
     "name": "DocNow",
     "slug": "docnow",
     "description": "منصة استشارات طبية فورية - الاتصال بالأطباء في دقائق مع أوصاف إلكترونية",
@@ -374,12 +1567,15 @@
       "Saudi-owned",
       "Instant Healthcare"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=DocNow+Chat"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "54",
+    "id": "031355161568004664",
     "name": "ShipFlow",
     "slug": "shipflow",
     "description": "منصة إدارة الشحنات المتعددة - أدوات متقدمة للتجار مع أيقونات تحليل والتتبع",
@@ -405,12 +1601,15 @@
       "Saudi-owned",
       "Multi-Carrier"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=ShipFlow+Analytics"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "55",
+    "id": "7689367152197029",
     "name": "EduQuest",
     "slug": "eduquest",
     "description": "منصة تعليمية تفاعلية للمدارس - محتوى سعودي معتمد مع أدوات التقييم",
@@ -437,12 +1636,15 @@
       "Saudi-owned",
       "Saudi Curriculum"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=EduQuest+Platform"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "56",
+    "id": "13439082294806715",
     "name": "CuisineTech",
     "slug": "cooktech",
     "description": "نظام إدارة المطاعم المتقدم - ذكاء اصطناعي للتنبؤ بالمبيعات وتحسين القوائم",
@@ -469,12 +1671,15 @@
       "Saudi-owned",
       "AI Restaurant"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=CuisineTech+AI"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "57",
+    "id": "961178787375999",
     "name": "HealthPlus",
     "slug": "healthplus",
     "description": "منصة الع健康 الشاملة - خدمات صحية عن بُعد مع مراقبة مستمرة للعلامات الحيوية",
@@ -502,12 +1707,15 @@
       "Saudi-owned",
       "Continuous Healthcare"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=HealthPlus+Monitoring"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "58",
+    "id": "1848785855052455",
     "name": "QuickShip",
     "slug": "quickship",
     "description": "خدمات لوجستية سريعة للأفراد - توصيل الطلبات في ساعات مع التتبع اللحظي",
@@ -532,12 +1740,15 @@
       "Saudi-owned",
       "On-Demand Delivery"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=QuickShip+App"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "59",
+    "id": "5229524805831274",
     "name": "SkillUp",
     "slug": "skillup",
     "description": "منصة تطوير المهارات المهنية - دورات تدريبية معتمدة مع شهادات وإحصاءات الأداء",
@@ -563,12 +1774,15 @@
       "Saudi-owned",
       "Professional Development"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=SkillUp+Courses"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "60",
+    "id": "7076380399877567",
     "name": "BistroManager",
     "slug": "bistromanager",
     "description": "نظام إدارة المطاعم والمقاهي - مبيعات، مخزون، موظفين، وتجربة Ordered",
@@ -595,12 +1809,15 @@
       "Saudi-owned",
       "All-in-One POS"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=BistroManager+POS"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "61",
+    "id": "9193275997511668",
     "name": "TeleMed",
     "slug": "telemed",
     "description": "منصة telemedicine متقدمة - فحوصات عن بُعد، مراقبة remotely، وتحليل البيانات الصحية",
@@ -628,12 +1845,15 @@
       "Saudi-owned",
       "Advanced Telehealth"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=TeleMed+Consultation"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "62",
+    "id": "8065618947224612",
     "name": "FulfillPro",
     "slug": "fulfillpro",
     "description": "حلول تنفيذ الطلبات للتجارة الإلكترونية - إدارة المستودعات، التعبئة، والشحن",
@@ -660,12 +1880,15 @@
       "Saudi-owned",
       "E-commerce Fulfillment"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=FulfillPro+Warehouse"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "63",
+    "id": "5521207640195015",
     "name": "TutorMe",
     "slug": "tutorme",
     "description": "منصة tutoring خاصة - توصيل الطلاب مع معلمين متخصصين وخطط تعليمية شخصية",
@@ -690,12 +1913,15 @@
       "Saudi-owned",
       "Private Tutoring"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=TutorMe+Session"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "64",
+    "id": "19033646329382925",
     "name": "OrderEase",
     "slug": "orderease",
     "description": "نظام طلب سهل للمطاعم - قوائم QR، طرق دفع متعددة، وإدارة الطلبات",
@@ -721,12 +1947,15 @@
       "Saudi-owned",
       "Contactless Ordering"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=OrderEase+QR"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "65",
+    "id": "9681245816589718",
     "name": "PharmaCare",
     "slug": "pharmacare",
     "description": "منصة خدمات الصيدليات - طلب الأدوية، استشارات صيدلانية، والتوصيل",
@@ -754,12 +1983,15 @@
       "Saudi-owned",
       "Pharmacy Network"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=PharmaCare+Delivery"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "66",
+    "id": "32788772351148354",
     "name": "CargoLink",
     "slug": "cargolink",
     "description": "شبكة لوجستية متكاملة - ربط بين الموردين والمشترين مع إدارة الشحنات متعددة الوسائط",
@@ -786,12 +2018,15 @@
       "Saudi-owned",
       "Intermodal Logistics"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=CargoLink+Network"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "67",
+    "id": "37147056835161063",
     "name": "CodeAcademy KSA",
     "slug": "codeacademy-ksa",
     "description": "أكاديمية برمجة سعودية - دورات تطوير الويب والتطبيقات باللغة العربية",
@@ -817,12 +2052,15 @@
       "Saudi-owned",
       "Arabic Coding"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=CodeAcademy+Courses"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "68",
+    "id": "08769787596903122",
     "name": "MenuCraft",
     "slug": "menucraft",
     "description": "منصة تصميم وتحديث قوائم المطاعم - تحليل سلوك العملاء وتجربة مستخدم محسنة",
@@ -848,12 +2086,15 @@
       "Saudi-owned",
       "Menu Optimization"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=MenuCraft+Design"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "69",
+    "id": "7544930615945189",
     "name": "WellnessHub",
     "slug": "wellnesshub",
     "description": "منصة العافية الشاملة - برامج العقل والجسم والتغذية متابعة مع مدربين متخصصين",
@@ -880,12 +2121,15 @@
       "Saudi-owned",
       "Holistic Wellness"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=WellnessHub+Dashboard"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "70",
+    "id": "26737243829078916",
     "name": "TrainTrack",
     "slug": "traintrack",
     "description": "نظام إدارة التدريب للمؤسسات - تخطيط، تنفيذ، تقييم، وشهادات تدريبية",
@@ -912,8 +2156,936 @@
       "Saudi-owned",
       "Corporate Training"
     ],
+    "pricing_plans": [],
     "screenshot_urls": [
       "https://placehold.co/400x300?text=TrainTrack+Dashboard"
-    ]
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "8693081568313248",
+    "name": "ExpressShip Express",
+    "slug": "expressship-express",
+    "description": "خدمات لوجستية عاجلة للأعمال - شحنات صغيرة، مستندات، وخدمات التوصيل المخصص",
+    "founded_year": 2022,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Seed - $7M",
+    "website": "https://expressship-express.sa",
+    "logo_url": "https://placehold.co/80x80?text=ExpressShip+Express",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "Mada",
+      "STC Pay",
+      "Salla",
+      "Zid"
+    ],
+    "certifications": [
+      "PDPL Compliant",
+      "Courier License"
+    ],
+    "badges": [
+      "\"Saudi-owned",
+      "Urgent Delivery\"PayTabs",
+      "paytabs",
+      "بوابة دفع متكاملة للمتاجر الإلكترونية - دفع محلي وعالمي بأسعار تنافسية",
+      "2015",
+      "الرياض",
+      "200-500",
+      "Series B - $50M",
+      "https://paytabs.com",
+      "https://placehold.co/80x80?text=PayTabs",
+      "Fintech",
+      "بوابة دفع متعددة القنوات",
+      "تحويل العملات",
+      "حماية من الاحتيال",
+      "تالفواتير المتكررة",
+      "Mada",
+      "STC Pay",
+      "Salla",
+      "Zid",
+      "SOC2",
+      "ISO27001",
+      "Saudi-owned"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=ExpressShip+Express"
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "7663168156675823",
+    "name": "Zid",
+    "slug": "zid",
+    "description": "منصة تجارة إلكترونية سحابية - إنشاء متجر إلكتروني بسهولة مع أدوات متقدمة",
+    "founded_year": 2018,
+    "headquarters": "جدة",
+    "employees": "100-200",
+    "funding": "Series A - $20M",
+    "website": "https://zid.sa",
+    "logo_url": "https://placehold.co/80x80?text=Zid",
+    "categories": [
+      "E-commerce"
+    ],
+    "integrations": [
+      "إدارة المنتجات"
+    ],
+    "certifications": [
+      "التكامل مع الموردين"
+    ],
+    "badges": [
+      "تحليلات المتجر"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9464605939221877",
+    "name": "Bayt",
+    "slug": "bayt",
+    "description": "منصة توظيف رائدة في الشرق الأوسط - ربط بين الباحثين عن العمل وشركات التوظيف",
+    "founded_year": 2000,
+    "headquarters": "الرياض",
+    "employees": "1000+",
+    "funding": "الربحية الذاتية",
+    "website": "https://bayt.com",
+    "logo_url": "https://placehold.co/80x80?text=Bayt",
+    "categories": [
+      "HR Tech"
+    ],
+    "integrations": [
+      "السيرة الذاتية الذكية"
+    ],
+    "certifications": [
+      "مقابلات via الإنترنت"
+    ],
+    "badges": [
+      "تحليل السوق"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "8078303302964369",
+    "name": "Sukoon",
+    "slug": "sukoon",
+    "description": "منصة موارد بشرية متكاملة للمنشآت السعودية - إدارة الموظفين والرواتب والامتثال",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series A - $8M",
+    "website": "https://sukoon.sa",
+    "logo_url": "https://placehold.co/80x80?text=Sukoon",
+    "categories": [
+      "HR Tech"
+    ],
+    "integrations": [
+      "معالجة الرواتب"
+    ],
+    "certifications": [
+      "الإجازات"
+    ],
+    "badges": [
+      "الامتثالlabor"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9554618336841383",
+    "name": "Bokraft",
+    "slug": "bokraft",
+    "description": "منصة تأجير السيارات - حجز مباشر وإدارة الأسطول للشركات",
+    "founded_year": 2020,
+    "headquarters": "جدة",
+    "employees": "20-50",
+    "funding": "Seed - $2M",
+    "website": "https://bokraft.sa",
+    "logo_url": "https://placehold.co/80x80?text=Bokraft",
+    "categories": [
+      "Misc SaaS"
+    ],
+    "integrations": [
+      "إدارة الأسطول"
+    ],
+    "certifications": [
+      "فوترة إلكترونية"
+    ],
+    "badges": [
+      "تأمين متكامل"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "20341492364206748",
+    "name": "Curate",
+    "slug": "curate",
+    "description": "منصة قائمة الطعام - تصميم وتوزيع القوائم للمطاعم مع تحليلات",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "10-30",
+    "funding": "Pre-seed - $1M",
+    "website": "https://curate.sa",
+    "logo_url": "https://placehold.co/80x80?text=Curate",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "نقل مباشر"
+    ],
+    "certifications": [
+      "تحليل الأداء"
+    ],
+    "badges": [
+      "إدارة العروض"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "8931490351372954",
+    "name": "SallaPay",
+    "slug": "sallapay",
+    "description": "محفظة إلكترونية وتحصيل المدفوعات - منصات مالية للمتاجر الإلكترونية",
+    "founded_year": 2020,
+    "headquarters": "جدة",
+    "employees": "100-200",
+    "funding": "Series A - $15M",
+    "website": "https://sallapay.sa",
+    "logo_url": "https://placehold.co/80x80?text=SallaPay",
+    "categories": [
+      "Fintech"
+    ],
+    "integrations": [
+      "تحصيل المدفوعات"
+    ],
+    "certifications": [
+      "التحويل الفوري"
+    ],
+    "badges": [
+      "فواتير QR"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "7628213260290981",
+    "name": "Omnana",
+    "slug": "omnana",
+    "description": "منصة توصيل طلبات سريعة للمتاجر الإلكترونية - نفس اليوم وبرنامج التحكم",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series A - $12M",
+    "website": "https://omnana.sa",
+    "logo_url": "https://placehold.co/80x80?text=Omnana",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "تتبع فوري"
+    ],
+    "certifications": [
+      "خدمات التخليص"
+    ],
+    "badges": [
+      "تطبيق التاجر"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "1333268907847982",
+    "name": "SallaTickets",
+    "slug": "sallatickets",
+    "description": "منصة بيع التذاكر - حفلات، أحداث، ومرافق رياضية",
+    "founded_year": 2020,
+    "headquarters": "جدة",
+    "employees": "30-60",
+    "funding": "Seed - $4M",
+    "website": "https://sallatickets.sa",
+    "logo_url": "https://placehold.co/80x80?text=SallaTickets",
+    "categories": [
+      "Marketing Tech"
+    ],
+    "integrations": [
+      "إدارة الفعاليات"
+    ],
+    "certifications": [
+      "الدفع الإلكتروني"
+    ],
+    "badges": [
+      "تحليل المبيعات"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "08411573845864573",
+    "name": "SallaMenu",
+    "slug": "sallamenu",
+    "description": "قوائم مطاعم رقمية - تصميم وتحديثات تلقائية مع طلبات مباشرة",
+    "founded_year": 2022,
+    "headquarters": "الرياض",
+    "employees": "20-50",
+    "funding": "Pre-seed - $2M",
+    "website": "https://sallamenu.sa",
+    "logo_url": "https://placehold.co/80x80?text=SallaMenu",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "طلب ذاتي"
+    ],
+    "certifications": [
+      "تحليل المبيعات"
+    ],
+    "badges": [
+      "تحديثات تلقائية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "5368001157231482",
+    "name": "Malaeb",
+    "slug": "malaeb",
+    "description": "منصة رياضيةcommunity -(results",
+    "founded_year": null,
+    "headquarters": " betting) لكن not gambling corporate",
+    "employees": "2015",
+    "funding": "جدة",
+    "website": "100-200",
+    "logo_url": "Series B - $25M",
+    "categories": [
+      "https://placehold.co/80x80?text=Malaeb"
+    ],
+    "integrations": [
+      "Marketing Tech"
+    ],
+    "certifications": [
+      "أخبار رياضية"
+    ],
+    "badges": [
+      "إحصائيات"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [
+      "https://malaeb.sa"
+    ],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "6498753105940174",
+    "name": "Tawseel",
+    "slug": "tawseel",
+    "description": "خدمات لوجستية للمتاجر الإلكترونية - معالجة الطلبات والتوصيل للعملاء",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series A - $20M",
+    "website": "https://tawseel.sa",
+    "logo_url": "https://placehold.co/80x80?text=Tawseel",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "توصيل最后一 ميل"
+    ],
+    "certifications": [
+      "تتبع الشحنات"
+    ],
+    "badges": [
+      "تحسين المسارات"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "3735985088018221",
+    "name": "Seha",
+    "slug": "seha",
+    "description": "منصة خدمات صحية عن بُعد - حجز مواعيد، استشارات، ووصفات إلكترونية",
+    "founded_year": 2018,
+    "headquarters": "جدة",
+    "employees": "200-500",
+    "funding": "Series C - $60M",
+    "website": "https://seha.sa",
+    "logo_url": "https://placehold.co/80x80?text=Seha",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "استشارات عن بُعد"
+    ],
+    "certifications": [
+      "وصفات إلكترونية"
+    ],
+    "badges": [
+      "إدارة السجلات"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "0493144939641722",
+    "name": "Nkhba",
+    "slug": "nkhba",
+    "description": "منصة تعليمية للمدارس السعودية - محتوى مناهج + أدوات تقييم",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series A - $10M",
+    "website": "https://nkhba.sa",
+    "logo_url": "https://placehold.co/80x80?text=Nkhba",
+    "categories": [
+      "EdTech"
+    ],
+    "integrations": [
+      "اختبارات تقييم"
+    ],
+    "certifications": [
+      "لوحة تحكم للمعلمين"
+    ],
+    "badges": [
+      "تحليل الأداء"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "642898674906643",
+    "name": "RiyadhAirways",
+    "slug": "riyadhairways",
+    "description": "حجوزات وخدمات الطيران - منصة حجوزات متكاملة لشركات الطيران",
+    "founded_year": 2022,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Government Partnership",
+    "website": "https://riyadhairways.sa",
+    "logo_url": "https://placehold.co/80x80?text=RiyadhAirways",
+    "categories": [
+      "Travel Tech"
+    ],
+    "integrations": [
+      "إدارة الحجوزات"
+    ],
+    "certifications": [
+      "خدمات إضافية"
+    ],
+    "badges": [
+      "تكامل مع أنظمة الخطوط الجوية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9211091118764093",
+    "name": "SaudiPost",
+    "slug": "saudipost",
+    "description": "خدمات بريدية ولوجستية متكاملة - توصيل，تتبع، وحلول مالية",
+    "founded_year": 1921,
+    "headquarters": "الرياض",
+    "employees": "1000+",
+    "funding": "State-owned",
+    "website": "https://saudipost.sa",
+    "logo_url": "https://placehold.co/80x80?text=SaudiPost",
+    "categories": [
+      "GovTech"
+    ],
+    "integrations": [
+      "تتبع الشحنات"
+    ],
+    "certifications": [
+      "حلول مالية"
+    ],
+    "badges": [
+      "خدمات حكومية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9709469936043686",
+    "name": "Mawid",
+    "slug": "mawid",
+    "description": "نظام حجز المواعيد للمؤسسات الصحية - فتحة مواعيد عبر الإنترنت",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series A - $6M",
+    "website": "https://mawid.sa",
+    "logo_url": "https://placehold.co/80x80?text=Mawid",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "تقويم احترافي"
+    ],
+    "certifications": [
+      "إشعاراتantara"
+    ],
+    "badges": [
+      "إحصائيات الاستخدام"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "8841863801211899",
+    "name": "Adeeb",
+    "slug": "adeeb",
+    "description": "منصة كتابة المحتوى العربي - توليد وتحرير النصوص بالذكاء الاصطناعي",
+    "founded_year": 2021,
+    "headquarters": "جدة",
+    "employees": "30-60",
+    "funding": "Seed - $5M",
+    "website": "https://adeeb.sa",
+    "logo_url": "https://placehold.co/80x80?text=Adeeb",
+    "categories": [
+      "Marketing Tech"
+    ],
+    "integrations": [
+      "تصحيح النصوص"
+    ],
+    "certifications": [
+      "تحسين SEO"
+    ],
+    "badges": [
+      "ترجمة آلية"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "5918416443001943",
+    "name": "ZidPay",
+    "slug": "zidpay",
+    "description": "بوابة دفع للتجارة الإلكترونية - تحصيل المدفوعات عبر الإنترنت",
+    "founded_year": 2021,
+    "headquarters": "جدة",
+    "employees": "20-50",
+    "funding": "Seed - $3M",
+    "website": "https://zidpay.sa",
+    "logo_url": "https://placehold.co/80x80?text=ZidPay",
+    "categories": [
+      "Fintech"
+    ],
+    "integrations": [
+      "بوابة دفع"
+    ],
+    "certifications": [
+      "حماية من الاحتيال"
+    ],
+    "badges": [
+      "فواتير متكررة"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "08931593737671728",
+    "name": "TaqatPro",
+    "slug": "taqatpro",
+    "description": "برنامج موارد بشرية متقدم - إدارة الأداء والتطوير الوظيفي",
+    "founded_year": 2022,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Seed - $8M",
+    "website": "https://taqatpro.sa",
+    "logo_url": "https://placehold.co/80x80?text=TaqatPro",
+    "categories": [
+      "HR Tech"
+    ],
+    "integrations": [
+      "التطوير الوظيفي"
+    ],
+    "certifications": [
+      "تحليل المواهب"
+    ],
+    "badges": [
+      "تقارير الامتثال"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "4426853582482734",
+    "name": "Khedma",
+    "slug": "khedma",
+    "description": "منصة الخدمات المنزلية - حجز وتوثيق مع stipudiate وقت الحقيقة، ومراجعات",
+    "founded_year": 2019,
+    "headquarters": "جدة",
+    "employees": "100-200",
+    "funding": "Series B - $30M",
+    "website": "https://khedma.sa",
+    "logo_url": "https://placehold.co/80x80?text=Khedma",
+    "categories": [
+      "Misc SaaS"
+    ],
+    "integrations": [
+      "إدارة المهام"
+    ],
+    "certifications": [
+      "جدولة الوقت"
+    ],
+    "badges": [
+      "نظام التقييم"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "7170208469035896",
+    "name": "AdeebAI",
+    "slug": "adeebai",
+    "description": "توليد المحتوى بالذكاء الاصطناعي - كتابة، تحرير، وترجمة نصوص عربية",
+    "founded_year": 2023,
+    "headquarters": "الرياض",
+    "employees": "10-30",
+    "funding": "Seed - $2M",
+    "website": "https://adeebai.sa",
+    "logo_url": "https://placehold.co/80x80?text=AdeebAI",
+    "categories": [
+      "Marketing Tech"
+    ],
+    "integrations": [
+      "تحرير النصوص"
+    ],
+    "certifications": [
+      "ترجمة آلية"
+    ],
+    "badges": [
+      "تحسين SEO"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "08684883308641123",
+    "name": "SallaERP",
+    "slug": "sallaerp",
+    "description": "ن تخطيط موارد المؤسسات (ERP) للتجارة الإلكترونية - إدارة المخزون، المبيعات، والمالية",
+    "founded_year": 2022,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Series A - $12M",
+    "website": "https://sallaerp.sa",
+    "logo_url": "https://placehold.co/80x80?text=SallaERP",
+    "categories": [
+      "E-commerce"
+    ],
+    "integrations": [
+      "المبيعات"
+    ],
+    "certifications": [
+      "المالية"
+    ],
+    "badges": [
+      "التقارير"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "29892852042730167",
+    "name": "Saudibnb",
+    "slug": "saudibnb",
+    "description": "منصة إدارة وتأجير الوحدات السكنية - للفنادق والشقق المفروشة",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series A - $10M",
+    "website": "https://saudibnb.sa",
+    "logo_url": "https://placehold.co/80x80?text=Saudibnb",
+    "categories": [
+      "PropTech"
+    ],
+    "integrations": [
+      "حجوزات إلكترونية"
+    ],
+    "certifications": [
+      "إدارة العملاء"
+    ],
+    "badges": [
+      "تقارير الأداء"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "24126863779659535",
+    "name": "TaqatCare",
+    "slug": "taqatcare",
+    "description": "منصة رعاية صحية عن بُعد للمسنين والمرضى المزمنين - مراقبة مستمرة",
+    "founded_year": 2022,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Seed - $6M",
+    "website": "https://taqatcare.sa",
+    "logo_url": "https://placehold.co/80x80?text=TaqatCare",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "مراقبة مستمرة"
+    ],
+    "certifications": [
+      "إدارة الأدوية"
+    ],
+    "badges": [
+      "تنبيهات الطوارئ"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "704925509723775",
+    "name": "SallaAnalytics",
+    "slug": "sallaanalytics",
+    "description": "تحليل بيانات المتاجر الإلكترونية - تقارير متقدمة ولوحات تحكم",
+    "founded_year": 2021,
+    "headquarters": "جدة",
+    "employees": "30-60",
+    "funding": "Seed - $4M",
+    "website": "https://sallaanalytics.sa",
+    "logo_url": "https://placehold.co/80x80?text=SallaAnalytics",
+    "categories": [
+      "E-commerce"
+    ],
+    "integrations": [
+      "تقارير متقدمة"
+    ],
+    "certifications": [
+      "لوحات تحكم"
+    ],
+    "badges": [
+      "تنبؤ المبيعات"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "4914483970387422",
+    "name": "RiyadhTech",
+    "slug": "riyadhtech",
+    "description": "حاضنة ومسرّع للشركات الناشئة - برامج إرشاد واستثمار",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series B - $40M",
+    "website": "https://riyadhtech.sa",
+    "logo_url": "https://placehold.co/80x80?text=RiyadhTech",
+    "categories": [
+      "Misc SaaS"
+    ],
+    "integrations": [
+      "حاضنة أعمال"
+    ],
+    "certifications": [
+      "استثمار"
+    ],
+    "badges": [
+      "برامج إرشاد"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "5553614234490721",
+    "name": "Saudimart",
+    "slug": "saudimart",
+    "description": "منصة B2B للتجارة الإلكترونية - ربط الموردين بالشركات الكبيرة",
+    "founded_year": 2020,
+    "headquarters": "جدة",
+    "employees": "100-200",
+    "funding": "Series A - $20M",
+    "website": "https://saudimart.sa",
+    "logo_url": "https://placehold.co/80x80?text=Saudimart",
+    "categories": [
+      "E-commerce"
+    ],
+    "integrations": [
+      "إدارة الطلبات"
+    ],
+    "certifications": [
+      "الدفع عند الاستلام"
+    ],
+    "badges": [
+      "التقارير"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "9272455120156631",
+    "name": "Mudeer",
+    "slug": "mudeer",
+    "description": "نظام إدارة الممتلكات - للشركات العقارية والملاك المتعددين",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "20-50",
+    "funding": "Seed - $3M",
+    "website": "https://mudeer.sa",
+    "logo_url": "https://placehold.co/80x80?text=Mudeer",
+    "categories": [
+      "PropTech"
+    ],
+    "integrations": [
+      "الفواتير"
+    ],
+    "certifications": [
+      "المستأجرين"
+    ],
+    "badges": [
+      "الصيانة"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "8357779637561177",
+    "name": "SallaMarket",
+    "slug": "sallamarket",
+    "description": "منصة منتجات للمتاجر الإلكترونية - توصيل للمشتريات، جملة، استيراد",
+    "founded_year": 2022,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Seed - $5M",
+    "website": "https://sallamarket.sa",
+    "logo_url": "https://placehold.co/80x80?text=SallaMarket",
+    "categories": [
+      "E-commerce"
+    ],
+    "integrations": [
+      "إدارة المشتريات"
+    ],
+    "certifications": [
+      "توصيل"
+    ],
+    "badges": [
+      "مخزون آمن"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "48376181884249336",
+    "name": "Ajeet",
+    "slug": "ajeet",
+    "description": "خدمات لوجستية سريعة - توصيل في ساعة، مواعيد مرنة، ودعم متخصص",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series A - $15M",
+    "website": "https://ajeet.sa",
+    "logo_url": "https://placehold.co/80x80?text=Ajeet",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "حجز مواعيد"
+    ],
+    "certifications": [
+      "تتبع لحظي"
+    ],
+    "badges": [
+      "خدمةعاجلة"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
+  },
+  {
+    "id": "6302390170555225",
+    "name": "TabbyBiz",
+    "slug": "tabbybiz",
+    "description": "حلول دفع بالتقسيط للشركات - تقسيط للعملاء مع تحمل المخاطر",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series B - $30M",
+    "website": "https://tabbybiz.sa",
+    "logo_url": "https://placehold.co/80x80?text=TabbyBiz",
+    "categories": [
+      "Fintech"
+    ],
+    "integrations": [
+      "تقييم المخاطر"
+    ],
+    "certifications": [
+      "التحصيل الآلي"
+    ],
+    "badges": [
+      "تقارير المبيعات"
+    ],
+    "pricing_plans": [],
+    "screenshot_urls": [],
+    "created_at": "2026-03-13T02:20:02.423Z",
+    "updated_at": "2026-03-13T02:20:02.423Z"
   }
 ]
