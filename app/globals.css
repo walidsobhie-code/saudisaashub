@@ -669,10 +669,15 @@ a:focus:not(:focus-visible) {
 
 .animate-marquee {
   display: inline-block;
-  animation: marquee 30s linear infinite;
+  animation: marquee 25s linear infinite;
   will-change: transform;
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+.animate-gradient-x {
+  animation: gradientShiftX 3s ease infinite;
+  background-size: 200% auto;
 }

@@ -45,22 +45,30 @@ export function Hero() {
           <span className="block gradient-headline">SaaS Hub</span>
         </h1>
 
-        {/* Subheadline - Single-line news ticker with scrolling movement */}
-        <div className="max-w-full mx-auto mb-16 overflow-hidden">
+        {/* Subheadline - Single-line news ticker in a recessed pit */}
+        <div className="max-w-5xl mx-auto mb-16">
           <div className={`relative transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ animationDelay: '0.5s' }}>
-            <div className="relative h-12 md:h-14 overflow-hidden">
+            {/* Recessed pit container */}
+            <div className="relative h-14 md:h-16 rounded-xl overflow-hidden bg-gradient-to-b from-black/60 via-[#0A0A0A] to-black/60 border border-white/5 shadow-[inset_0_2px_8px_rgba(0,0,0,0.8)]">
               {/* Scrolling Marquee */}
               <div className="absolute inset-0 flex items-center">
                 <div className="animate-marquee whitespace-nowrap">
-                  <span className="text-lg md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-accent-green via-accent-cyan via-purple-400 to-pink-400">
-                    🚀 اكتشف أكثر من 250 شركة SaaS سعودية • Search ZATCA-Compliant Solutions • Abonnez-vous pour des mises à jour sur le financement et les articles • Look at the top 10 Saudi SaaS companies • Funding tracker live • ZATCA compliance guide • Subscribe to newsletter
+                  <span className="text-lg md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-accent-green via-accent-cyan via-purple-400 to-pink-400 animate-gradient-x">
+                    🚀 اكتشف أكثر من 250 شركة SaaS سعودية • Search ZATCA-Compliant Solutions • Funding Tracker Live • ZATCA Compliance Guide • Top 10 Saudi SaaS Companies • Subscribe to Newsletter
                   </span>
                 </div>
               </div>
               
-              {/* Fade edges for smooth transition */}
-              <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent" />
-              <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent" />
+              {/* Subtle inner glow at bottom for depth */}
+              <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-t from-accent-green/20 to-transparent" />
+            </div>
+            
+            {/* Quick indicator dots */}
+            <div className="flex justify-center gap-2 mt-3">
+              <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-accent-cyan animate-pulse" style={{ animationDelay: '0.5s' }} />
+              <div className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" style={{ animationDelay: '1s' }} />
+              <div className="w-2 h-2 rounded-full bg-pink-400 animate-pulse" style={{ animationDelay: '1.5s' }} />
             </div>
           </div>
         </div>
