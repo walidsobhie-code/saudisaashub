@@ -51,6 +51,140 @@ export default async function Home() {
 
       <Hero />
 
+      {/* Featured Reports & Guides */}
+      <section className="py-20 bg-gradient-to-b from-accent-green/5 to-transparent">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">تقرير ومقالات مميزة</h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              اكتشف أبحاثنا الشاملة وأدلةنا العملية لمساعدتك على فهم سوق SaaS السعودي
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* State of Saudi SaaS 2026 */}
+            <Link
+              href="/reports/state-of-saudi-saas-2026"
+              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
+            >
+              <div className="p-8 bg-gradient-to-br from-accent-green/10 to-transparent">
+                <div className="text-4xl font-bold text-accent-green mb-4">📊</div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
+                  حالة سوق SaaS السعودية 2026
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  تقرير سنوي شامل يحلل حجم السوق، الاتجاهات، التمويل، وتأثير ZATCA
+                </p>
+                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
+                  اقرأ التقرير
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* ZATCA Compliance Guide */}
+            <Link
+              href="/articles/zatca-compliance-guide"
+              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
+            >
+              <div className="p-8 bg-gradient-to-br from-accent-cyan/10 to-transparent">
+                <div className="text-4xl font-bold text-accent-cyan mb-4">⚖️</div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
+                  دليل امتثال ZATCA للفواتير الإلكترونية
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  كل ما تحتاج معرفته about نظام Fatoora: المراحل، المتطلبات، والعقوبات
+                </p>
+                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
+                  اقرأ الدليل
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Raise Seed Funding */}
+            <Link
+              href="/articles/raise-seed-saudi"
+              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
+            >
+              <div className="p-8 bg-gradient-to-br from-purple-500/10 to-transparent">
+                <div className="text-4xl font-bold text-purple-400 mb-4">💰</div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
+                  كيفية جمع التمويل المبدئي في السعودية
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  دليل عملي خطوة بخطوة: من التحضير إلى إبرام الصفقة مع المستثمرين
+                </p>
+                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
+                  اقرأ الدليل
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Top 10 SaaS Companies */}
+            <Link
+              href="/articles/top-10-saudi-saas"
+              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
+            >
+              <div className="p-8 bg-gradient-to-br from-pink-500/10 to-transparent">
+                <div className="text-4xl font-bold text-pink-400 mb-4">🏆</div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
+                  أفضل 10 شركات SaaS في السعودية
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  تحليل مقارن مفصل لأبرز الشركات مع نقاط القوة والضعف
+                </p>
+                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
+                  عرض القائمة
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* ZATCA Hub */}
+            <Link
+              href="/zatca"
+              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
+            >
+              <div className="p-8 bg-gradient-to-br from-yellow-500/10 to-transparent">
+                <div className="text-4xl font-bold text-yellow-400 mb-4">📋</div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
+                  مركز ZATCA للامتثال
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                  قائمة بالشركات المتوافقة، متطلبات، وآخر التحديثات
+                </p>
+                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
+                  تصفح المركز
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Funding Tracker */}
+            <Link
+              href="/funding"
+              className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
+            >
+              <div className="p-8 bg-gradient-to-br from-blue-500/10 to-transparent">
+                <div className="text-4xl font-bold text-blue-400 mb-4">📈</div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
+                  تتبع التمويل
+                </h3>
+                <p className="text-text-secondary text-sm mb-4">
+                 腺 أعمق الجولات الاستثمارية وصفقات الشركات السعودية
+                </p>
+                <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
+                  تصفح البيانات
+                  <span>→</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Trusted Companies Section */}
       <TrustedCompanies />
 
