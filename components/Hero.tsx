@@ -45,24 +45,23 @@ export function Hero() {
           <span className="block gradient-headline">SaaS Hub</span>
         </h1>
 
-        {/* Subheadline - News-style colorful animated ticker */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className={`transform transition-all duration-1500 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ animationDelay: '0.5s' }}>
-            <p className="text-lg md:text-2xl font-medium leading-relaxed relative">
-              {/* Animated gradient background */}
-              <span className="absolute inset-0 bg-gradient-to-r from-accent-green via-accent-cyan via-purple-400 to-pink-400 bg-[length:200%_100%] animate-gradient-shift opacity-20 rounded-lg blur-sm" />
+        {/* Subheadline - Single-line news ticker with scrolling movement */}
+        <div className="max-w-full mx-auto mb-16 overflow-hidden">
+          <div className={`relative transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ animationDelay: '0.5s' }}>
+            <div className="relative h-12 md:h-14 overflow-hidden">
+              {/* Scrolling Marquee */}
+              <div className="absolute inset-0 flex items-center">
+                <div className="animate-marquee whitespace-nowrap">
+                  <span className="text-lg md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-accent-green via-accent-cyan via-purple-400 to-pink-400">
+                    🚀 اكتشف أكثر من 250 شركة SaaS سعودية • Search ZATCA-Compliant Solutions • Abonnez-vous pour des mises à jour sur le financement et les articles • Look at the top 10 Saudi SaaS companies • Funding tracker live • ZATCA compliance guide • Subscribe to newsletter
+                  </span>
+                </div>
+              </div>
               
-              {/* Text with gradient clip */}
-              <span className="relative inline-block bg-clip-text text-transparent bg-gradient-to-r from-accent-green via-accent-cyan to-pink-400 animate-gradient-x">
-                اكتشف أكثر من 250 شركة SaaS سعودية، ابحث عن حلول متوافقة مع ZATCA، وكن على اطلاع بأحدث التمويل والمقالات
-              </span>
-            </p>
-            <p className="text-xl md:text-2xl font-medium leading-relaxed relative mt-3">
-              <span className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-accent-green bg-[length:200%_100%] animate-gradient-shift-2 opacity-20 rounded-lg blur-sm" />
-              <span className="relative inline-block bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan via-pink-400 to-accent-green animate-gradient-x-2">
-                Discover 250+ Saudi SaaS companies, find ZATCA-compliant solutions, and stay updated with funding and articles
-              </span>
-            </p>
+              {/* Fade edges for smooth transition */}
+              <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent" />
+              <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent" />
+            </div>
           </div>
         </div>
 
