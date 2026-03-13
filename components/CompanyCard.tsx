@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function CompanyCard({ company }: Props) {
-  // Safely extract values - these may be undefined or empty
+  // Safely extract values
   const name = company.name || 'Unknown';
   const slug = company.slug || '';
   const description = company.description || '';
@@ -22,6 +22,9 @@ export default function CompanyCard({ company }: Props) {
   const shortDesc = description.length > 120
     ? description.substring(0, 120) + '...'
     : description;
+
+  // Get first letter safely
+  const firstLetter = name ? name.charAt(0) : '?';
 
   return (
     <div className="group card hover:scale-[1.02] transition-all duration-300 overflow-hidden h-full border border-[var(--color-border)] rounded-xl">
@@ -38,10 +41,9 @@ export default function CompanyCard({ company }: Props) {
                 sizes="64px"
               />
             ) : (
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-accent-pink/20 to-purple-500/20">
-                <span className="text-xl font-bold text-white/60">
-                  {name.charAt(0)}
-                </span>
+              // Saudi-themed placeholder: gradient with Arabic/flag colors
+              <div className="w-full h-full bg-gradient-to-br from-accent-green/20 via-purple-500/20 to-accent-cyan/20 flex items-center justify-center">
+                <span className="text-xl font-bold text-white/80">{firstLetter}</span>
               </div>
             )}
           </div>
@@ -58,7 +60,7 @@ export default function CompanyCard({ company }: Props) {
         </p>
 
         {/* Meta Info */}
-        <div className="flex items-center gap-4 text-xs text-text-muted">
+        <div className="flex flex-wrap items-center gap-4 text-xs text-text-muted">
           {headquarters && (
             <span className="flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

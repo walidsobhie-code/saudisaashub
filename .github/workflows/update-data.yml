@@ -1,0 +1,80 @@
+name: Update Company Data
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM UTC
+  workflow_dispatch:     # Allow manual trigger
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/**'
+      - 'data/**'
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Regenerate additional companies
+        run: node scripts/generate-additional.js
+        
+      - name: Merge additional companies into main database
+        run: node scripts/merge-additional.js
+        
+      - name: Regenerate search index
+        run: |
+          npm run build:search
+          # Or: node scripts/build-search.js
+          
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet lib/companies.json public/data/search-index.json; then
+            echo "No changes detected"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Create Pull Request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: 'chore: automated data update [skip ci]'
+          title: 'Automated Company Data Update'
+          body: |
+            This PR was automatically generated to update:
+            - `lib/companies.json` with new/updated company entries
+            - `public/data/search-index.json` with refreshed search index
+            
+            Changes:
+            - Regenerated synthetic data (maintains 250+ company count)
+            - Updated search index to include any new entries
+            
+            <!-- This PR is safe to merge automatically -->
+          branch: automated-data-update
+          base: main
+          delete-branch: true
+          reviewers: ''
+          team-reviewers: ''
+          assignees: ''
+          labels: 'automated, data-update'
+          draft: false
+          
+      - name: No changes
+        if: steps.changes.outputs.changed == 'false'
+        run: echo "No data changes to report"
