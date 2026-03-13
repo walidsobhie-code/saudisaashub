@@ -1,4 +1,4 @@
-import { getSql } from './neon';
+import companiesData from './companies.json' assert { type: 'json' };
 
 export interface Company {
   id: string;
@@ -11,109 +11,107 @@ export interface Company {
   funding: string;
   website: string;
   logo_url: string | null;
+  categories?: Array<{ id: string; name: string; slug: string }>;
+  integrations?: Array<{ id: string; name: string; slug: string }>;
+  certifications?: Array<{ id: string; name: string; slug: string; category?: string }>;
+  badges?: Array<{ id: string; name: string; slug: string; color: string }>;
+  pricing_plans?: Array<{
+    id?: string;
+    plan_name: string;
+    price: number;
+    frequency: string;
+    features_list?: string[];
+    is_active?: boolean;
+    trial_days?: number;
+  }>;
+  screenshot_urls?: string[] | null;
   created_at: string;
   updated_at: string;
 }
 
-export interface Category {
-  id: string;
-  name: string;
-  slug: string;
-  description?: string;
-}
+// Mock timestamps (since no DB)
+const now = new Date().toISOString();
 
-export interface Feature {
-  id: string;
-  name: string;
-  slug: string;
-  description?: string;
-}
+// Convert string arrays to expected object shape
+const normalizeCompany = (c: any): Company => {
+  const toObjArray = (arr: string[] | undefined) =>
+    arr?.map((name, idx) => ({
+      id: `${c.id}-${idx}`,
+      name,
+      slug: name.toLowerCase().replace(/\s+/g, '-'),
+    })) || [];
 
-export interface Integration {
-  id: string;
-  name: string;
-  slug: string;
-  description?: string;
-  category?: string;
-}
+  return {
+    ...c,
+    categories: toObjArray(c.categories),
+    integrations: toObjArray(c.integrations),
+    certifications: toObjArray(c.certifications),
+    badges: toObjArray(c.badges).map(b => ({ ...b, color: '#3B82F6' })),
+    pricing_plans: c.pricing_plans?.map((p: any) => ({
+      id: p.id || `${c.id}-${p.plan_name}`,
+      plan_name: p.plan_name,
+      price: p.price,
+      frequency: p.frequency,
+      features_list: p.features_list,
+      is_active: p.is_active ?? true,
+      trial_days: p.trial_days ?? 0,
+    })) || [],
+    screenshot_urls: c.screenshot_urls || [],
+    created_at: now,
+    updated_at: now,
+  };
+};
 
-export interface Certification {
-  id: string;
-  name: string;
-  slug: string;
-  description?: string;
-  category?: string;
-}
+const companies: Company[] = companiesData.map(normalizeCompany);
 
-export interface Badge {
-  id: string;
-  name: string;
-  slug: string;
-  description?: string;
-  color: string;
-}
-
-// Fetch all companies from database (without relationships for now)
 export async function getAllCompaniesDB(): Promise<Company[]> {
-  const result = await getSql()`
-    SELECT id, name, slug, description, founded_year, headquarters, employees, funding, website, logo_url, created_at, updated_at
-    FROM companies
-    ORDER BY name
-  `;
-  return result as Company[];
+  return companies;
 }
 
-// Get company by slug with basic info
 export async function getCompanyBySlugDB(slug: string): Promise<Company | null> {
-  const result = await getSql()`
-    SELECT * FROM companies WHERE slug = ${slug} LIMIT 1
-  `;
-  return result.length > 0 ? (result[0] as Company) : null;
+  return companies.find(c => c.slug === slug) || null;
 }
 
-// Get all categories (lookup table)
-export async function getAllCategoriesDB(): Promise<Category[]> {
-  const result = await getSql()`
-    SELECT id, name, slug, description FROM categories ORDER BY name
-  `;
-  return result as Category[];
-}
-
-// Get all certifications (lookup table)
-export async function getAllCertificationsDB(): Promise<Certification[]> {
-  const result = await getSql()`
-    SELECT id, name, slug, description, category FROM certifications ORDER BY name
-  `;
-  return result as Certification[];
-}
-
-// Get unique employee sizes from companies
-export async function getUniqueEmployeeSizesDB(): Promise<string[]> {
-  const result = await getSql()`
-    SELECT DISTINCT employees FROM companies WHERE employees IS NOT NULL AND employees != '' ORDER BY employees
-  `;
-  return result.map((r: { employees: string }) => r.employees);
-}
-
-// Search companies by name/description
-export async function searchCompaniesDB(query: string): Promise<Company[]> {
-  const lowerQuery = `%${query.toLowerCase()}%`;
-  const result = await getSql()`
-    SELECT id, name, slug, description, founded_year, headquarters, employees, funding, website, logo_url, created_at, updated_at
-    FROM companies
-    WHERE LOWER(name) LIKE ${lowerQuery} OR LOWER(description) LIKE ${lowerQuery}
-    ORDER BY name
-  `;
-  return result as Company[];
-}
-
-// Filter companies by category (requires relationships - will return empty for now)
 export async function getCompaniesByCategoryDB(categorySlug: string): Promise<Company[]> {
-  // This will work after relationships are added
-  return [];
+  return companies.filter(c => c.categories?.some(cat => cat.slug === categorySlug));
 }
 
-// Filter companies by certification (requires relationships)
-export async function filterCompaniesByCertificationDB(certSlug: string): Promise<Company[]> {
-  return [];
+export async function searchCompaniesDB(query: string): Promise<Company[]> {
+  const lower = query.toLowerCase();
+  return companies.filter(c => 
+    c.name.toLowerCase().includes(lower) || 
+    c.description.toLowerCase().includes(lower)
+  );
+}
+
+export async function getAllCategoriesDB(): Promise<Array<{ id: string; name: string; slug: string }>> {
+  const allCategories = new Set<string>();
+  companies.forEach(c => {
+    c.categories?.forEach(cat => allCategories.add(cat.name));
+  });
+  return Array.from(allCategories).map((name, idx) => ({
+    id: String(idx),
+    name,
+    slug: name.toLowerCase().replace(/\s+/g, '-'),
+  }));
+}
+
+export async function getAllCertificationsDB(): Promise<Array<{ id: string; name: string; slug: string; category?: string }>> {
+  const allCerts = new Set<string>();
+  companies.forEach(c => {
+    c.certifications?.forEach(cert => allCerts.add(cert.name));
+  });
+  return Array.from(allCerts).map((name, idx) => ({
+    id: String(idx),
+    name,
+    slug: name.toLowerCase().replace(/\s+/g, '-'),
+  }));
+}
+
+export async function getUniqueEmployeeSizesDB(): Promise<string[]> {
+  const sizes = new Set<string>();
+  companies.forEach(c => {
+    if (c.employees) sizes.add(c.employees);
+  });
+  return Array.from(sizes).sort();
 }

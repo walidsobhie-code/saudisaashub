@@ -1,0 +1,919 @@
+[
+  {
+    "id": "42",
+    "name": "Ajeetly",
+    "slug": "ajeetly",
+    "description": "منصة لوجستية ذكية لإدارة سلسلة التوريد والتوصيل - تحسين المسارات وتتبع الشحنات بشكل فوري",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "100-500",
+    "funding": "Series A - $25M",
+    "website": "https://ajeetly.com",
+    "logo_url": "https://placehold.co/80x80?text=Ajeetly",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "Mada",
+      "STC Pay",
+      "Salla",
+      "SAR"
+    ],
+    "certifications": [
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Fastest Growing"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=Ajeetly+Dashboard"
+    ]
+  },
+  {
+    "id": "43",
+    "name": "Ruzzle",
+    "slug": "ruzzle",
+    "description": "منصة تعليم الألغاز والألعاب التعليمية - محتوى تفاعلي باللغة العربية مع تحليلات الأداء",
+    "founded_year": 2021,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Seed - $5M",
+    "website": "https://ruzzle.app",
+    "logo_url": "https://placehold.co/80x80?text=Ruzzle",
+    "categories": [
+      "EdTech"
+    ],
+    "integrations": [
+      "Google Classroom",
+      "Mada",
+      "Zid"
+    ],
+    "certifications": [
+      "ISO27001",
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Innovative EdTech"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=Ruzzle+App"
+    ]
+  },
+  {
+    "id": "44",
+    "name": "Resly",
+    "slug": "resly",
+    "description": "نظام إدارة المطاعم الشامل - حجوزات الطاولات، إدارة الطلبات، والتواصل مع العملاء",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series A - $12M",
+    "website": "https://resly.com",
+    "logo_url": "https://placehold.co/80x80?text=Resly",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "Mada",
+      "STC Pay",
+      "Jahez",
+      "Foodics"
+    ],
+    "certifications": [
+      "ISO27001"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Restaurant Management"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=Resly+POS"
+    ]
+  },
+  {
+    "id": "45",
+    "name": "Altibbi",
+    "slug": "altibbi",
+    "description": "منصة استشارات طبية عن بُعد - تواصل مباشر مع الأطباء المتخصصين ووصفات إلكترونية",
+    "founded_year": 2018,
+    "headquarters": "الرياض",
+    "employees": "200-500",
+    "funding": "Series B - $50M",
+    "website": "https://altibbi.com",
+    "logo_url": "https://placehold.co/80x80?text=Altibbi",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "Mada",
+      "STC Pay",
+      "SEHA",
+      "Zid"
+    ],
+    "certifications": [
+      "HIPAA",
+      "ISO27001",
+      "Saudi FDA"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Telemedicine Leader"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=Altibbi+Consultation"
+    ]
+  },
+  {
+    "id": "46",
+    "name": "SaudiLogix",
+    "slug": "saudilogix",
+    "description": "حلول لوجستية متكاملة للشركات - إدارة المستودعات، التوزيع، والخدمات اللوجستية الدولية",
+    "founded_year": 2020,
+    "headquarters": "الدمام",
+    "employees": "200-500",
+    "funding": "Series A - $30M",
+    "website": "https://saudilogix.com",
+    "logo_url": "https://placehold.co/80x80?text=SaudiLogix",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "SADAD",
+      "Mada",
+      "SAR",
+      "Oracle"
+    ],
+    "certifications": [
+      "PDPL Compliant",
+      "Saudi Logistics License"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Integrated Logistics"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=SaudiLogix+Warehouse"
+    ]
+  },
+  {
+    "id": "47",
+    "name": "EdAdvisor",
+    "slug": "edadvisor",
+    "description": "منصة استشارات التعليم العالي - مساعدة الطلاب في اختيار الجامعات والبرامج المناسبة",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Seed - $8M",
+    "website": "https://edadvisor.sa",
+    "logo_url": "https://placehold.co/80x80?text=EdAdvisor",
+    "categories": [
+      "EdTech"
+    ],
+    "integrations": [
+      "Mada",
+      "Zid",
+      "Google Forms"
+    ],
+    "certifications": [
+      "Ministry of Education Approved"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Education Counseling"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=EdAdvisor+Counseling"
+    ]
+  },
+  {
+    "id": "48",
+    "name": "KitchenPro",
+    "slug": "kitchenpro",
+    "description": "نظام إدارة المطابخ السحابي - تحسين العمليات، إدارة المخزون، والجودة الغذائية",
+    "founded_year": 2020,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Series A - $15M",
+    "website": "https://kitchenpro.sa",
+    "logo_url": "https://placehold.co/80x80?text=KitchenPro",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "Foodics",
+      "Resly",
+      "Mada",
+      "STC Pay"
+    ],
+    "certifications": [
+      "Food Safety",
+      "Saudi Health Authority"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Kitchen Operations"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=KitchenPro+Dashboard"
+    ]
+  },
+  {
+    "id": "49",
+    "name": "MediCare+",
+    "slug": "medicareplus",
+    "description": "منصة إدارة العيادات والمستشفيات - حجز المواعيد، إدارة السجلات، والاستشارات الطبية",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series A - $20M",
+    "website": "https://medicareplus.sa",
+    "logo_url": "https://placehold.co/80x80?text=MediCare+",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "SEHA",
+      "Mada",
+      "STC Pay",
+      "SAR"
+    ],
+    "certifications": [
+      "Saudi FDA",
+      "ISO27001",
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Healthcare Management"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=MediCare+Dashboard"
+    ]
+  },
+  {
+    "id": "50",
+    "name": "ExpressShip",
+    "slug": "expressship",
+    "description": "خدمات توصيل سريع للمتاجر الإلكترونية - التوصيل في نفس اليوم والتتبع الفوري",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Seed - $10M",
+    "website": "https://expressship.sa",
+    "logo_url": "https://placehold.co/80x80?text=ExpressShip",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "Salla",
+      "Salla",
+      "Zid",
+      "Mada"
+    ],
+    "certifications": [
+      "PDPL Compliant",
+      "Courrier License"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Same-Day Delivery"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=ExpressShip+Delivery"
+    ]
+  },
+  {
+    "id": "51",
+    "name": "LearnSmart",
+    "slug": "learnsmart",
+    "description": "منصة تعليم ذكية معذكاء اصطناعي - تخصيص المحتوى وتحليل أداء الطلاب",
+    "founded_year": 2020,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Series A - $12M",
+    "website": "https://learnsmart.sa",
+    "logo_url": "https://placehold.co/80x80?text=LearnSmart",
+    "categories": [
+      "EdTech"
+    ],
+    "integrations": [
+      "Google Classroom",
+      "Mada",
+      "Zid"
+    ],
+    "certifications": [
+      "Ministry of Education Approved",
+      "ISO27001"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "AI EdTech"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=LearnSmart+AI"
+    ]
+  },
+  {
+    "id": "52",
+    "name": "TableMate",
+    "slug": "tablemate",
+    "description": "نظام حجوزات الطاولات والخدمة الذاتية - زيادة الإيرادات وتحسين تجربة العملاء",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "20-50",
+    "funding": "Seed - $3M",
+    "website": "https://tablemate.sa",
+    "logo_url": "https://placehold.co/80x80?text=TableMate",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "Foodics",
+      "Mada",
+      "STC Pay",
+      "Google Maps"
+    ],
+    "certifications": [
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Restaurant Booking"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=TableMate+Booking"
+    ]
+  },
+  {
+    "id": "53",
+    "name": "DocNow",
+    "slug": "docnow",
+    "description": "منصة استشارات طبية فورية - الاتصال بالأطباء في دقائق مع أوصاف إلكترونية",
+    "founded_year": 2022,
+    "headquarters": "الدمام",
+    "employees": "50-100",
+    "funding": "Seed - $7M",
+    "website": "https://docnow.sa",
+    "logo_url": "https://placehold.co/80x80?text=DocNow",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "SEHA",
+      "Mada",
+      "STC Pay",
+      "SAR"
+    ],
+    "certifications": [
+      "Saudi FDA",
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Instant Healthcare"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=DocNow+Chat"
+    ]
+  },
+  {
+    "id": "54",
+    "name": "ShipFlow",
+    "slug": "shipflow",
+    "description": "منصة إدارة الشحنات المتعددة - أدوات متقدمة للتجار مع أيقونات تحليل والتتبع",
+    "founded_year": 2019,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Series A - $18M",
+    "website": "https://shipflow.sa",
+    "logo_url": "https://placehold.co/80x80?text=ShipFlow",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "Salla",
+      "Zid",
+      "Mada",
+      "SAR"
+    ],
+    "certifications": [
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Multi-Carrier"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=ShipFlow+Analytics"
+    ]
+  },
+  {
+    "id": "55",
+    "name": "EduQuest",
+    "slug": "eduquest",
+    "description": "منصة تعليمية تفاعلية للمدارس - محتوى سعودي معتمد مع أدوات التقييم",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series A - $15M",
+    "website": "https://eduquest.sa",
+    "logo_url": "https://placehold.co/80x80?text=EduQuest",
+    "categories": [
+      "EdTech"
+    ],
+    "integrations": [
+      "Google Classroom",
+      "Mada",
+      "Zid",
+      "SAR"
+    ],
+    "certifications": [
+      "Ministry of Education Full Approval",
+      "ISO27001"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Saudi Curriculum"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=EduQuest+Platform"
+    ]
+  },
+  {
+    "id": "56",
+    "name": "CuisineTech",
+    "slug": "cooktech",
+    "description": "نظام إدارة المطاعم المتقدم - ذكاء اصطناعي للتنبؤ بالمبيعات وتحسين القوائم",
+    "founded_year": 2021,
+    "headquarters": "الدمام",
+    "employees": "50-100",
+    "funding": "Seed - $10M",
+    "website": "https://cooktech.sa",
+    "logo_url": "https://placehold.co/80x80?text=CuisineTech",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "Foodics",
+      "Mada",
+      "STC Pay",
+      "Power BI"
+    ],
+    "certifications": [
+      "ISO27001",
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "AI Restaurant"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=CuisineTech+AI"
+    ]
+  },
+  {
+    "id": "57",
+    "name": "HealthPlus",
+    "slug": "healthplus",
+    "description": "منصة الع健康 الشاملة - خدمات صحية عن بُعد مع مراقبة مستمرة للعلامات الحيوية",
+    "founded_year": 2020,
+    "headquarters": "جدة",
+    "employees": "100-200",
+    "funding": "Series A - $25M",
+    "website": "https://healthplus.sa",
+    "logo_url": "https://placehold.co/80x80?text=HealthPlus",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "SEHA",
+      "Mada",
+      "STC Pay",
+      "Apple Health"
+    ],
+    "certifications": [
+      "Saudi FDA",
+      "HIPAA",
+      "ISO27001"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Continuous Healthcare"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=HealthPlus+Monitoring"
+    ]
+  },
+  {
+    "id": "58",
+    "name": "QuickShip",
+    "slug": "quickship",
+    "description": "خدمات لوجستية سريعة للأفراد - توصيل الطلبات في ساعات مع التتبع اللحظي",
+    "founded_year": 2022,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Seed - $8M",
+    "website": "https://quickship.sa",
+    "logo_url": "https://placehold.co/80x80?text=QuickShip",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "Mada",
+      "STC Pay",
+      "Zid"
+    ],
+    "certifications": [
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "On-Demand Delivery"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=QuickShip+App"
+    ]
+  },
+  {
+    "id": "59",
+    "name": "SkillUp",
+    "slug": "skillup",
+    "description": "منصة تطوير المهارات المهنية - دورات تدريبية معتمدة مع شهادات وإحصاءات الأداء",
+    "founded_year": 2020,
+    "headquarters": "الدمام",
+    "employees": "50-100",
+    "funding": "Series A - $12M",
+    "website": "https://skillup.sa",
+    "logo_url": "https://placehold.co/80x80?text=SkillUp",
+    "categories": [
+      "EdTech"
+    ],
+    "integrations": [
+      "Mada",
+      "Zid",
+      "Taqat",
+      "SAR"
+    ],
+    "certifications": [
+      "Human Resources Development Fund Approved"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Professional Development"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=SkillUp+Courses"
+    ]
+  },
+  {
+    "id": "60",
+    "name": "BistroManager",
+    "slug": "bistromanager",
+    "description": "نظام إدارة المطاعم والمقاهي - مبيعات، مخزون، موظفين، وتجربة Ordered",
+    "founded_year": 2019,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series A - $10M",
+    "website": "https://bistromanager.sa",
+    "logo_url": "https://placehold.co/80x80?text=BistroManager",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "Foodics",
+      "Mada",
+      "STC Pay",
+      "Zid"
+    ],
+    "certifications": [
+      "ISO27001",
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "All-in-One POS"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=BistroManager+POS"
+    ]
+  },
+  {
+    "id": "61",
+    "name": "TeleMed",
+    "slug": "telemed",
+    "description": "منصة telemedicine متقدمة - فحوصات عن بُعد، مراقبة remotely، وتحليل البيانات الصحية",
+    "founded_year": 2021,
+    "headquarters": "جدة",
+    "employees": "100-200",
+    "funding": "Series A - $18M",
+    "website": "https://telemed.sa",
+    "logo_url": "https://placehold.co/80x80?text=TeleMed",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "SEHA",
+      "Mada",
+      "STC Pay",
+      "SAR"
+    ],
+    "certifications": [
+      "Saudi FDA",
+      "ISO27001",
+      "PDPL"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Advanced Telehealth"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=TeleMed+Consultation"
+    ]
+  },
+  {
+    "id": "62",
+    "name": "FulfillPro",
+    "slug": "fulfillpro",
+    "description": "حلول تنفيذ الطلبات للتجارة الإلكترونية - إدارة المستودعات، التعبئة، والشحن",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "100-200",
+    "funding": "Series A - $20M",
+    "website": "https://fulfillpro.sa",
+    "logo_url": "https://placehold.co/80x80?text=FulfillPro",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "Salla",
+      "Zid",
+      "Mada",
+      "SAR"
+    ],
+    "certifications": [
+      "PDPL Compliant",
+      "Warehouse Management Certified"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "E-commerce Fulfillment"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=FulfillPro+Warehouse"
+    ]
+  },
+  {
+    "id": "63",
+    "name": "TutorMe",
+    "slug": "tutorme",
+    "description": "منصة tutoring خاصة - توصيل الطلاب مع معلمين متخصصين وخطط تعليمية شخصية",
+    "founded_year": 2021,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Seed - $6M",
+    "website": "https://tutorme.sa",
+    "logo_url": "https://placehold.co/80x80?text=TutorMe",
+    "categories": [
+      "EdTech"
+    ],
+    "integrations": [
+      "Mada",
+      "Zid",
+      "Google Calendar"
+    ],
+    "certifications": [
+      "Ministry of Education Registered"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Private Tutoring"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=TutorMe+Session"
+    ]
+  },
+  {
+    "id": "64",
+    "name": "OrderEase",
+    "slug": "orderease",
+    "description": "نظام طلب سهل للمطاعم - قوائم QR، طرق دفع متعددة، وإدارة الطلبات",
+    "founded_year": 2021,
+    "headquarters": "الدمام",
+    "employees": "20-50",
+    "funding": "Seed - $4M",
+    "website": "https://orderease.sa",
+    "logo_url": "https://placehold.co/80x80?text=OrderEase",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "Foodics",
+      "Mada",
+      "STC Pay",
+      "Apple Pay"
+    ],
+    "certifications": [
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Contactless Ordering"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=OrderEase+QR"
+    ]
+  },
+  {
+    "id": "65",
+    "name": "PharmaCare",
+    "slug": "pharmacare",
+    "description": "منصة خدمات الصيدليات - طلب الأدوية، استشارات صيدلانية، والتوصيل",
+    "founded_year": 2020,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Series A - $10M",
+    "website": "https://pharmacare.sa",
+    "logo_url": "https://placehold.co/80x80?text=PharmaCare",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "SEHA",
+      "Mada",
+      "STC Pay",
+      "SAR"
+    ],
+    "certifications": [
+      "Saudi FDA",
+      "PDPL",
+      "Pharmacy License"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Pharmacy Network"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=PharmaCare+Delivery"
+    ]
+  },
+  {
+    "id": "66",
+    "name": "CargoLink",
+    "slug": "cargolink",
+    "description": "شبكة لوجستية متكاملة - ربط بين الموردين والمشترين مع إدارة الشحنات متعددة الوسائط",
+    "founded_year": 2019,
+    "headquarters": "جدة",
+    "employees": "100-200",
+    "funding": "Series A - $15M",
+    "website": "https://cargolink.sa",
+    "logo_url": "https://placehold.co/80x80?text=CargoLink",
+    "categories": [
+      "Logistics"
+    ],
+    "integrations": [
+      "SADAD",
+      "Mada",
+      "SAR",
+      "Salla"
+    ],
+    "certifications": [
+      "PDPL Compliant",
+      "Transport License"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Intermodal Logistics"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=CargoLink+Network"
+    ]
+  },
+  {
+    "id": "67",
+    "name": "CodeAcademy KSA",
+    "slug": "codeacademy-ksa",
+    "description": "أكاديمية برمجة سعودية - دورات تطوير الويب والتطبيقات باللغة العربية",
+    "founded_year": 2021,
+    "headquarters": "الرياض",
+    "employees": "50-100",
+    "funding": "Seed - $5M",
+    "website": "https://codeacademy.sa",
+    "logo_url": "https://placehold.co/80x80?text=CodeAcademy",
+    "categories": [
+      "EdTech"
+    ],
+    "integrations": [
+      "Mada",
+      "Zid",
+      "LinkedIn",
+      "GitHub"
+    ],
+    "certifications": [
+      "Ministry of Communications Approved"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Arabic Coding"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=CodeAcademy+Courses"
+    ]
+  },
+  {
+    "id": "68",
+    "name": "MenuCraft",
+    "slug": "menucraft",
+    "description": "منصة تصميم وتحديث قوائم المطاعم - تحليل سلوك العملاء وتجربة مستخدم محسنة",
+    "founded_year": 2022,
+    "headquarters": "الرياض",
+    "employees": "20-50",
+    "funding": "Seed - $3M",
+    "website": "https://menucraft.sa",
+    "logo_url": "https://placehold.co/80x80?text=MenuCraft",
+    "categories": [
+      "Restaurant Tech"
+    ],
+    "integrations": [
+      "Foodics",
+      "Mada",
+      "STC Pay",
+      "Google Analytics"
+    ],
+    "certifications": [
+      "PDPL Compliant"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Menu Optimization"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=MenuCraft+Design"
+    ]
+  },
+  {
+    "id": "69",
+    "name": "WellnessHub",
+    "slug": "wellnesshub",
+    "description": "منصة العافية الشاملة - برامج العقل والجسم والتغذية متابعة مع مدربين متخصصين",
+    "founded_year": 2021,
+    "headquarters": "جدة",
+    "employees": "50-100",
+    "funding": "Series A - $12M",
+    "website": "https://wellnesshub.sa",
+    "logo_url": "https://placehold.co/80x80?text=WellnessHub",
+    "categories": [
+      "HealthTech"
+    ],
+    "integrations": [
+      "Mada",
+      "STC Pay",
+      "Apple Health",
+      "Google Fit"
+    ],
+    "certifications": [
+      "Ministry of Health Approved",
+      "ISO27001"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Holistic Wellness"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=WellnessHub+Dashboard"
+    ]
+  },
+  {
+    "id": "70",
+    "name": "TrainTrack",
+    "slug": "traintrack",
+    "description": "نظام إدارة التدريب للمؤسسات - تخطيط، تنفيذ، تقييم، وشهادات تدريبية",
+    "founded_year": 2020,
+    "headquarters": "الدمام",
+    "employees": "50-100",
+    "funding": "Series A - $10M",
+    "website": "https://traintrack.sa",
+    "logo_url": "https://placehold.co/80x80?text=TrainTrack",
+    "categories": [
+      "EdTech"
+    ],
+    "integrations": [
+      "Mada",
+      "Zid",
+      "SAR",
+      "HR Systems"
+    ],
+    "certifications": [
+      "Human Resources Development Fund Approved",
+      "ISO27001"
+    ],
+    "badges": [
+      "Saudi-owned",
+      "Corporate Training"
+    ],
+    "screenshot_urls": [
+      "https://placehold.co/400x300?text=TrainTrack+Dashboard"
+    ]
+  }
+]
