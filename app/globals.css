@@ -394,6 +394,11 @@ a:focus:not(:focus-visible) {
   animation: pulse-slow 4s ease-in-out infinite;
 }
 
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
 .animated-gradient-text {
   background-size: 200% auto;
   animation: shimmer 3s linear infinite;

@@ -1,73 +1,128 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 
 export function Hero() {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const categories = [
+    { name: 'FinTech', slug: 'fintech', icon: '💳' },
+    { name: 'HealthTech', slug: 'healthtech', icon: '🏥' },
+    { name: 'E-commerce', slug: 'e-commerce', icon: '🛒' },
+    { name: 'Education', slug: 'edtech', icon: '🎓' },
+    { name: 'Logistics', slug: 'logistics', icon: '🚚' },
+  ];
+
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-      {/* Background */}
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Animated Mesh Gradient Background */}
       <div className="absolute inset-0 bg-background">
-        {/* Green Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[150px] opacity-30" style={{ background: 'radial-gradient(circle, rgba(0,217,165,0.4) 0%, transparent 70%)' }} />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[100px] opacity-20" style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.3) 0%, transparent 70%)' }} />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[80px] opacity-15" style={{ background: 'radial-gradient(circle, rgba(255,107,157,0.3) 0%, transparent 70%)' }} />
+        {/* Floating Blobs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-accent-green/20 to-accent-green/5 blur-3xl animate-float" style={{ animationDelay: '0s' }} />
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-500/5 blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/5 blur-3xl animate-float" style={{ animationDelay: '4s' }} />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 border border-accent-green/20 mb-10">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-accent-green/30 mb-8 animate-fade-in">
           <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
-          <span className="text-text-secondary text-sm">المصدر الأول لـ SaaS في السعودية</span>
+          <span className="text-text-secondary text-sm">المصدر الأول لـ SaaS في المملكة العربية السعودية</span>
         </div>
 
-        {/* Title */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-          <span className="block text-white">Saudi</span>
-          <span className="block gradient-text">SaaS Hub</span>
+        {/* Main Headline */}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          <span className="block text-white">الوجهة الأولى</span>
+          <span className="block bg-gradient-to-r from-accent-green via-accent-cyan to-purple-500 bg-clip-text text-transparent">
+            لشركات البرمجيات السعودية
+          </span>
         </h1>
 
-        {/* Tagline */}
-        <p className="text-xl md:text-2xl text-text-secondary max-w-2xl mx-auto mb-10">
-          مصدرك الأول لأحدث أخبار التقنية والأعمال في المملكة العربية السعودية
+        {/* Subheadline */}
+        <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto mb-12 leading-relaxed">
+          اكتشف 250+ شركة SaaS سعودية، ابحث عن حلول متوافقة مع <span className="text-accent-green font-semibold">ZATCA</span>، واتبع أحدث التمويل والمقالات
         </p>
 
-        {/* CTA */}
+        {/* Primary CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <Link
-            href="/articles"
-            className="px-8 py-4 rounded-xl bg-accent-green text-background font-bold hover:shadow-glow-green transition-all hover:scale-105"
+            href="/companies"
+            className="group px-8 py-4 rounded-xl bg-gradient-to-r from-accent-green to-accent-green/80 text-background font-bold text-lg hover:shadow-glow-green transition-all hover:scale-105 active:scale-95"
           >
-            استكشف المقالات
+            <span className="flex items-center gap-2">
+              تصفح الشركات
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </span>
           </Link>
           <Link
-            href="/about"
-            className="px-8 py-4 rounded-xl bg-card border border-white/10 text-white font-semibold hover:border-accent-green/30 transition-all"
+            href="/contact"
+            className="group px-8 py-4 rounded-xl bg-card/60 backdrop-blur-sm border border-white/10 text-white font-semibold text-lg hover:border-accent-green/50 transition-all hover:scale-105 active:scale-95"
           >
-            عن المنصة
+            <span className="flex items-center gap-2">
+              أضف شركتك
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </span>
           </Link>
         </div>
 
-        {/* Quick Links */}
-        <div className="flex flex-wrap justify-center gap-3">
-          {['المقالات', 'عن المنصة', 'اتصل بنا'].map((link, i) => (
-            <Link
-              key={link}
-              href={i === 0 ? '/articles' : i === 1 ? '/about' : '/contact'}
-              className="px-4 py-2 rounded-full bg-card/50 border border-white/5 text-text-secondary hover:text-white hover:border-accent-green/30 transition-all text-sm"
-            >
-              {link}
-            </Link>
-          ))}
+        {/* Stats Row */}
+        <div className="grid grid-cols-3 gap-6 max-w-3xl mx-auto mb-16">
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-6">
+            <div className="text-4xl font-bold text-accent-green mb-2">250+</div>
+            <div className="text-text-secondary text-sm">شركة سعودية</div>
+          </div>
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-6">
+            <div className="text-4xl font-bold text-accent-cyan mb-2">15+</div>
+            <div className="text-text-secondary text-sm">فئة متخصصة</div>
+          </div>
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-6">
+            <div className="text-4xl font-bold text-purple-400 mb-2">ZATCA</div>
+            <div className="text-text-secondary text-sm">متوافق</div>
+          </div>
+        </div>
+
+        {/* Quick Search & Categories */}
+        <div className="max-w-4xl mx-auto">
+          {/* Search */}
+          <div className="relative mb-6">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="ابحث عن شركة، فئة، أو خدمة..."
+              className="w-full px-6 py-4 rounded-2xl bg-card/80 backdrop-blur-sm border border-white/10 text-white placeholder:text-text-muted focus:border-accent-green focus:outline-none focus:ring-2 focus:ring-accent-green/20 text-lg"
+            />
+            <button className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-accent-green/10 text-accent-green hover:bg-accent-green/20 transition-colors">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Category Pills */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/companies?category=${cat.slug}`}
+                className="px-4 py-2 rounded-full bg-card/50 border border-white/5 text-text-secondary hover:text-white hover:border-accent-green/30 transition-all text-sm flex items-center gap-2"
+              >
+                <span>{cat.icon}</span>
+                <span>{cat.name}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Scroll */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg className="w-6 h-6 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </div>
+      {/* Bottom Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 }
