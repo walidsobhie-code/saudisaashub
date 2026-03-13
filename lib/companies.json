@@ -1120,24 +1120,6 @@
     "updated_at": "2026-03-13T02:20:02.423Z"
   },
   {
-    "id": "04529532711391593",
-    "description": "",
-    "founded_year": null,
-    "headquarters": "",
-    "employees": "",
-    "funding": "",
-    "website": "",
-    "logo_url": null,
-    "categories": [],
-    "integrations": [],
-    "certifications": [],
-    "badges": [],
-    "pricing_plans": [],
-    "screenshot_urls": [],
-    "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
-  },
-  {
     "id": "6710648116963479",
     "name": "TestCo",
     "slug": "testco",
