@@ -1,5 +1,7 @@
 import { getCompanies } from './actions';
 
+export const dynamic = 'force-dynamic';
+
 export default async function AdminPage() {
   const companies = await getCompanies();
   const totalCompanies = companies.length;

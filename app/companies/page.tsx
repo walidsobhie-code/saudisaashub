@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 import CompaniesPageClient from './CompaniesPageClient';
 import { getAllCompaniesDB, getAllCategoriesDB, getAllCertificationsDB, getUniqueEmployeeSizesDB } from '@/lib/db-companies';
 
+export const dynamic = 'force-dynamic';
+export const dynamicParams = false;
+
 export const metadata: Metadata = {
   title: 'دليل شركات SaaS السعودية | Saudi SaaS Hub',
   description: 'اكتشف أفضل شركات البرمجيات كخدمة في المملكة العربية السعودية. تصفح الأدلة الموثقة مع الفلاتر حسب التصنيف، الشهادات، الحجم، ونموذج التسعير.',

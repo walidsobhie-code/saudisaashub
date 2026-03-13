@@ -11,6 +11,9 @@ import { QuestionHook, ArticleHashtags } from '@/components/ArticleHooks';
 import { ArticleContent } from '@/components/ArticleContent';
 import { PublisherCard } from '@/components/PublisherCard';
 
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+
 interface PageProps {
   params: { slug: string };
 }
