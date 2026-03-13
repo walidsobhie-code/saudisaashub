@@ -11,6 +11,14 @@ export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  // During Cloudflare build, DATABASE_URL is not set - return generic metadata
+  if (!process.env.DATABASE_URL) {
+    return {
+      title: 'Company - Saudi SaaS Hub',
+      description: 'View company details on Saudi SaaS Hub',
+    };
+  }
+
   const { slug } = await params;
   const company = await getCompanyBySlugDB(slug);
 
@@ -59,6 +67,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function CompanyProfilePage({ params }: PageProps) {
+  // During Cloudflare build, DATABASE_URL is not set - render placeholder
+  if (!process.env.DATABASE_URL) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-4">Company Profile</h1>
+        <p className="text-gray-500">Loading company details...</p>
+      </div>
+    );
+  }
+
   const { slug } = await params;
   const company = await getCompanyBySlugDB(slug);
 

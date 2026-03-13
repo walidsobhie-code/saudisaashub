@@ -21,6 +21,16 @@ export const metadata: Metadata = {
 };
 
 export default async function CompaniesPage() {
+  // During Cloudflare build, DATABASE_URL is not set - render empty placeholder
+  if (!process.env.DATABASE_URL) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-4">دليل شركات SaaS السعودية</h1>
+        <p className="text-gray-500">Loading companies...</p>
+      </div>
+    );
+  }
+
   // Server-side data fetching from database
   const [initialCompanies, categories, certifications, employeeSizes] = await Promise.all([
     getAllCompaniesDB(),

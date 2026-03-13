@@ -3,6 +3,16 @@ import { getCompanies } from './actions';
 export const dynamic = 'force-dynamic';
 
 export default async function AdminPage() {
+  // During Cloudflare build, DATABASE_URL is not set - render empty placeholder
+  if (!process.env.DATABASE_URL) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-4">Admin Dashboard</h1>
+        <p className="text-gray-500">Loading admin data...</p>
+      </div>
+    );
+  }
+
   const companies = await getCompanies();
   const totalCompanies = companies.length;
   const recentCompanies = companies.slice(0, 5);
