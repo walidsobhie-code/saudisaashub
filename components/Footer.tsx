@@ -11,9 +11,13 @@ const socialLinks = [
 
 const quickLinks = [
   { name: 'الرئيسية', href: '/' },
-  { name: 'المقالات', href: '/articles' },
+  { name: 'شركات SaaS', href: '/companies' },
+  { name: 'الأخبار', href: '/news' },
+  { name: 'الفعاليات', href: '/events' },
+  { name: 'الأدلة', href: '/guides' },
   { name: 'عن المنصة', href: '/about' },
-  { name: 'اتصل بنا', href: '/contact' },
+  { name: 'المجلس الاستشاري', href: '/advisory' },
+  { name: 'المنهجية', href: '/methodology' },
 ];
 
 export function Footer() {
