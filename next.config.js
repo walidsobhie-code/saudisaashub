@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export', // Static export for Cloudflare Pages
   images: {
-    unoptimized: true, // Use if not using Vercel image optimization
+    unoptimized: true, // Required for static export
   },
 };
 

@@ -8,8 +8,6 @@ import { SaudiSaaSCompanies } from '@/components/SaudiSaaSCompanies';
 import { CompanyComparer } from '@/components/CompanyComparer';
 import { UpcomingEvents } from '@/components/UpcomingEvents';
 
-export const dynamic = 'force-dynamic';
-
 export default async function Home() {
   const articles = await getArticles();
   const featuredArticles = articles.slice(0, 6);
