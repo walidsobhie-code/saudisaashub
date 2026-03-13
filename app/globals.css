@@ -659,3 +659,81 @@ a:focus:not(:focus-visible) {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
 }
+
+/* Logo ticker marquee */
+@keyframes marquee-hover {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.animate-marquee-hover {
+  animation: marquee-hover 30s linear infinite;
+}
+
+.animate-marquee-hover:hover {
+  animation-play-state: paused;
+}
+
+/* Spline container */
+.spline-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  max-width: 600px;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (max-width: 1280px) {
+  .spline-container {
+    display: none;
+  }
+}
+
+/* ========================================
+   LOGO TICKER
+======================================== */
+
+@keyframes marquee-hover {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.animate-marquee-hover {
+  animation: marquee-hover 30s linear infinite;
+}
+
+.animate-marquee-hover:hover {
+  animation-play-state: paused;
+}
+
+/* ========================================
+   SPLINE 3D CONTAINER
+======================================== */
+
+.spline-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 100%;
+  max-width: 600px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 1280px) {
+  .spline-container {
+    display: none;
+  }
+}
+
+.spline-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  opacity: 0.8;
+}

@@ -6,6 +6,7 @@ import { getAllCompaniesDB } from '@/lib/db-companies';
 import { ArticleCard } from '@/components/ArticleCard';
 import CompanyCard from '@/components/CompanyCard';
 import { Hero } from '@/components/Hero';
+import { LogoTicker } from '@/components/LogoTicker';
 import { Newsletter } from '@/components/Newsletter';
 
 export default async function Home() {
@@ -46,6 +47,9 @@ export default async function Home() {
       <link rel="alternate" hrefLang="x-default" href="https://saudisaashub.pages.dev/" />
 
       <Hero />
+
+      {/* Logo Ticker - Trusted Companies */}
+      <LogoTicker />
 
       {/* Editorial Spotlight */}
       <section className="py-24 relative">

@@ -3,6 +3,14 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
+import dynamic from 'next/dynamic';
+
+// Dynamically load Spline to avoid SSR issues
+const SplineEmbed = dynamic(() => import('./SplineEmbed').then(mod => mod.SplineEmbed), {
+  ssr: false,
+  loading: () => null,
+});
+import { SplineEmbed } from './SplineEmbed';
 
 export function Hero() {
   const router = useRouter();
@@ -225,28 +233,7 @@ export function Hero() {
       {/* ========================================
           3D SPLINE EMBED (Optional - Saudi-themed)
       ======================================== */}
-      {visible && (
-        <div
-          className="absolute right-0 top-[20%] w-[400px] h-[500px] hidden xl:block pointer-events-none opacity-40"
-          style={{
-            transform: `translate(${-mousePosition.x * 0.3}px, ${mousePosition.y * 0.2}px)`,
-            transition: 'transform 0.5s ease-out',
-          }}
-        >
-          {/* Decorative 3D-like elements (CSS only for reliability) */}
-          <div className="relative w-full h-full">
-            {/* Floating cube-like shapes */}
-            <div className="absolute top-1/4 right-1/4 w-32 h-32 border-2 border-accent-green/30 rotate-12 animate-float-shadow rounded-lg" style={{ animationDuration: '8s' }} />
-            <div className="absolute top-1/2 right-1/3 w-24 h-24 border-2 border-purple-400/30 -rotate-6 animate-float-shadow rounded-lg" style={{ animationDuration: '10s', animationDelay: '1s' }} />
-            <div className="absolute top-1/3 right-1/2 w-16 h-16 bg-gradient-to-br from-accent-green/20 to-purple-400/20 animate-float-shadow rounded-lg" style={{ animationDuration: '12s', animationDelay: '2s' }} />
-
-            {/* Glowing orbs */}
-            <div className="absolute top-[15%] right-[30%] w-4 h-4 bg-accent-green rounded-full animate-pulse" />
-            <div className="absolute top-[45%] right-[15%] w-3 h-3 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-            <div className="absolute top-[60%] right-[40%] w-2 h-2 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
-          </div>
-        </div>
-      )}
+      {visible && <SplineEmbed />}
 
       {/* ========================================
           MAIN CONTENT
