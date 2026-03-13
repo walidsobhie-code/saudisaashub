@@ -34,15 +34,13 @@ export function Hero() {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-          <span className="block text-white">الوجهة الأولى</span>
-          <span className="block bg-gradient-to-r from-accent-green via-accent-cyan to-purple-500 bg-clip-text text-transparent">
-            لشركات البرمجيات السعودية
-          </span>
+          <span className="block text-white">Saudi</span>
+          <span className="block text-accent-green">SaaS Hub</span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto mb-12 leading-relaxed">
-          اكتشف 250+ شركة SaaS سعودية، ابحث عن حلول متوافقة مع <span className="text-accent-green font-semibold">ZATCA</span>، واتبع أحدث التمويل والمقالات
+          Discover 250+ Saudi SaaS companies, find ZATCA-compliant solutions, and stay updated with funding and articles
         </p>
 
         {/* Primary CTAs */}
@@ -72,18 +70,22 @@ export function Hero() {
         </div>
 
         {/* Stats Row */}
-        <div className="grid grid-cols-3 gap-6 max-w-3xl mx-auto mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-16">
           <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-6">
             <div className="text-4xl font-bold text-accent-green mb-2">250+</div>
-            <div className="text-text-secondary text-sm">شركة سعودية</div>
+            <div className="text-text-secondary text-sm">Saudi Companies</div>
           </div>
           <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-6">
             <div className="text-4xl font-bold text-accent-cyan mb-2">15+</div>
-            <div className="text-text-secondary text-sm">فئة متخصصة</div>
+            <div className="text-text-secondary text-sm">Categories</div>
           </div>
           <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-6">
-            <div className="text-4xl font-bold text-purple-400 mb-2">ZATCA</div>
-            <div className="text-text-secondary text-sm">متوافق</div>
+            <div className="text-4xl font-bold text-purple-400 mb-2">10+</div>
+            <div className="text-text-secondary text-sm">Articles</div>
+          </div>
+          <div className="bg-card/40 backdrop-blur-sm rounded-xl border border-white/5 p-6">
+            <div className="text-4xl font-bold text-white mb-2">1</div>
+            <div className="text-text-secondary text-sm">Platform</div>
           </div>
         </div>
 

@@ -170,13 +170,13 @@ export default async function Home() {
               <div className="p-8 bg-gradient-to-br from-blue-500/10 to-transparent">
                 <div className="text-4xl font-bold text-blue-400 mb-4">📈</div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
-                  تتبع التمويل
+                  Funding Tracker
                 </h3>
                 <p className="text-text-secondary text-sm mb-4">
-                 腺 أعمق الجولات الاستثمارية وصفقات الشركات السعودية
+                  Track investment rounds and funding deals of Saudi companies
                 </p>
                 <div className="flex items-center gap-2 text-accent-green text-sm font-medium">
-                  تصفح البيانات
+                  View Data
                   <span>→</span>
                 </div>
               </div>

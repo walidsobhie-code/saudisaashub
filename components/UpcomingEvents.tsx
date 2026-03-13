@@ -47,7 +47,10 @@ export function UpcomingEvents() {
                     {new Date(event.date).getDate()}
                   </div>
                   <div className="text-sm text-white">
-                    {new Date(event.date).toLocaleDateString('ar-SA', { month: 'short' })}
+                    {new Date(event.date).toLocaleDateString('en-US', { month: 'short' })}
+                  </div>
+                  <div className="text-xs text-text-secondary">
+                    {new Date(event.date).getFullYear()}
                   </div>
                 </div>
                 {/* Region Badge */}
