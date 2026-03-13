@@ -7,12 +7,40 @@ export function Hero() {
   const [searchQuery, setSearchQuery] = useState('');
   const [visible, setVisible] = useState(false);
   const [statsAnimated, setStatsAnimated] = useState(false);
+  const [companiesCount, setCompaniesCount] = useState(0);
+  const [categoriesCount, setCategoriesCount] = useState(0);
+  const [articlesCount, setArticlesCount] = useState(0);
   const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  // Count-up animation effect
+  useEffect(() => {
+    if (!statsAnimated) return;
+
+    const duration = 2000;
+    const companiesEnd = 250;
+    const categoriesEnd = 15;
+    const articlesEnd = 10;
+
+    let startTime: number;
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+
+      setCompaniesCount(Math.floor(progress * companiesEnd));
+      setCategoriesCount(Math.floor(progress * categoriesEnd));
+      setArticlesCount(Math.floor(progress * articlesEnd));
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    requestAnimationFrame(animate);
+  }, [statsAnimated]);
 
   // Count-up animation for stats
   useEffect(() => {
