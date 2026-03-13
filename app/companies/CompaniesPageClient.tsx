@@ -40,6 +40,8 @@ export default function CompaniesPageClient({
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedCertifications, setSelectedCertifications] = useState<string[]>([]);
   const [selectedEmployeeSize, setSelectedEmployeeSize] = useState<string>('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const companiesPerPage = 20;
 
   useEffect(() => {
     let filtered = initialCompanies;
@@ -78,7 +80,16 @@ export default function CompaniesPageClient({
     }
 
     setCompanies(filtered);
+    setCurrentPage(1); // Reset to page 1 on filter change
   }, [initialCompanies, searchQuery, selectedCategories, selectedCertifications, selectedEmployeeSize]);
+
+  // Pagination
+  const companiesPerPage = 20;
+  const totalPages = Math.ceil(companies.length / companiesPerPage);
+  const paginatedCompanies = companies.slice(
+    (currentPage - 1) * companiesPerPage,
+    currentPage * companiesPerPage
+  );
 
   return (
     <div className="min-h-screen py-12">
@@ -190,7 +201,7 @@ export default function CompaniesPageClient({
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {companies.map((company) => (
+              {paginatedCompanies.map((company) => (
                 <a
                   key={company.id}
                   href={`/companies/${company.slug}`}
@@ -202,6 +213,43 @@ export default function CompaniesPageClient({
             </div>
           )}
         </main>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center gap-2 mt-8 mb-8">
+            <button
+              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className="px-4 py-2 rounded-lg bg-card border border-white/10 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:border-accent-green/30"
+            >
+              السابق
+            </button>
+            
+            <div className="flex gap-1">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                <button
+                  key={page}
+                  onClick={() => setCurrentPage(page)}
+                  className={`w-10 h-10 rounded-lg ${
+                    currentPage === page
+                      ? 'bg-accent-green text-white'
+                      : 'bg-card border border-white/10 text-white hover:border-accent-green/30'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 rounded-lg bg-card border border-white/10 text-white disabled:opacity-50 disabled:cursor-not-allowed hover:border-accent-green/30"
+            >
+              التالي
+            </button>
+          </div>
+        )}
 
         <div className="clear-both" />
       </div>

@@ -7,6 +7,8 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'الرئيسية' },
+  { href: '/companies', label: 'شركات SaaS' },
+  { href: '/search', label: 'بحث' },
   { href: '/articles', label: 'المقالات' },
   { href: '/about', label: 'عن المنصة' },
   { href: '/contact', label: 'اتصل بنا' },
@@ -72,7 +74,7 @@ export function Header() {
 
             {/* Search Button */}
             <Link
-              href="/articles"
+              href="/search"
               className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-white/10 text-text-secondary hover:text-white hover:border-accent-green/30 transition-all text-sm"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
