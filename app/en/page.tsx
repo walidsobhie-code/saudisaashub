@@ -111,7 +111,7 @@ export default async function HomeEN() {
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent-green/10 to-purple-500/10 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-accent-green">
-                        {company.name.charAt(0)}
+                        {company.name ? company.name.charAt(0) : '?'}
                       </span>
                     </div>
                     <div>
