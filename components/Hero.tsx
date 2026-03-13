@@ -69,6 +69,13 @@ export function Hero() {
     { value: 1, suffix: '', label: 'Platform', link: '/about', color: 'white' },
   ];
 
+  const highlights = [
+    { text: 'ZATCA Compliance', icon: '📋', link: '/zatca' },
+    { text: 'Funding Tracker', icon: '💰', link: '/funding' },
+    { text: '250+ Companies', icon: '🏢', link: '/companies' },
+    { text: 'Expert Guides', icon: '📚', link: '/guides' },
+  ];
+
   const categories = [
     { name: 'FinTech', slug: 'fintech', icon: '💳' },
     { name: 'HealthTech', slug: 'healthtech', icon: '🏥' },
@@ -101,26 +108,48 @@ export function Hero() {
           <span className="block gradient-headline">SaaS Hub</span>
         </h1>
 
-        {/* Subheadline - Clean white news ticker in recessed pit */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <div className={`relative transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ animationDelay: '0.5s' }}>
-            {/* Recessed pit container */}
-            <div className="relative h-20 md:h-24 rounded-xl overflow-hidden bg-gradient-to-b from-black/60 via-[#0A0A0A] to-black/60 border border-white/5 shadow-[inset_0_2px_8px_rgba(0,0,0,0.8)]">
-              {/* Scrolling Marquee Wrapper - Single line with both languages */}
-              <div className="absolute inset-0 flex items-center">
-                <div className="animate-marquee whitespace-nowrap">
-                  <span className="text-lg md:text-2xl font-medium text-white">
-                    🚀 اكتشف أكثر من 250 شركة SaaS سعودية • Discover 250+ Saudi SaaS companies • ZATCA Compliance Guide • Funding Tracker Live • أفضل 10 شركات SaaS • Top 10 Companies • اشترك في النشرة البريدية • Subscribe to Newsletter
-                  </span>
-                </div>
-              </div>
-              
-              {/* Subtle inner glow at bottom for depth */}
-              <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-t from-accent-green/20 to-transparent" />
+        {/* Subheadline - Clean static with featured highlights */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className={`transition-all duration-1000 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ animationDelay: '0.5s' }}>
+            {/* Main description */}
+            <p className="text-xl md:text-2xl text-text-secondary mb-8 leading-relaxed">
+              اكتشف أكثر من <span className="text-accent-green font-semibold">250 شركة SaaS</span> سعودية في مكان واحد
+            </p>
+
+            {/* Featured highlights as interactive badges */}
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/zatca" className="group px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500/20 to-amber-600/10 border border-amber-500/30 hover:border-amber-400 hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all flex items-center gap-2">
+                <span className="text-amber-400">📋</span>
+                <span className="text-amber-200 text-sm font-medium">ZATCA Compliance</span>
+                <svg className="w-4 h-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link href="/funding" className="group px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all flex items-center gap-2">
+                <span className="text-emerald-400">💰</span>
+                <span className="text-emerald-200 text-sm font-medium">Funding Tracker</span>
+                <svg className="w-4 h-4 text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link href="/reports" className="group px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-500/20 to-purple-600/10 border border-purple-500/30 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all flex items-center gap-2">
+                <span className="text-purple-400">📊</span>
+                <span className="text-purple-200 text-sm font-medium">State of SaaS 2026</span>
+                <svg className="w-4 h-4 text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link href="/companies" className="group px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/20 to-cyan-600/10 border border-cyan-500/30 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all flex items-center gap-2">
+                <span className="text-cyan-400">🏆</span>
+                <span className="text-cyan-200 text-sm font-medium">Top 10 Companies</span>
+                <svg className="w-4 h-4 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
-            
-            {/* Clean separator line */}
-            <div className="w-16 h-0.5 bg-gradient-to-r from-accent-green via-accent-cyan to-purple-400 mx-auto mt-3 rounded-full" />
+
+            {/* Separator line */}
+            <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-accent-green to-transparent mx-auto mt-10 rounded-full" />
           </div>
         </div>
 
