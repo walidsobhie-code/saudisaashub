@@ -25,7 +25,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.422Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 100000000,
+    "compliance_status": "in_progress",
+    "employee_count_range": "1000+"
   },
   {
     "id": "38428754081358507",
@@ -53,7 +56,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 59755263,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-500"
   },
   {
     "id": "47350673415740097",
@@ -81,7 +87,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 90577493,
+    "compliance_status": "zatca_compliant",
+    "employee_count_range": "500-1000"
   },
   {
     "id": "4236211139458742",
@@ -109,7 +118,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 63200568,
+    "compliance_status": "not_started",
+    "employee_count_range": "200-500"
   },
   {
     "id": "4827749053128676",
@@ -137,7 +149,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 36137290,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "2578255338114378",
@@ -165,7 +180,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 60293227,
+    "compliance_status": "not_started",
+    "employee_count_range": "500-1000"
   },
   {
     "id": "976016253370909",
@@ -193,7 +211,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 338494733,
+    "compliance_status": "not_started",
+    "employee_count_range": "200-500"
   },
   {
     "id": "7368930613041794",
@@ -221,7 +242,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 109611332,
+    "compliance_status": "zatca_compliant",
+    "employee_count_range": "1000-5000"
   },
   {
     "id": "9987996494314928",
@@ -249,7 +273,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 450234924,
+    "compliance_status": "in_progress",
+    "employee_count_range": "200-500"
   },
   {
     "id": "9185540267247462",
@@ -277,7 +304,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 359135297,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "9038344565609981",
@@ -305,7 +335,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 4149214,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "9015301366112103",
@@ -333,7 +366,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 1822440,
+    "compliance_status": "zatca_compliant",
+    "employee_count_range": "10-50"
   },
   {
     "id": "05879653182335254",
@@ -361,7 +397,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 4737032,
+    "compliance_status": "in_progress",
+    "employee_count_range": "20-50"
   },
   {
     "id": "03999565727045906",
@@ -389,7 +428,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 105000000,
+    "compliance_status": "not_started",
+    "employee_count_range": "10-50"
   },
   {
     "id": "8105045306971791",
@@ -417,7 +459,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 22876580,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "18766462304248788",
@@ -445,7 +490,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 4824903,
+    "compliance_status": "not_started",
+    "employee_count_range": "10-50"
   },
   {
     "id": "26235243508933115",
@@ -473,7 +521,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 30465245,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "1704138929549801",
@@ -501,7 +552,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 16499136,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "23166529265272917",
@@ -529,7 +583,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 6457834,
+    "compliance_status": "in_progress",
+    "employee_count_range": "20-50"
   },
   {
     "id": "13501193490532182",
@@ -557,7 +614,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 1795602,
+    "compliance_status": "not_started",
+    "employee_count_range": "10-50"
   },
   {
     "id": "2769747223820971",
@@ -585,7 +645,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 1975543,
+    "compliance_status": "in_progress",
+    "employee_count_range": "10-50"
   },
   {
     "id": "27282585279349325",
@@ -613,7 +676,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 3152759,
+    "compliance_status": "not_started",
+    "employee_count_range": "10-50"
   },
   {
     "id": "5108359465195808",
@@ -641,7 +707,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 7963837,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "5943699326472563",
@@ -669,7 +738,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 32003059,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "9293473917191264",
@@ -697,7 +769,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 5402561,
+    "compliance_status": "not_started",
+    "employee_count_range": "30-60"
   },
   {
     "id": "21440950182049112",
@@ -725,7 +800,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 5907406,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-40"
   },
   {
     "id": "12430212127231788",
@@ -753,7 +831,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 2635832,
+    "compliance_status": "not_started",
+    "employee_count_range": "10-30"
   },
   {
     "id": "9624675360202571",
@@ -781,7 +862,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 15691768,
+    "compliance_status": "not_started",
+    "employee_count_range": "30-50"
   },
   {
     "id": "3065685815185305",
@@ -809,7 +893,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 78869942,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "7589665028881292",
@@ -837,7 +924,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 35434633,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "9665562488382548",
@@ -865,7 +955,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 9464195,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "20201933688811857",
@@ -893,7 +986,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 5010000000,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "34679932706062055",
@@ -921,7 +1017,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 306000000,
+    "compliance_status": "in_progress",
+    "employee_count_range": "30-60"
   },
   {
     "id": "7151334119891084",
@@ -949,7 +1048,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 34054744,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "272148330926655",
@@ -977,7 +1079,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 53148526,
+    "compliance_status": "in_progress",
+    "employee_count_range": "100-200"
   },
   {
     "id": "7072726822058483",
@@ -1005,7 +1110,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 145356086,
+    "compliance_status": "not_started",
+    "employee_count_range": "200-500"
   },
   {
     "id": "047366259859873305",
@@ -1033,7 +1141,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 19954006,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "7190443283124486",
@@ -1061,7 +1172,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 73791486,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "6888707896777629",
@@ -1089,7 +1203,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 110176275,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-300"
   },
   {
     "id": "021715170597816025",
@@ -1117,7 +1234,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 5662535,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "6710648116963479",
@@ -1147,7 +1267,10 @@
       "https://placehold.co/400x300?text=TestCo"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 10297945,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "03452606895823884",
@@ -1181,7 +1304,10 @@
       "https://placehold.co/400x300?text=Ajeetly+Dashboard"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 53137369,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-500"
   },
   {
     "id": "6796370813985357",
@@ -1215,7 +1341,10 @@
       "https://placehold.co/400x300?text=Ruzzle+App"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 12069139,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "3483726959759681",
@@ -1249,7 +1378,10 @@
       "https://placehold.co/400x300?text=Resly+POS"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 44225364,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "4656489894287108",
@@ -1277,7 +1409,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 39165052,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "38045843572166615",
@@ -1312,7 +1447,10 @@
       "https://placehold.co/400x300?text=SaudiLogix+Warehouse"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 114346762,
+    "compliance_status": "not_started",
+    "employee_count_range": "200-500"
   },
   {
     "id": "7075021570863894",
@@ -1345,7 +1483,10 @@
       "https://placehold.co/400x300?text=EdAdvisor+Counseling"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 20874176,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "3637059374611542",
@@ -1380,7 +1521,10 @@
       "https://placehold.co/400x300?text=KitchenPro+Dashboard"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 33775782,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "21764706061147066",
@@ -1416,7 +1560,10 @@
       "https://placehold.co/400x300?text=MediCare+Dashboard"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 53600666,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "33776166888830195",
@@ -1451,7 +1598,10 @@
       "https://placehold.co/400x300?text=ExpressShip+Delivery"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 37207365,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "5476860916045105",
@@ -1485,7 +1635,10 @@
       "https://placehold.co/400x300?text=LearnSmart+AI"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 31577068,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "25832731667375386",
@@ -1519,7 +1672,10 @@
       "https://placehold.co/400x300?text=TableMate+Booking"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 11963170,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "3851338236361006",
@@ -1554,7 +1710,10 @@
       "https://placehold.co/400x300?text=DocNow+Chat"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 20062789,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "031355161568004664",
@@ -1588,7 +1747,10 @@
       "https://placehold.co/400x300?text=ShipFlow+Analytics"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 53699206,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "7689367152197029",
@@ -1623,7 +1785,10 @@
       "https://placehold.co/400x300?text=EduQuest+Platform"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 51280292,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "13439082294806715",
@@ -1658,7 +1823,10 @@
       "https://placehold.co/400x300?text=CuisineTech+AI"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 20407028,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "961178787375999",
@@ -1694,7 +1862,10 @@
       "https://placehold.co/400x300?text=HealthPlus+Monitoring"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 52925339,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "1848785855052455",
@@ -1727,7 +1898,10 @@
       "https://placehold.co/400x300?text=QuickShip+App"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 25094667,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "5229524805831274",
@@ -1761,7 +1935,10 @@
       "https://placehold.co/400x300?text=SkillUp+Courses"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 27601931,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "7076380399877567",
@@ -1796,7 +1973,10 @@
       "https://placehold.co/400x300?text=BistroManager+POS"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 22697944,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "9193275997511668",
@@ -1832,7 +2012,10 @@
       "https://placehold.co/400x300?text=TeleMed+Consultation"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 48652850,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "8065618947224612",
@@ -1867,7 +2050,10 @@
       "https://placehold.co/400x300?text=FulfillPro+Warehouse"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 43944126,
+    "compliance_status": "in_progress",
+    "employee_count_range": "100-200"
   },
   {
     "id": "5521207640195015",
@@ -1900,7 +2086,10 @@
       "https://placehold.co/400x300?text=TutorMe+Session"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 12343274,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "19033646329382925",
@@ -1934,7 +2123,10 @@
       "https://placehold.co/400x300?text=OrderEase+QR"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 13350051,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "9681245816589718",
@@ -1970,7 +2162,10 @@
       "https://placehold.co/400x300?text=PharmaCare+Delivery"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 39378295,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "32788772351148354",
@@ -2005,7 +2200,10 @@
       "https://placehold.co/400x300?text=CargoLink+Network"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 50472033,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "37147056835161063",
@@ -2039,7 +2237,10 @@
       "https://placehold.co/400x300?text=CodeAcademy+Courses"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 17117199,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "08769787596903122",
@@ -2073,7 +2274,10 @@
       "https://placehold.co/400x300?text=MenuCraft+Design"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 9128509,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "7544930615945189",
@@ -2108,7 +2312,10 @@
       "https://placehold.co/400x300?text=WellnessHub+Dashboard"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 24787098,
+    "compliance_status": "zatca_compliant",
+    "employee_count_range": "50-100"
   },
   {
     "id": "26737243829078916",
@@ -2143,7 +2350,10 @@
       "https://placehold.co/400x300?text=TrainTrack+Dashboard"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 33437212,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "8693081568313248",
@@ -2198,7 +2408,10 @@
       "https://placehold.co/400x300?text=ExpressShip+Express"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 17698524,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "7663168156675823",
@@ -2226,7 +2439,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 40574760,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "9464605939221877",
@@ -2254,7 +2470,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 100000000,
+    "compliance_status": "not_started",
+    "employee_count_range": "1000+"
   },
   {
     "id": "8078303302964369",
@@ -2282,7 +2501,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 24075627,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "9554618336841383",
@@ -2310,7 +2532,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 7817166,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "20341492364206748",
@@ -2338,7 +2563,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 3820681,
+    "compliance_status": "in_progress",
+    "employee_count_range": "10-30"
   },
   {
     "id": "8931490351372954",
@@ -2366,7 +2594,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 49735617,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "7628213260290981",
@@ -2394,7 +2625,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 43093311,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "1333268907847982",
@@ -2422,7 +2656,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 12538349,
+    "compliance_status": "not_started",
+    "employee_count_range": "30-60"
   },
   {
     "id": "08411573845864573",
@@ -2450,7 +2687,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 4295351,
+    "compliance_status": "zatca_compliant",
+    "employee_count_range": "20-50"
   },
   {
     "id": "5368001157231482",
@@ -2480,7 +2720,10 @@
       "https://malaeb.sa"
     ],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 201500000,
+    "compliance_status": "not_started",
+    "employee_count_range": "2015"
   },
   {
     "id": "6498753105940174",
@@ -2508,7 +2751,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 55762039,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "3735985088018221",
@@ -2536,7 +2782,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 128016520,
+    "compliance_status": "not_started",
+    "employee_count_range": "200-500"
   },
   {
     "id": "0493144939641722",
@@ -2564,7 +2813,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 29243608,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "642898674906643",
@@ -2592,7 +2844,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 5010000000,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "9211091118764093",
@@ -2620,7 +2875,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 100000000,
+    "compliance_status": "not_started",
+    "employee_count_range": "1000+"
   },
   {
     "id": "9709469936043686",
@@ -2648,7 +2906,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 12124019,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "8841863801211899",
@@ -2676,7 +2937,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 11853696,
+    "compliance_status": "zatca_compliant",
+    "employee_count_range": "30-60"
   },
   {
     "id": "5918416443001943",
@@ -2704,7 +2968,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 6027514,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "08931593737671728",
@@ -2732,7 +2999,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 29026590,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "4426853582482734",
@@ -2760,7 +3030,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 119891912,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "7170208469035896",
@@ -2788,7 +3061,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 7659426,
+    "compliance_status": "not_started",
+    "employee_count_range": "10-30"
   },
   {
     "id": "08684883308641123",
@@ -2816,7 +3092,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 28758575,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "29892852042730167",
@@ -2844,7 +3123,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 21074330,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "24126863779659535",
@@ -2872,7 +3154,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 20065516,
+    "compliance_status": "in_progress",
+    "employee_count_range": "50-100"
   },
   {
     "id": "704925509723775",
@@ -2900,7 +3185,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 11956553,
+    "compliance_status": "in_progress",
+    "employee_count_range": "30-60"
   },
   {
     "id": "4914483970387422",
@@ -2928,7 +3216,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 156115106,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "5553614234490721",
@@ -2956,7 +3247,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 42497868,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "9272455120156631",
@@ -2984,7 +3278,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 11205931,
+    "compliance_status": "not_started",
+    "employee_count_range": "20-50"
   },
   {
     "id": "8357779637561177",
@@ -3012,7 +3309,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 13204800,
+    "compliance_status": "not_started",
+    "employee_count_range": "50-100"
   },
   {
     "id": "48376181884249336",
@@ -3040,7 +3340,10 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 34492436,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   },
   {
     "id": "6302390170555225",
@@ -3068,6 +3371,9 @@
     "pricing_plans": [],
     "screenshot_urls": [],
     "created_at": "2026-03-13T02:20:02.423Z",
-    "updated_at": "2026-03-13T02:20:02.423Z"
+    "updated_at": "2026-03-13T02:20:02.423Z",
+    "arr": 118428659,
+    "compliance_status": "not_started",
+    "employee_count_range": "100-200"
   }
 ]
