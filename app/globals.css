@@ -508,3 +508,25 @@ a:focus:not(:focus-visible) {
 .animate-pulse {
   animation: pulse 2s ease-in-out infinite;
 }
+
+/* Advanced 3D Effects for Hero */
+@keyframes hueShift {
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(20deg); }
+  100% { filter: hue-rotate(0deg); }
+}
+
+@keyframes meshFloat {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-3%) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.mesh-gradient-advanced {
+  position: relative;
+  background: radial-gradient(circle at 30% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(245, 158, 11, 0.12) 0%, transparent 45%),
+              radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.10) 0%, transparent 40%),
+              linear-gradient(135deg, #0A0A0A 0%, #111827 50%, #0A0A0A 100%);
+  animation: hueShift 25s ease-in-out infinite, meshFloat 20s ease-in-out infinite alternate;
+}
