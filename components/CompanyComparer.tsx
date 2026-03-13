@@ -43,7 +43,7 @@ const getCompanyData = (company: any, criterion: string): string => {
     case 'headquarters':
       return company.headquarters || 'N/A';
     case 'founded':
-      return company.founded_year?.toString() || 'N/A';
+      return company.founded?.toString() || 'N/A';
     default:
       return 'N/A';
   }

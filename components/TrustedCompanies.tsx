@@ -1,16 +1,24 @@
 'use client';
 
+interface TrustedCompaniesProps {
+  lang?: 'ar' | 'en';
+}
+
 import { platformStats } from '@/lib/trusted-companies';
 
-export function TrustedCompanies() {
+export function TrustedCompanies({ lang = 'ar' }: TrustedCompaniesProps) {
   return (
     <section className="py-16 border-y border-white/5 bg-card/20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">منصتنا في أرقام</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            {lang === 'en' ? 'Platform in Numbers' : 'منصتنا في أرقام'}
+          </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            أرقام حقيقية تعكس نمو وتوسع منظومة SaaS في المملكة العربية السعودية
+            {lang === 'en'
+              ? 'Real metrics that reflect the growth and expansion of the SaaS ecosystem in Saudi Arabia'
+              : 'أرقام حقيقية تعكس نمو وتوسع منظومة SaaS في المملكة العربية السعودية'}
           </p>
         </div>
 
@@ -24,7 +32,9 @@ export function TrustedCompanies() {
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent-green to-purple-400 bg-clip-text text-transparent mb-2">
                 {stat.value}
               </div>
-              <p className="text-text-secondary text-sm text-center">{stat.label}</p>
+              <p className="text-text-secondary text-sm text-center">
+                {lang === 'en' ? stat.labelEn : stat.label}
+              </p>
             </div>
           ))}
         </div>

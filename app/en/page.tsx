@@ -81,7 +81,7 @@ export default async function HomeEN() {
       </section>
 
       {/* Platform Stats - English */}
-      <TrustedCompanies />
+      <TrustedCompanies lang="en" />
 
       {/* Featured Saudi Companies - English */}
       <section className="py-20">

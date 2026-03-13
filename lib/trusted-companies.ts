@@ -9,10 +9,10 @@ export interface PlatformStat {
 }
 
 export const platformStats: PlatformStat[] = [
-  { value: '200+', label: 'شركة سعودية', labelEn: 'Saudi Companies' },
-  { value: '50+', label: 'تصنيف', labelEn: 'Categories' },
-  { value: '5000+', label: 'مستخدم نشط', labelEn: 'Active Users' },
-  { value: '20+', label: 'مقالة متخصصة', labelEn: 'Expert Articles' }
+  { value: '29+', label: 'شركة سعودية', labelEn: 'Saudi Companies' },
+  { value: '10+', label: 'تصنيف', labelEn: 'Categories' },
+  { value: '10+', label: 'مقالة متخصصة', labelEn: 'Expert Articles' },
+  { value: '1', label: 'منصة موثوقة', labelEn: 'Trusted Platform' }
 ];
 
 // Retained for potential future partner logos (when real partnerships exist)
