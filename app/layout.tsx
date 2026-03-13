@@ -5,12 +5,14 @@ import { Footer } from '@/components/Footer';
 import { SearchModal } from '@/components/SearchModal';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { Inter, Cairo } from 'next/font/google';
+// Optional: Dubai font (if needed for premium Arabic) – comment out if not using
+// import { Dubai } from 'next/font/google';
 
 const SITE_URL = 'https://saudisaashub.pages.dev';
 const OG_IMAGE = `${SITE_URL}/logo-og.png`;
 const NOW = new Date().toISOString();
 
-// Optimized font loading with next/font
+// Optimized font loading
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -24,6 +26,15 @@ const cairo = Cairo({
   variable: '--font-cairo',
   preload: true,
 });
+
+// Uncomment to use Dubai instead of Cairo
+// const dubai = Dubai({
+//   subsets: ['arabic'],
+//   weight: ['400', '500', '700'],
+//   display: 'swap',
+//   variable: '--font-dubai',
+//   preload: true,
+// });
 
 export async function generateMetadata(): Promise<Metadata> {
   const now = new Date().toISOString();

@@ -24,7 +24,7 @@ export default function CompanyCard({ company }: Props) {
     : description;
 
   return (
-    <div className="group bg-card rounded-xl border border-white/5 hover:border-accent-green/30 transition-all duration-300 overflow-hidden h-full">
+    <div className="group card hover:scale-[1.02] transition-all duration-300 overflow-hidden h-full border border-[var(--color-border)] rounded-xl">
       <div className="p-6">
         {/* Logo and Name */}
         <div className="flex items-start gap-4 mb-4">
