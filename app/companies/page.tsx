@@ -26,12 +26,17 @@ export default async function CompaniesPage() {
     getUniqueEmployeeSizesDB(),
   ]);
 
+  // Defensive: ensure arrays are not undefined
+  const safeCategories = categories || [];
+  const safeCertifications = certifications || [];
+  const safeEmployeeSizes = employeeSizes || [];
+
   return (
     <CompaniesPageClient
       initialCompanies={initialCompanies}
-      categories={categories}
-      certifications={certifications}
-      employeeSizes={employeeSizes}
+      categories={safeCategories}
+      certifications={safeCertifications}
+      employeeSizes={safeEmployeeSizes}
     />
   );
 }

@@ -7,6 +7,9 @@
     "build": "node scripts/build-search.js && next build && rm -rf .next",
     "start": "next start"
   },
+  "engines": {
+    "node": ">=18.x"
+  },
   "dependencies": {
     "better-sqlite3": "^12.6.2",
     "date-fns": "^4.1.0",

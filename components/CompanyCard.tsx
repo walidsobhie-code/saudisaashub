@@ -10,8 +10,8 @@ interface Props {
 
 export default function CompanyCard({ company }: Props) {
   // Safely extract values - these may be undefined or empty
-  const name = company.name;
-  const slug = company.slug;
+  const name = company.name || 'Unknown';
+  const slug = company.slug || '';
   const description = company.description || '';
   const logo_url = company.logo_url;
   const employees = company.employees || '';
