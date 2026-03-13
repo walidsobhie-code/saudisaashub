@@ -136,7 +136,7 @@ export default async function HomeEN() {
                     </div>
                     <div className="p-2 rounded-lg bg-white/5">
                       <div className="text-text-muted mb-1">Founded</div>
-                      <div className="text-white font-medium">{company.founded_year}</div>
+                      <div className="text-white font-medium">{company.founded}</div>
                     </div>
                   </div>
 
@@ -178,7 +178,7 @@ export default async function HomeEN() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.slice(0, 3).map((event) => (
               <div
-                key={event.id}
+                key={event.slug}
                 className="bg-card rounded-xl border border-white/5 p-6 hover:border-accent-green/30 transition-all"
               >
                 <div className="flex items-start gap-4 mb-4">
