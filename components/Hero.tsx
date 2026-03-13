@@ -34,14 +34,19 @@ export function Hero() {
 
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-          <span className="block text-accent-green">Saudi</span>
-          <span className="block gradient-text">SaaS Hub</span>
+          <span className="block text-white">Saudi</span>
+          <span className="block gradient-headline">SaaS Hub</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto mb-12 leading-relaxed">
-          Discover 250+ Saudi SaaS companies, find ZATCA-compliant solutions, and stay updated with funding and articles
-        </p>
+        <div className="max-w-3xl mx-auto mb-12 space-y-2">
+          <p className="text-sm md:text-base text-text-secondary leading-relaxed animate-fade-in-out" style={{ animationDuration: '4s' }}>
+            اكتشف أكثر من 250 شركة SaaS سعودية، ابحث عن حلول متوافقة مع ZATCA، وكن على اطلاع بأحدث التمويل والمقالات
+          </p>
+          <p className="text-base md:text-lg text-text-secondary leading-relaxed animate-fade-in-out" style={{ animationDuration: '4s', animationDelay: '2s', opacity: 0 }}>
+            Discover 250+ Saudi SaaS companies, find ZATCA-compliant solutions, and stay updated with funding and articles
+          </p>
+        </div>
 
         {/* Primary CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">

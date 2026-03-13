@@ -33,6 +33,13 @@ body {
   background-clip: text;
 }
 
+.gradient-headline {
+  background: linear-gradient(135deg, #004ada 0%, #e369ef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .gradient-border {
   position: relative;
   background: #1A1A2E;
@@ -397,6 +404,16 @@ a:focus:not(:focus-visible) {
 .animate-fade-in {
   animation: fadeInUp 0.8s ease forwards;
   opacity: 0;
+}
+
+.animate-fade-in-out {
+  animation: fadeInOut 4.5s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: translateY(10px); }
+  50% { opacity: 1; transform: translateY(0); }
 }
 
 .animated-gradient-text {
