@@ -8,6 +8,10 @@ export default async function sitemap() {
   const staticPages = [
     { url: baseUrl, lastModified: new Date() },
     { url: `${baseUrl}/en`, lastModified: new Date() },
+    { url: `${baseUrl}/companies`, lastModified: new Date() },
+    { url: `${baseUrl}/search`, lastModified: new Date() },
+    { url: `${baseUrl}/zatca`, lastModified: new Date() },
+    { url: `${baseUrl}/funding`, lastModified: new Date() },
     { url: `${baseUrl}/articles`, lastModified: new Date() },
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/contact`, lastModified: new Date() },
