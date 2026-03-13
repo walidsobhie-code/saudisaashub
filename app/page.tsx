@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getArticles } from '@/lib/articles';
 import { editorialPicks } from '@/lib/editorial-picks';
 import { getTrendingCompanies, getTrendingArticleSlugs } from '@/lib/trending';
-import { companies } from '@/lib/companies';
+import { getAllCompaniesDB } from '@/lib/db-companies';
 import { ArticleCard } from '@/components/ArticleCard';
 import CompanyCard from '@/components/CompanyCard';
 import { Hero } from '@/components/Hero';
@@ -11,9 +11,10 @@ import { Newsletter } from '@/components/Newsletter';
 export default async function Home() {
   const articles = await getArticles();
   const featuredArticles = articles.slice(0, 3);
-  const trendingCompanies = getTrendingCompanies();
+  const trendingCompanies = await getTrendingCompanies();
   const trendingArticleSlugs = getTrendingArticleSlugs();
   const trendingArticles = articles.filter(a => trendingArticleSlugs.includes(a.slug));
+  const allCompanies = await getAllCompaniesDB();
 
   // Get editorial spotlight items
   const spotlight = editorialPicks.slice(0, 2);
@@ -178,7 +179,7 @@ export default async function Home() {
           </div>
           {/* Featured Companies */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {companies.slice(0, 6).map(company => (
+            {allCompanies.slice(0, 6).map(company => (
               <CompanyCard key={company.id} company={company} />
             ))}
           </div>

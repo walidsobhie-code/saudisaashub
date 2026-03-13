@@ -1,5 +1,3 @@
-import { Article, Company, Report } from '@/lib/db-companies';
-
 export interface EditorialPick {
   type: 'article' | 'report' | 'company' | 'event';
   id: string;
