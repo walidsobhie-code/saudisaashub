@@ -7,7 +7,6 @@ import ArticleCard from '@/components/ArticleCard';
 import CompanyCard from '@/components/CompanyCard';
 import { Hero } from '@/components/Hero';
 import Newsletter from '@/components/Newsletter';
-import Newsletter from '@/components/Newsletter';
 
 export default async function Home() {
   const articles = await getArticles();
