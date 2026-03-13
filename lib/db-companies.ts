@@ -15,6 +15,7 @@ export interface Company {
   arr?: number; // Annual Recurring Revenue estimate (USD)
   compliance_status?: 'zatca_compliant' | 'in_progress' | 'not_started';
   employee_count_range?: string;
+  rating?: number; // User rating (1-5 scale)
   categories?: Array<{ id: string; name: string; slug: string }>;
   integrations?: Array<{ id: string; name: string; slug: string }>;
   certifications?: Array<{ id: string; name: string; slug: string; category?: string }>;

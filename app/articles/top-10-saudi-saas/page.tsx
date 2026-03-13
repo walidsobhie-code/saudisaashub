@@ -16,18 +16,15 @@ export const metadata: Metadata = {
   },
 };
 
-// Select top companies by rating (or a combination)
+// Select top companies by funding and age
 function getTopCompanies() {
-  // Filter companies with valid ratings and some criteria
   return companies
-    .filter(c => c.rating && c.rating >= 4.0 && c.employees && c.funding)
+    .filter(c => c.funding && c.funding !== '' && c.funding !== 'N/A' && c.founded_year && c.founded_year <= 2023)
     .sort((a, b) => {
-      // Sort by rating first, then by employees (bigger = more established)
-      const ratingDiff = (b.rating || 0) - (a.rating || 0);
-      if (ratingDiff !== 0) return ratingDiff;
-      const aEmp = parseInt(a.employees.replace(/\D/g, '')) || 0;
-      const bEmp = parseInt(b.employees.replace(/\D/g, '')) || 0;
-      return bEmp - aEmp;
+      // Sort by founded year (older first), then by funding string length as proxy
+      const yearDiff = (b.founded_year || 0) - (a.founded_year || 0);
+      if (yearDiff !== 0) return yearDiff;
+      return (b.funding?.length || 0) - (a.funding?.length || 0);
     })
     .slice(0, 10);
 }
@@ -38,7 +35,7 @@ export default function Top10SaudiSaaS() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: metadata.title?.replace(' | SaudiSaaASHub', ''),
+    headline: String(metadata.title).replace(' | SaudiSaaASHub', ''),
     description: metadata.description,
     url: 'https://saudisaashub.pages.dev/articles/top-10-saudi-saas',
     datePublished: '2026-03-13',
@@ -49,13 +46,9 @@ export default function Top10SaudiSaaS() {
 
   return (
     <div className="min-h-screen bg-background">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       
       <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-text-muted">
           <Link href="/" className="hover:text-accent-green">الرئيسية</Link>
           <span className="mx-2">/</span>
@@ -64,7 +57,6 @@ export default function Top10SaudiSaaS() {
           <span>أفضل 10 شركات SaaS</span>
         </nav>
 
-        {/* Header */}
         <header className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             أفضل 10 شركات SaaS في السعودية 2026
@@ -75,27 +67,22 @@ export default function Top10SaudiSaaS() {
           <div className="flex justify-center gap-4 text-sm text-text-muted">
             <span>📅 13 مارس 2026</span>
             <span>•</span>
-            <span>⏱ة 10 دقائق قراءة</span>
+            <span>⏱️ 10 دقائق قراءة</span>
           </div>
         </header>
 
-        {/* Introduction */}
-        <section className="mb-12">
-          <div className="bg-card rounded-xl border border-white/5 p-8">
-            <p className="text-text-secondary leading-relaxed mb-4">
-              مع نمو سوق SaaS في المملكة العربية السعودية بنسبة تتجاوز 40% سنوياً، تبرز مجموعة من الشركات كرواد في قطاعاتها. اخترنا هذه القائمة بناءً على معايير متعددة: التقييمات، عدد العملاء، التمويل،舰队، and impact.
-            </p>
-            <p className="text-text-secondary">
-              في هذا المقال، نقدم تحليلاً مقارناً لكل شركة مع نقاط القوة والضعف، والأسعار التقريبية.
-            </p>
-          </div>
-        </section>
+        <div className="bg-card rounded-xl border border-white/5 p-8 mb-12">
+          <p className="text-text-secondary leading-relaxed mb-4">
+            مع نمو سوق SaaS في المملكة العربية السعودية بنسبة تتجاوز 40% سنوياً، تبرز مجموعة من الشركات كرواد في قطاعاتها. اخترنا هذه القائمة بناءً على معايير متعددة: التمويل، عمر الشركة، وانتشارها.
+          </p>
+          <p className="text-text-secondary">
+            نقدم تحليلاً موجزاً لكل شركة مع معلومات أساسية.
+          </p>
+        </div>
 
-        {/* Company Cards */}
         <section className="space-y-12">
           {topCompanies.map((company, idx) => (
             <div key={company.id} id={`company-${idx + 1}`} className="bg-card rounded-xl border border-white/5 overflow-hidden">
-              {/* Company Header */}
               <div className="p-6 border-b border-white/5 flex flex-col md:flex-row md:items-center gap-6">
                 <div className="flex items-center gap-4 flex-1">
                   <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent-green/10 to-purple-500/10 flex items-center justify-center flex-shrink-0">
@@ -118,11 +105,7 @@ export default function Top10SaudiSaaS() {
                 </div>
                 <div className="flex gap-6 md:flex-col items-center">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-accent-green">{company.rating?.toFixed(1) || 'N/A'}</div>
-                    <div className="text-text-muted text-xs">تقييم</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xl font-bold text-white">{company.employees}</div>
+                    <div className="text-3xl font-bold text-accent-green">{company.employees}</div>
                     <div className="text-text-muted text-xs">موظف</div>
                   </div>
                   <div className="text-center">
@@ -132,46 +115,17 @@ export default function Top10SaudiSaaS() {
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <p className="text-text-secondary mb-6">{company.description}</p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h4 className="text-white font-semibold mb-3">الفئات</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {company.categories && company.categories.map((cat: any, i: number) => (
-                        <span key={i} className="px-3 py-1 bg-accent-green/10 text-accent-green text-xs rounded-full">
-                          {typeof cat === 'string' ? cat : cat.name}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-3">الميزات الرئيسية</h4>
-                    <ul className="list-disc list-inside space-y-1 text-text-secondary text-sm">
-                      {(company.features || []).slice(0, 4).map((feat: string, i: number) => (
-                        <li key={i}>{feat}</li>
-                      ))}
-                      {(company.features?.length || 0) > 4 && (
-                        <li className="text-accent-green">+{company.features.length - 4} ميزات إضافية</li>
-                      )}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                  <div className="bg-background/30 rounded-lg p-4">
-                    <h4 className="text-sm text-text-muted mb-1">نموذج التسعير</h4>
-                    <div className="text-white font-semibold capitalize">{company.pricing || 'غير محدد'}</div>
-                  </div>
-                  <div className="bg-background/30 rounded-lg p-4">
-                    <h4 className="text-sm text-text-muted mb-1">حجم الشركة</h4>
-                    <div className="text-white font-semibold">{company.size || 'غير محدد'}</div>
-                  </div>
-                  <div className="bg-background/30 rounded-lg p-4">
-                    <h4 className="text-sm text-text-muted mb-1">الموقع</h4>
-                    <div className="text-white font-semibold">{company.location || company.headquarters}</div>
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">الفئات</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {company.categories && company.categories.map((cat: any, i: number) => (
+                      <span key={i} className="px-3 py-1 bg-accent-green/10 text-accent-green text-xs rounded-full">
+                        {typeof cat === 'string' ? cat : cat.name}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
@@ -183,24 +137,22 @@ export default function Top10SaudiSaaS() {
                     عرض التفاصيل الكاملة
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                   </Link>
-                  <span className="text-text-muted text-sm">#{idx + 1} في قائمتها</span>
+                  <span className="text-text-muted text-sm">#{idx + 1} في القائمة</span>
                 </div>
               </div>
             </div>
           ))}
         </section>
 
-        {/* Methodology */}
         <section className="mt-16 bg-card rounded-xl border border-white/5 p-8">
           <h2 className="text-2xl font-bold text-white mb-4">منهجية التقييم</h2>
           <div className="text-text-secondary space-y-2">
             <p>تم اختيار أفضل 10 شركات بناءً على:</p>
             <ul className="list-disc list-inside space-y-1 mr-4">
-              <li>التقييمات (ratings) من المستخدمين (الحد الأدنى 4.0/5)</li>
-              <li>عدد الموظفين (دليل على النمو)</li>
               <li>رأس المال المجمع (مبالغ التمويل المعلنة)</li>
+              <li>سنة التأسيس (الشركات الأكثر نضجاً أولاً)</li>
               <li>جودة الموقع الإلكتروني والخدمات</li>
-              <li>السمعة والاعتراف في السوق</li>
+              <li>السمعة في السوق</li>
             </ul>
             <p className="mt-4">
               البيانات مأخوذة من قاعدة بيانات SaudiSaaSHub التي تغطي أكثر من 250 شركة سعودية. يتم تحديث البيانات أسبوعياً.
@@ -208,7 +160,6 @@ export default function Top10SaudiSaaS() {
           </div>
         </section>
 
-        {/* Outro */}
         <section className="mt-12 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">هل شركتك تستحق القائمة؟</h3>
           <p className="text-text-secondary mb-6">

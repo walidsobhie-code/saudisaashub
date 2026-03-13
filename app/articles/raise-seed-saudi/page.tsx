@@ -19,7 +19,7 @@ export default function RaiseSeedSaudi() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: metadata.title?.replace(' | SaudiSaaSHub', ''),
+    headline: String(metadata.title).replace(' | SaudiSaaSHub', ''),
     description: metadata.description,
     url: 'https://saudisaashub.pages.dev/articles/raise-seed-saudi',
     datePublished: '2026-03-13',
