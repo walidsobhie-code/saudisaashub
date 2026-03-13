@@ -27,7 +27,7 @@ export const upcomingEvents: TechEvent[] = [
     date: '2026-05-20',
     location: 'جدة، المملكة العربية السعودية',
     description: 'قمة متخصصة في حلول SaaS - استراتيجيات النمو والتحول الرقمي',
-    website: 'https://saasssummit.ksa',
+    website: 'https://saassummit.com/saudi-arabia',
     type: 'conference',
     region: 'Saudi'
   },

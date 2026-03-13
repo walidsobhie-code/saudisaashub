@@ -5,53 +5,48 @@ import { saudiSaaSCompanies } from '@/lib/saudi-saas-companies';
 
 // Comparison criteria (features)
 const criteria = [
-  { key: 'pricing', label: 'نموذج التسعير' },
-  { key: 'support', label: 'الدعم الفني' },
-  { key: 'integration', label: 'التكاملات' },
-  { key: 'language', label: 'اللغة' },
+  { key: 'pricing', label: 'نموذج التسعير', en: 'Pricing Model' },
+  { key: 'support', label: 'الدعم الفني', en: 'Support' },
+  { key: 'integration', label: 'التكاملات', en: 'Integrations' },
+  { key: 'language', label: 'اللغة', en: 'Language' },
+  { key: 'employees', label: 'الموظفين', en: 'Employees' },
+  { key: 'funding', label: 'التمويل', en: 'Funding' },
+  { key: 'headquarters', label: 'المقر', en: 'Headquarters' },
+  { key: 'founded', label: 'سنة التأسيس', en: 'Founded' },
 ];
 
-// Mock comparison data based on company category (simplified)
-const getCompanyScore = (company: any, criterion: string): string => {
-  const scores: Record<string, Record<string, string>> = {
-    pricing: {
-      'GovTech': 'Exclusive',
-      'HR Tech': 'اشتراك شهري',
-      'E-commerce': 'Freemium',
-      'Fintech': 'اشتراك شهري',
-      'Logistics': 'Houly based',
-      'Restaurant Tech': 'اشتراك شهري',
-      'Food Delivery': 'Freemium'
-    },
-    support: {
-      'GovTech': '24/7',
-      'HR Tech': 'ساعات العمل',
-      'E-commerce': '24/7',
-      'Fintech': '24/7',
-      'Logistics': 'تذاكر',
-      'Restaurant Tech': 'ساعات العمل',
-      'Food Delivery': 'تذاكر'
-    },
-    integration: {
-      'GovTech': 'API',
-      'HR Tech': 'متوسط',
-      'E-commerce': 'كثير',
-      'Fintech': 'API',
-      'Logistics': 'متوسط',
-      'Restaurant Tech': 'كثير',
-      'Food Delivery': 'كثير'
-    },
-    language: {
-      'GovTech': 'عربية فقط',
-      'HR Tech': 'الإنجليزية والعربية',
-      'E-commerce': 'الإنجليزية والعربية',
-      'Fintech': 'الإنجليزية والعربية',
-      'Logistics': 'الإنجليزية والعربية',
-      'Restaurant Tech': 'الإنجليزية والعربية',
-      'Food Delivery': 'الإنجليزية والعربية'
-    }
-  };
-  return scores[criterion]?.[company.category] || 'غير معروف';
+// Get real company data for comparison
+const getCompanyData = (company: any, criterion: string): string => {
+  switch (criterion) {
+    case 'pricing':
+      // Map category to pricing model
+      const pricingMap: Record<string, string> = {
+        'GovTech': 'Contact Sales',
+        'HR Tech': 'Monthly Subscription',
+        'E-commerce': 'Freemium',
+        'Fintech': 'Monthly Subscription',
+        'Logistics': 'Usage-based',
+        'Restaurant Tech': 'Monthly Subscription',
+        'Food Delivery': 'Freemium'
+      };
+      return pricingMap[company.category] || 'Varies';
+    case 'support':
+      return '24/7 Online';
+    case 'integration':
+      return 'API Available';
+    case 'language':
+      return 'Arabic & English';
+    case 'employees':
+      return company.employees || 'N/A';
+    case 'funding':
+      return company.funding || 'N/A';
+    case 'headquarters':
+      return company.headquarters || 'N/A';
+    case 'founded':
+      return company.founded_year?.toString() || 'N/A';
+    default:
+      return 'N/A';
+  }
 };
 
 export function CompanyComparer() {
@@ -65,7 +60,7 @@ export function CompanyComparer() {
       } else if (prev.length < 3) {
         return [...prev, slug];
       }
-      return prev; // Max 3 companies
+      return prev;
     });
   };
 
@@ -114,12 +109,39 @@ export function CompanyComparer() {
               </button>
             ))}
           </div>
-          <p className="text-text-muted text-sm mt-2">
-            {selectedCompanies.length === 0
-              ? 'اختر شركة واحدة على الأقل للمقارنة'
-              : `${selectedCompanies.length} من 3 محددة`}
-            {selectedCompanies.length > 0 && selectedCompanies.length < 2 && ' - اختر شركة أخرى للمقارنة'}
-          </p>
+
+          {/* Clear selection message */}
+          {selectedCompanies.length === 0 && (
+            <div className="mt-4 p-4 bg-accent-green/10 rounded-lg border border-accent-green/20">
+              <p className="text-accent-green text-sm">
+                👆 انقر على أسماء الشركات أعلاه للاختيار. تحتاج لاختيار شركتين على الأقل للمقارنة.
+              </p>
+            </div>
+          )}
+
+          {selectedCompanies.length === 1 && (
+            <div className="mt-4 p-4 bg-accent-green/10 rounded-lg border border-accent-green/20">
+              <p className="text-accent-green text-sm">
+                ✅ اختيار: {selectedData[0]?.name}. اختر شركة أخرى للمقارنة.
+              </p>
+            </div>
+          )}
+
+          {selectedCompanies.length === 2 && (
+            <div className="mt-4 p-4 bg-accent-green/10 rounded-lg border border-accent-green/20">
+              <p className="text-accent-green text-sm">
+                ✅ اختيار: {selectedData.map(c => c.name).join(' vs ')}. اضغط "قارن الآن" للمقارنة!
+              </p>
+            </div>
+          )}
+
+          {selectedCompanies.length === 3 && (
+            <div className="mt-4 p-4 bg-accent-green/10 rounded-lg border border-accent-green/20">
+              <p className="text-accent-green text-sm">
+                ✅ 3 شركات محددة. اضغط "قارن الآن" للمقارنة أو انقر لإلغاء تحديد.
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Compare Button */}
@@ -129,7 +151,9 @@ export function CompanyComparer() {
             disabled={selectedCompanies.length < 2}
             className="px-8 py-3 rounded-xl bg-accent-green text-background font-bold hover:shadow-glow-green transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            قارن الآن
+            {selectedCompanies.length < 2
+              ? `اختر ${2 - selectedCompanies.length} شركة للمقارنة`
+              : `قارن الآن (${selectedCompanies.length}/3)`}
           </button>
         </div>
 
@@ -162,7 +186,7 @@ export function CompanyComparer() {
                       <td className="p-4 text-text-secondary text-sm">{criterion.label}</td>
                       {selectedData.map(company => (
                         <td key={company.slug} className="p-4 text-center text-white text-sm">
-                          {getCompanyScore(company, criterion.key)}
+                          {getCompanyData(company, criterion.key)}
                         </td>
                       ))}
                     </tr>
@@ -185,7 +209,7 @@ export function CompanyComparer() {
                       rel="noopener noreferrer"
                       className="inline-block mt-3 text-accent-green hover:underline text-sm"
                     >
-                      زيارة الموقع
+                      زيارة الموقع ←
                     </a>
                   </div>
                 ))}

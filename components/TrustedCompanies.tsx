@@ -1,6 +1,6 @@
 'use client';
 
-import { trustedCompanies } from '@/lib/trusted-companies';
+import { platformStats } from '@/lib/trusted-companies';
 
 export function TrustedCompanies() {
   return (
@@ -8,31 +8,24 @@ export function TrustedCompanies() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">الشركات التي تثق بنا</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">منصتنا في أرقام</h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            نعمل مع أفضل الشركات التقنية والمستثمرين في المملكة العربية السعودية
+            أرقام حقيقية تعكس نمو وتوسع منظومة SaaS في المملكة العربية السعودية
           </p>
         </div>
 
-        {/* Companies Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
-          {trustedCompanies.map((company) => (
-            <a
-              key={company.name}
-              href={company.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center justify-center p-6 rounded-xl bg-card/50 border border-white/5 hover:border-accent-green/30 transition-all"
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {platformStats.map((stat, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center p-6 rounded-xl bg-card/50 border border-white/5 hover:border-accent-green/30 transition-all"
             >
-              {/* Logo placeholder - replace with actual logos */}
-              <div className="w-20 h-20 mb-4 rounded-full bg-gradient-to-br from-accent-green/10 to-purple-500/10 flex items-center justify-center overflow-hidden">
-                <span className="text-2xl font-bold text-accent-green">
-                  {company.name.charAt(0)}
-                </span>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-accent-green to-purple-400 bg-clip-text text-transparent mb-2">
+                {stat.value}
               </div>
-              <h3 className="text-white font-medium text-sm text-center mb-1">{company.name}</h3>
-              <p className="text-text-muted text-xs text-center">{company.industry}</p>
-            </a>
+              <p className="text-text-secondary text-sm text-center">{stat.label}</p>
+            </div>
           ))}
         </div>
       </div>
