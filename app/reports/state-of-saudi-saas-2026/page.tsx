@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { reportStats } from '@/lib/report-stats';
-import { companies } from '@/lib/companies';
 
 export const metadata: Metadata = {
   title: 'State of Saudi SaaS 2026 - Comprehensive Market Analysis',
