@@ -142,7 +142,7 @@ export default function MethodologyPage() {
               <li><strong>Join as contributor:</strong> Experts in SaaS, ZATCA, or Saudi tech are invited to write for us.</li>
             </ul>
             <p className="text-text-secondary mt-4">
-              Contact: <a href="mailto:hello@saudisaashub.com" className="text-accent-green hover:underline">hello@saudisaashub.com</a>
+              Contact: <a href="mailto:saudisaashub@outlook.com" className="text-accent-green hover:underline">saudisaashub@outlook.com</a>
             </p>
           </section>
         </div>

@@ -53,7 +53,7 @@ export default function AboutPage() {
             Have questions, feedback, or want to contribute? Reach out:
           </p>
           <ul className="list-disc list-inside space-y-2 text-text-secondary mb-6">
-            <li><strong>Email:</strong> <a href="mailto:hello@saudisaashub.com" className="text-accent-green hover:underline">hello@saudisaashub.com</a></li>
+            <li><strong>Email:</strong> <a href="mailto:saudisaashub@outlook.com" className="text-accent-green hover:underline">saudisaashub@outlook.com</a></li>
             <li><strong>Address:</strong> Riyadh, Saudi Arabia</li>
             <li><strong>Response time:</strong> We aim to respond within 24 hours</li>
           </ul>
