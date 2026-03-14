@@ -24,7 +24,6 @@ export default async function sitemap() {
     { url: `${baseUrl}/events`, lastModified: new Date() },
     { url: `${baseUrl}/news`, lastModified: new Date() },
     { url: `${baseUrl}/news/digest`, lastModified: new Date() },
-    { url: `${baseUrl}/advisory`, lastModified: new Date() },
     { url: `${baseUrl}/methodology`, lastModified: new Date() },
   ];
 

@@ -12,7 +12,6 @@ const navLinks = [
   { href: '/events', label: 'الفعاليات' },
   { href: '/news', label: 'الأخبار' },
   { href: '/about', label: 'عن المنصة' },
-  { href: '/advisory', label: 'المجلس الاستشاري' },
   { href: '/methodology', label: 'المنهجية' },
 ];
 

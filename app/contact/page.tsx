@@ -122,7 +122,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-text-secondary text-sm">البريد الإلكتروني</p>
-                    <p className="text-white">saudisaashub@outlook.com</p>
+                    <p className="text-white">hello@saudisaashub.com</p>
                   </div>
                 </div>
 

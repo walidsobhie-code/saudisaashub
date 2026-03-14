@@ -114,7 +114,7 @@ export default function MethodologyPage() {
               <li><strong>Citations:</strong> All claims are backed by linked sources. Data visualizations include source attribution.</li>
               <li><strong>Author credentials:</strong> Every article lists the author with relevant expertise (e.g., "Saudi SaaS Research Team", "ZATCA Compliance Specialist").</li>
               <li><strong>Bilingual requirement:</strong> All flagship content is published in both Arabic and English.</li>
-              <li><strong>Peer review:</strong> Major reports are reviewed by at least one member of our advisory board.</li>
+              <li><strong>Multi-step review:</strong> All content undergoes thorough internal review for accuracy and quality before publication.</li>
             </ul>
           </section>
 

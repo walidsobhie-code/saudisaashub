@@ -30,19 +30,6 @@ export default function AboutPage() {
             <li>Offer practical guides (ZATCA compliance, funding, pricing, more)</li>
           </ul>
 
-          <h2 className="text-2xl font-bold text-white mt-12 mb-4">Our Advisory Board</h2>
-          <p className="text-text-secondary mb-6">
-            Our work is guided by an advisory board of seasoned leaders from Saudi tech, investment, government, and academia. Their expertise ensures the accuracy, credibility, and impact of our research.
-          </p>
-          <div className="mb-6">
-            <Link 
-              href="/advisory" 
-              className="inline-flex items-center gap-2 text-accent-green hover:underline font-medium"
-            >
-              Meet Our Advisory Board →
-            </Link>
-          </div>
-
           <h2 className="text-2xl font-bold text-white mt-12 mb-4">Our Methodology</h2>
           <p className="text-text-secondary mb-6">
             We are committed to transparency and rigor. Every company profile, funding round, and compliance update undergoes multi-step verification. We publish our sources, update频率, and quality standards openly.
@@ -54,37 +41,6 @@ export default function AboutPage() {
             >
               Read Our Methodology →
             </Link>
-          </div>
-
-          <h2 className="text-2xl font-bold text-white mt-12 mb-4">Trusted By</h2>
-          <p className="text-text-secondary mb-6">
-            Our data and research are cited by leading media outlets, investment firms, and government agencies across Saudi Arabia and the wider MENA region.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div className="bg-card/30 rounded-lg p-4 border border-white/5 text-center text-text-muted text-sm">
-              TechCrunch
-            </div>
-            <div className="bg-card/30 rounded-lg p-4 border border-white/5 text-center text-text-muted text-sm">
-              Wamda
-            </div>
-            <div className="bg-card/30 rounded-lg p-4 border border-white/5 text-center text-text-muted text-sm">
-              MAGNiT
-            </div>
-            <div className="bg-card/30 rounded-lg p-4 border border-white/5 text-center text-text-muted text-sm">
-              Saudi Venture Capital Company
-            </div>
-            <div className="bg-card/30 rounded-lg p-4 border border-white/5 text-center text-text-muted text-sm">
-              Monsha'at
-            </div>
-            <div className="bg-card/30 rounded-lg p-4 border border-white/5 text-center text-text-muted text-sm">
-              STC Ventures
-            </div>
-            <div className="bg-card/30 rounded-lg p-4 border border-white/5 text-center text-text-muted text-sm">
-              KAUST Innovation
-            </div>
-            <div className="bg-card/30 rounded-lg p-4 border border-white/5 text-center text-text-muted text-sm">
-              PIF
-            </div>
           </div>
 
           <h2 className="text-2xl font-bold text-white mt-12 mb-4">Contact Us</h2>

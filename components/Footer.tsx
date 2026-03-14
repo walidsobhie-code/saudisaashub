@@ -16,7 +16,6 @@ const quickLinks = [
   { name: 'الفعاليات', href: '/events' },
   { name: 'الأدلة', href: '/guides' },
   { name: 'عن المنصة', href: '/about' },
-  { name: 'المجلس الاستشاري', href: '/advisory' },
   { name: 'المنهجية', href: '/methodology' },
 ];
 
