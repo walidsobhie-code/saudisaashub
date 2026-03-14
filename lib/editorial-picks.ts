@@ -17,7 +17,7 @@ export const editorialPicks: EditorialPick[] = [
     excerpt: 'Comprehensive market analysis covering 252 companies, funding trends, and ZATCA impact.',
     reason: ' cornerstone research report establishing platform authority',
     link: '/reports/state-of-saudi-saas-2026',
-    imageUrl: '/images/report-2026-og.png',
+    imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80', // Business/charts
   },
   {
     type: 'article',
@@ -26,6 +26,7 @@ export const editorialPicks: EditorialPick[] = [
     excerpt: 'Everything Saudi SaaS companies need to know about Fatoora compliance.',
     reason: 'High-demand practical guide with immediate utility',
     link: '/articles/zatca-compliance-guide',
+    imageUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80', // Government/compliance
   },
   {
     type: 'company',
@@ -34,6 +35,6 @@ export const editorialPicks: EditorialPick[] = [
     excerpt: 'Leading e-commerce platform powering 100,000+ stores in MENA',
     reason: 'Flagship Saudi SaaS success story',
     link: '/companies/salla',
-    imageUrl: '/logos/salla.png',
+    // Using company logo from DB (no imageUrl needed)
   },
 ];

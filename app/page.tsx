@@ -20,13 +20,14 @@ export default async function Home() {
   // Get editorial spotlight items
   const spotlight = editorialPicks.slice(0, 2);
 
-  // Get deep dives (reports)
+  // Get deep dives (reports) with unique Saudi-themed images
   const reports = [
     {
       slug: 'state-of-saudi-saas-2026',
       title: 'State of Saudi SaaS 2026',
       description: 'Comprehensive market analysis covering 252 companies, funding trends, and ZATCA impact.',
       date: '2026-03-13',
+      image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80', // Business/charts
     },
   ];
 
@@ -65,6 +66,16 @@ export default async function Home() {
                 href={pick.link}
                 className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
               >
+                {pick.imageUrl && (
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={pick.imageUrl}
+                      alt={pick.headline}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  </div>
+                )}
                 <div className="p-8">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="px-3 py-1 bg-accent-green/10 text-accent-green text-xs font-semibold rounded-full uppercase">
@@ -138,15 +149,27 @@ export default async function Home() {
               <Link
                 key={report.slug}
                 href={`/reports/${report.slug}`}
-                className="group bg-card rounded-xl border border-white/5 p-8 hover:border-accent-green/30 transition-all"
+                className="group bg-card rounded-xl border border-white/5 overflow-hidden hover:border-accent-green/30 transition-all"
               >
-                <div className="text-4xl font-bold text-yellow-400 mb-4">Reports</div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
-                  {report.title}
-                </h3>
-                <p className="text-text-secondary text-sm mb-4">{report.description}</p>
-                <div className="flex items-center gap-2 text-accent-green font-medium">
-                  Explore Report <span>→</span>
+                {report.image && (
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={report.image}
+                      alt={report.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  </div>
+                )}
+                <div className="p-6">
+                  <div className="text-sm font-semibold text-yellow-400 mb-2">Reports</div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
+                    {report.title}
+                  </h3>
+                  <p className="text-text-secondary text-sm mb-4">{report.description}</p>
+                  <div className="flex items-center gap-2 text-accent-green font-medium">
+                    Explore Report <span>→</span>
+                  </div>
                 </div>
               </Link>
             ))}
