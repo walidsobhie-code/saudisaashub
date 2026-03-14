@@ -1,34 +1,10 @@
-import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+'use client';
 
-// Load the report page client-side only to avoid static generation timeout
-const ReportPageClient = dynamic(() => import('@/app/reports/state-of-saudi-saas-2026/ReportPageClient'), {
-  ssr: false,
-  loading: () => (
-    <div className="min-h-screen bg-background flex items-center justify-center">
-      <div className="text-center">
-        <div className="w-16 h-16 border-4 border-accent-green border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-        <p className="text-text-secondary">Loading report...</p>
-      </div>
-    </div>
-  ),
-});
+import { reportStats } from '@/lib/report-stats';
 
-export const metadata: Metadata = {
-  title: 'State of Saudi SaaS 2026 - Comprehensive Market Analysis',
-  description: 'Comprehensive analysis of 252 Saudi SaaS companies, funding trends, ZATCA compliance, and market insights.',
-  openGraph: {
-    title: 'State of Saudi SaaS 2026',
-    description: 'Comprehensive market analysis covering 252 companies, funding trends, and ZATCA impact.',
-    type: 'article',
-    publishedTime: '2026-03-13',
-  },
-};
-
-export default function StateOfSaudiSaaS2026() {
+export default function ReportPageClient() {
   const { totalCompanies, categoryCounts, fundingStats, topLocations, avgFounded, newestFounded } = reportStats;
 
-  // Chart colors
   const colors = ['#10b981', '#3b82f6', '#8b5cf6', '#f59e0b', '#ef4444', '#06b6d4', '#84cc16', '#f97316', '#ec4899', '#6366f1'];
 
   return (
@@ -366,7 +342,7 @@ export default function StateOfSaudiSaaS2026() {
               className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/10 border border-white/20 text-gray-300 hover:bg-white/20 hover:border-accent-green/50 hover:text-white transition-all shadow-sm"
               aria-label="نسخ الرابط"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
               </svg>
