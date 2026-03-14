@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { fundingRounds } from '@/lib/funding';
+import ShareButtons from '@/components/ShareButtons/ShareButtons';
 
 export const metadata: Metadata = {
   title: 'Saudi SaaS Funding Tracker | Saudi SaaS Hub',
@@ -61,6 +62,9 @@ export default async function FundingPage() {
           </div>
         </div>
       </section>
+
+      {/* Social Sharing */}
+      <ShareButtons />
     </div>
   );
 }

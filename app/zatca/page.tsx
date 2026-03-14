@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { ArticleCard } from '@/components/ArticleCard';
 import { getArticles } from '@/lib/articles';
+import ShareButtons from '@/components/ShareButtons/ShareButtons';
 
 export const metadata: Metadata = {
   title: 'ZATCA Compliance & E-Invoicing Guide - Saudi SaaS Hub',
@@ -93,6 +94,9 @@ export default async function ZatcaPage() {
           </div>
         </div>
       </section>
+
+      {/* Social Sharing */}
+      <ShareButtons />
     </div>
   );
 }

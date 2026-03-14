@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { companies } from '@/lib/companies';
+import ShareButtons from '@/components/ShareButtons/ShareButtons';
 
 export const metadata: Metadata = {
   title: 'حالة سوق SaaS السعودية 2026 | التقرير السنوي',
@@ -388,6 +389,8 @@ export default function StateOfSaudiSaaS2026() {
             أضف شركتك الآن
           </a>
         </section>
+
+        <ShareButtons />
 
         {/* Last updated */}
         <div className="text-center text-text-muted text-sm py-8 border-t border-white/5">
