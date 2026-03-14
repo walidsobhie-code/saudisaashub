@@ -50,15 +50,8 @@ export function HeroContent({
     }
   };
 
-  // High-quality Unsplash images related to Saudi Arabia, Riyadh, and business
+  // Images for featured links cards only (stats cards don't have images)
   const images = {
-    // Stats cards - Saudi/Riyadh themed
-    companies: "https://images.unsplash.com/photo-1535810231464-547226032e50?w=400&h=300&fit=crop&q=80", // Riyadh skyline at night
-    categories: "https://images.unsplash.com/photo-1518005052353-e9871cb7dbb2?w=400&h=300&fit=crop&q=80", // KAFD tower (Riyadh)
-    articles: "https://images.unsplash.com/photo-1518302562190-27092386a121?w=400&h=300&fit=crop&q=80", // Riyadh business district
-    platform: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80", // Network/data visualization
-
-    // Featured links cards
     zatca: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&q=80", // Modern Saudi architecture
     funding: "https://images.unsplash.com/photo-1468252543213-49ad8c6c7670?w=400&h=300&fit=crop&q=80", // Business growth/finance
     report: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop&q=80", // Data/analytics workspace
@@ -66,10 +59,10 @@ export function HeroContent({
   };
 
   const stats = [
-    { value: 250, suffix: '+', label: 'شركة سعودية', link: '/companies', color: 'accent-green', image: images.companies },
-    { value: 15, suffix: '+', label: 'فئة', link: '/companies', color: 'accent-cyan', image: images.categories },
-    { value: 10, suffix: '+', label: 'مقال', link: '/articles', color: 'purple-400', image: images.articles },
-    { value: 1, suffix: '', label: 'منصة', link: '/about', color: 'white', image: images.platform },
+    { value: 250, suffix: '+', label: 'شركة سعودية', link: '/companies', color: 'accent-green' },
+    { value: 15, suffix: '+', label: 'فئة', link: '/companies', color: 'accent-cyan' },
+    { value: 10, suffix: '+', label: 'مقال', link: '/articles', color: 'purple-400' },
+    { value: 1, suffix: '', label: 'منصة', link: '/about', color: 'white' },
   ];
 
   // SVG Icons
@@ -434,17 +427,6 @@ export function HeroContent({
             className={`group bg-card/40 backdrop-blur-sm rounded-2xl border border-[var(--color-border)] p-6 hover:border-accent-green/50 hover:shadow-glow-green hover:-translate-y-2 transition-all duration-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ animationDelay: `${0.7 + index * 0.1}s` }}
           >
-            {/* Image */}
-            <div className="relative h-20 mb-4 rounded-xl overflow-hidden">
-              <img
-                src={stat.image}
-                alt={stat.label}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            </div>
-
             {/* Counter */}
             <div className={`text-4xl md:text-5xl font-bold mb-2 ${stat.color === 'accent-green' ? 'text-[var(--color-primary)]' : stat.color === 'accent-cyan' ? 'text-accent-cyan' : stat.color === 'purple-400' ? 'text-purple-400' : 'text-white'}`}>
               {stat.value === 250 ? `${companiesCount}+` :
