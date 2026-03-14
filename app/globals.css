@@ -8,6 +8,7 @@
   --color-primary-dark: #059669;
   --color-secondary: #F59E0B; /* Muted gold for premium badges */
   --color-accent: #8B5CF6; /* Purple for SaaS Hub gradient */
+  --color-accent-cyan: #06b6d4; /* Cyan for secondary accents */
   
   /* Backgrounds */
   --color-background: #0A0A0A;
@@ -130,6 +131,18 @@ p {
   border-color: var(--color-primary);
 }
 
+.text-accent-cyan {
+  color: var(--color-accent-cyan);
+}
+
+.bg-accent-cyan {
+  background-color: var(--color-accent-cyan);
+}
+
+.border-accent-cyan {
+  border-color: var(--color-accent-cyan);
+}
+
 /* Premium badge */
 .premium-badge {
   background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
@@ -154,6 +167,11 @@ a:focus:not(:focus-visible) {
 }
 
 /* Animations */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
@@ -736,4 +754,131 @@ a:focus:not(:focus-visible) {
   height: 100%;
   border: none;
   opacity: 0.8;
+}
+
+/* ========================================
+   NEW HERO 3D ANIMATIONS
+======================================== */
+
+/* Blob floating animations */
+@keyframes blob-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes blob-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 15px) scale(0.98); }
+  66% { transform: translate(20px, -25px) scale(1.02); }
+}
+
+@keyframes blob-float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(15px, 25px) scale(1.03); }
+  66% { transform: translate(-30px, -15px) scale(0.97); }
+}
+
+/* Geometric element floating */
+@keyframes geo-float-1 {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(-15px) rotate(50deg); }
+}
+
+@keyframes geo-float-2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes geo-float-3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+/* Building lights blinking */
+@keyframes blink-1 {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes blink-2 {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes blink-3 {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.blink-1 { animation: blink-1 3s ease-in-out infinite; }
+.blink-2 { animation: blink-2 4s ease-in-out infinite; }
+.blink-3 { animation: blink-3 3.5s ease-in-out infinite; }
+
+/* 3D Cube animations */
+@keyframes cube-float-1 {
+  0%, 100% { transform: rotate(15deg) translateY(0) translateZ(20px); }
+  50% { transform: rotate(20deg) translateY(-15px) translateZ(30px); }
+}
+
+@keyframes cube-float-2 {
+  0%, 100% { transform: rotate(-10deg) translateY(0) translateZ(10px); }
+  50% { transform: rotate(-15deg) translateY(20px) translateZ(20px); }
+}
+
+@keyframes cube-float-3 {
+  0%, 100% { transform: rotate(25deg) translateY(0) translateZ(40px); }
+  50% { transform: rotate(30deg) translateY(-10px) translateZ(50px); }
+}
+
+/* Orb pulse animations */
+@keyframes orb-pulse-1 {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+@keyframes orb-pulse-2 {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+@keyframes orb-pulse-3 {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+}
+
+/* Ring rotation */
+@keyframes ring-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Dash animation for connecting lines */
+@keyframes dash {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -20; }
+}
+
+.animate-dash {
+  animation: dash 2s linear infinite;
+}
+
+/* Scroll dot animation */
+@keyframes scroll-dot {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.5; }
+}
+
+.animate-scroll-dot {
+  animation: scroll-dot 2s ease-in-out infinite;
+}
+
+/* Background gradient size for animated gradient */
+.bg-200% {
+  background-size: 200% 200%;
+}
+
+/* Glow shadow */
+.shadow-glow-green {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.3), 0 0 60px rgba(16, 185, 129, 0.1);
 }
