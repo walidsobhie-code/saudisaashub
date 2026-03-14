@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { companies } from '@/lib/companies';
+import { reportStats } from '@/lib/report-stats';
 
 export const metadata: Metadata = {
   title: 'حالة سوق SaaS السعودية 2026 | التقرير السنوي',
@@ -16,59 +16,9 @@ export const metadata: Metadata = {
 };
 
 export default function StateOfSaudiSaaS2026() {
-  // Analyze data from the 252 companies
-  const totalCompanies = companies.length;
-  
-  // Category distribution
-  const categoryCounts: Record<string, number> = {};
-  companies.forEach(c => {
-    if (c.categories && Array.isArray(c.categories)) {
-      c.categories.forEach((cat: any) => {
-        const catName = typeof cat === 'string' ? cat : cat.name;
-        categoryCounts[catName] = (categoryCounts[catName] || 0) + 1;
-      });
-    }
-  });
-  
-  const sortedCategories = Object.entries(categoryCounts)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 10);
-  
-  // Funding analysis
-  const withFunding = companies.filter(c => c.funding && c.funding !== '' && c.funding !== 'N/A');
-  const fundingStats = {
-    total: withFunding.length,
-    percentage: ((withFunding.length / totalCompanies) * 100).toFixed(1),
-    byStage: {} as Record<string, number>,
-  };
-  
-  withFunding.forEach(c => {
-    const f = c.funding.toLowerCase();
-    if (f.includes('seed')) fundingStats.byStage['Seed'] = (fundingStats.byStage['Seed'] || 0) + 1;
-    else if (f.includes('series a')) fundingStats.byStage['Series A'] = (fundingStats.byStage['Series A'] || 0) + 1;
-    else if (f.includes('series b')) fundingStats.byStage['Series B'] = (fundingStats.byStage['Series B'] || 0) + 1;
-    else if (f.includes('bootstrap')) fundingStats.byStage['Bootstrap'] = (fundingStats.byStage['Bootstrap'] || 0) + 1;
-    else fundingStats.byStage['Other'] = (fundingStats.byStage['Other'] || 0) + 1;
-  });
-  
-  // Location distribution
-  const locationCounts: Record<string, number> = {};
-  companies.forEach(c => {
-    if (c.headquarters) {
-      const city = c.headquarters.split(',')[0].trim();
-      locationCounts[city] = (locationCounts[city] || 0) + 1;
-    }
-  });
-  const topLocations = Object.entries(locationCounts)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5);
-  
-  // Founded years
-  const years = companies
-    .map(c => c.founded_year)
-    .filter(y => y && y >= 2010 && y <= 2025);
-  const avgFounded = years.length ? Math.round(years.reduce((a, b) => a + b, 0) / years.length) : 2018;
-  const newest = Math.max(...years);
+  // Use pre-calculated stats to avoid heavy computation during static generation
+  const { totalCompanies, categoryCounts, fundingStats, topLocations, avgFounded, newestFounded } = reportStats;
+  // categoryCounts, topLocations etc. are already destructured
   
   // JSON-LD structured data
   const jsonLd = {
@@ -105,7 +55,7 @@ export default function StateOfSaudiSaaS2026() {
             <span>•</span>
             <span>{totalCompanies.toLocaleString('en-US')} شركة</span>
             <span>•</span>
-            <span>{((withFunding.length / totalCompanies) * 100).toFixed(1)}% ممولة</span>
+            <span>{fundingStats.percentage}% ممولة</span>
           </div>
         </header>
 
@@ -160,7 +110,7 @@ export default function StateOfSaudiSaaS2026() {
               <div className="text-text-secondary">شركة SaaS نشطة</div>
             </div>
             <div className="bg-card rounded-xl border border-white/5 p-6">
-              <div className="text-3xl font-bold text-accent-green mb-2">{sortedCategories.length}</div>
+              <div className="text-3xl font-bold text-accent-green mb-2">{categoryCounts.length}</div>
               <div className="text-text-secondary">قطاع مختلف</div>
             </div>
             <div className="bg-card rounded-xl border border-white/5 p-6">
@@ -177,7 +127,7 @@ export default function StateOfSaudiSaaS2026() {
           <div className="bg-card rounded-xl border border-white/5 p-8 mb-6">
             <h3 className="text-xl font-semibold text-white mb-4">التوزيع حسب القطاع</h3>
             <div className="space-y-4">
-              {sortedCategories.map(([category, count], idx) => {
+              {categoryCounts.map(([category, count], idx) => {
                 const percentage = ((count / totalCompanies) * 100).toFixed(1);
                 return (
                   <div key={category}>
@@ -198,7 +148,7 @@ export default function StateOfSaudiSaaS2026() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {sortedCategories.slice(0, 6).map(([category, count]) => (
+            {categoryCounts.slice(0, 6).map(([category, count]) => (
               <div key={category} className="bg-card rounded-xl border border-white/5 p-6">
                 <h4 className="text-lg font-semibold text-white mb-2">{category}</h4>
                 <p className="text-text-secondary mb-4">
