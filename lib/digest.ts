@@ -80,20 +80,20 @@ export function generatePlainTextDigest(digest: DigestIssue): string {
   text += `Week of ${digest.week_of}\n\n`;
 
   if (digest.top_funding_rounds.length > 0) {
-    text += `💰 TOP FUNDING ROUNDS\n`;
+    text += `TOP FUNDING ROUNDS\n`;
     digest.top_funding_rounds.forEach(round => {
       text += `• ${round.title} - ${round.amount}\n  ${round.link}\n\n`;
     });
   }
 
   if (digest.regulation_updates.length > 0) {
-    text += `⚖️ REGULATION UPDATES\n`;
+    text += `REGULATION UPDATES\n`;
     digest.regulation_updates.forEach(update => {
       text += `• ${update.title}\n  ${update.link}\n\n`;
     });
   }
 
-  text += `📊 Full news feed: https://saudisaashub.pages.dev/news\n`;
+  text += `Full news feed: https://saudisaashub.pages.dev/news\n`;
   text += `🔔 Subscribe: https://saudisaashub.pages.dev/contact?type=newsletter\n`;
 
   return text;
@@ -126,7 +126,7 @@ export function generateHTMLDigest(digest: DigestIssue): string {
 
   ${digest.top_funding_rounds.length > 0 ? `
   <div class="section">
-    <h2>💰 Top Funding Rounds</h2>
+    <h2>Top Funding Rounds</h2>
     ${digest.top_funding_rounds.map(round => `
       <div class="news-item">
         <strong>${round.title}</strong> - ${round.amount}<br>
@@ -138,7 +138,7 @@ export function generateHTMLDigest(digest: DigestIssue): string {
 
   ${digest.regulation_updates.length > 0 ? `
   <div class="section">
-    <h2>⚖️ Regulation Updates</h2>
+    <h2>Regulation Updates</h2>
     ${digest.regulation_updates.map(update => `
       <div class="news-item">
         <strong>${update.title}</strong><br>
@@ -149,7 +149,7 @@ export function generateHTMLDigest(digest: DigestIssue): string {
   ` : ''}
 
   <div class="section">
-    <p>📊 <a href="https://saudisaashub.pages.dev/news">View full news feed</a></p>
+    <p><a href="https://saudisaashub.pages.dev/news">View full news feed</a></p>
     <p>🔔 <a href="https://saudisaashub.pages.dev/contact?type=newsletter">Subscribe to newsletter</a></p>
   </div>
 

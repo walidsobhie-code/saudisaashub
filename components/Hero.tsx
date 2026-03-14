@@ -10,7 +10,6 @@ const SplineEmbed = dynamic(() => import('./SplineEmbed').then(mod => mod.Spline
   ssr: false,
   loading: () => null,
 });
-import { SplineEmbed } from './SplineEmbed';
 
 export function Hero() {
   const router = useRouter();

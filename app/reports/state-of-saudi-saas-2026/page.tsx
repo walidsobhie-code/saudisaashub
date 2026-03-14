@@ -101,11 +101,11 @@ export default function StateOfSaudiSaaS2026() {
             تحليل شامل لمشهد البرمجيات كخدمة في المملكة العربية السعودية
           </p>
           <div className="flex justify-center gap-4 text-sm text-text-muted">
-            <span>📅 مارس 2026</span>
+            <span>مارس 2026</span>
             <span>•</span>
-            <span>📊 {totalCompanies.toLocaleString('en-US')} شركة</span>
+            <span>{totalCompanies.toLocaleString('en-US')} شركة</span>
             <span>•</span>
-            <span>📈 {((withFunding.length / totalCompanies) * 100).toFixed(1)}% ممولة</span>
+            <span>{((withFunding.length / totalCompanies) * 100).toFixed(1)}% ممولة</span>
           </div>
         </header>
 

@@ -51,7 +51,7 @@ export default function ZatcaComplianceGuidePage() {
             خطوة بخطوة: من الفهم الأساسي إلى التطبيق الكامل لنظام Fatoora
           </p>
           <div className="flex justify-center gap-4 text-sm text-text-muted">
-            <span>📅 13 مارس 2026</span>
+            <span>13 مارس 2026</span>
             <span>•</span>
             <span>⏱️ 15 دقيقة قراءة</span>
           </div>

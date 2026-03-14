@@ -65,7 +65,7 @@ export default function Top10SaudiSaaS() {
             مراجعة شاملة ومقارنة مفصلة لأبرز اللاعبين في السوق
           </p>
           <div className="flex justify-center gap-4 text-sm text-text-muted">
-            <span>📅 13 مارس 2026</span>
+            <span>13 مارس 2026</span>
             <span>•</span>
             <span>⏱️ 10 دقائق قراءة</span>
           </div>

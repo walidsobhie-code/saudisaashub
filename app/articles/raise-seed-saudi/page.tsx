@@ -54,7 +54,7 @@ export default function RaiseSeedSaudi() {
             دليل عملي خطوة بخطوة: من التحضير إلى إبرام الصفقة
           </p>
           <div className="flex justify-center gap-4 text-sm text-text-muted">
-            <span>📅 13 مارس 2026</span>
+            <span>13 مارس 2026</span>
             <span>•</span>
             <span>⏱️ 12 دقيقة قراءة</span>
           </div>

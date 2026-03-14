@@ -65,7 +65,7 @@ export default function DigestPage() {
                 {digest.top_funding_rounds.length > 0 && (
                   <div>
                     <h3 className="text-accent-green font-semibold mb-2 flex items-center gap-2">
-                      <span>💰</span> Top Funding Rounds
+                      <span>Top Funding Rounds</span>
                     </h3>
                     <ul className="space-y-2">
                       {digest.top_funding_rounds.map((round, idx) => (
@@ -83,7 +83,7 @@ export default function DigestPage() {
                 {digest.regulation_updates.length > 0 && (
                   <div>
                     <h3 className="text-accent-green font-semibold mb-2 flex items-center gap-2">
-                      <span>⚖️</span> Regulation Updates
+                      <span>Regulation Updates</span>
                     </h3>
                     <ul className="space-y-2">
                       {digest.regulation_updates.map((update, idx) => (

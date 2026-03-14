@@ -23,7 +23,7 @@ export default function ReportsPage() {
               href={`/reports/${report.slug}`}
               className="group bg-card rounded-xl border border-white/5 p-8 hover:border-accent-green/30 transition-all"
             >
-              <div className="text-4xl font-bold text-yellow-400 mb-4">📈</div>
+              <div className="text-4xl font-bold text-yellow-400 mb-4">Reports</div>
               <h2 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
                 {report.title}
               </h2>

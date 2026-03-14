@@ -122,7 +122,8 @@ export function CompanyComparer() {
           {selectedCompanies.length === 1 && (
             <div className="mt-4 p-4 bg-accent-green/10 rounded-lg border border-accent-green/20">
               <p className="text-accent-green text-sm">
-                ✅ اختيار: {selectedData[0]?.name}. اختر شركة أخرى للمقارنة.
+                <svg className="w-4 h-4 inline" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                اختيار: {selectedData[0]?.name}. اختر شركة أخرى للمقارنة.
               </p>
             </div>
           )}
@@ -130,7 +131,8 @@ export function CompanyComparer() {
           {selectedCompanies.length === 2 && (
             <div className="mt-4 p-4 bg-accent-green/10 rounded-lg border border-accent-green/20">
               <p className="text-accent-green text-sm">
-                ✅ اختيار: {selectedData.map(c => c.name).join(' vs ')}. اضغط "قارن الآن" للمقارنة!
+                <svg className="w-4 h-4 inline" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                اختيار: {selectedData.map(c => c.name).join(' vs ')}. اضغط "قارن الآن" للمقارنة!
               </p>
             </div>
           )}
@@ -138,7 +140,8 @@ export function CompanyComparer() {
           {selectedCompanies.length === 3 && (
             <div className="mt-4 p-4 bg-accent-green/10 rounded-lg border border-accent-green/20">
               <p className="text-accent-green text-sm">
-                ✅ 3 شركات محددة. اضغط "قارن الآن" للمقارنة أو انقر لإلغاء تحديد.
+                <svg className="w-4 h-4 inline" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                3 شركات محددة. اضغط "قارن الآن" للمقارنة أو انقر لإلغاء تحديد.
               </p>
             </div>
           )}

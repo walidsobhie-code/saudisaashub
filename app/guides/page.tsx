@@ -6,14 +6,14 @@ export default function GuidesPage() {
       slug: 'zatca-compliance-guide',
       title: 'ZATCA E-Invoicing Guide',
       description: 'Complete guide to Fatoora compliance for Saudi SaaS companies.',
-      icon: '⚖️',
+      icon: 'Z',
       color: 'text-accent-cyan',
     },
     {
       slug: 'raise-seed-saudi',
       title: 'How to Raise Seed Funding',
       description: 'Step-by-step guide to securing investment in Saudi Arabia.',
-      icon: '💰',
+      icon: 'F',
       color: 'text-yellow-400',
     },
   ];
@@ -29,7 +29,7 @@ export default function GuidesPage() {
             href="/zatca"
             className="group bg-card rounded-xl border border-white/5 p-8 hover:border-accent-green/30 transition-all"
           >
-            <div className="text-4xl font-bold text-accent-cyan mb-4">📋</div>
+            <div className="text-4xl font-bold text-accent-cyan mb-4">ZATCA</div>
             <h2 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
               ZATCA Compliance Hub
             </h2>
@@ -45,7 +45,7 @@ export default function GuidesPage() {
             href="/funding"
             className="group bg-card rounded-xl border border-white/5 p-8 hover:border-accent-green/30 transition-all"
           >
-            <div className="text-4xl font-bold text-blue-400 mb-4">📈</div>
+            <div className="text-4xl font-bold text-blue-400 mb-4">Funding</div>
             <h2 className="text-xl font-bold text-white mb-3 group-hover:text-accent-green transition-colors">
               Funding Tracker
             </h2>
