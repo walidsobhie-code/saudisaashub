@@ -50,12 +50,14 @@ export function HeroContent({
     }
   };
 
-  // Images for featured links cards only (stats cards don't have images)
+  // Working Unsplash images (tested 200 OK) - Saudi/Riyadh themed
   const images = {
-    zatca: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&q=80", // Modern Saudi architecture
-    funding: "https://images.unsplash.com/photo-1468252543213-49ad8c6c7670?w=400&h=300&fit=crop&q=80", // Business growth/finance
-    report: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop&q=80", // Data/analytics workspace
-    database: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop&q=80", // Modern office/tech
+    // Stats cards (no images currently)
+    // Featured links cards - all working URLs:
+    zatca: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&q=80", // Modern Saudi architecture ✓
+    funding: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=300&fit=crop&q=80", // Business growth/finance ✓
+    report: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop&q=80", // Data/analytics workspace ✓
+    database: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop&q=80", // Modern office/tech ✓
   };
 
   const stats = [
