@@ -50,16 +50,19 @@ export function HeroContent({
     }
   };
 
-  // High-quality Unsplash images related to Saudi Arabia and business
+  // High-quality Unsplash images related to Saudi Arabia, Riyadh, and business
   const images = {
-    companies: "https://images.unsplash.com/photo-1518005052353-e9871cb7dbb2?w=400&h=300&fit=crop&q=80", // Modern office building in Riyadh
-    categories: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80", // Network/global connections
-    articles: "https://images.unsplash.com/photo-1504711434969-e9871cb7dbb2?w=400&h=300&fit=crop&q=80", // Business/media
-    platform: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop&q=80", // Tech workspace
-    zatca: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&q=80", // Document/compliance
-    funding: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=300&fit=crop&q=80", // Growth/chart
-    report: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80", // Analytics
-    database: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&q=80", // Office/team
+    // Stats cards - Saudi/Riyadh themed
+    companies: "https://images.unsplash.com/photo-1535810231464-547226032e50?w=400&h=300&fit=crop&q=80", // Riyadh skyline at night
+    categories: "https://images.unsplash.com/photo-1518005052353-e9871cb7dbb2?w=400&h=300&fit=crop&q=80", // KAFD tower (Riyadh)
+    articles: "https://images.unsplash.com/photo-1518302562190-27092386a121?w=400&h=300&fit=crop&q=80", // Riyadh business district
+    platform: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80", // Network/data visualization
+
+    // Featured links cards
+    zatca: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&q=80", // Modern Saudi architecture
+    funding: "https://images.unsplash.com/photo-1468252543213-49ad8c6c7670?w=400&h=300&fit=crop&q=80", // Business growth/finance
+    report: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop&q=80", // Data/analytics workspace
+    database: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop&q=80", // Modern office/tech
   };
 
   const stats = [
