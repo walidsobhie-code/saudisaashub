@@ -182,11 +182,11 @@ export function HeroContent({
           <div className="absolute inset-0 bg-gradient-to-r from-accent-green/0 via-white/20 to-accent-green/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </Link>
         <Link
-          href="/contact"
+          href="/news"
           className="group px-10 py-5 rounded-2xl glass text-white font-semibold text-xl hover:bg-white/10 transition-all duration-300 hover:scale-105 active:scale-95 border border-white/10 hover:border-accent-green/50 relative overflow-hidden"
         >
           <span className="flex items-center gap-3 relative z-10">
-            أضف شركتك
+            الأخبار
             <span className="group-hover:translate-x-1 transition-transform">{icons.arrow}</span>
           </span>
           {/* Subtle border glow on hover */}
