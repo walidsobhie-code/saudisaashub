@@ -30,6 +30,11 @@ export default function AboutPage() {
             <li>Offer practical guides (ZATCA compliance, funding, pricing, more)</li>
           </ul>
 
+          <h2 className="text-2xl font-bold text-white mt-12 mb-4">Our Team</h2>
+          <p className="text-text-secondary mb-6">
+            Saudi SaaS Hub is operated by a distributed team of researchers, writers, and developers based across Saudi Arabia. We work remotely to bring you comprehensive coverage of the Saudi SaaS ecosystem from multiple perspectives.
+          </p>
+
           <h2 className="text-2xl font-bold text-white mt-12 mb-4">Our Methodology</h2>
           <p className="text-text-secondary mb-6">
             We are committed to transparency and rigor. Every company profile, funding round, and compliance update undergoes multi-step verification. We publish our sources, update频率, and quality standards openly.
