@@ -50,11 +50,23 @@ export function HeroContent({
     }
   };
 
+  // High-quality Unsplash images related to Saudi Arabia and business
+  const images = {
+    companies: "https://images.unsplash.com/photo-1518005052353-e9871cb7dbb2?w=400&h=300&fit=crop&q=80", // Modern office building in Riyadh
+    categories: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80", // Network/global connections
+    articles: "https://images.unsplash.com/photo-1504711434969-e9871cb7dbb2?w=400&h=300&fit=crop&q=80", // Business/media
+    platform: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop&q=80", // Tech workspace
+    zatca: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&q=80", // Document/compliance
+    funding: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=300&fit=crop&q=80", // Growth/chart
+    report: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80", // Analytics
+    database: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&q=80", // Office/team
+  };
+
   const stats = [
-    { value: 250, suffix: '+', label: 'شركة سعودية', link: '/companies', color: 'accent-green' },
-    { value: 15, suffix: '+', label: 'فئة', link: '/companies', color: 'accent-cyan' },
-    { value: 10, suffix: '+', label: 'مقال', link: '/articles', color: 'purple-400' },
-    { value: 1, suffix: '', label: 'منصة', link: '/about', color: 'white' },
+    { value: 250, suffix: '+', label: 'شركة سعودية', link: '/companies', color: 'accent-green', image: images.companies },
+    { value: 15, suffix: '+', label: 'فئة', link: '/companies', color: 'accent-cyan', image: images.categories },
+    { value: 10, suffix: '+', label: 'مقال', link: '/articles', color: 'purple-400', image: images.articles },
+    { value: 1, suffix: '', label: 'منصة', link: '/about', color: 'white', image: images.platform },
   ];
 
   // SVG Icons
@@ -331,6 +343,16 @@ export function HeroContent({
       ======================================== */}
       <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-16 stagger-children transition-all duration-1000 ease-out ${visible ? 'opacity-100' : 'opacity-0'}`}>
         <Link href="/zatca" className="group p-5 rounded-2xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/20 hover:border-amber-400 hover:shadow-[0_0_30px_rgba(245,158,11,0.2)] transition-all duration-300 hover:-translate-y-1">
+          {/* Image */}
+          <div className="relative h-24 mb-4 rounded-xl overflow-hidden">
+            <img
+              src={images.zatca}
+              alt="ZATCA Compliance"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          </div>
           <div className="flex items-center gap-3 mb-2">
             <div className="p-2 rounded-lg bg-amber-500/20 text-amber-400">
               {icons.zatca}
@@ -340,6 +362,16 @@ export function HeroContent({
           <p className="text-text-secondary text-sm">حلال vat السعودي</p>
         </Link>
         <Link href="/funding" className="group p-5 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 hover:border-emerald-400 hover:shadow-[0_0_30px_rgba(16,185,129,0.2)] transition-all duration-300 hover:-translate-y-1">
+          {/* Image */}
+          <div className="relative h-24 mb-4 rounded-xl overflow-hidden">
+            <img
+              src={images.funding}
+              alt="Funding"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          </div>
           <div className="flex items-center gap-3 mb-2">
             <div className="p-2 rounded-lg bg-emerald-500/20 text-emerald-400">
               {icons.funding}
@@ -349,6 +381,16 @@ export function HeroContent({
           <p className="text-text-secondary text-sm">آخر الجولات التمويلية</p>
         </Link>
         <Link href="/reports" className="group p-5 rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/20 hover:border-purple-400 hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] transition-all duration-300 hover:-translate-y-1">
+          {/* Image */}
+          <div className="relative h-24 mb-4 rounded-xl overflow-hidden">
+            <img
+              src={images.report}
+              alt="Reports"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          </div>
           <div className="flex items-center gap-3 mb-2">
             <div className="p-2 rounded-lg bg-purple-500/20 text-purple-400">
               {icons.report}
@@ -358,6 +400,16 @@ export function HeroContent({
           <p className="text-text-secondary text-sm">State of SaaS 2026</p>
         </Link>
         <Link href="/companies" className="group p-5 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 border border-cyan-500/20 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)] transition-all duration-300 hover:-translate-y-1">
+          {/* Image */}
+          <div className="relative h-24 mb-4 rounded-xl overflow-hidden">
+            <img
+              src={images.database}
+              alt="Companies Database"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          </div>
           <div className="flex items-center gap-3 mb-2">
             <div className="p-2 rounded-lg bg-cyan-500/20 text-cyan-400">
               {icons.companies}
@@ -379,12 +431,25 @@ export function HeroContent({
             className={`group bg-card/40 backdrop-blur-sm rounded-2xl border border-[var(--color-border)] p-6 hover:border-accent-green/50 hover:shadow-glow-green hover:-translate-y-2 transition-all duration-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ animationDelay: `${0.7 + index * 0.1}s` }}
           >
+            {/* Image */}
+            <div className="relative h-20 mb-4 rounded-xl overflow-hidden">
+              <img
+                src={stat.image}
+                alt={stat.label}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            </div>
+
+            {/* Counter */}
             <div className={`text-4xl md:text-5xl font-bold mb-2 ${stat.color === 'accent-green' ? 'text-[var(--color-primary)]' : stat.color === 'accent-cyan' ? 'text-accent-cyan' : stat.color === 'purple-400' ? 'text-purple-400' : 'text-white'}`}>
               {stat.value === 250 ? `${companiesCount}+` :
                stat.value === 15 ? `${categoriesCount}+` :
                stat.value === 10 ? `${articlesCount}+` :
                stat.value}
             </div>
+            {/* Label */}
             <div className="text-text-secondary text-sm group-hover:text-white transition-colors">{stat.label}</div>
           </Link>
         ))}
