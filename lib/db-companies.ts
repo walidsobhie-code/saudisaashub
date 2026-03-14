@@ -46,8 +46,11 @@ const normalizeCompany = (c: any): Company => {
       slug: name.toLowerCase().replace(/\s+/g, '-'),
     })) || [];
 
+  // Remove external logo URLs that cause CORS/loading issues
+  // Use placeholder gradient with first letter instead
   return {
     ...c,
+    logo_url: null, // Clear all external logos
     categories: toObjArray(c.categories),
     integrations: toObjArray(c.integrations),
     certifications: toObjArray(c.certifications),
