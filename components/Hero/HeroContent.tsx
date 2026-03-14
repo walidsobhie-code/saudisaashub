@@ -276,11 +276,11 @@ export function HeroContent({
 
             {/* Copy Link */}
             <button
-              onClick={async () => {
+              onClick={async (e: React.MouseEvent<HTMLButtonElement>) => {
                 try {
                   await navigator.clipboard.writeText(window.location.href);
                   // Simple feedback - could enhance with custom toast
-                  const btn = event.currentTarget;
+                  const btn = e.currentTarget;
                   const originalContent = btn.innerHTML;
                   btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>`;
                   btn.classList.add('bg-accent-green', 'text-background');
