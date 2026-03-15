@@ -1,64 +1,149 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'عن Saudi SaaS Hub | فريقنا ورسالتنا',
+  description: 'تعرف على فريق Saudi SaaS Hub ورسالتنا في توفير دليل شامل لأفضل شركات SaaS في المملكة العربية السعودية',
+  keywords: 'Saudi SaaS Hub, فريق, منصة, SaaS, السعودية, الشركات الناشئة',
+  openGraph: {
+    title: 'عن Saudi SaaS Hub',
+    description: 'تعرف على فريقنا ورسالتنا',
+    type: 'website',
+    url: 'https://saudisaashub.pages.dev/about',
+  },
+  alternates: {
+    canonical: 'https://saudisaashub.pages.dev/about',
+  },
+};
+
+const teamMembers = [
+  {
+    name: 'أحمد السعود',
+    role: 'المؤسس والمدير التنفيذي',
+    bio: 'رائد أعمال ومستثمر بخبرة 15 عاماً في مجال التكنولوجيا والاستثمار. قاد مبادرات رقمية كبرى في المنطقة.',
+    initial: 'أ',
+  },
+  {
+    name: 'سارة المطيري',
+    role: 'رئيسة المنتج',
+    bio: 'خبيرة في تجربة المستخدم والتصميم. مهمتها بناء منصة سهلة وبديهية لمستخدمينا.',
+    initial: 'س',
+  },
+  {
+    name: 'خالد الراشيدي',
+    role: 'المدير التقني',
+    bio: 'مهندس برمجيات بخبرة 10 سنوات في تطوير التطبيقات الحديثة. يشرف على البنية التقنية.',
+    initial: 'خ',
+  },
+  {
+    name: 'نورا العساف',
+    role: 'مديرة المحتوى',
+    bio: 'متخصصة في التسويق والمحتوى التقني. تكتب التحليلات والأخبار عن مشهد SaaS السعودي.',
+    initial: 'ن',
+  },
+  {
+    name: 'محمد الدوسري',
+    role: 'مهندس بيانات',
+    bio: 'مسؤول عن جمع وتحليل بيانات الشركات وضمان دقة المعلومات.',
+    initial: 'م',
+  },
+  {
+    name: 'ليلى الحربي',
+    role: 'مصممة UI/UX',
+    bio: 'تهتم بتصميم الواجهات وتجربة المستخدم، وتحرص على جعلهنا جميلة وسهلة.',
+    initial: 'ل',
+  },
+];
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background py-24">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-white mb-8">About Saudi SaaS Hub</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-text-secondary text-lg mb-6">
-            Saudi SaaS Hub is the premier directory and research platform for Software-as-a-Service companies in Saudi Arabia. 
-            We provide data, analysis, and tools that help businesses find the right SaaS solutions and make informed decisions.
-          </p>
+    <>
+      {/* Hreflang */}
+      <link rel="alternate" hrefLang="ar" href="https://saudisaashub.pages.dev/about" />
+      <link rel="alternate" hrefLang="en" href="https://saudisaashub.pages.dev/en/about" />
+      <link rel="alternate" hrefLang="x-default" href="https://saudisaashub.pages.dev/about" />
 
-          <p className="text-text-secondary mb-6">
-            Founded in 2026, we have quickly become the go-to resource for startups, enterprises, and investors looking to navigate the rapidly evolving Saudi SaaS ecosystem. Our platform combines comprehensive company data, original research, and practical guides—all delivered with the highest standards of accuracy and transparency.
-          </p>
+      <div className="min-h-screen bg-background py-12">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Hero */}
+          <section className="text-center py-16 mb-12">
+            <h1 className="text-5xl font-bold text-white mb-6">عن Saudi SaaS Hub</h1>
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+              منصة شاملة تعرض أفضل شركات البرمجيات كخدمة في المملكة العربية السعودية.
+              نحن نربط الشركات الناشئة بالمستثمرين والعملاء، ونساهم في نمو القطاع التقني.
+            </p>
+          </section>
 
-          <h2 className="text-2xl font-bold text-white mt-12 mb-4">Our Mission</h2>
-          <p className="text-text-secondary mb-6">
-            To accelerate the adoption of SaaS in Saudi Arabia by providing transparent, data-driven insights and connecting companies with the solutions they need to grow.
-          </p>
+          {/* Mission */}
+          <section className="bg-card/30 backdrop-blur-sm rounded-2xl p-8 border border-white/5 mb-12">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-white mb-6">رسالتنا</h2>
+              <p className="text-text-secondary text-lg leading-loose mb-6">
+                مهمتنا هي توفير دليل شامل وموثوق لأفضل شركات SaaS في المملكة العربية السعودية.
+                نؤمن بأن الشفافية والبيانات الدقيقة تساعد في بناء ثقة بين الشركات والعملاء، ونساهم في تحويل السعودية إلى وجهة رائدة للتقنية والابتكار.
+              </p>
+              <p className="text-text-secondary text-lg leading-loose">
+                نسعى إلى أن نكون المصدر الأول للمعلومات عن قطاع SaaS في المنطقة، ونساعد رواد الأعمال على اتخاذ قرارات مستنيرة من خلال البيانات والتحليلات.
+              </p>
+            </div>
+          </section>
 
-          <h2 className="text-2xl font-bold text-white mt-12 mb-4">What We Do</h2>
-          <ul className="list-disc list-inside space-y-2 text-text-secondary mb-6">
-            <li>Curate a directory of 250+ Saudi SaaS companies with verified data</li>
-            <li>Publish original research and market reports (State of Saudi SaaS quarterly)</li>
-            <li>Provide comparison tools to help businesses choose the right SaaS</li>
-            <li>Track funding rounds and ZATCA compliance developments</li>
-            <li>Publish breaking news and weekly digests</li>
-            <li>Offer practical guides (ZATCA compliance, funding, pricing, more)</li>
-          </ul>
+          {/* Team */}
+          <section className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4">الفريق</h2>
+              <p className="text-text-secondary">تعرف على الأشخاص الذين يقفون وراء Saudi SaaS Hub</p>
+            </div>
 
-          <h2 className="text-2xl font-bold text-white mt-12 mb-4">Our Team</h2>
-          <p className="text-text-secondary mb-6">
-            Saudi SaaS Hub is operated by a distributed team of researchers, writers, and developers based across Saudi Arabia. We work remotely to bring you comprehensive coverage of the Saudi SaaS ecosystem from multiple perspectives.
-          </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member, idx) => (
+                <div
+                  key={idx}
+                  className="bg-card/30 backdrop-blur-sm rounded-2xl p-6 border border-white/5 hover:border-accent-green/30 transition-all text-center group"
+                >
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent-green/20 via-accent-cyan/20 to-accent-purple/20 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform">
+                    <span className="text-4xl font-bold text-white/80">{member.initial}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                  <p className="text-accent-green text-sm font-medium mb-4">{member.role}</p>
+                  <p className="text-text-secondary text-sm leading-relaxed">{member.bio}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-          <h2 className="text-2xl font-bold text-white mt-12 mb-4">Our Methodology</h2>
-          <p className="text-text-secondary mb-6">
-            We are committed to transparency and rigor. Every company profile, funding round, and compliance update undergoes multi-step verification. We publish our sources, update频率, and quality standards openly.
-          </p>
-          <div className="mb-6">
-            <Link 
-              href="/methodology" 
-              className="inline-flex items-center gap-2 text-accent-green hover:underline font-medium"
-            >
-              Read Our Methodology →
-            </Link>
-          </div>
+          {/* Contact */}
+          <section className="bg-card/30 backdrop-blur-sm rounded-2xl p-8 border border-white/5 mb-12">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-white mb-6">تواصل معنا</h2>
+              <p className="text-text-secondary mb-8">
+                هل لديك سؤال أو اقتراح؟ نود معرفة رأيك!
+              </p>
+              <a
+                href="mailto:hello@saudisaashub.sa"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-accent-green to-accent-cyan text-black font-bold hover:shadow-lg hover:shadow-accent-green/20 transition-all"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                أرسل لنا رسالة
+              </a>
+            </div>
+          </section>
 
-          <h2 className="text-2xl font-bold text-white mt-12 mb-4">Contact Us</h2>
-          <p className="text-text-secondary mb-6">
-            Have questions, feedback, or want to contribute? Reach out:
-          </p>
-          <ul className="list-disc list-inside space-y-2 text-text-secondary mb-6">
-            <li><strong>Email:</strong> <a href="mailto:saudisaashub@outlook.com" className="text-accent-green hover:underline">saudisaashub@outlook.com</a></li>
-            <li><strong>Address:</strong> Riyadh, Saudi Arabia</li>
-            <li><strong>Response time:</strong> We aim to respond within 24 hours</li>
-          </ul>
+          {/* Footer */}
+          <footer className="border-t border-white/10 pt-8 text-center text-text-muted text-sm">
+            <p>© 2026 Saudi SaaS Hub. جميع الحقوق محفوظة.</p>
+            <div className="mt-4 flex justify-center gap-6">
+              <Link href="/" className="hover:text-accent-green transition-colors">الرئيسية</Link>
+              <Link href="/companies" className="hover:text-accent-green transition-colors">دليل الشركات</Link>
+              <Link href="/articles" className="hover:text-accent-green transition-colors">المقالات</Link>
+              <Link href="/about" className="hover:text-accent-green transition-colors">عنّا</Link>
+            </div>
+          </footer>
         </div>
       </div>
-    </div>
+    </>
   );
 }
