@@ -33,6 +33,12 @@ interface Company {
     trial_days?: number;
   }>;
   screenshot_urls?: string[] | null;
+  // New fields
+  funding_stage?: 'pre-seed' | 'seed' | 'series-a' | 'series-b' | 'series-c' | 'undisclosed';
+  funding_amount?: number;
+  employee_count?: number;
+  city?: string;
+  verified?: boolean;
 }
 
 interface CompanyProfileClientProps {
@@ -145,8 +151,19 @@ export default function CompanyProfileClient({
             {/* Info */}
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-3 mb-3">
-                <h1 className="text-3xl md:text-4xl font-bold text-white">
+                <h1 className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3">
                   {company.name}
+                  {company.verified && (
+                    <div
+                      className="p-1 rounded-full bg-accent-green/90 shadow-lg"
+                      title="شركة موثقة"
+                      dir="rtl"
+                    >
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  )}
                 </h1>
                 {compareList.includes(company.id) ? (
                   <button

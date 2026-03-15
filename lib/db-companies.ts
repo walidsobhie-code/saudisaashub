@@ -32,6 +32,15 @@ export interface Company {
   screenshot_urls?: string[] | null;
   created_at: string;
   updated_at: string;
+
+  // New filtering fields (Priority 1)
+  funding_stage?: 'pre-seed' | 'seed' | 'series-a' | 'series-b' | 'series-c' | 'undisclosed';
+  funding_amount?: number; // in millions (SAR/USD)
+  employee_count?: number; // actual count
+  city?: string; // extracted from headquarters
+
+  // Verification flag
+  verified?: boolean;
 }
 
 // Mock timestamps (since no DB)
@@ -48,6 +57,47 @@ const normalizeCompany = (c: any): Company => {
 
   // Remove external logo URLs that cause CORS/loading issues
   // Use placeholder gradient with first letter instead
+  const fundingStr = c.funding || '';
+  const employeesStr = c.employees || '';
+  const headquartersStr = c.headquarters || '';
+
+  // Parse funding amount (e.g., "$12.5M" -> 12.5, "Undisclosed" -> 0)
+  const fundingMatch = fundingStr.match(/[\d,]+\.?\d*/);
+  const fundingAmount = fundingMatch ? parseFloat(fundingMatch[0].replace(/,/g, '')) : 0;
+
+  // Determine funding stage based on amount (in millions)
+  let fundingStage: Company['funding_stage'] = 'undisclosed';
+  if (fundingAmount > 0) {
+    if (fundingAmount < 2) fundingStage = 'pre-seed';
+    else if (fundingAmount < 10) fundingStage = 'seed';
+    else if (fundingAmount < 50) fundingStage = 'series-a';
+    else if (fundingAmount < 200) fundingStage = 'series-b';
+    else fundingStage = 'series-c';
+  }
+
+  // Parse employee count (e.g., "51-200" -> 125 average, "10+" -> 10)
+  let employeeCount: number | undefined;
+  const empMatch = employeesStr.match(/\d+/);
+  if (empMatch) {
+    const num = parseInt(empMatch[0]);
+    // If range like "51-200", take midpoint
+    const rangeMatch = employeesStr.match(/(\d+)-(\d+)/);
+    if (rangeMatch) {
+      employeeCount = Math.round((parseInt(rangeMatch[1]) + parseInt(rangeMatch[2])) / 2);
+    } else if (employeesStr.includes('+')) {
+      employeeCount = num; // conservative lower bound
+    } else {
+      employeeCount = num;
+    }
+  }
+
+  // Extract city from headquarters (e.g., "Riyadh, Saudi Arabia" -> "Riyadh")
+  const city = headquartersStr.split(',')[0]?.trim() || '';
+
+  // Verification criteria: has website, headquarters, employees, and either funding data OR categories OR certifications
+  const isVerified = !!(c.website && c.headquarters && c.employees &&
+    (c.funding || (c.categories && c.categories.length > 0) || (c.certifications && c.certifications.length > 0)));
+
   return {
     ...c,
     logo_url: null, // Clear all external logos
@@ -67,6 +117,12 @@ const normalizeCompany = (c: any): Company => {
     screenshot_urls: c.screenshot_urls || [],
     created_at: now,
     updated_at: now,
+    // New fields
+    funding_stage: fundingStage,
+    funding_amount: fundingAmount || undefined,
+    employee_count: employeeCount,
+    city: city || undefined,
+    verified: isVerified,
   };
 };
 

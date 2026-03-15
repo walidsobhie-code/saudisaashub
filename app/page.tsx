@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getArticles } from '@/lib/articles';
 import { editorialPicks } from '@/lib/editorial-picks';
 import { getTrendingCompanies, getTrendingArticleSlugs } from '@/lib/trending';
@@ -8,6 +9,7 @@ import CompanyCard from '@/components/CompanyCard';
 import { Hero } from '@/components/Hero';
 import { LogoTicker } from '@/components/LogoTicker';
 import { Newsletter } from '@/components/Newsletter';
+import { Sparkles } from 'lucide-react';
 
 export default async function Home() {
   const articles = await getArticles();
@@ -51,6 +53,118 @@ export default async function Home() {
 
       {/* Logo Ticker - Trusted Companies */}
       <LogoTicker />
+
+      {/* Featured Companies Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent-green/5 to-transparent" />
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent-green/10 rounded-full text-accent-green text-sm font-medium mb-4">
+              <span className="w-2 h-2 bg-accent-green rounded-full animate-pulse" />
+              Editor's Picks
+            </div>
+            <h2 className="text-4xl font-bold text-white mb-4">الشركات المميزة</h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              مختارات فريق التحرير من أفضل شركات SaaS السعودية
+            </p>
+          </div>
+
+          {/* Select top 6 verified companies by funding amount as featured */}
+          {
+            (() => {
+              const featuredCompanies = allCompanies
+                .filter(c => c.verified && c.categories && c.categories.length > 0)
+                .sort((a, b) => (b.funding_amount || 0) - (a.funding_amount || 0))
+                .slice(0, 6);
+
+              return (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {featuredCompanies.map((company, idx) => {
+                    const category = company.categories?.[0]?.name || '';
+                    const reasonSnippets = [
+                      `شركة رائدة في مجال ${category} مع تمويل قوي ونمو مستمر`,
+                      `من أبرز اللاعبين في ${category} وتتميز بمنتجات مبتكرة`,
+                      `نجحت في جذب استثمارات كبيرة وتقدم حلولاً متميزة`,
+                      `تم اختيارها لجودة بياناتها وتأثيرها في السوق`,
+                      `شركة ذات تقييم عالٍ و nombreux عملاء`,
+                    ];
+                    const reason = reasonSnippets[idx % reasonSnippets.length];
+
+                    return (
+                      <div
+                        key={company.id}
+                        className="group bg-card/30 backdrop-blur-sm rounded-2xl p-6 border border-accent-green/20 hover:border-accent-green/40 transition-all duration-300 relative overflow-hidden"
+                      >
+                        {/* Featured badge corner */}
+                        <div className="absolute -top-2 -right-2 w-16 h-16 bg-gradient-to-br from-accent-green to-accent-cyan rounded-full opacity-20 blur-xl" />
+
+                        {/* Logo card */}
+                        <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-elevated border border-white/10 mb-4">
+                          {company.logo_url ? (
+                            <Image
+                              src={company.logo_url}
+                              alt={`${company.name} logo`}
+                              fill
+                              className="object-cover"
+                              sizes="64px"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-accent-green/30 to-accent-cyan/30">
+                              <span className="text-xl font-bold text-white/80">
+                                {company.name?.charAt(0) || '?'}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent-green transition-colors">
+                          {company.name}
+                        </h3>
+
+                        <p className="text-accent-cyan text-sm font-medium mb-3">
+                          {category}
+                        </p>
+
+                        <p className="text-text-secondary text-sm mb-4 line-clamp-2">
+                          {company.description}
+                        </p>
+
+                        {/* Why featured */}
+                        <div className="flex items-start gap-2 text-xs text-accent-green/80 mb-4">
+                          <Sparkles className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                          <p>{reason}</p>
+                        </div>
+
+                        <Link
+                          href={`/companies/${company.slug}`}
+                          className="inline-flex items-center gap-2 text-accent-green hover:text-accent-cyan transition-colors text-sm font-medium"
+                        >
+                          عرض التفاصيل
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </Link>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })()
+          }
+
+          <div className="text-center mt-12">
+            <Link
+              href="/companies"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-accent-green to-accent-cyan text-black font-bold hover:shadow-lg hover:shadow-accent-green/20 transition-all"
+            >
+              عرض جميع الشركات
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Editorial Spotlight */}
       <section className="py-24 relative">

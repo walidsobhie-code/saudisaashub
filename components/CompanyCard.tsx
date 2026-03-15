@@ -27,7 +27,20 @@ export default function CompanyCard({ company }: Props) {
   const firstLetter = name ? name.charAt(0) : '?';
 
   return (
-    <div className="group card hover:scale-[1.02] transition-all duration-300 overflow-hidden h-full border border-[var(--color-border)] rounded-xl">
+    <div className="group card hover:scale-[1.02] transition-all duration-300 overflow-hidden h-full border border-[var(--color-border)] rounded-xl relative">
+      {/* Verification Badge */}
+      {company.verified && (
+        <div
+          className="absolute -top-2 -right-2 z-10 bg-accent-green/90 p-1 rounded-full shadow-lg"
+          title="شركة موثقة"
+          dir="rtl"
+        >
+          <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+      )}
+
       <div className="p-6">
         {/* Logo and Name */}
         <div className="flex items-start gap-4 mb-4">
