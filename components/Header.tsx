@@ -7,12 +7,14 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'الرئيسية' },
-  { href: '/companies', label: 'شركات SaaS' },
-  // Research is a mega-menu, not a simple link
-  { href: '/events', label: 'الفعاليات' },
+  { href: '/companies', label: 'الشركات' },
+  { href: '/articles', label: 'المقالات' },
   { href: '/news', label: 'الأخبار' },
+  { href: '/events', label: 'الفعاليات' },
+  { href: '/reports', label: 'التقارير' },
+  { href: '/guides', label: 'الأدلة' },
   { href: '/about', label: 'عن المنصة' },
-  { href: '/methodology', label: 'المنهجية' },
+  { href: '/contact', label: 'اتصل بنا' },
 ];
 
 const researchItems = {
@@ -31,6 +33,7 @@ const researchItems = {
   ],
   tools: [
     { href: '/search', label: 'Search' },
+    { href: '/compare', label: 'Compare' },
     { href: '/companies?comparison=true', label: 'Comparator' },
   ],
 };

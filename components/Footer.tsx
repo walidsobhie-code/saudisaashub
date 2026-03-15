@@ -11,12 +11,15 @@ const socialLinks = [
 
 const quickLinks = [
   { name: 'الرئيسية', href: '/' },
-  { name: 'شركات SaaS', href: '/companies' },
+  { name: 'الشركات', href: '/companies' },
+  { name: 'المقالات', href: '/articles' },
   { name: 'الأخبار', href: '/news' },
   { name: 'الفعاليات', href: '/events' },
+  { name: 'التقارير', href: '/reports' },
   { name: 'الأدلة', href: '/guides' },
   { name: 'عن المنصة', href: '/about' },
-  { name: 'المنهجية', href: '/methodology' },
+  { name: 'اتصل بنا', href: '/contact' },
+  { name: 'اتصل بنا', href: '/contact' },
 ];
 
 export function Footer() {
@@ -89,11 +92,27 @@ export function Footer() {
           {/* Categories */}
           <div>
             <h3 className="text-white font-semibold mb-4">الفئات</h3>
-            <ul className="space-y-3 text-text-secondary text-sm">
-              <li>SaaS</li>
-              <li>Startup</li>
-              <li>التسويق</li>
-              <li>التقنية</li>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/category/fintech" className="text-text-secondary hover:text-accent-green transition-colors">
+                  FinTech
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/healthtech" className="text-text-secondary hover:text-accent-green transition-colors">
+                  HealthTech
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/edtech" className="text-text-secondary hover:text-accent-green transition-colors">
+                  EdTech
+                </Link>
+              </li>
+              <li>
+                <Link href="/companies" className="text-text-secondary hover:text-accent-green transition-colors">
+                  جميع الفئات
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
