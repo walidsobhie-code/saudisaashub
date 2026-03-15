@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { getAllInterviews } from '@/lib/interviews';
 import { ShareButtons } from '@/components/ShareButtons';
 
+export const dynamic = 'force-dynamic'; // Render on-demand to avoid build issues
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Interviews | Saudi SaaS Hub',
