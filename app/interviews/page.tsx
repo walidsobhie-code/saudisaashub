@@ -1,10 +1,15 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { getAllInterviews } from '@/lib/interviews';
-import { ShareButtons } from '@/components/ShareButtons';
+
+const ShareButtons = dynamic(() => import('@/components/ShareButtons'), {
+  ssr: false,
+  loading: () => <div className="h-10" />,
+});
 
 export const dynamic = 'force-dynamic';
-export const revalidate = 0; // No static generation
+export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

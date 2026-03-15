@@ -1,11 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { getAllInterviews } from '@/lib/interviews';
-import { ShareButtons } from '@/components/ShareButtons';
+
+const ShareButtons = dynamic(() => import('@/components/ShareButtons'), {
+  ssr: false,
+  loading: () => <div className="h-10" />,
+});
 
 export const dynamic = 'force-dynamic';
-export const dynamicParams = true; // Allow any slug
+export const dynamicParams = true;
 export const revalidate = 0;
 
 interface PageProps {

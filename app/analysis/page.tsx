@@ -1,7 +1,12 @@
 import { Metadata } from 'next';
 import { getArticles } from '@/lib/articles';
 import { ArticleCard } from '@/components/ArticleCard';
-import { ShareButtons } from '@/components/ShareButtons';
+import dynamic from 'next/dynamic';
+
+const ShareButtons = dynamic(() => import('@/components/ShareButtons'), {
+  ssr: false,
+  loading: () => <div className="h-10" />,
+});
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
