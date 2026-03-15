@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { ShareButtons } from '@/components/ShareButtons';
 
 export const metadata: Metadata = {
   title: 'الذكاء الاصطناعي في الرعاية الصحية السعودية 2026 | SaudiSaaSHub',
@@ -28,6 +29,9 @@ export default function Page() {
           <ol><li><strong>AI في تحليل الأشعة:</strong> يكتشف أورام الثدي وسرطانات الرئة بدقة تضاهي الخبراء</li><li><strong>التنبؤ بإعادة الدخول المستشفى:</strong> يتنبأ بالمرضى الأكثر عرضة للعودة</li><li><strong>المساعدون الافتراضيون:</strong> يردون على أسئلة المرضى ويُذكّرون بالأدوية</li></ol>
           <h2>التحديات</h2>
           <ul><li><strong>جودة البيانات:</strong> أنظمة EHR الموزعة تعني بيانات غير منظّمة</li><li><strong>الاعتماد:</strong> AI التشخيصي يحتاج اعتماداً من وزارة الصحة</li></ul>
+        </div>
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <ShareButtons title="الذكاء الاصطناعي في الرعاية الصحية السعودية 2026" url="https://saudisaashub.pages.dev/articles/ai-healthcare-saudi-2026" />
         </div>
       </section>
     </>

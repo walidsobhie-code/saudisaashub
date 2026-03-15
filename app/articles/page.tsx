@@ -54,8 +54,31 @@ export default function ArticlesPage() {
     setSearchQuery(query);
   };
 
+  // Structured data for articles collection
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'المقالات -沙特 SaaS枢纽',
+    description: 'Discover the latest articles about technology and business in Saudi Arabia',
+    url: 'https://saudisaashub.pages.dev/articles',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: filteredArticles.slice(0, 10).map((article, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `https://saudisaashub.pages.dev/articles/${article.slug}`,
+      })),
+    },
+  };
+
   return (
     <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Header */}
       <section className="py-16 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4">
