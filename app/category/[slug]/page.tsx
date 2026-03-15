@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getCompaniesByCategoryDB, getAllCategoriesDB } from '@/lib/db-companies';
+import { getArticles } from '@/lib/articles';
 import CompanyCard from '@/components/CompanyCard';
+import ArticleCard from '@/components/ArticleCard';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -71,7 +73,15 @@ export default async function CategoryPage({ params }: PageProps) {
     notFound();
   }
 
-  const companies = await getCompaniesByCategoryDB(slug);
+  const [companies, articles] = await Promise.all([
+    getCompaniesByCategoryDB(slug),
+    getArticles(),
+  ]);
+
+  // Get related articles for this category (max 3)
+  const relatedArticles = articles
+    .filter(a => a.categories.includes(slug))
+    .slice(0, 3);
 
   // Calculate stats
   const totalCompanies = companies.length;
@@ -134,6 +144,29 @@ export default async function CategoryPage({ params }: PageProps) {
           <div className="bg-card rounded-xl border border-white/5 p-12 text-center">
             <p className="text-text-muted text-lg">لا توجد شركات في هذا التصنيف حالياً</p>
           </div>
+        )}
+
+        {/* Related Articles */}
+        {relatedArticles.length > 0 && (
+          <section className="py-12 bg-card/20">
+            <div className="max-w-7xl mx-auto px-4">
+              <h2 className="text-2xl font-bold mb-8">مقالات عن {categoryInfo.title.split('|')[0].trim()}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedArticles.map((article) => (
+                  <ArticleCard
+                    key={article.slug}
+                    title={article.title}
+                    excerpt={article.excerpt}
+                    slug={article.slug}
+                    date={article.date}
+                    categories={article.categories}
+                    readingTime={article.readingTime}
+                    image={article.image}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
         )}
       </div>
     </div>

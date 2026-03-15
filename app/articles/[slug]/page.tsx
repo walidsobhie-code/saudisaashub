@@ -10,6 +10,8 @@ import { generateSampleFAQs } from '@/lib/faqs';
 import { QuestionHook, ArticleHashtags } from '@/components/ArticleHooks';
 import { ArticleContent } from '@/components/ArticleContent';
 import { PublisherCard } from '@/components/PublisherCard';
+import { getCompaniesByCategoryDB, getAllCompaniesDB } from '@/lib/db-companies';
+import CompanyCard from '@/components/CompanyCard';
 
 interface PageProps {
   params: { slug: string };
@@ -95,6 +97,16 @@ export default async function ArticlePage({ params }: PageProps) {
     .filter((a) => a.slug !== article.slug)
     .filter((a) => a.categories.some((cat) => article.categories.includes(cat)))
     .slice(0, 3);
+
+  // Get related companies from matching categories
+  const relatedCompaniesPromises = article.categories
+    .slice(0, 3) // limit to first 3 categories to avoid too many fetches
+    .map(catSlug => getCompaniesByCategoryDB(catSlug));
+  const relatedCompaniesArrays = await Promise.all(relatedCompaniesPromises);
+  const allRelatedCompanies = Array.from(
+    new Set(relatedCompaniesArrays.flat())
+  ).filter(c => c.id !== undefined) // ensure valid
+    .slice(0, 6); // show max 6
 
   const formattedDate = 'مؤخراً';
 
@@ -281,6 +293,20 @@ export default async function ArticlePage({ params }: PageProps) {
                   readingTime={related.readingTime}
                   image={related.image}
                 />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related Companies */}
+      {allRelatedCompanies.length > 0 && (
+        <section className="py-12 bg-card/20">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-2xl font-bold mb-8">شركات ذات صلة</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {allRelatedCompanies.map((company) => (
+                <CompanyCard key={company.id} company={company} />
               ))}
             </div>
           </div>

@@ -134,44 +134,29 @@ export function HeroContent({
       </div>
 
       {/* ========================================
-          MAIN HEADLINE WITH ANIMATED GRADIENT
+          MAIN HEADLINE
       ======================================== */}
-      <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight transition-all duration-1000 ease-out delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <span className="block text-white">Saudi</span>
+      <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight transition-all duration-1000 ease-out delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <span className="block text-white">اكتشف أفضل شركات</span>
         <span className="block relative">
           <span className="relative z-10 animate-gradient bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-primary)] via-accent-cyan to-[var(--color-accent)] bg-200%">
-            SaaS Hub
+            SaaS في السعودية
           </span>
-          {/* Glow effect behind text */}
-          <span className="absolute inset-0 blur-2xl opacity-50 bg-gradient-to-r from-[var(--color-primary)] via-accent-cyan to-[var(--color-accent)] bg-200% animate-gradient" style={{ filter: 'blur(30px)' }} />
         </span>
       </h1>
 
       {/* ========================================
-          SUBTITLE
+          SUBTITLE + TRUST SIGNALS
       ======================================== */}
-      <p className={`text-xl md:text-2xl text-text-secondary mb-10 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 ease-out delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-        بوابتك الشاملة لـ{' '}
-        <span className="text-accent-green font-bold">أخبار SaaS</span>،{' '}
-        <span className="text-accent-cyan font-bold">رؤى السوق</span>، و{' '}
-        <span className="text-purple-400 font-bold">قواعد البيانات</span> في المملكة العربية السعودية
-      </p>
-
-      {/* ========================================
-          QUICK STATS ROW
-      ======================================== */}
-      <div className={`flex flex-wrap justify-center gap-4 mb-10 transition-all duration-1000 ease-out delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-        <div className="flex items-center gap-2 px-4 py-2 rounded-full glass">
-          {icons.star}
-          <span className="text-white font-semibold">250+ شركة</span>
-        </div>
-        <div className="flex items-center gap-2 px-4 py-2 rounded-full glass">
-          {icons.star}
-          <span className="text-white font-semibold">15+ فئة</span>
-        </div>
-        <div className="flex items-center gap-2 px-4 py-2 rounded-full glass">
-          {icons.star}
-          <span className="text-white font-semibold">تغطية شاملة</span>
+      <div className={`max-w-4xl mx-auto mb-10 transition-all duration-1000 ease-out delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-6">
+          دليل شامل لـ <span className="text-accent-green font-bold">250+ شركة سعودية</span> في قطاع البرمجيات كخدمة.
+          نقدم بيانات موثقة، تحليلات السوق، ومراجع لمساعدة رواد الأعمال والمستثمرين.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-text-secondary">
+          <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-green" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg> بيانات موثقة</span>
+          <span className="flex items-center gap-2"><svg className="w-4 h-4 text-accent-cyan" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg> تحديث مستمر</span>
+          <span className="flex items-center gap-2"><svg className="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg> مجاني للاستخدام</span>
         </div>
       </div>
 
