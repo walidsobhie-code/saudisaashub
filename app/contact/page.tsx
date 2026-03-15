@@ -119,7 +119,7 @@ export default function ContactPage() {
 
     // Real-time validation
     const error = validateCompanyField(name, value);
-    setCompanyErrors(prev => ({ ...prev, [name]: error }));
+    setCompanyErrors(prev => ({ ...prev, [name]: error || '' }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

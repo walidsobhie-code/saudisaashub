@@ -65,7 +65,6 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { isDark, toggle: toggleDarkMode } = useDarkMode();
-  const { isDark, toggle: toggleDarkMode } = useDarkMode();
 
   // Scroll detection for transparent-to-solid effect
   useEffect(() => {
