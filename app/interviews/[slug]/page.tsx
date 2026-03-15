@@ -4,7 +4,8 @@ import { notFound } from 'next/navigation';
 import { getAllInterviews } from '@/lib/interviews';
 import { ShareButtons } from '@/components/ShareButtons';
 
-export const dynamic = 'force-dynamic'; // Render on-demand
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 interface PageProps {
   params: Promise<{ slug: string }>;

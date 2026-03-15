@@ -3,7 +3,8 @@ import { getArticles } from '@/lib/articles';
 import { ArticleCard } from '@/components/ArticleCard';
 import { ShareButtons } from '@/components/ShareButtons';
 
-export const dynamic = 'force-dynamic'; // Render on-demand
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

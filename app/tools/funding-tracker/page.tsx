@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 import { getAllCompaniesDB } from '@/lib/db-companies';
 import FundingTrackerClient from './FundingTrackerClient';
 
-export const dynamic = 'force-dynamic'; // Render on-demand
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
