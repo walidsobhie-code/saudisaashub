@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllInterviews } from '@/lib/interviews';
 import { ShareButtons } from '@/components/ShareButtons';
