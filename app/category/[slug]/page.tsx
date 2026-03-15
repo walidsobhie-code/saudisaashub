@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getCompaniesByCategoryDB, getAllCategoriesDB } from '@/lib/db-companies';
 import { getArticles } from '@/lib/articles';
 import CompanyCard from '@/components/CompanyCard';
-import ArticleCard from '@/components/ArticleCard';
+import { ArticleCard } from '@/components/ArticleCard';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
