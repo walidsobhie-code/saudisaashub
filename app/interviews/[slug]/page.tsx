@@ -5,17 +5,11 @@ import { getAllInterviews } from '@/lib/interviews';
 import { ShareButtons } from '@/components/ShareButtons';
 
 export const dynamic = 'force-dynamic';
-export const runtime = 'nodejs';
+export const dynamicParams = true; // Allow any slug
+export const revalidate = 0;
 
 interface PageProps {
   params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-  const interviews = getAllInterviews();
-  return interviews.map((interview) => ({
-    slug: interview.slug,
-  }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

@@ -4,7 +4,7 @@ import { ArticleCard } from '@/components/ArticleCard';
 import { ShareButtons } from '@/components/ShareButtons';
 
 export const dynamic = 'force-dynamic';
-export const runtime = 'nodejs';
+export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

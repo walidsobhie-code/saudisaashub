@@ -4,7 +4,7 @@ import { getAllInterviews } from '@/lib/interviews';
 import { ShareButtons } from '@/components/ShareButtons';
 
 export const dynamic = 'force-dynamic';
-export const runtime = 'nodejs'; // Explicitly use Node.js runtime
+export const revalidate = 0; // No static generation
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
