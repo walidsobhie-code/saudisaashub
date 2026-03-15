@@ -141,7 +141,7 @@ export function PublisherCard({ compact = false }: PublisherCardProps) {
 
         {/* Newsletter CTA */}
         <Link
-          href="/newsletter"
+          href="/contact?type=newsletter"
           className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-accent-green/10 text-accent-green border border-accent-green/20 hover:bg-accent-green hover:text-[#0f0f1a] transition-all text-sm font-medium"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

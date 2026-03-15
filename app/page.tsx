@@ -146,7 +146,7 @@ export default function HomePage() {
               <Link href="/contact" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all text-sm">
                 تواصل معنا
               </Link>
-              <Link href="/advisory" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all text-sm">
+              <Link href="/contact" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all text-sm">
                 الاستشارات
               </Link>
               <Link href="/news/digest" className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-text-secondary hover:text-white hover:border-white/30 transition-all text-sm">

@@ -125,7 +125,7 @@ export default function CompanyProfileClient({
       {/* Compare Floating Button */}
       {compareCount > 0 && (
         <Link
-          href="/compare"
+          href="/companies"
           className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 px-6 py-4 rounded-full bg-gradient-to-r from-accent-pink to-accent-purple text-white font-bold shadow-glow-pink hover:shadow-glow-purple transition-shadow"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
