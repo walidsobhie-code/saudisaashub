@@ -31,7 +31,7 @@ export default async function FundingTrackerPage() {
 
   // Get unique categories and stages
   const categories = Array.from(new Set(fundedCompanies.flatMap(c => c.categories?.map(cat => cat.slug) || [])));
-  const stages = Array.from(new Set(fundedCompanies.map(c => c.funding_stage).filter(Boolean)));
+  const stages = Array.from(new Set(fundedCompanies.map(c => c.funding_stage).filter((s): s is string => s != null))) as string[];
 
   // Top companies by funding
   const topCompanies = [...fundedCompanies]
