@@ -99,8 +99,7 @@ export default function AboutPage() {
                   <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent-green/20 via-accent-cyan/20 to-accent-purple/20 flex items-center justify-center border border-white/10 group-hover:scale-105 transition-transform">
                     <span className="text-4xl font-bold text-white/80">{member.initial}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-accent-green text-sm font-medium mb-4">{member.role}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">{member.role}</h3>
                   <p className="text-text-secondary text-sm leading-relaxed">{member.bio}</p>
                 </div>
               ))}
