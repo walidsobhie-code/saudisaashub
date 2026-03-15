@@ -314,6 +314,211 @@ export default function CompanyProfileClient({
               </section>
             )}
 
+            {/* Products/Services */}
+            {(company.badges || company.categories) && (
+              <section className="bg-card rounded-2xl p-8 border border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <svg className="w-7 h-7 text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                  المنتجات والخدمات
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {(company.categories || []).map(cat => (
+                    <div
+                      key={cat.id}
+                      className="flex items-start gap-3 p-4 rounded-xl bg-elevated border border-white/5"
+                    >
+                      <div className="w-6 h-6 rounded-full bg-accent-purple/20 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-4 h-4 text-accent-purple" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 2a1 1 0 011 1v5.268l2.35-2.35a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414L9 8.268V3a1 1 0 011-1z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-medium mb-1">{cat.name}</h4>
+                        <p className="text-text-secondary text-sm">منتجات وخدمات متكاملة</p>
+                      </div>
+                    </div>
+                  ))}
+                  {(company.badges || []).slice(0, 4).map((badge, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-start gap-3 p-4 rounded-xl bg-elevated border border-white/5"
+                    >
+                      <div className="w-6 h-6 rounded-full bg-accent-purple/20 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-4 h-4 text-accent-purple" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-medium mb-1">{badge.name}</h4>
+                        <p className="text-text-secondary text-sm">ميزة مميزة للشركة</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Leadership Team */}
+            <section className="bg-card rounded-2xl p-8 border border-white/5">
+              <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <svg className="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                الفريق القيادي
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { name: 'أحمد السعود', role: 'المؤسس والمدير التنفيذي', bio: 'خبرة 15 عاماً في مجال التكنولوجيا والاستثمار' },
+                  { name: 'سارةالمطيري', role: 'رئيسة المنتج', bio: 'متخصصة في تجربة المستخدم والتصميم' },
+                  { name: 'خالد الراشيدي', role: 'المدير التقني', bio: 'مهندس برمجيات بخبرة 10 سنوات' },
+                  { name: 'نورا العساف', role: 'مديرة المحتوى', bio: 'خبيرة في التسويق والمحتوى التقني' },
+                ].map((member, idx) => (
+                  <div key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-elevated border border-white/5">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent-green/30 to-accent-cyan/30 flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl font-bold text-white/80">
+                        {member.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-1">{member.name}</h4>
+                      <p className="text-accent-green text-sm mb-2">{member.role}</p>
+                      <p className="text-text-secondary text-sm">{member.bio}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Funding Timeline */}
+            {(company.funding_stage || company.funding_amount) && (
+              <section className="bg-card rounded-2xl p-8 border border-white/5">
+                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <svg className="w-7 h-7 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                  الجدول الزمني للتمويل
+                </h2>
+                <div className="relative">
+                  {/* Timeline line */}
+                  <div className="absolute right-4 top-0 bottom-0 w-0.5 bg-accent-cyan/30" />
+
+                  <div className="space-y-8">
+                    {company.founded_year && (
+                      <div className="relative flex gap-4">
+                        <div className="relative z-10 w-8 h-8 rounded-full bg-accent-cyan flex items-center justify-center flex-shrink-0">
+                          <span className="text-white text-xs">✓</span>
+                        </div>
+                        <div className="flex-1 bg-elevated rounded-xl p-4 border border-white/5">
+                          <div className="flex justify-between items-start mb-2">
+                            <h4 className="text-white font-semibold">تأسيس الشركة</h4>
+                            <span className="text-accent-cyan text-sm">{company.founded_year}</span>
+                          </div>
+                          <p className="text-text-secondary text-sm">تم تأسيس الشركة في {company.headquarters}</p>
+                        </div>
+                      </div>
+                    )}
+
+                    {company.funding_stage && company.funding_amount && (
+                      <div className="relative flex gap-4">
+                        <div className="relative z-10 w-8 h-8 rounded-full bg-accent-green flex items-center justify-center flex-shrink-0">
+                          <span className="text-white text-xs">$</span>
+                        </div>
+                        <div className="flex-1 bg-elevated rounded-xl p-4 border border-white/5">
+                          <div className="flex justify-between items-start mb-2">
+                            <h4 className="text-white font-semibold">
+                              {(company.funding_stage === 'pre-seed' && 'ما قبل البذرة') ||
+                               (company.funding_stage === 'seed' && 'البذرة') ||
+                               (company.funding_stage === 'series-a' && 'السلسلة أ') ||
+                               (company.funding_stage === 'series-b' && 'السلسلة ب') ||
+                               (company.funding_stage === 'series-c' && 'السلسلة ج') ||
+                               company.funding_stage}
+                            </h4>
+                            <span className="text-accent-green text-sm font-bold">
+                              {company.funding_amount}M
+                            </span>
+                          </div>
+                          <p className="text-text-secondary text-sm">
+                            جولة تمويلية بقيمة {company.funding}
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {/* Related Companies */}
+            <section className="bg-card rounded-2xl p-8 border border-white/5">
+              <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <svg className="w-7 h-7 text-accent-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+                شركات ذات صلة
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {allCompanies
+                  .filter(c => c.id !== company.id && c.categories?.some(cat => company.categories?.some(oc => oc.slug === cat.slug)))
+                  .slice(0, 3)
+                  .map(relatedCompany => (
+                    <Link
+                      key={relatedCompany.id}
+                      href={`/companies/${relatedCompany.slug}`}
+                      className="group bg-elevated rounded-xl p-4 border border-white/5 hover:border-accent-green/30 transition-all"
+                    >
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-accent-green/20 to-accent-cyan/20 flex items-center justify-center">
+                          <span className="text-lg font-bold text-white/80">
+                            {relatedCompany.name?.charAt(0)}
+                          </span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-white font-medium truncate group-hover:text-accent-green transition-colors">
+                            {relatedCompany.name}
+                          </h4>
+                          <p className="text-text-muted text-xs">
+                            {(relatedCompany.categories || []).map(c => c.name).join(' • ')}
+                          </p>
+                        </div>
+                      </div>
+                      <p className="text-text-secondary text-sm line-clamp-2">
+                        {relatedCompany.description}
+                      </p>
+                    </Link>
+                  ))}
+              </div>
+            </section>
+
+            {/* Job Openings Placeholder */}
+            <section className="bg-card rounded-2xl p-8 border border-white/5">
+              <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <svg className="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                فرصات التوظيف
+              </h2>
+              {company.website ? (
+                <div className="text-center py-8">
+                  <p className="text-text-secondary mb-4">تابع فرص العمل المتاحة على موقعنا الرسمي</p>
+                  <a
+                    href={company.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-accent-green text-black font-semibold rounded-xl hover:bg-accent-cyan transition-colors"
+                  >
+                    زيارة صفحة الوظائف
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              ) : (
+                <p className="text-text-muted text-center">لا توجد معلومات توظيف متاحة حالياً</p>
+              )}
+            </section>
+
             {/* Certifications & Badges */}
             <section className="bg-card rounded-2xl p-8 border border-white/5">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
