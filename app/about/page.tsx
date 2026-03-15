@@ -19,40 +19,34 @@ export const metadata: Metadata = {
 
 const teamMembers = [
   {
-    name: 'أحمد السعود',
     role: 'المؤسس والمدير التنفيذي',
-    bio: 'رائد أعمال ومستثمر بخبرة 15 عاماً في مجال التكنولوجيا والاستثمار. قاد مبادرات رقمية كبرى في المنطقة.',
-    initial: 'أ',
+    bio: 'خبرة extensive في مجال التكنولوجيا والاستثمار في المنطقة العربية',
+    initial: '✱',
   },
   {
-    name: 'سارة المطيري',
-    role: 'رئيسة المنتج',
-    bio: 'خبيرة في تجربة المستخدم والتصميم. مهمتها بناء منصة سهلة وبديهية لمستخدمينا.',
-    initial: 'س',
+    role: 'رئيس المنتج',
+    bio: 'خبير في تجربة المستخدم والتصميم، يركز على بناء منصة سهلة وبديهية',
+    initial: '◆',
   },
   {
-    name: 'خالد الراشيدي',
     role: 'المدير التقني',
-    bio: 'مهندس برمجيات بخبرة 10 سنوات في تطوير التطبيقات الحديثة. يشرف على البنية التقنية.',
-    initial: 'خ',
+    bio: 'مهندس برمجيات ذو خبرة في تطوير التطبيقات الحديثة والبنى التحتية',
+    initial: '⚡',
   },
   {
-    name: 'نورا العساف',
-    role: 'مديرة المحتوى',
-    bio: 'متخصصة في التسويق والمحتوى التقني. تكتب التحليلات والأخبار عن مشهد SaaS السعودي.',
-    initial: 'ن',
+    role: 'مدير المحتوى',
+    bio: 'متخصص في التسويق والمحتوى التقني، يكتب تحليلات وأخبار عن مشهد SaaS السعودي',
+    initial: '✎',
   },
   {
-    name: 'محمد الدوسري',
-    role: 'مهندس بيانات',
-    bio: 'مسؤول عن جمع وتحليل بيانات الشركات وضمان دقة المعلومات.',
-    initial: 'م',
+    role: 'مهندس البيانات',
+    bio: 'مسؤول عن جمع، تحليل، وضمان دقة بيانات الشركات',
+    initial: '📊',
   },
   {
-    name: 'ليلى الحربي',
-    role: 'مصممة UI/UX',
-    bio: 'تهتم بتصميم الواجهات وتجربة المستخدم، وتحرص على جعلهنا جميلة وسهلة.',
-    initial: 'ل',
+    role: 'مصمم UI/UX',
+    bio: 'يهتم بتصميم الواجهات وتجربة المستخدم، ويحرص على جعلها جميلة وسهلة',
+    initial: '◈',
   },
 ];
 
@@ -121,7 +115,7 @@ export default function AboutPage() {
                 هل لديك سؤال أو اقتراح؟ نود معرفة رأيك!
               </p>
               <a
-                href="mailto:hello@saudisaashub.sa"
+                href="mailto:saudisaashub@outlook.com"
                 className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-accent-green to-accent-cyan text-black font-bold hover:shadow-lg hover:shadow-accent-green/20 transition-all"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

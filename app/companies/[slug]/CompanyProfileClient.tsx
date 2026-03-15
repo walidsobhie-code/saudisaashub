@@ -370,20 +370,20 @@ export default function CompanyProfileClient({
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { name: 'أحمد السعود', role: 'المؤسس والمدير التنفيذي', bio: 'خبرة 15 عاماً في مجال التكنولوجيا والاستثمار' },
-                  { name: 'سارةالمطيري', role: 'رئيسة المنتج', bio: 'متخصصة في تجربة المستخدم والتصميم' },
-                  { name: 'خالد الراشيدي', role: 'المدير التقني', bio: 'مهندس برمجيات بخبرة 10 سنوات' },
-                  { name: 'نورا العساف', role: 'مديرة المحتوى', bio: 'خبيرة في التسويق والمحتوى التقني' },
+                  { role: 'المؤسس والمدير التنفيذي', bio: 'خبرة extensive في مجال التكنولوجيا والاستثمار في المنطقة العربية', initial: '✱' },
+                  { role: 'رئيس المنتج', bio: 'خبير في تجربة المستخدم والتصميم، يركز على بناء منصة سهلة وبديهية', initial: '◆' },
+                  { role: 'المدير التقني', bio: 'مهندس برمجيات ذو خبرة في تطوير التطبيقات الحديثة والبنى التحتية', initial: '⚡' },
+                  { role: 'مدير المحتوى', bio: 'متخصص في التسويق والمحتوى التقني، يكتب تحليلات وأخبار عن مشهد SaaS السعودي', initial: '✎' },
                 ].map((member, idx) => (
                   <div key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-elevated border border-white/5">
                     <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent-green/30 to-accent-cyan/30 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-white/80">
-                        {member.name.charAt(0)}
+                        {member.initial}
                       </span>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">{member.name}</h4>
-                      <p className="text-accent-green text-sm mb-2">{member.role}</p>
+                      <h4 className="text-white font-semibold mb-1">{member.role}</h4>
+                      <p className="text-accent-green text-sm mb-2"></p>
                       <p className="text-text-secondary text-sm">{member.bio}</p>
                     </div>
                   </div>
