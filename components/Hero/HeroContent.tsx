@@ -174,27 +174,6 @@ export function HeroContent({
       </div>
 
       {/* ========================================
-          TRUSTED BY LOGOS
-      ======================================== */}
-      <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 ease-out delay-400 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-        <p className="text-text-muted text-sm mb-6 text-center">يثق فينا رواد الأعمال من شركات رائدة</p>
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-70 hover:opacity-100 transition-opacity">
-          {['AWS', 'Google', 'Microsoft', 'NVIDIA', 'Oracle', 'foodics', 'qiwa', 'salla', 'tamara', 'zid'].map((logo) => (
-            <div key={logo} className="relative group">
-              <img
-                src={`/logo/${logo}.${logo === 'qiwa' ? 'jpeg' : 'png'}`}
-                alt={`${logo} logo`}
-                width={120}
-                height={40}
-                className="h-8 md:h-10 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 filter"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ========================================
           PRIMARY CTAS WITH ENHANCED EFFECTS
       ======================================== */}
       <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 transition-all duration-1000 ease-out delay-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
