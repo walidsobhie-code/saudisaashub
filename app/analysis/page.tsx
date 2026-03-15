@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { getArticles } from '@/lib/articles';
-import ArticleCard from '@/components/ArticleCard';
+import { ArticleCard } from '@/components/ArticleCard';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getCompaniesDB } from '@/lib/db-companies';
+import { getAllCompaniesDB } from '@/lib/db-companies';
 import FundingTrackerClient from './FundingTrackerClient';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function FundingTrackerPage() {
-  const companies = await getCompaniesDB();
+  const companies = await getAllCompaniesDB();
 
   // Filter companies with funding data
   const fundedCompanies = companies.filter(c => c.funding_amount && c.funding_amount > 0);

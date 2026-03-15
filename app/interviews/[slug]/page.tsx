@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getAllInterviews } from '@/lib/interviews';
-import ShareButtons from '@/components/ShareButtons';
+import { ShareButtons } from '@/components/ShareButtons';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
