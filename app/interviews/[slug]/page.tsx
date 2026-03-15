@@ -1,20 +1,17 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import dynamic from 'next/dynamic';
 import { getAllInterviews } from '@/lib/interviews';
-
-const ShareButtons = dynamic(() => import('@/components/ShareButtons'), {
-  ssr: false,
-  loading: () => <div className="h-10" />,
-});
-
-export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
-export const revalidate = 0;
 
 interface PageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const interviews = getAllInterviews();
+  return interviews.map((interview) => ({
+    slug: interview.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -73,15 +70,6 @@ export default async function InterviewPage({ params }: PageProps) {
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">{interview.interviewee.role}</h1>
           <p className="text-accent-cyan text-lg">{interview.interviewee.company}</p>
-        </div>
-
-        {/* Sharing */}
-        <div className="text-center mb-8">
-          <p className="text-text-muted text-sm mb-2">شارك هذه المقابلة</p>
-          <ShareButtons
-            title={`مقابلة مع ${interview.interviewee.role} - ${interview.interviewee.company}`}
-            url={`https://saudisaashub.pages.dev/interviews/${slug}`}
-          />
         </div>
 
         {/* Content */}

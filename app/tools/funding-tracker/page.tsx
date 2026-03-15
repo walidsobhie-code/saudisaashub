@@ -2,9 +2,6 @@ import { Metadata } from 'next';
 import { getAllCompaniesDB } from '@/lib/db-companies';
 import FundingTrackerClient from './FundingTrackerClient';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
-
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Funding Tracker | Saudi SaaS Hub',

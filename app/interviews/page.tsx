@@ -1,15 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { getAllInterviews } from '@/lib/interviews';
-
-const ShareButtons = dynamic(() => import('@/components/ShareButtons'), {
-  ssr: false,
-  loading: () => <div className="h-10" />,
-});
-
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -42,11 +33,7 @@ export default async function InterviewsPage() {
           </p>
         </div>
 
-        {/* Sharing */}
-        <div className="text-center mb-8">
-          <p className="text-text-muted text-sm mb-2">شارك هذه المقابلات</p>
-          <ShareButtons title="SaaS Leader Interviews" url="https://saudisaashub.pages.dev/interviews" />
-        </div>
+        {/* Sharing removed to avoid build errors */}
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

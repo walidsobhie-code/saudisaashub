@@ -1,15 +1,6 @@
 import { Metadata } from 'next';
 import { getArticles } from '@/lib/articles';
 import { ArticleCard } from '@/components/ArticleCard';
-import dynamic from 'next/dynamic';
-
-const ShareButtons = dynamic(() => import('@/components/ShareButtons'), {
-  ssr: false,
-  loading: () => <div className="h-10" />,
-});
-
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -48,12 +39,6 @@ export default async function AnalysisPage() {
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
             تحليل عميق لاتجاهات السوق، وأنماط الاستثمار، وتبني التقنية عبر السعودية
           </p>
-        </div>
-
-        {/* Sharing */}
-        <div className="text-center mb-8">
-          <p className="text-text-muted text-sm mb-2">شارك هذه التحليلات</p>
-          <ShareButtons title="Market Analysis" url="https://saudisaashub.pages.dev/analysis" />
         </div>
 
         {/* Articles Grid */}
