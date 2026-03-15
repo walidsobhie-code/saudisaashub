@@ -9,6 +9,7 @@ import CompanyCard from '@/components/CompanyCard';
 import { Hero } from '@/components/Hero';
 import { LogoTicker } from '@/components/LogoTicker';
 import { Newsletter } from '@/components/Newsletter';
+import Link from 'next/link';
 
 export default async function Home() {
   const articles = await getArticles();
