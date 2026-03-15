@@ -5,6 +5,27 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
+// Dark mode hook
+function useDarkMode() {
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('theme');
+    if (stored) {
+      setIsDark(stored === 'dark');
+    }
+  }, []);
+
+  const toggle = () => {
+    const newValue = !isDark;
+    setIsDark(newValue);
+    localStorage.setItem('theme', newValue ? 'dark' : 'light');
+    document.documentElement.classList.toggle('light', !newValue);
+  };
+
+  return { isDark, toggle };
+}
+
 const navLinks = [
   { href: '/', label: 'الرئيسية' },
   { href: '/companies', label: 'الشركات' },
@@ -43,6 +64,8 @@ export function Header() {
   const [researchOpen, setResearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { isDark, toggle: toggleDarkMode } = useDarkMode();
+  const { isDark, toggle: toggleDarkMode } = useDarkMode();
 
   // Scroll detection for transparent-to-solid effect
   useEffect(() => {
@@ -175,7 +198,24 @@ export function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-lg bg-card border border-white/10 text-text-secondary hover:text-white hover:border-accent-green/30 transition-all"
+              aria-label={isDark ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الداكن'}
+            >
+              {isDark ? (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              )}
+            </button>
+
             {/* Language Switcher */}
             <Link
               href="/en"
@@ -183,6 +223,23 @@ export function Header() {
             >
               🇺🇸 EN
             </Link>
+
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="flex items-center justify-center w-9 h-9 rounded-lg bg-card border border-white/10 text-text-secondary hover:text-white hover:border-accent-green/30 transition-all"
+              aria-label={isDark ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الداكن'}
+            >
+              {isDark ? (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              )}
+            </button>
 
             {/* Search Button */}
             <Link

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light mode variables */
+:root, .light {
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-surface-light: #F1F5F9;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-hover: rgba(0, 0, 0, 0.15);
+  --color-text: #1E293B;
+  --color-text-secondary: #64748B;
+  --color-text-muted: #94A3B8;
+  --color-primary: #059669;
+  --color-accent: #7C3AED;
+  --color-accent-cyan: #0891B2;
+}
+
+/* Dark mode (default) */
 :root {
   /* Brand Colors */
   --color-primary: #10B981; /* Muted green */
@@ -9,27 +25,27 @@
   --color-secondary: #F59E0B; /* Muted gold for premium badges */
   --color-accent: #8B5CF6; /* Purple for SaaS Hub gradient */
   --color-accent-cyan: #06b6d4; /* Cyan for secondary accents */
-  
+
   /* Backgrounds */
   --color-background: #0A0A0A;
   --color-surface: #121212;
   --color-surface-light: #1F1F1F;
-  
+
   /* Borders */
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-hover: rgba(255, 255, 255, 0.15);
-  
+
   /* Typography */
   --color-text: #FFFFFF;
   --color-text-secondary: #A0A0B8;
   --color-text-muted: #6B6B80;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
   --shadow-layered: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
-  
+
   /* Spacing scale */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -38,6 +54,92 @@
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
   --spacing-3xl: 4rem;
+}
+
+/* Light mode overrides */
+.light {
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-layered: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+:root {
+  /* Brand Colors */
+  --color-primary: #10B981; /* Muted green */
+  --color-primary-dark: #059669;
+  --color-secondary: #F59E0B; /* Muted gold for premium badges */
+  --color-accent: #8B5CF6; /* Purple for SaaS Hub gradient */
+  --color-accent-cyan: #06b6d4; /* Cyan for secondary accents */
+
+  /* Backgrounds */
+  --color-background: #0A0A0A;
+  --color-surface: #121212;
+  --color-surface-light: #1F1F1F;
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+
+  /* Typography */
+  --color-text: #FFFFFF;
+  --color-text-secondary: #A0A0B8;
+  --color-text-muted: #6B6B80;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --shadow-layered: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* Spacing scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+}
+
+/* Light mode */
+html.light {
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-surface-light: #F1F5F9;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-hover: rgba(0, 0, 0, 0.15);
+  --color-text: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94A3B8;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-layered: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+html.light body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+html.light .bg-card,
+html.light .bg-background,
+html.light .bg-surface {
+  background-color: var(--color-surface);
+}
+
+html.light .text-text-secondary {
+  color: var(--color-text-secondary);
+}
+
+html.light .text-text-muted {
+  color: var(--color-text-muted);
+}
+
+html.light .border-white\/5,
+html.light .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -56,6 +158,46 @@ body {
   color: var(--color-text);
   line-height: 1.7;
   font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode specific overrides */
+.light body {
+  background-color: #F8FAFC;
+  color: #1E293B;
+}
+
+.light .bg-background {
+  background-color: #F8FAFC;
+}
+
+.light .bg-card {
+  background-color: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.light .bg-elevated {
+  background-color: #FFFFFF;
+}
+
+.light .text-text-secondary {
+  color: #64748B;
+}
+
+.light .text-text-muted {
+  color: #94A3B8;
+}
+
+.light .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.light .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.light .hover\:border-white\/20:hover {
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 /* Typography scale */

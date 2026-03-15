@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://saudisaashub.com/sitemap.xml
+Sitemap: https://saudisaashub.pages.dev/sitemap.xml
