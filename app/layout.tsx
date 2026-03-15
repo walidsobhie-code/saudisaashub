@@ -4,9 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SearchModal } from '@/components/SearchModal';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
-import { Inter, Cairo } from 'next/font/google';
-// Optional: Dubai font (if needed for premium Arabic) – comment out if not using
-// import { Dubai } from 'next/font/google';
+import { Inter, Cairo, Tajawal } from 'next/font/google';
 
 const SITE_URL = 'https://saudisaashub.pages.dev';
 const OG_IMAGE = `${SITE_URL}/logo-og.png`;
@@ -27,14 +25,14 @@ const cairo = Cairo({
   preload: true,
 });
 
-// Uncomment to use Dubai instead of Cairo
-// const dubai = Dubai({
-//   subsets: ['arabic'],
-//   weight: ['400', '500', '700'],
-//   display: 'swap',
-//   variable: '--font-dubai',
-//   preload: true,
-// });
+// Premium Arabic font - Tajawal for business elegance
+const tajawal = Tajawal({
+  subsets: ['arabic'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+  variable: '--font-tajawal',
+  preload: true,
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   const now = new Date().toISOString();
@@ -119,7 +117,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="ar" dir="rtl" className={`${inter.variable} ${cairo.variable}`}>
+    <html lang="ar" dir="rtl" className={`${inter.variable} ${tajawal.variable}`}>
       <head>
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://images.unsplash.com" />

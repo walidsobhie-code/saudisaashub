@@ -10,21 +10,24 @@ interface ArticleCardProps {
   date: string;
   categories: string[];
   readingTime: number;
-  image?: string; // Optional featured image URL
+  image?: string;
 }
 
 export function ArticleCard({ title, excerpt, slug, date, categories, readingTime, image }: ArticleCardProps) {
   return (
     <article className="group bg-card rounded-xl border border-white/5 hover:border-accent-green/30 transition-all overflow-hidden flex flex-col">
       <Link href={`/articles/${slug}`} className="flex flex-col h-full">
-        {/* Featured Image */}
+        {/* Featured Image - Optimized with aspect ratio to prevent CLS */}
         {image && (
           <div className="relative h-48 overflow-hidden">
             <img
               src={image}
               alt={title}
+              width={400}
+              height={192}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
+              decoding="async"
             />
             {/* Category Badge Overlay */}
             <div className="absolute top-3 right-3">

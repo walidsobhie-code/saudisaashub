@@ -29,15 +29,18 @@ export function FeaturedImage({ src, alt, caption }: FeaturedImageProps) {
           </div>
         )}
 
-        {/* Image */}
+        {/* Image - Optimized for CLS */}
         <img
           src={src}
           alt={alt}
+          width={800}
+          height={450}
           className={`w-full h-full object-cover transition-opacity duration-500 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={() => setIsLoaded(true)}
           loading="lazy"
+          decoding="async"
         />
 
         {/* Gradient overlay */}

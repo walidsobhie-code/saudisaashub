@@ -13,6 +13,22 @@ import { PublisherCard } from '@/components/PublisherCard';
 import { getCompaniesByCategoryDB, getAllCompaniesDB } from '@/lib/db-companies';
 import CompanyCard from '@/components/CompanyCard';
 
+// Generate FAQ Schema for SEO
+function generateFAQSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
 interface PageProps {
   params: { slug: string };
 }
@@ -33,6 +49,10 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   const url = `https://saudisaashub.com/articles/${article.slug}`;
+
+  // Generate FAQs based on article for SEO schema
+  const faqs = generateSampleFAQs(article.title, article.content);
+  const faqSchema = faqs.length > 0 ? generateFAQSchema(faqs) : null;
 
   return {
     title: `${article.title} | SaudiSaaSHub`,
@@ -55,31 +75,11 @@ export async function generateMetadata({ params }: PageProps) {
       images: article.image ? [article.image] : [],
     },
     other: {
-      'script:ld+json': JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: article.title,
-        description: article.excerpt,
-        author: { '@type': 'Organization', name: 'Saudi SaaS Hub' },
-        publisher: {
-          '@type': 'Organization',
-          name: 'Saudi SaaS Hub',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://saudisaashub.com/logo.png',
-          },
-        },
-        datePublished: article.date,
-        dateModified: article.date,
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': url,
-        },
-        keywords: article.categories.join(', '),
-        wordCount: article.content.split(/\s+/).filter(w => w.length > 0).length,
-        articleSection: article.categories[0] || 'مقالات',
-        inLanguage: 'ar-SA',
-      }),
+      'article:published_time': article.date,
+      'article:modified_time': article.date,
+      'article:section': article.categories[0] || 'مقالات',
+      'article:tag': article.categories.join(', '),
+      ...(faqSchema && { 'script:ld+json': JSON.stringify(faqSchema) }),
     },
   };
 }
