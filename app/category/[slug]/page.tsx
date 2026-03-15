@@ -4,6 +4,7 @@ import { getCompaniesByCategoryDB, getAllCategoriesDB } from '@/lib/db-companies
 import { getArticles } from '@/lib/articles';
 import CompanyCard from '@/components/CompanyCard';
 import { ArticleCard } from '@/components/ArticleCard';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -100,6 +101,14 @@ export default async function CategoryPage({ params }: PageProps) {
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4">
+        <Breadcrumb
+          items={[
+            { label: 'الرئيسية', href: '/' },
+            { label: 'الشركات', href: '/companies' },
+            { label: categoryInfo.title.split(' | ')[0], href: `/category/${slug}` },
+          ]}
+        />
+
         {/* Hero */}
         <section className="text-center py-16 mb-12">
           <h1 className="text-5xl font-bold text-white mb-6">

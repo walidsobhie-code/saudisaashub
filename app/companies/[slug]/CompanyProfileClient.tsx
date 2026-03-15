@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Breadcrumb } from '@/components/Breadcrumb';
 // Don't import Company from old lib - we'll use any/unknown or define a local interface
 // import { Company } from '@/lib/companies';
 
@@ -101,6 +102,16 @@ export default function CompanyProfileClient({
 
   return (
     <div className="min-h-screen relative">
+      <div className="max-w-7xl mx-auto px-4 pt-8">
+        <Breadcrumb
+          items={[
+            { label: 'الرئيسية', href: '/' },
+            { label: 'الشركات', href: '/companies' },
+            { label: company.name, href: `/companies/${company.slug}` },
+          ]}
+        />
+      </div>
+
       {/* Compare Toast */}
       {showCompareToast && (
         <div className="fixed top-24 left-1/2 -translate-x-1/2 z-50 bg-accent-green text-black px-6 py-3 rounded-full shadow-glow-green flex items-center gap-3 animate-bounce-in">

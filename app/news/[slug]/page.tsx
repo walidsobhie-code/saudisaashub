@@ -1,8 +1,9 @@
-import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import { getNewsBySlug, getAllNews } from '@/lib/news';
 import { format } from 'date-fns';
 import { ArticleContent } from '@/components/ArticleContent';
+import { Breadcrumb } from '@/components/Breadcrumb';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -51,14 +52,13 @@ export default async function NewsArticlePage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-background py-12">
       <div className="max-w-4xl mx-auto px-4">
-        {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-sm text-text-muted mb-8">
-          <Link href="/" className="hover:text-accent-green transition-colors">Home</Link>
-          <span>/</span>
-          <Link href="/news" className="hover:text-accent-green transition-colors">News</Link>
-          <span>/</span>
-          <span className="text-text-secondary">{article.category}</span>
-        </nav>
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'News', href: '/news' },
+            { label: article.category, href: `/news/${slug}` },
+          ]}
+        />
 
         {/* Article Header */}
         <header className="mb-8">

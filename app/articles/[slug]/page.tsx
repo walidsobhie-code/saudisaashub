@@ -11,6 +11,7 @@ import { QuestionHook, ArticleHashtags } from '@/components/ArticleHooks';
 import { ArticleContent } from '@/components/ArticleContent';
 import { PublisherCard } from '@/components/PublisherCard';
 import { getCompaniesByCategoryDB, getAllCompaniesDB } from '@/lib/db-companies';
+import { Breadcrumb } from '@/components/Breadcrumb';
 import CompanyCard from '@/components/CompanyCard';
 
 // Generate FAQ Schema for SEO
@@ -118,22 +119,13 @@ export default async function ArticlePage({ params }: PageProps) {
       {/* Article Header - Professional Style */}
       <section className="py-10 md:py-14 border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-text-muted mb-6">
-            <Link href="/" className="hover:text-white transition-colors">
-              الرئيسية
-            </Link>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <Link href="/articles" className="hover:text-white transition-colors">
-              المقالات
-            </Link>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className="text-text-secondary truncate max-w-[200px]">{article.title}</span>
-          </nav>
+          <Breadcrumb
+            items={[
+              { label: 'الرئيسية', href: '/' },
+              { label: 'المقالات', href: '/articles' },
+              { label: article.title, href: `/articles/${params.slug}` },
+            ]}
+          />
 
           {/* Featured Image */}
           {article.image && (
