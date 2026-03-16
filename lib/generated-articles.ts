@@ -127,7 +127,7 @@ export const articles: Article[] = [
     ],
     "author": "Saudi SaaS Hub",
     "readingTime": 11,
-    "image": "https://images.unsplash.com/photo-1559568451-8f9bdd736990?auto=format&fit=crop&w=1200&q=80"
+    "image": "https://images.unsplash.com/photo-1580339832869-4e3be53d2f94?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "title": "دليل الفوترة الإلكترونية ZATCA الشامل للمؤسسات التجارية في السعودية 2026",
@@ -140,7 +140,7 @@ export const articles: Article[] = [
     ],
     "author": "Saudi SaaS Hub",
     "readingTime": 8,
-    "image": "https://images.unsplash.com/photo-1559056199-764a73a7edf3?auto=format&fit=crop&w=1200&q=80"
+    "image": "https://images.unsplash.com/photo-1569407228235-9a744849a066?auto=format&fit=crop&w=1200&q=80"
   }
 ];
 

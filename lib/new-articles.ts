@@ -511,7 +511,7 @@ export const moreArticles: Article[] = [
     categories: ["صحة رقمية", "الذكاء الاصطناعي"],
     author: "Saudi SaaS Hub",
     readingTime: 10,
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1592722182674-2d6663dcf7b8?auto=format&fit=crop&w=1200&q=80"
   },
   {
     title: "أفضل تطبيقات الصحة واللياقة في السعودية 2026",
@@ -561,6 +561,6 @@ export const moreArticles: Article[] = [
     categories: ["صحة رقمية", "تطبيقات"],
     author: "Saudi SaaS Hub",
     readingTime: 8,
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
   }
 ];
