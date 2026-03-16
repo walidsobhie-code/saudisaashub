@@ -1,0 +1,2121 @@
+{
+  "totalCompanies": 252,
+  "companiesWithIssues": [
+    {
+      "name": "Absher",
+      "slug": "absher",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Taqat",
+      "slug": "taqat",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Salla",
+      "slug": "salla",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "HyperPay",
+      "slug": "hyperpay",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Ajmotly",
+      "slug": "ajmotly",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Foodics",
+      "slug": "foodics",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Nana",
+      "slug": "nana",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Jahez",
+      "slug": "jahez",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Tabby",
+      "slug": "tabby",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Tamara",
+      "slug": "tamara",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "AqarGate",
+      "slug": "aqargate",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "MakanHub",
+      "slug": "makanhub",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "EjariTech",
+      "slug": "ejaritech",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SaudiProperties",
+      "slug": "saudiproperties",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "HouseBank",
+      "slug": "housebank",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SquareYard",
+      "slug": "squareyard",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "MarketR",
+      "slug": "marketr",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SaudiAds",
+      "slug": "saudiads",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "BuzzMe",
+      "slug": "buzzme",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "ReachSEO",
+      "slug": "reachseo",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Convertly",
+      "slug": "convertly",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "MediaOwm",
+      "slug": "mediaowm",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "ZakatLedger",
+      "slug": "zakatledger",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SaaSBooks",
+      "slug": "saasbooks",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SaudiTax",
+      "slug": "sauditax",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "AuditTrack",
+      "slug": "audittrack",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "InvoiceFlow",
+      "slug": "invoiceflow",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "FinancialEye",
+      "slug": "financialeye",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Najis",
+      "slug": "najis",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "EMarine",
+      "slug": "emarine",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SaudiVisa",
+      "slug": "saudivisa",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "RailLink",
+      "slug": "raillink",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SaudiOil",
+      "slug": "saudioil",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "HajjConnect",
+      "slug": "hajjconnect",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "TaskFlow",
+      "slug": "taskflow",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SaudiHR",
+      "slug": "saudihr",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "CloudSync",
+      "slug": "cloudsync",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "EduLearn",
+      "slug": "edulearn",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "HealthTrack",
+      "slug": "healthtrack",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "LegalEase",
+      "slug": "legalease",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "TestCo",
+      "slug": "testco",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Ajeetly",
+      "slug": "ajeetly",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Ruzzle",
+      "slug": "ruzzle",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Resly",
+      "slug": "resly",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "AltibbiPro",
+      "slug": "altibbi",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SaudiLogix",
+      "slug": "saudilogix",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "EdAdvisor",
+      "slug": "edadvisor",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "KitchenPro",
+      "slug": "kitchenpro",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "MediCare+",
+      "slug": "medicareplus",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "ExpressShip",
+      "slug": "expressship",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "LearnSmart",
+      "slug": "learnsmart",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "TableMate",
+      "slug": "tablemate",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "DocNow",
+      "slug": "docnow",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "ShipFlow",
+      "slug": "shipflow",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "EduQuest",
+      "slug": "eduquest",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "CuisineTech",
+      "slug": "cooktech",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "HealthPlus",
+      "slug": "healthplus",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "QuickShip",
+      "slug": "quickship",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SkillUp",
+      "slug": "skillup",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "BistroManager",
+      "slug": "bistromanager",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "TeleMed",
+      "slug": "telemed",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "FulfillPro",
+      "slug": "fulfillpro",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "TutorMe",
+      "slug": "tutorme",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "OrderEase",
+      "slug": "orderease",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "PharmaCare",
+      "slug": "pharmacare",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "CargoLink",
+      "slug": "cargolink",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "CodeAcademy KSA",
+      "slug": "codeacademy-ksa",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "MenuCraft",
+      "slug": "menucraft",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "WellnessHub",
+      "slug": "wellnesshub",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "TrainTrack",
+      "slug": "traintrack",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "ExpressShip Express",
+      "slug": "expressship-express",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Zid",
+      "slug": "zid",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Bayt",
+      "slug": "bayt",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Sukoon",
+      "slug": "sukoon",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Bokraft",
+      "slug": "bokraft",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Curate",
+      "slug": "curate",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SallaPay",
+      "slug": "sallapay",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Omnana",
+      "slug": "omnana",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SallaTickets",
+      "slug": "sallatickets",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SallaMenu",
+      "slug": "sallamenu",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Malaeb",
+      "slug": "malaeb",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Tawseel",
+      "slug": "tawseel",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Seha",
+      "slug": "seha",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Nkhba",
+      "slug": "nkhba",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "RiyadhAirways",
+      "slug": "riyadhairways",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SaudiPost",
+      "slug": "saudipost",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Mawid",
+      "slug": "mawid",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Adeeb",
+      "slug": "adeeb",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "ZidPay",
+      "slug": "zidpay",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "TaqatPro",
+      "slug": "taqatpro",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Khedma",
+      "slug": "khedma",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "AdeebAI",
+      "slug": "adeebai",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SallaERP",
+      "slug": "sallaerp",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudibnb",
+      "slug": "saudibnb",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "TaqatCare",
+      "slug": "taqatcare",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SallaAnalytics",
+      "slug": "sallaanalytics",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "RiyadhTech",
+      "slug": "riyadhtech",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudimart",
+      "slug": "saudimart",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Mudeer",
+      "slug": "mudeer",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "SallaMarket",
+      "slug": "sallamarket",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Ajeet",
+      "slug": "ajeet",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "TabbyBiz",
+      "slug": "tabbybiz",
+      "missing": [
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital  Services 20",
+      "slug": "digital-services-20",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Cloud",
+      "slug": "unified-cloud",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Solutions",
+      "slug": "unified-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global AI",
+      "slug": "global-ai",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Cloud",
+      "slug": "al-cloud",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Tech 25",
+      "slug": "neo-tech-25",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Solutions",
+      "slug": "al-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Innovations",
+      "slug": "future-innovations",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Labs",
+      "slug": "advanced-labs",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future  Services 96",
+      "slug": "future-services-96",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Innovations",
+      "slug": "global-innovations",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Platform",
+      "slug": "unified-platform",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Cloud 53",
+      "slug": "smart-cloud-53",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Digital 92",
+      "slug": "arabian-digital-92",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Digital",
+      "slug": "smart-digital",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Digital 5",
+      "slug": "global-digital-5",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Systems",
+      "slug": "advanced-systems",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Digital 46",
+      "slug": "arabian-digital-46",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Innovations",
+      "slug": "al-innovations",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudi AI",
+      "slug": "saudi-ai",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Labs 13",
+      "slug": "future-labs-13",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Platform",
+      "slug": "arabian-platform",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Cloud",
+      "slug": "smart-cloud",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Digital 53",
+      "slug": "neo-digital-53",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Cloud 87",
+      "slug": "digital-cloud-87",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart AI",
+      "slug": "smart-ai",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Solutions 99",
+      "slug": "advanced-solutions-99",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Labs 48",
+      "slug": "neo-labs-48",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Tech",
+      "slug": "smart-tech",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Solutions",
+      "slug": "global-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Systems",
+      "slug": "future-systems",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Systems 36",
+      "slug": "global-systems-36",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Labs",
+      "slug": "future-labs",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Innovations",
+      "slug": "neo-innovations",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Solutions",
+      "slug": "smart-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Systems 88",
+      "slug": "arabian-systems-88",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Solutions 63",
+      "slug": "global-solutions-63",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Cloud",
+      "slug": "neo-cloud",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Innovations",
+      "slug": "advanced-innovations",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Labs",
+      "slug": "arabian-labs",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al AI",
+      "slug": "al-ai",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Platform",
+      "slug": "advanced-platform",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Platform",
+      "slug": "global-platform",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Digital",
+      "slug": "digital-digital",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Tech 8",
+      "slug": "smart-tech-8",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian AI 50",
+      "slug": "arabian-ai-50",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Innovations 98",
+      "slug": "global-innovations-98",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Cloud",
+      "slug": "arabian-cloud",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Digital",
+      "slug": "advanced-digital",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital  Services 59",
+      "slug": "digital-services-59",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart  Services 36",
+      "slug": "smart-services-36",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Digital 51",
+      "slug": "unified-digital-51",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Digital",
+      "slug": "global-digital",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Tech 14",
+      "slug": "advanced-tech-14",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudi Innovations",
+      "slug": "saudi-innovations",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Cloud",
+      "slug": "advanced-cloud",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Digital 54",
+      "slug": "global-digital-54",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Tech 11",
+      "slug": "smart-tech-11",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Systems",
+      "slug": "smart-systems",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Tech",
+      "slug": "digital-tech",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Solutions",
+      "slug": "neo-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Solutions",
+      "slug": "digital-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Tech",
+      "slug": "neo-tech",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future AI 57",
+      "slug": "future-ai-57",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Innovations",
+      "slug": "unified-innovations",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Systems",
+      "slug": "unified-systems",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Cloud",
+      "slug": "global-cloud",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Platform",
+      "slug": "neo-platform",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future AI 55",
+      "slug": "future-ai-55",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Systems",
+      "slug": "global-systems",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Cloud",
+      "slug": "future-cloud",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Solutions",
+      "slug": "future-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Cloud 45",
+      "slug": "al-cloud-45",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Labs 66",
+      "slug": "future-labs-66",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced  Services 72",
+      "slug": "advanced-services-72",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Digital 37",
+      "slug": "future-digital-37",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Tech 80",
+      "slug": "al-tech-80",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian AI",
+      "slug": "arabian-ai",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudi Platform",
+      "slug": "saudi-platform",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified AI",
+      "slug": "unified-ai",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudi Labs",
+      "slug": "saudi-labs",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudi Solutions",
+      "slug": "saudi-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Tech 91",
+      "slug": "unified-tech-91",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Systems",
+      "slug": "al-systems",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Cloud 49",
+      "slug": "digital-cloud-49",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Systems 75",
+      "slug": "digital-systems-75",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Labs",
+      "slug": "smart-labs",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Digital",
+      "slug": "future-digital",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Tech",
+      "slug": "arabian-tech",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future  Services",
+      "slug": "future-services",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian  Services",
+      "slug": "arabian-services",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Systems 82",
+      "slug": "unified-systems-82",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Digital 23",
+      "slug": "neo-digital-23",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Platform 6",
+      "slug": "advanced-platform-6",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced  Services 71",
+      "slug": "advanced-services-71",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Solutions",
+      "slug": "advanced-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Innovations",
+      "slug": "digital-innovations",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital  Services 99",
+      "slug": "digital-services-99",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Tech 90",
+      "slug": "neo-tech-90",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart Platform 31",
+      "slug": "smart-platform-31",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Systems 3",
+      "slug": "global-systems-3",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Digital 67",
+      "slug": "neo-digital-67",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Platform",
+      "slug": "digital-platform",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Tech",
+      "slug": "unified-tech",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudi Digital 3",
+      "slug": "saudi-digital-3",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Tech",
+      "slug": "global-tech",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Systems 76",
+      "slug": "digital-systems-76",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Smart  Services",
+      "slug": "smart-services",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Platform 80",
+      "slug": "unified-platform-80",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital AI",
+      "slug": "digital-ai",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Platform 4",
+      "slug": "future-platform-4",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Platform 31",
+      "slug": "advanced-platform-31",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Labs",
+      "slug": "al-labs",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global AI 76",
+      "slug": "global-ai-76",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Digital 97",
+      "slug": "digital-digital-97",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Digital 2",
+      "slug": "al-digital-2",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Platform 21",
+      "slug": "neo-platform-21",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Platform 54",
+      "slug": "future-platform-54",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Tech 69",
+      "slug": "advanced-tech-69",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Cloud 53",
+      "slug": "digital-cloud-53",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Labs",
+      "slug": "unified-labs",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified  Services",
+      "slug": "unified-services",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Innovations 50",
+      "slug": "al-innovations-50",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al  Services",
+      "slug": "al-services",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Tech",
+      "slug": "advanced-tech",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudi Systems 91",
+      "slug": "saudi-systems-91",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Cloud 32",
+      "slug": "future-cloud-32",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future AI",
+      "slug": "future-ai",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Platform 53",
+      "slug": "neo-platform-53",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Solutions 88",
+      "slug": "al-solutions-88",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Solutions 75",
+      "slug": "unified-solutions-75",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Solutions",
+      "slug": "arabian-solutions",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Labs",
+      "slug": "global-labs",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo  Services",
+      "slug": "neo-services",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Platform 44",
+      "slug": "future-platform-44",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Digital 72",
+      "slug": "arabian-digital-72",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Tech",
+      "slug": "future-tech",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Advanced Cloud 74",
+      "slug": "advanced-cloud-74",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Innovations 80",
+      "slug": "arabian-innovations-80",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo AI 17",
+      "slug": "neo-ai-17",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Digital 38",
+      "slug": "global-digital-38",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Digital Labs",
+      "slug": "digital-labs",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Future Innovations 87",
+      "slug": "future-innovations-87",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudi Labs 71",
+      "slug": "saudi-labs-71",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Arabian Systems",
+      "slug": "arabian-systems",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Neo Digital",
+      "slug": "neo-digital",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Al Digital 67",
+      "slug": "al-digital-67",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Saudi Innovations 59",
+      "slug": "saudi-innovations-59",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Unified Tech 32",
+      "slug": "unified-tech-32",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    },
+    {
+      "name": "Global Tech 91",
+      "slug": "global-tech-91",
+      "missing": [
+        "integrations (empty array)",
+        "certifications (empty array)",
+        "pricing_plans (empty array)"
+      ]
+    }
+  ],
+  "fieldStats": {
+    "name": {
+      "present": 252,
+      "missing": 0,
+      "empty": 0
+    },
+    "website": {
+      "present": 252,
+      "missing": 0,
+      "empty": 0
+    },
+    "headquarters": {
+      "present": 252,
+      "missing": 0,
+      "empty": 0
+    },
+    "employees": {
+      "present": 252,
+      "missing": 0,
+      "empty": 0
+    },
+    "funding": {
+      "present": 252,
+      "missing": 0,
+      "empty": 0
+    },
+    "description": {
+      "present": 252,
+      "missing": 0,
+      "empty": 0
+    },
+    "categories": {
+      "present": 252,
+      "missing": 0,
+      "empty": 0
+    },
+    "integrations": {
+      "present": 102,
+      "missing": 0,
+      "empty": 150
+    },
+    "certifications": {
+      "present": 102,
+      "missing": 0,
+      "empty": 150
+    },
+    "pricing_plans": {
+      "present": 0,
+      "missing": 0,
+      "empty": 252
+    }
+  }
+}
