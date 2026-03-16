@@ -114,8 +114,36 @@ export default async function ArticlePage({ params }: PageProps) {
   // Generate FAQs based on article
   const faqs = generateSampleFAQs(article.title, article.content);
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://saudisaashub.pages.dev';
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    datePublished: new Date(article.date).toISOString(),
+    author: {
+      '@type': 'Organization',
+      name: article.author
+    },
+    image: article.image,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Saudi SaaS Hub',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo.png`
+      }
+    },
+    description: article.excerpt,
+    url: `${siteUrl}/articles/${article.slug}`
+  };
+
   return (
     <>
+      {/* JSON-LD Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* Article Header - Professional Style */}
       <section className="py-10 md:py-14 border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
