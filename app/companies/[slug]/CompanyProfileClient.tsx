@@ -92,7 +92,8 @@ export default function CompanyProfileClient({
   }, [compareList, company.id]);
 
   // Format currency
-  const formatPrice = (price: number, frequency: string) => {
+  const formatPrice = (price: number | null, frequency: string) => {
+    if (price === null || price === undefined) return 'اتصل بنا';
     if (price === 0) return 'مجاني';
     return `${price.toLocaleString('ar-SA')} ريال${frequency === 'monthly' ? '/شهريًا' : frequency === 'yearly' ? '/سنويًا' : ''}`;
   };
